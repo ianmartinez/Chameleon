@@ -1,0 +1,107 @@
+object Form1: TForm1
+  Left = 0
+  Height = 703
+  Top = 0
+  Width = 973
+  ActiveControl = RadioButton1
+  BorderStyle = bsDialog
+  Caption = 'Form1'
+  ClientHeight = 703
+  ClientWidth = 973
+  DesignTimePPI = 192
+  OnCreate = FormCreate
+  Visible = False
+  object RadioButton1: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 24
+    Width = 95
+    Caption = 'None'
+    Checked = True
+    TabOrder = 6
+    TabStop = True
+  end
+  object RadioButton2: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 88
+    Width = 111
+    Caption = 'Battery'
+    TabOrder = 0
+  end
+  object RadioButton3: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 360
+    Width = 89
+    Caption = 'Time'
+    TabOrder = 1
+  end
+  object RadioButton4: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 416
+    Width = 151
+    Caption = 'Conditions'
+    TabOrder = 2
+  end
+  object RadioButton5: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 472
+    Width = 166
+    Caption = 'Wind Speed'
+    TabOrder = 3
+  end
+  object RadioButton6: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 536
+    Width = 173
+    Caption = 'Temperature'
+    TabOrder = 4
+  end
+  object RadioButton7: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 600
+    Width = 134
+    Caption = 'Humidity'
+    TabOrder = 5
+  end
+  inline ImageButtonFrame1: TImageButtonFrame
+    Left = 174
+    Height = 430
+    Top = 274
+    Width = 420
+    ClientHeight = 430
+    ClientWidth = 420
+    TabOrder = 7
+    inherited imgPreview: TImage
+      AnchorSideLeft.Control = ImageButtonFrame1
+      AnchorSideTop.Control = ImageButtonFrame1
+      AnchorSideRight.Control = ImageButtonFrame1
+      Left = 8
+      Height = 366
+      Top = 8
+      Width = 404
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+      BorderSpacing.Around = 2
+      BorderSpacing.InnerBorder = 2
+    end
+    inherited btnPickImage: TButton
+      AnchorSideLeft.Control = ImageButtonFrame1
+      AnchorSideRight.Control = ImageButtonFrame1
+      AnchorSideBottom.Control = ImageButtonFrame1
+      Left = 6
+      Top = 382
+      Width = 408
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+    end
+  end
+end

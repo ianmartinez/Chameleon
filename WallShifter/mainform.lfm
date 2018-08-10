@@ -1,0 +1,72 @@
+object WallShifterForm: TWallShifterForm
+  Left = 0
+  Height = 703
+  Top = 0
+  Width = 973
+  ActiveControl = RadioButton1
+  BorderStyle = bsDialog
+  Caption = 'WallShifter 1.0'
+  ClientHeight = 703
+  ClientWidth = 973
+  DesignTimePPI = 192
+  OnCreate = FormCreate
+  Visible = False
+  object RadioButton1: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 24
+    Width = 95
+    Caption = 'None'
+    Checked = True
+    TabOrder = 6
+    TabStop = True
+  end
+  object RadioButton2: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 88
+    Width = 111
+    Caption = 'Battery'
+    TabOrder = 0
+  end
+  object RadioButton3: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 360
+    Width = 89
+    Caption = 'Time'
+    TabOrder = 1
+  end
+  object RadioButton4: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 416
+    Width = 151
+    Caption = 'Conditions'
+    TabOrder = 2
+  end
+  object RadioButton5: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 472
+    Width = 166
+    Caption = 'Wind Speed'
+    TabOrder = 3
+  end
+  object RadioButton6: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 536
+    Width = 173
+    Caption = 'Temperature'
+    TabOrder = 4
+  end
+  object RadioButton7: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 600
+    Width = 134
+    Caption = 'Humidity'
+    TabOrder = 5
+  end
+end
