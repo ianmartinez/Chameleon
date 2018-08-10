@@ -10,9 +10,9 @@ uses
 
 type
 
-  { TForm1 }
+  { TWallShifterForm }
 
-  TForm1 = class(TForm)
+  TWallShifterForm = class(TForm)
     ImageButtonFrame1: TImageButtonFrame;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
@@ -21,7 +21,9 @@ type
     RadioButton5: TRadioButton;
     RadioButton6: TRadioButton;
     RadioButton7: TRadioButton;
+    ScrollBox1: TScrollBox;
     procedure FormCreate(Sender: TObject);
+    procedure ImageButtonFrame2Click(Sender: TObject);
     procedure ScrollBox1Click(Sender: TObject);
   private
 
@@ -30,20 +32,20 @@ type
   end;
 
 var
-  Form1: TForm1;
+  WallShifterForm: TWallShifterForm;
 
 implementation
 
 {$R *.lfm}
 
-{ TForm1 }
+{ TWallShifterForm }
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TWallShifterForm.FormCreate(Sender: TObject);
 begin
-
+  ImageButtonFrame1.SettingName := 'Test';
 end;
 
-procedure TForm1.ScrollBox1Click(Sender: TObject);
+procedure TWallShifterForm.ScrollBox1Click(Sender: TObject);
 begin
 
 end;

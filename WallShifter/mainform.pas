@@ -13,6 +13,7 @@ type
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
+    ImageButtonFrame1: TImageButtonFrame;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
@@ -20,6 +21,7 @@ type
     RadioButton5: TRadioButton;
     RadioButton6: TRadioButton;
     RadioButton7: TRadioButton;
+    ScrollBox1: TScrollBox;
     procedure FormCreate(Sender: TObject);
     procedure ScrollBox1Click(Sender: TObject);
   private
@@ -39,7 +41,7 @@ implementation
 
 procedure TWallShifterForm.FormCreate(Sender: TObject);
 begin
-
+  ImageButtonFrame1.SettingName := 'Test';
 end;
 
 procedure TWallShifterForm.ScrollBox1Click(Sender: TObject);

@@ -69,4 +69,50 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Humidity'
     TabOrder = 5
   end
+  object ScrollBox1: TScrollBox
+    Left = 24
+    Height = 216
+    Top = 128
+    Width = 916
+    HorzScrollBar.Page = 702
+    VertScrollBar.Page = 1
+    VertScrollBar.Visible = False
+    ClientHeight = 212
+    ClientWidth = 912
+    TabOrder = 7
+    inline ImageButtonFrame1: TImageButtonFrame
+      Height = 212
+      Width = 168
+      Align = alLeft
+      AutoSize = True
+      ClientHeight = 212
+      ClientWidth = 168
+      inherited imgPreview: TImage
+        AnchorSideLeft.Control = ImageButtonFrame1
+        AnchorSideTop.Control = ImageButtonFrame1
+        AnchorSideRight.Control = ImageButtonFrame1
+        Left = 8
+        Height = 148
+        Top = 8
+        Width = 152
+        BorderSpacing.Left = 6
+        BorderSpacing.Top = 6
+        BorderSpacing.Right = 6
+        BorderSpacing.Bottom = 6
+        BorderSpacing.Around = 2
+        BorderSpacing.InnerBorder = 2
+      end
+      inherited btnPickImage: TButton
+        AnchorSideLeft.Control = ImageButtonFrame1
+        AnchorSideRight.Control = ImageButtonFrame1
+        AnchorSideBottom.Control = ImageButtonFrame1
+        Left = 6
+        Top = 164
+        Width = 156
+        BorderSpacing.Left = 6
+        BorderSpacing.Right = 6
+        BorderSpacing.Bottom = 6
+      end
+    end
+  end
 end

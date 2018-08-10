@@ -18,13 +18,12 @@ type
     procedure btnPickImageClick(Sender: TObject);
   private
 
-  public
+  public      
+       SettingName : string;
 
   end;
 
 implementation
-  var
-    SettingName : String;
 {$R *.lfm}
 
 { TImageButtonFrame }
