@@ -10,13 +10,14 @@ object ImageButtonFrame: TImageButtonFrame
   TabOrder = 0
   object imgPreview: TImage
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = Owner
+    AnchorSideTop.Control = lblTitle
+    AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = btnPickImage
     Left = 4
-    Height = 162
-    Top = 4
+    Height = 127
+    Top = 39
     Width = 202
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
@@ -25,6 +26,7 @@ object ImageButtonFrame: TImageButtonFrame
     BorderSpacing.Bottom = 3
     BorderSpacing.Around = 1
     BorderSpacing.InnerBorder = 1
+    Center = True
     Proportional = True
     Stretch = True
     Transparent = True
@@ -47,6 +49,24 @@ object ImageButtonFrame: TImageButtonFrame
     Caption = 'Pick Image...'
     OnClick = btnPickImageClick
     TabOrder = 0
+  end
+  object lblTitle: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 3
+    Height = 32
+    Top = 3
+    Width = 204
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Left = 3
+    BorderSpacing.Top = 3
+    BorderSpacing.Right = 3
+    Caption = 'Image'
+    ParentColor = False
   end
   object dlgOpenPicture: TOpenPictureDialog
     Filter = 'Image files (*.png;*.bmp;*.jpeg;*.jpg;*.gif)|*.png;*.bmp;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*'

@@ -13,7 +13,6 @@ type
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
-    ImageButtonFrame1: TImageButtonFrame;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
@@ -21,10 +20,10 @@ type
     RadioButton5: TRadioButton;
     RadioButton6: TRadioButton;
     RadioButton7: TRadioButton;
-    ScrollBox1: TScrollBox;
+    BatteryBox: TScrollBox;
     procedure FormCreate(Sender: TObject);
-    procedure ImageButtonFrame2Click(Sender: TObject);
     procedure ScrollBox1Click(Sender: TObject);
+    function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
   private
 
   public
@@ -41,14 +40,34 @@ implementation
 { TWallShifterForm }
 
 procedure TWallShifterForm.FormCreate(Sender: TObject);
-begin
-  ImageButtonFrame1.SettingName := 'Test';
+var
+    i: Integer;
+  begin
+    // Battery Percentage
+      i:= 100;
+      while i >= 0 do begin
+        CreateImageButtonFrame('Battery' + i.ToString(), i.ToString() + '%', BatteryBox);
+        Dec(i, 10);
+      end;
 end;
 
-procedure TWallShifterForm.ScrollBox1Click(Sender: TObject);
+function TWallShifterForm.CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+var
+  ImageButtonFrame : TImageButtonFrame;
 begin
+  ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);
 
+  with ImageButtonFrame  do begin
+    Name := _SettingKey + 'Button';
+    Align := alLeft;
+    AutoSize := True;
+    SettingKey := _SettingKey;
+    Title := _Title;
+
+    Parent := ControlOwner;
+  end;
+
+  Result := ImageButtonFrame;
 end;
-
 end.
 

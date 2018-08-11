@@ -15,12 +15,15 @@ type
     btnPickImage: TButton;
     imgPreview: TImage;
     dlgOpenPicture: TOpenPictureDialog;
+    lblTitle: TLabel;
     procedure btnPickImageClick(Sender: TObject);
+    function GetTitle(): string;
+    procedure SetTitle(Value: string);
   private
 
-  public      
-       SettingName : string;
-
+  public
+       SettingKey : string;
+       property Title : string read GetTitle write SetTitle;
   end;
 
 implementation
@@ -37,5 +40,14 @@ begin
       raise Exception.Create('File does not exist.');
 end;
 
+function TImageButtonFrame.GetTitle() : string;
+begin
+  Result := lblTitle.Caption;
+end;
+
+procedure TImageButtonFrame.SetTitle(Value: string);
+begin
+  lblTitle.Caption := Value;
+end;
 end.
 
