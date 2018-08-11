@@ -6,20 +6,21 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, ColorBox, imagebutton;
+  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ImageButton, WeatherReader;
 
 type
 
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
-    RadioButton3: TRadioButton;
-    RadioButton4: TRadioButton;
-    RadioButton5: TRadioButton;
-    RadioButton6: TRadioButton;
-    RadioButton7: TRadioButton;
+    rbHeatIndex: TRadioButton;
+    rbNone: TRadioButton;
+    rbBattery: TRadioButton;
+    rbTime: TRadioButton;
+    rbConditions: TRadioButton;
+    rbWindSpeed: TRadioButton;
+    rbTemperature: TRadioButton;
+    rbHumidity: TRadioButton;
     BatteryBox: TScrollBox;
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
@@ -42,7 +43,7 @@ procedure TWallShifterForm.FormCreate(Sender: TObject);
 var
     i: Integer;
   begin
-    // Battery Percentage
+    // Battery Percentage -
       i:= 100;
       while i >= 0 do begin
         CreateImageButtonFrame('Battery' + i.ToString(), i.ToString() + '%', BatteryBox);

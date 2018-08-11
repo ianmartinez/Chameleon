@@ -1,12 +1,12 @@
 object WallShifterForm: TWallShifterForm
   Left = 0
-  Height = 703
+  Height = 736
   Top = 0
   Width = 973
   ActiveControl = rbNone
   BorderStyle = bsDialog
   Caption = 'WallShifter 1.0'
-  ClientHeight = 703
+  ClientHeight = 736
   ClientWidth = 973
   DesignTimePPI = 192
   OnCreate = FormCreate
@@ -82,7 +82,7 @@ object WallShifterForm: TWallShifterForm
   object rbHeatIndex: TRadioButton
     Left = 24
     Height = 36
-    Top = 664
+    Top = 656
     Width = 151
     Caption = 'Heat Index'
     TabOrder = 8
