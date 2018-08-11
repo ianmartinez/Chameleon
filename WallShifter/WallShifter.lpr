@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, MainForm, imagebutton;
+  Forms, MainForm, imagebutton, WeatherReader;
 
 {$R *.res}
 

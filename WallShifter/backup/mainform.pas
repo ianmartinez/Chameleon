@@ -22,7 +22,6 @@ type
     RadioButton7: TRadioButton;
     BatteryBox: TScrollBox;
     procedure FormCreate(Sender: TObject);
-    procedure ScrollBox1Click(Sender: TObject);
     function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
   private
 

@@ -12,7 +12,6 @@ uses
 {$R *.res}
 
 begin
-  Application.Scaled := True;
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TWallShifterForm, WallShifterForm);

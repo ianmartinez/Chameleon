@@ -26,6 +26,7 @@ object ImageButtonFrame: TImageButtonFrame
     BorderSpacing.Bottom = 3
     BorderSpacing.Around = 1
     BorderSpacing.InnerBorder = 1
+    Center = True
     Proportional = True
     Stretch = True
     Transparent = True

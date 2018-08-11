@@ -3,7 +3,7 @@ object WallShifterForm: TWallShifterForm
   Height = 703
   Top = 0
   Width = 973
-  ActiveControl = RadioButton1
+  ActiveControl = rbNone
   BorderStyle = bsDialog
   Caption = 'WallShifter 1.0'
   ClientHeight = 703
@@ -11,7 +11,7 @@ object WallShifterForm: TWallShifterForm
   DesignTimePPI = 192
   OnCreate = FormCreate
   Visible = False
-  object RadioButton1: TRadioButton
+  object rbNone: TRadioButton
     Left = 24
     Height = 36
     Top = 24
@@ -21,7 +21,7 @@ object WallShifterForm: TWallShifterForm
     TabOrder = 6
     TabStop = True
   end
-  object RadioButton2: TRadioButton
+  object rbBattery: TRadioButton
     Left = 24
     Height = 36
     Top = 88
@@ -29,7 +29,7 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Battery'
     TabOrder = 0
   end
-  object RadioButton3: TRadioButton
+  object rbTime: TRadioButton
     Left = 24
     Height = 36
     Top = 360
@@ -37,7 +37,7 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Time'
     TabOrder = 1
   end
-  object RadioButton4: TRadioButton
+  object rbConditions: TRadioButton
     Left = 24
     Height = 36
     Top = 416
@@ -45,7 +45,7 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Conditions'
     TabOrder = 2
   end
-  object RadioButton5: TRadioButton
+  object rbWindSpeed: TRadioButton
     Left = 24
     Height = 36
     Top = 472
@@ -53,7 +53,7 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Wind Speed'
     TabOrder = 3
   end
-  object RadioButton6: TRadioButton
+  object rbTemperature: TRadioButton
     Left = 24
     Height = 36
     Top = 536
@@ -61,7 +61,7 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Temperature'
     TabOrder = 4
   end
-  object RadioButton7: TRadioButton
+  object rbHumidity: TRadioButton
     Left = 24
     Height = 36
     Top = 600
@@ -78,5 +78,13 @@ object WallShifterForm: TWallShifterForm
     VertScrollBar.Page = 1
     VertScrollBar.Visible = False
     TabOrder = 7
+  end
+  object rbHeatIndex: TRadioButton
+    Left = 24
+    Height = 36
+    Top = 664
+    Width = 151
+    Caption = 'Heat Index'
+    TabOrder = 8
   end
 end

@@ -1,4 +1,4 @@
-unit imagebutton;
+unit ImageButton;
 
 {$mode objfpc}{$H+}
 

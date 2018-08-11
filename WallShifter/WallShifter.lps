@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="WallShifter.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="44" Y="8"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,10 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="31"/>
-        <CursorPos X="53" Y="24"/>
-        <UsageCount Value="35"/>
+        <TopLine Value="7"/>
+        <CursorPos X="33" Y="41"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -33,9 +32,10 @@
         <ComponentName Value="ImageButtonFrame"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="15" Y="50"/>
-        <UsageCount Value="35"/>
+        <UnitName Value="ImageButton"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="76" Y="8"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -44,136 +44,146 @@
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="6"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit3>
       <Unit4>
         <Filename Value="customcontrols.pas"/>
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="16"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="weatherreader.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WeatherReader"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="77" Y="14"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit5>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="45" Column="41" TopLine="13"/>
+        <Filename Value="imagebutton.pas"/>
+        <Caret Line="21" Column="10"/>
       </Position1>
       <Position2>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="15" Column="34"/>
+        <Caret Line="14" Column="74"/>
       </Position2>
       <Position3>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="26" Column="19"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="32" Column="35" TopLine="14"/>
       </Position3>
       <Position4>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="15" Column="75"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="45" Column="42" TopLine="14"/>
       </Position4>
       <Position5>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="17" Column="70"/>
+        <Caret Line="22" Column="34"/>
       </Position5>
       <Position6>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="28" Column="37"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="52" Column="17" TopLine="20"/>
       </Position6>
       <Position7>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="21" Column="10"/>
+        <Caret Line="25" Column="32" TopLine="3"/>
       </Position7>
       <Position8>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="14" Column="74"/>
+        <Caret Line="26" Column="31"/>
       </Position8>
       <Position9>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="32" Column="35" TopLine="14"/>
+        <Filename Value="imagebutton.pas"/>
+        <Caret Line="20" Column="26"/>
       </Position9>
       <Position10>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="45" Column="42" TopLine="14"/>
+        <Filename Value="imagebutton.pas"/>
+        <Caret Line="31" Column="17" TopLine="14"/>
       </Position10>
       <Position11>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="22" Column="34"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="52" Column="48" TopLine="27"/>
       </Position11>
       <Position12>
         <Filename Value="mainform.pas"/>
-        <Caret Line="52" Column="17" TopLine="20"/>
+        <Caret Line="48" Column="83" TopLine="23"/>
       </Position12>
       <Position13>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="25" Column="32" TopLine="3"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="45" Column="74" TopLine="27"/>
       </Position13>
       <Position14>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="26" Column="31"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="44" Column="48" TopLine="24"/>
       </Position14>
       <Position15>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="20" Column="26"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="47" Column="62" TopLine="26"/>
       </Position15>
       <Position16>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="31" Column="17" TopLine="14"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="55" Column="21" TopLine="20"/>
       </Position16>
       <Position17>
         <Filename Value="mainform.pas"/>
-        <Caret Line="52" Column="48" TopLine="27"/>
+        <Caret Line="57" Column="27" TopLine="27"/>
       </Position17>
       <Position18>
         <Filename Value="mainform.pas"/>
-        <Caret Line="48" Column="83" TopLine="23"/>
+        <Caret Line="27" Column="98" TopLine="27"/>
       </Position18>
       <Position19>
         <Filename Value="mainform.pas"/>
-        <Caret Line="45" Column="74" TopLine="27"/>
+        <Caret Line="49" Column="69" TopLine="28"/>
       </Position19>
       <Position20>
         <Filename Value="mainform.pas"/>
-        <Caret Line="44" Column="48" TopLine="24"/>
+        <Caret Line="45" Column="91" TopLine="28"/>
       </Position20>
       <Position21>
         <Filename Value="mainform.pas"/>
-        <Caret Line="47" Column="62" TopLine="26"/>
+        <Caret Line="53" Column="24" TopLine="15"/>
       </Position21>
       <Position22>
         <Filename Value="mainform.pas"/>
-        <Caret Line="55" Column="21" TopLine="20"/>
+        <Caret Line="51" Column="40" TopLine="30"/>
       </Position22>
       <Position23>
         <Filename Value="mainform.pas"/>
-        <Caret Line="57" Column="27" TopLine="27"/>
+        <Caret Line="50" Column="40" TopLine="29"/>
       </Position23>
       <Position24>
         <Filename Value="mainform.pas"/>
-        <Caret Line="27" Column="98" TopLine="27"/>
+        <Caret Line="71" Column="13" TopLine="32"/>
       </Position24>
       <Position25>
         <Filename Value="mainform.pas"/>
-        <Caret Line="49" Column="69" TopLine="28"/>
+        <Caret Line="40" Column="33" TopLine="6"/>
       </Position25>
       <Position26>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="45" Column="91" TopLine="28"/>
+        <Filename Value="weatherreader.pas"/>
+        <Caret Line="14" Column="5"/>
       </Position26>
       <Position27>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="53" Column="24" TopLine="15"/>
+        <Filename Value="weatherreader.pas"/>
+        <Caret Line="10" Column="9"/>
       </Position27>
       <Position28>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="51" Column="40" TopLine="30"/>
+        <Filename Value="weatherreader.pas"/>
+        <Caret Line="9" Column="21"/>
       </Position28>
       <Position29>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="50" Column="40" TopLine="29"/>
+        <Filename Value="weatherreader.pas"/>
+        <Caret Line="14" Column="20"/>
       </Position29>
       <Position30>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="71" Column="13" TopLine="32"/>
+        <Filename Value="imagebutton.pas"/>
+        <Caret Line="45" Column="25" TopLine="16"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
