@@ -4,6 +4,7 @@ object WallShifterForm: TWallShifterForm
   Top = 0
   Width = 1448
   ActiveControl = rbNone
+  AutoScroll = True
   Caption = 'WallShifter 1.0'
   ClientHeight = 1208
   ClientWidth = 1448
@@ -5240,10 +5241,10 @@ object WallShifterForm: TWallShifterForm
     Left = 144
     Height = 57
     Top = 8
-    Width = 271
+    Width = 205
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
-    Caption = 'WallShifter 1.0'
+    Caption = 'WallShifter'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -48
     Font.Name = 'Arial Narrow'
@@ -5281,6 +5282,7 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     Caption = 'About...'
+    OnClick = btnAboutClick
     TabOrder = 2
   end
 end

@@ -4933,6 +4933,7 @@ object WallShifterForm: TWallShifterForm
       TabOrder = 11
     end
     object HumidityBox: TScrollBox
+      AnchorSideLeft.Control = rbHumidity
       AnchorSideTop.Control = rbHumidity
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = ScrollBox1
@@ -4949,7 +4950,7 @@ object WallShifterForm: TWallShifterForm
       HorzScrollBar.Tracking = True
       VertScrollBar.Page = 1
       VertScrollBar.Visible = False
-      Anchors = [akTop, akRight, akBottom]
+      Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Top = 8
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 12
@@ -5239,10 +5240,10 @@ object WallShifterForm: TWallShifterForm
     Left = 144
     Height = 57
     Top = 8
-    Width = 271
+    Width = 205
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
-    Caption = 'WallShifter 1.0'
+    Caption = 'WallShifter'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -48
     Font.Name = 'Arial Narrow'
@@ -5280,6 +5281,7 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     Caption = 'About...'
+    OnClick = btnAboutClick
     TabOrder = 2
   end
 end

@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ImageButton, WeatherReader, Settings;
+  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ImageButton, WeatherReader, Settings,
+  AboutForm;
 
 type
 
@@ -33,6 +34,7 @@ type
     rbHumidity: TRadioButton;
     BatteryBox: TScrollBox;
     ScrollBox1: TScrollBox;
+    procedure btnAboutClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
     procedure ScrollBox1Click(Sender: TObject);
@@ -61,6 +63,11 @@ begin
     CreateImageButtonFrame(WriteSafeString('Battery' + BatteryModes[i]), BatteryModes[i], BatteryBox);
     Dec(i);
   end;
+end;
+
+procedure TWallShifterForm.btnAboutClick(Sender: TObject);
+begin
+  AboutDialog.ShowModal();
 end;
 
 function TWallShifterForm.CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
