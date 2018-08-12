@@ -7,11 +7,12 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, MainForm, imagebutton, WeatherReader, Settings, AboutForm;
+  Forms, MainForm, imagebutton, WeatherReader, Settings, AboutForm, VersionSupport;
 
 {$R *.res}
 
 begin
+  Application.Scaled := True;
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TWallShifterForm, WallShifterForm);

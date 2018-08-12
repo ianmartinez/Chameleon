@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ComCtrls, ImageButton,
-  WeatherReader, Settings, AboutForm;
+  WeatherReader, Settings, AboutForm, VersionSupport;
 
 type
 
@@ -19,11 +19,12 @@ type
     gbInterval: TGroupBox;
     gbWallpapers: TGroupBox;
     Image1: TImage;
-    Label1: TLabel;
+    lblProgramName: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     PageControl1: TPageControl;
     gbShiftBy: TRadioGroup;
+    pnlTop: TPanel;
     rbHeatIndex: TRadioButton;
     rbNone: TRadioButton;
     rbBattery: TRadioButton;
@@ -44,7 +45,6 @@ type
     procedure btnAboutClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
-    procedure ScrollBox1Click(Sender: TObject);
   private
 
   public
@@ -70,6 +70,8 @@ begin
     CreateImageButtonFrame(WriteSafeString('Battery' + BatteryModes[i]), BatteryModes[i], BatteryBox);
     Dec(i);
   end;
+
+  lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
 end;
 
 procedure TWallShifterForm.btnAboutClick(Sender: TObject);
@@ -94,11 +96,6 @@ begin
   end;
 
   Result := ImageButtonFrame;
-end;
-
-procedure TWallShifterForm.ScrollBox1Click(Sender: TObject);
-begin
-
 end;
 
 end.
