@@ -1,71 +1,97 @@
 object ImageButtonFrame: TImageButtonFrame
   Left = 0
-  Height = 159
+  Height = 201
   Top = 0
-  Width = 133
-  ClientHeight = 159
-  ClientWidth = 133
+  Width = 250
+  ClientHeight = 201
+  ClientWidth = 250
+  Color = clNone
+  Constraints.MinWidth = 250
+  ParentColor = False
   ParentFont = False
   TabOrder = 0
-  object imgPreview: TImage
+  object pnlMain: TPanel
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = lblTitle
-    AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = btnPickImage
-    Left = 4
-    Height = 78
-    Top = 44
-    Width = 125
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Left = 3
-    BorderSpacing.Top = 3
-    BorderSpacing.Right = 3
-    BorderSpacing.Bottom = 3
-    BorderSpacing.Around = 1
-    BorderSpacing.InnerBorder = 1
-    Center = True
-    Proportional = True
-    Stretch = True
-    Transparent = True
-  end
-  object btnPickImage: TButton
-    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 3
-    Height = 25
-    Top = 126
-    Width = 127
-    Anchors = [akLeft, akRight, akBottom]
-    AutoSize = True
+    Height = 195
+    Top = 3
+    Width = 244
+    Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
+    BorderSpacing.Top = 3
     BorderSpacing.Right = 3
-    BorderSpacing.Bottom = 8
-    Caption = 'Pick Image...'
-    OnClick = btnPickImageClick
-    TabOrder = 0
-  end
-  object lblTitle: TLabel
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = Owner
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    Left = 3
-    Height = 32
-    Top = 8
-    Width = 127
-    Alignment = taCenter
-    Anchors = [akTop, akLeft, akRight]
-    AutoSize = False
-    BorderSpacing.Left = 3
-    BorderSpacing.Top = 8
-    BorderSpacing.Right = 3
-    Caption = 'Image'
+    BorderSpacing.Bottom = 3
+    BevelInner = bvLowered
+    ClientHeight = 195
+    ClientWidth = 244
+    Color = clNone
     ParentColor = False
+    TabOrder = 0
+    object imgPreview: TImage
+      AnchorSideLeft.Control = pnlMain
+      AnchorSideTop.Control = lblTitle
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = pnlMain
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = btnPickImage
+      Left = 6
+      Height = 110
+      Top = 46
+      Width = 232
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 3
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 3
+      BorderSpacing.Bottom = 3
+      BorderSpacing.Around = 1
+      BorderSpacing.InnerBorder = 1
+      Center = True
+      Proportional = True
+      Stretch = True
+      Transparent = True
+    end
+    object btnPickImage: TButton
+      AnchorSideLeft.Control = pnlMain
+      AnchorSideRight.Control = pnlMain
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = pnlMain
+      AnchorSideBottom.Side = asrBottom
+      Left = 5
+      Height = 25
+      Top = 160
+      Width = 234
+      Anchors = [akLeft, akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 3
+      BorderSpacing.Right = 3
+      BorderSpacing.Bottom = 8
+      Caption = 'Pick Image...'
+      OnClick = btnPickImageClick
+      TabOrder = 0
+    end
+    object lblTitle: TLabel
+      AnchorSideLeft.Control = pnlMain
+      AnchorSideTop.Control = pnlMain
+      AnchorSideRight.Control = pnlMain
+      AnchorSideRight.Side = asrBottom
+      Left = 5
+      Height = 32
+      Top = 10
+      Width = 234
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      BorderSpacing.Left = 3
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 3
+      Caption = 'Image'
+      ParentColor = False
+    end
   end
   object dlgOpenPicture: TOpenPictureDialog
     Filter = 'Image files (*.png;*.bmp;*.jpeg;*.jpg;*.gif)|*.png;*.bmp;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*'

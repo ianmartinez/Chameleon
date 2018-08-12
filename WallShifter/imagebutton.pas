@@ -16,6 +16,7 @@ type
     imgPreview: TImage;
     dlgOpenPicture: TOpenPictureDialog;
     lblTitle: TLabel;
+    pnlMain: TPanel;
     procedure btnPickImageClick(Sender: TObject);
     function GetTitle(): string;
     procedure SetTitle(Value: string);
