@@ -11,6 +11,8 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True/PM"/>
+        <TextName Value="AtlinUtils.WallShifter"/>
+        <TextDesc Value="Dynamically change desktop wallpapers"/>
       </XPManifest>
       <Icon Value="0"/>
     </General>

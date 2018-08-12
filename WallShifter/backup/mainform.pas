@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ImageButton, WeatherReader, Settings,
-  AboutForm;
+  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ComCtrls, ImageButton,
+  WeatherReader, Settings, AboutForm;
 
 type
 
@@ -16,14 +16,14 @@ type
   TWallShifterForm = class(TForm)
     btnSettings: TButton;
     btnAbout: TButton;
+    gbInterval: TGroupBox;
+    gbWallpapers: TGroupBox;
     Image1: TImage;
     Label1: TLabel;
-    TimeBox: TScrollBox;
-    ConditionsBox: TScrollBox;
-    TemperatureBox: TScrollBox;
-    HumidityBox: TScrollBox;
-    WindspeedBox: TScrollBox;
-    HeatIndexBox: TScrollBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    PageControl1: TPageControl;
+    gbShiftBy: TRadioGroup;
     rbHeatIndex: TRadioButton;
     rbNone: TRadioButton;
     rbBattery: TRadioButton;
@@ -33,7 +33,14 @@ type
     rbTemperature: TRadioButton;
     rbHumidity: TRadioButton;
     BatteryBox: TScrollBox;
-    ScrollBox1: TScrollBox;
+    spInterval: TSpinEdit;
+    tsBattery: TTabSheet;
+    tsTime: TTabSheet;
+    tsConditions: TTabSheet;
+    tsWindSpeed: TTabSheet;
+    tsTemperature: TTabSheet;
+    tsHeatIndex: TTabSheet;
+    tsHumidity: TTabSheet;
     procedure btnAboutClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;

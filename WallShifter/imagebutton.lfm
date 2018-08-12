@@ -1,11 +1,10 @@
 object ImageButtonFrame: TImageButtonFrame
   Left = 0
-  Height = 215
+  Height = 159
   Top = 0
-  Width = 210
-  ClientHeight = 215
-  ClientWidth = 210
-  DesignTimePPI = 192
+  Width = 133
+  ClientHeight = 159
+  ClientWidth = 133
   ParentFont = False
   TabOrder = 0
   object imgPreview: TImage
@@ -16,9 +15,9 @@ object ImageButtonFrame: TImageButtonFrame
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = btnPickImage
     Left = 4
-    Height = 117
+    Height = 78
     Top = 44
-    Width = 202
+    Width = 125
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -38,9 +37,9 @@ object ImageButtonFrame: TImageButtonFrame
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 3
-    Height = 42
-    Top = 165
-    Width = 204
+    Height = 25
+    Top = 126
+    Width = 127
     Anchors = [akLeft, akRight, akBottom]
     AutoSize = True
     BorderSpacing.Left = 3
@@ -58,7 +57,7 @@ object ImageButtonFrame: TImageButtonFrame
     Left = 3
     Height = 32
     Top = 8
-    Width = 204
+    Width = 127
     Alignment = taCenter
     Anchors = [akTop, akLeft, akRight]
     AutoSize = False
