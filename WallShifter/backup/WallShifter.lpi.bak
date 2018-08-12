@@ -30,7 +30,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="5">
       <Unit0>
         <Filename Value="WallShifter.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -56,6 +56,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="WeatherReader"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="settings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Settings"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
