@@ -69,10 +69,31 @@ procedure TWallShifterForm.FormCreate(Sender: TObject);
 var
   i: Integer;
 begin
-  // Battery Percentage
+  // Battery percentage
   i:= high(BatteryModes);
   while i >= low(BatteryModes) do begin
     CreateImageButtonFrame(WriteSafeString('Battery' + BatteryModes[i]), BatteryModes[i], BatteryBox);
+    Dec(i);     
+  end;
+
+  // Time of day
+  i:= high(TimeModes);
+  while i >= low(TimeModes) do begin
+    CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox);
+    Dec(i);
+  end;
+
+  // Wind speed
+  i:= high(WindSpeedModes);
+  while i >= low(WindSpeedModes) do begin
+    CreateImageButtonFrame(WriteSafeString('WindSpeed' + WindSpeedModes[i]), WindSpeedModes[i], WindSpeedBox);
+    Dec(i);
+  end;
+                 
+  // Temperature
+  i:= high(TemperatureModes);
+  while i >= low(TemperatureModes) do begin
+    CreateImageButtonFrame(WriteSafeString('Temperature' + TemperatureModes[i]), TemperatureModes[i], TemperatureBox);
     Dec(i);
   end;
 
