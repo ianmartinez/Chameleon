@@ -4959,13 +4959,13 @@ object WallShifterForm: TWallShifterForm
       Height = 266
       Top = 8
       Width = 543
-      ActivePage = tsBattery
+      ActivePage = tsTime
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
-      TabIndex = 0
+      TabIndex = 1
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
@@ -4998,21 +4998,177 @@ object WallShifterForm: TWallShifterForm
       end
       object tsTime: TTabSheet
         Caption = 'Time'
+        ClientHeight = 238
+        ClientWidth = 535
+        object TimeBox: TScrollBox
+          AnchorSideLeft.Control = tsBattery
+          AnchorSideTop.Control = tsBattery
+          AnchorSideRight.Control = tsBattery
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = tsBattery
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 222
+          Top = 8
+          Width = 519
+          HorzScrollBar.Increment = 1
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Smooth = True
+          HorzScrollBar.Tracking = True
+          VertScrollBar.Page = 1
+          VertScrollBar.Visible = False
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          TabOrder = 0
+        end
       end
       object tsConditions: TTabSheet
         Caption = 'Weather Conditions'
+        ClientHeight = 238
+        ClientWidth = 535
+        object ConditionsBox: TScrollBox
+          AnchorSideLeft.Control = tsBattery
+          AnchorSideTop.Control = tsBattery
+          AnchorSideRight.Control = tsBattery
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = tsBattery
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 222
+          Top = 8
+          Width = 519
+          HorzScrollBar.Increment = 1
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Smooth = True
+          HorzScrollBar.Tracking = True
+          VertScrollBar.Page = 1
+          VertScrollBar.Visible = False
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          TabOrder = 0
+        end
       end
       object tsWindSpeed: TTabSheet
         Caption = 'Wind Speed'
+        ClientHeight = 238
+        ClientWidth = 535
+        object WindSpeedBox: TScrollBox
+          AnchorSideLeft.Control = tsBattery
+          AnchorSideTop.Control = tsBattery
+          AnchorSideRight.Control = tsBattery
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = tsBattery
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 222
+          Top = 8
+          Width = 519
+          HorzScrollBar.Increment = 1
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Smooth = True
+          HorzScrollBar.Tracking = True
+          VertScrollBar.Page = 1
+          VertScrollBar.Visible = False
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          TabOrder = 0
+        end
       end
       object tsTemperature: TTabSheet
         Caption = 'Temperature'
+        ClientHeight = 238
+        ClientWidth = 535
+        object TemperatureBox: TScrollBox
+          AnchorSideLeft.Control = tsBattery
+          AnchorSideTop.Control = tsBattery
+          AnchorSideRight.Control = tsBattery
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = tsBattery
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 222
+          Top = 8
+          Width = 519
+          HorzScrollBar.Increment = 1
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Smooth = True
+          HorzScrollBar.Tracking = True
+          VertScrollBar.Page = 1
+          VertScrollBar.Visible = False
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          TabOrder = 0
+        end
       end
       object tsHumidity: TTabSheet
         Caption = 'Humidity'
+        ClientHeight = 238
+        ClientWidth = 535
+        object HumidityBox: TScrollBox
+          AnchorSideLeft.Control = tsBattery
+          AnchorSideTop.Control = tsBattery
+          AnchorSideRight.Control = tsBattery
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = tsBattery
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 222
+          Top = 8
+          Width = 519
+          HorzScrollBar.Increment = 1
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Smooth = True
+          HorzScrollBar.Tracking = True
+          VertScrollBar.Page = 1
+          VertScrollBar.Visible = False
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          TabOrder = 0
+        end
       end
       object tsHeatIndex: TTabSheet
         Caption = 'Heat Index'
+        ClientHeight = 238
+        ClientWidth = 535
+        object HeatIndexBox: TScrollBox
+          AnchorSideLeft.Control = tsBattery
+          AnchorSideTop.Control = tsBattery
+          AnchorSideRight.Control = tsBattery
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = tsBattery
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 222
+          Top = 8
+          Width = 519
+          HorzScrollBar.Increment = 1
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Smooth = True
+          HorzScrollBar.Tracking = True
+          VertScrollBar.Page = 1
+          VertScrollBar.Visible = False
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          TabOrder = 0
+        end
       end
     end
   end
@@ -5223,38 +5379,20 @@ object WallShifterForm: TWallShifterForm
       AnchorSideLeft.Control = Image1
       AnchorSideLeft.Side = asrBottom
       Left = 112
-      Height = 31
+      Height = 25
       Top = 8
-      Width = 115
+      Width = 92
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       Caption = 'WallShifter'
       Font.CharSet = ANSI_CHARSET
-      Font.Height = -27
+      Font.Height = -21
       Font.Name = 'Arial Narrow'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
-    end
-    object btnSettings: TButton
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = pnlTop
-      AnchorSideRight.Control = btnAbout
-      Left = 402
-      Height = 25
-      Top = 8
-      Width = 77
-      Anchors = [akTop, akRight]
-      AutoSize = True
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 8
-      BorderSpacing.Right = 8
-      BorderSpacing.Bottom = 8
-      Caption = 'Settings...'
-      Constraints.MinHeight = 25
-      TabOrder = 0
     end
     object btnAbout: TButton
       AnchorSideLeft.Side = asrBottom
@@ -5275,7 +5413,7 @@ object WallShifterForm: TWallShifterForm
       Caption = 'About...'
       Constraints.MinHeight = 25
       OnClick = btnAboutClick
-      TabOrder = 1
+      TabOrder = 0
     end
   end
 end

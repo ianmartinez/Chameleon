@@ -14,7 +14,12 @@ type
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
-    btnSettings: TButton;
+    HeatIndexBox: TScrollBox;
+    HumidityBox: TScrollBox;
+    TemperatureBox: TScrollBox;
+    WindSpeedBox: TScrollBox;
+    ConditionsBox: TScrollBox;
+    TimeBox: TScrollBox;
     btnAbout: TButton;
     gbInterval: TGroupBox;
     gbWallpapers: TGroupBox;

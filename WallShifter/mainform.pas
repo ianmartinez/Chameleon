@@ -14,6 +14,12 @@ type
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
+    HeatIndexBox: TScrollBox;
+    HumidityBox: TScrollBox;
+    TemperatureBox: TScrollBox;
+    WindSpeedBox: TScrollBox;
+    ConditionsBox: TScrollBox;
+    TimeBox: TScrollBox;
     btnAbout: TButton;
     gbInterval: TGroupBox;
     gbWallpapers: TGroupBox;
@@ -67,6 +73,13 @@ begin
   i:= high(BatteryModes);
   while i >= low(BatteryModes) do begin
     CreateImageButtonFrame(WriteSafeString('Battery' + BatteryModes[i]), BatteryModes[i], BatteryBox);
+    Dec(i);     
+  end;
+
+  // Time of Day
+  i:= high(TimeModes);
+  while i >= low(TimeModes) do begin
+    CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox);
     Dec(i);
   end;
 
