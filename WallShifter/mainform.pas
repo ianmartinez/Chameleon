@@ -72,52 +72,38 @@ var
   i: Integer;
 begin
   // Battery percentage
-  i:= high(PercentageModes);
-  while i >= low(PercentageModes) do begin
+  for i:= high(PercentageModes) downto low(PercentageModes) do begin
     CreateImageButtonFrame(WriteSafeString('Battery' + PercentageModes[i]), PercentageModes[i], BatteryBox);
-    Dec(i);     
   end;
 
   // Time of day
-  i:= high(TimeModes);
-  while i >= low(TimeModes) do begin
+  for i:= high(TimeModes) downto low(TimeModes) do begin
     CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox);
-    Dec(i);
   end;
 
   // Weather Conditions
-  i:= high(WeatherConditions);
-  while i >= low(WeatherConditions) do begin
+  for i:= high(WeatherConditions) downto low(WeatherConditions) do begin
     CreateImageButtonFrame(WriteSafeString('WeatherConditions' + WeatherConditions[i]), WeatherConditions[i], ConditionsBox);
-    Dec(i);
   end;
 
   // Wind speed
-  i:= high(WindSpeedModes);
-  while i >= low(WindSpeedModes) do begin
+  for i:= high(WindSpeedModes) downto low(WindSpeedModes) do begin
     CreateImageButtonFrame(WriteSafeString('WindSpeed' + WindSpeedModes[i]), WindSpeedModes[i], WindSpeedBox);
-    Dec(i);
   end;
                  
   // Temperature
-  i:= high(TemperatureModes);
-  while i >= low(TemperatureModes) do begin
+  for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame(WriteSafeString('Temperature' + TemperatureModes[i]), TemperatureModes[i], TemperatureBox);
-    Dec(i);
   end;
 
   // Humidity
-  i:= high(PercentageModes);
-  while i >= low(PercentageModes) do begin
+  for i:= high(PercentageModes) downto low(PercentageModes) do begin
     CreateImageButtonFrame(WriteSafeString('Humidity' + PercentageModes[i]), PercentageModes[i], HumidityBox);
-    Dec(i);
   end;
 
   // Heat Index
-  i:= high(TemperatureModes);
-  while i >= low(TemperatureModes) do begin
+  for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame(WriteSafeString('HeatIndex' + TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
-    Dec(i);
   end;
 
   lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;

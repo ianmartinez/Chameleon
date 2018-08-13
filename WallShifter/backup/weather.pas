@@ -19,18 +19,23 @@ interface
 	   XmlFile: string;
   end;
 
-  type StringArray = array of string;
   type WeatherStationArray = array of WeatherStation;
 
   function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
-  function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;          
-  function StringSplit(Source: string; Seperator: char): StringArray;
-  function StringParts(Source: string; Seperator: char): integer;
+  function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;
 
 implementation
   uses
     Classes, SysUtils;
+
+  procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
+  begin
+     ListOfStrings.Clear;
+     ListOfStrings.Delimiter       := Delimiter;
+     ListOfStrings.StrictDelimiter := True; // Requires D2006 or newer.
+     ListOfStrings.DelimitedText   := Str;
+  end;
 
   function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
   begin
@@ -71,17 +76,25 @@ implementation
       'Haze');
   var
     i: Integer;
-    ConditionNames: StringArray;
+    ConditionNames: TStringList;
     ConditionNamePos: Integer;
+    NormalizedWeatherCondition: string;
   begin
+    NormalizedWeatherCondition := 'Invalid';
 
-    for i := low(WeatherConditions) to high(WeatherConditions) do
-      ConditionNames := StringSplit(WeatherConditions[i], '|');
-      for ConditionNamePos := low(ConditionNames) to high(ConditionNames) do
-        if(CompareStr(ConditionNames[ConditionNamePos], WeatherConditions[i]) = 0) then
-          Result := ConditionNames[i];
+    for i := low(WeatherConditions) to high(WeatherConditions) do begin
+      ConditionNames := TStringList.Create;
+      try
+        SplitString('|', WeatherConditionsIrregular[i], ConditionNames);
+        for ConditionNamePos := 0 to ConditionNames.Count - 1 do
+          if(LowerCase(WeatherCondition) = LowerCase(ConditionNames[ConditionNamePos])) then
+            NormalizedWeatherCondition := WeatherConditions[i];
+      finally
+        ConditionNames.Free;
+      end;
+    end;
 
-    Result := '';
+    Result := NormalizedWeatherCondition;
   end;
 
   (*
@@ -111,46 +124,6 @@ implementation
 
     Result := Round(c1 + c2*t + c3*r + c4*t*r + c5*sqr(t) + c6*sqr(r) +
               c7*sqr(t)*r + c8*t*sqr(r) + c9*sqr(t)*sqr(r));
-  end;
-
-  function StringSplit(Source: string; Seperator: char): StringArray;
-  var
-    Count, Counter: integer;
-    Strings: array of string;
-  begin
-    //Get parts count.
-    Count := StringParts(Source, Seperator);
-
-    //Set length of array.
-    SetLength(Strings, Count + 1);
-
-    for Counter := 0 to Count do
-    begin
-      //Fill array slots with split data.
-      Strings[Counter] := StringPart(Source, Seperator, Counter);
-    end;
-
-    //Return array
-    Result := Strings;
-  end;
-
-  function StringParts(Source: string; Seperator: char): integer;
-  var
-    Counter, Count: integer;
-  begin
-
-    Count := 0;
-
-    if Source = '' then
-      Result := 0;
-
-    for Counter := 0 to Length(Source) do
-    begin
-      if Source[Counter] = Seperator then
-        Inc(Count);
-    end;
-
-    Result := Count;
   end;
 end.
 

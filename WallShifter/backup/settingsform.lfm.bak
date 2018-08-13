@@ -7,5 +7,31 @@ object SettingsDialog: TSettingsDialog
   ClientHeight = 240
   ClientWidth = 320
   OnCreate = FormCreate
+  Position = poOwnerFormCenter
   Visible = False
+  object Button1: TButton
+    Left = 229
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'OK'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 16
+    Height = 23
+    Top = 16
+    Width = 288
+    TabOrder = 1
+    Text = 'Edit1'
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
 end
