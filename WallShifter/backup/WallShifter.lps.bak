@@ -85,14 +85,14 @@
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="6"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit7>
       <Unit8>
         <Filename Value="customcontrols.pas"/>
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="16"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit8>
       <Unit9>
         <Filename Value="aboutdialog.pas"/>
@@ -101,7 +101,7 @@
         <UnitName Value="AboutDialog"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="28" Y="18"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="19"/>
       </Unit9>
       <Unit10>
         <Filename Value="C:\lazarus\lcl\interfacebase.pp"/>
@@ -109,21 +109,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="306"/>
         <CursorPos X="3" Y="122"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit10>
       <Unit11>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\resh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="42"/>
         <CursorPos X="21" Y="53"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit11>
       <Unit12>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-res\src\versiontypes.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos X="3" Y="37"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit12>
       <Unit13>
         <Filename Value="weather.pas"/>
@@ -131,8 +131,8 @@
         <UnitName Value="Weather"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="66"/>
-        <CursorPos X="16" Y="84"/>
+        <TopLine Value="26"/>
+        <CursorPos X="8" Y="50"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit13>
@@ -145,7 +145,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="14"/>
         <CursorPos X="55" Y="29"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit14>
@@ -273,20 +273,4 @@
       </Position30>
     </JumpHistory>
   </ProjectSession>
-  <Debugging>
-    <Watches Count="4">
-      <Item1>
-        <Expression Value="ConditionNamePos"/>
-      </Item1>
-      <Item2>
-        <Expression Value="i"/>
-      </Item2>
-      <Item3>
-        <Expression Value="ConditionNames.Strings[ConditionNamePos]"/>
-      </Item3>
-      <Item4>
-        <Expression Value="ConditionNames.Count"/>
-      </Item4>
-    </Watches>
-  </Debugging>
 </CONFIG>

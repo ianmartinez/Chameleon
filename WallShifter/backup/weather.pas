@@ -19,9 +19,20 @@ interface
 	   XmlFile: string;
   end;
 
+  type WeatherData = record
+	   Conditions: string;
+	   WindSpeed: integer;    
+	   WindDirection: integer;
+	   Temperature: integer;
+	   Humidity: integer;  
+	   Visibility: integer;
+     HeatIndex: integer;
+  end;
+
   type WeatherStationArray = array of WeatherStation;
 
-  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
+  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray; 
+  function GetWeatherData(Station: WeatherStation) : WeatherData;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;
 
@@ -37,6 +48,13 @@ implementation
      ListOfStrings.DelimitedText   := Str;
   end;
 
+  function GetWeatherData(Station: WeatherStation) : WeatherData;
+  var
+    StationData: WeatherData;
+  begin
+    Result := StationData;
+  end;
+
   function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
   begin
     Result := nil;
@@ -44,8 +62,11 @@ implementation
   
   (*
     Many weather conditions returned from weather.gov can be described
-    dozens of different ways. This function normalizes them to match those
-    in the array WeatherConditions declared above
+    dozens of different ways:
+      http://w1.weather.gov/xml/current_obs/weather.php
+
+    This function normalizes them to match those in the array WeatherConditions
+    declared above.
   *)
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   const

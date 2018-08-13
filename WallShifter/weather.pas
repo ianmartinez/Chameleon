@@ -19,11 +19,22 @@ interface
 	   XmlFile: string;
   end;
 
+  type WeatherData = record
+	   Conditions: string;
+	   WindSpeed: integer;    
+	   WindDirection: integer;
+	   Temperature: integer;
+	   Humidity: integer;  
+	   Visibility: integer;
+     HeatIndex: integer;
+  end;
+
   type WeatherStationArray = array of WeatherStation;
 
-  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
+  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray; 
+  function GetWeatherData(Station: WeatherStation) : WeatherData;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
-  function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;
+  function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
 
 implementation
   uses
@@ -35,6 +46,13 @@ implementation
      ListOfStrings.Delimiter       := Delimiter;
      ListOfStrings.StrictDelimiter := True; // Requires D2006 or newer.
      ListOfStrings.DelimitedText   := Str;
+  end;
+
+  function GetWeatherData(Station: WeatherStation) : WeatherData;
+  var
+    StationData: WeatherData;
+  begin
+    Result := StationData;
   end;
 
   function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
@@ -78,9 +96,9 @@ implementation
       'Dust|Low Drifting Dust|Blowing Dust|Sand|Blowing Sand|Low Drifting Sand|Dust/Sand Whirls|Dust/Sand Whirls in Vicinity|Dust Storm|Heavy Dust Storm|Dust Storm in Vicinity|Sand Storm|Heavy Sand Storm|Sand Storm in Vicinity',
       'Haze');
   var
-    i: Integer;
+    i: integer;
     ConditionNames: TStringList;
-    ConditionNamePos: Integer;
+    ConditionNamePos: integer;
     NormalizedWeatherCondition: string;
   begin
     NormalizedWeatherCondition := 'Invalid';
@@ -107,10 +125,10 @@ implementation
       Equation from: https://en.wikipedia.org/wiki/Heat_index#Formula
       Table: https://en.wikipedia.org/wiki/Heat_index#Table_of_values
   *)
-  function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;
+  function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
   var
-    t: Integer;
-    r: Integer;
+    t: integer;
+    r: integer;
   const
     c1: double = -42.379;
     c2: double = 2.04901523;

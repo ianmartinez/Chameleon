@@ -78,7 +78,7 @@ begin
 
   // Time of day
   for i:= high(TimeModes) downto low(TimeModes) do begin
-    CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox
+    CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox);
   end;
 
   // Weather Conditions

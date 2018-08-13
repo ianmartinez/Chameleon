@@ -69,7 +69,7 @@ implementation
 
 procedure TWallShifterForm.FormCreate(Sender: TObject);
 var
-  i: Integer;
+  i: integer;
 begin
   // Battery percentage
   for i:= high(PercentageModes) downto low(PercentageModes) do begin

@@ -150,7 +150,7 @@ end;
 
 Function ProductVersionToString(PV: TFileProductVersion): String;
 Begin
-  Result := Format('%d.%d.%d.%d', [PV[0], PV[1], PV[2], PV[3]]);
+  Result := Format('%d.%d', [PV[0], PV[1]]);
 End;
 
 Function GetProductVersion: String;

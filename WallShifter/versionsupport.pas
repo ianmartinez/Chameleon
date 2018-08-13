@@ -126,7 +126,7 @@ End;
 
 Function GetResourceStrings(oStringList: TStringList): Boolean;
 Var
-  i, j : Integer;
+  i, j : integer;
   oTable : TVersionStringTable;
 begin
   CreateInfo;
