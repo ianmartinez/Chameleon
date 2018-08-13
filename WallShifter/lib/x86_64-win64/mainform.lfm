@@ -4781,7 +4781,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 105
-    Top = 127
+    Top = 183
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
@@ -4876,7 +4876,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 55
-    Top = 240
+    Top = 296
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
@@ -4937,15 +4937,15 @@ object WallShifterForm: TWallShifterForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 8
-    Height = 302
-    Top = 303
+    Height = 246
+    Top = 359
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
     Caption = 'Wallpapers'
-    ClientHeight = 282
+    ClientHeight = 226
     ClientWidth = 559
     TabOrder = 2
     object PageControl1: TPageControl
@@ -4956,7 +4956,7 @@ object WallShifterForm: TWallShifterForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 266
+      Height = 210
       Top = 8
       Width = 543
       ActivePage = tsTime
@@ -4998,7 +4998,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsTime: TTabSheet
         Caption = 'Time'
-        ClientHeight = 238
+        ClientHeight = 182
         ClientWidth = 535
         object TimeBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5008,7 +5008,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 166
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5178,7 +5178,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
-    Height = 111
+    Height = 167
     Top = 8
     Width = 563
     Anchors = [akTop, akLeft, akRight]
@@ -5188,14 +5188,14 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
     BevelOuter = bvNone
-    ClientHeight = 111
+    ClientHeight = 167
     ClientWidth = 563
     TabOrder = 3
     object Image1: TImage
       AnchorSideBottom.Control = pnlTop
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 96
+      Height = 152
       Top = 8
       Width = 96
       Anchors = [akTop, akLeft, akBottom]
@@ -5434,6 +5434,16 @@ object WallShifterForm: TWallShifterForm
       Constraints.MinHeight = 25
       OnClick = btnSettingsClick
       TabOrder = 1
+    end
+    object Memo1: TMemo
+      Left = 248
+      Height = 90
+      Top = 77
+      Width = 150
+      Lines.Strings = (
+        'Memo1'
+      )
+      TabOrder = 2
     end
   end
 end

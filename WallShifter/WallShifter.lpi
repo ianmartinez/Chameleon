@@ -85,6 +85,7 @@
         <Filename Value="settingsform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="SettingsDialog"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
       </Unit7>
