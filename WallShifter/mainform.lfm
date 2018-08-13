@@ -5415,5 +5415,25 @@ object WallShifterForm: TWallShifterForm
       OnClick = btnAboutClick
       TabOrder = 0
     end
+    object btnSettings: TButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = pnlTop
+      AnchorSideRight.Control = btnAbout
+      AnchorSideBottom.Side = asrBottom
+      Left = 402
+      Height = 25
+      Top = 8
+      Width = 77
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Settings...'
+      Constraints.MinHeight = 25
+      OnClick = btnAboutClick
+      TabOrder = 1
+    end
   end
 end

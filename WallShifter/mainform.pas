@@ -14,6 +14,7 @@ type
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
+    btnSettings: TButton;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
     TemperatureBox: TScrollBox;
@@ -70,9 +71,9 @@ var
   i: Integer;
 begin
   // Battery percentage
-  i:= high(BatteryModes);
-  while i >= low(BatteryModes) do begin
-    CreateImageButtonFrame(WriteSafeString('Battery' + BatteryModes[i]), BatteryModes[i], BatteryBox);
+  i:= high(PercentageModes);
+  while i >= low(PercentageModes) do begin
+    CreateImageButtonFrame(WriteSafeString('Battery' + PercentageModes[i]), PercentageModes[i], BatteryBox);
     Dec(i);     
   end;
 
@@ -80,6 +81,13 @@ begin
   i:= high(TimeModes);
   while i >= low(TimeModes) do begin
     CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox);
+    Dec(i);
+  end;
+
+  // Weather Conditions
+  i:= high(WeatherConditionsModes);
+  while i >= low(WeatherConditionsModes) do begin
+    CreateImageButtonFrame(WriteSafeString('WeatherConditions' + WeatherConditionsModes[i]), WeatherConditionsModes[i], ConditionsBox);
     Dec(i);
   end;
 
@@ -97,7 +105,14 @@ begin
     Dec(i);
   end;
 
-    // Heat Index
+  // Humidity
+  i:= high(PercentageModes);
+  while i >= low(PercentageModes) do begin
+    CreateImageButtonFrame(WriteSafeString('Humidity' + PercentageModes[i]), PercentageModes[i], HumidityBox);
+    Dec(i);
+  end;
+
+  // Heat Index
   i:= high(TemperatureModes);
   while i >= low(TemperatureModes) do begin
     CreateImageButtonFrame(WriteSafeString('HeatIndex' + TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
