@@ -7,13 +7,14 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ComCtrls, ImageButton,
-  WeatherReader, Settings, AboutForm, VersionSupport;
+  Weather, Settings, AboutForm, VersionSupport;
 
 type
 
   { TWallShifterForm }
 
   TWallShifterForm = class(TForm)
+    btnSettings: TButton;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
     TemperatureBox: TScrollBox;
@@ -48,6 +49,7 @@ type
     tsHeatIndex: TTabSheet;
     tsHumidity: TTabSheet;
     procedure btnAboutClick(Sender: TObject);
+    procedure btnSettingsClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
   private
@@ -84,9 +86,9 @@ begin
   end;
 
   // Weather Conditions
-  i:= high(WeatherConditionsModes);
-  while i >= low(WeatherConditionsModes) do begin
-    CreateImageButtonFrame(WriteSafeString('WeatherConditions' + WeatherConditionsModes[i]), WeatherConditionsModes[i], ConditionsBox);
+  i:= high(WeatherConditions);
+  while i >= low(WeatherConditions) do begin
+    CreateImageButtonFrame(WriteSafeString('WeatherConditions' + WeatherConditions[i]), WeatherConditions[i], ConditionsBox);
     Dec(i);
   end;
 
@@ -124,6 +126,11 @@ end;
 procedure TWallShifterForm.btnAboutClick(Sender: TObject);
 begin
   AboutDialog.ShowModal();
+end;
+
+procedure TWallShifterForm.btnSettingsClick(Sender: TObject);
+begin
+  SettingsDialog.ShowModal();
 end;
 
 function TWallShifterForm.CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;

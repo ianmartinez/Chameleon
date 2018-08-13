@@ -4912,7 +4912,7 @@ object WallShifterForm: TWallShifterForm
       MaxValue = 100000
       MinValue = 10
       TabOrder = 0
-      Value = 10
+      Value = 60
     end
     object Label3: TLabel
       AnchorSideLeft.Control = spInterval
@@ -5432,7 +5432,7 @@ object WallShifterForm: TWallShifterForm
       BorderSpacing.Bottom = 8
       Caption = 'Settings...'
       Constraints.MinHeight = 25
-      OnClick = btnAboutClick
+      OnClick = btnSettingsClick
       TabOrder = 1
     end
   end

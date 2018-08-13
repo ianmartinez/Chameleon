@@ -37,7 +37,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="WallShifter.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -59,28 +59,35 @@
         <UnitName Value="ImageButton"/>
       </Unit2>
       <Unit3>
-        <Filename Value="weatherreader.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="WeatherReader"/>
-      </Unit3>
-      <Unit4>
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
-      </Unit4>
-      <Unit5>
+      </Unit3>
+      <Unit4>
         <Filename Value="aboutform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="AboutDialog"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
-      </Unit5>
-      <Unit6>
+      </Unit4>
+      <Unit5>
         <Filename Value="versionsupport.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="VersionSupport"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="weather.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Weather"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="settingsform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SettingsDialog"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SettingsForm"/>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

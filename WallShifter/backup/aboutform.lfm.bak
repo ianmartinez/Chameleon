@@ -262,14 +262,14 @@ object AboutDialog: TAboutDialog
       AnchorSideLeft.Control = Image1
       AnchorSideLeft.Side = asrBottom
       Left = 112
-      Height = 37
+      Height = 25
       Top = 8
-      Width = 138
+      Width = 92
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       Caption = 'WallShifter'
       Font.CharSet = ANSI_CHARSET
-      Font.Height = -32
+      Font.Height = -21
       Font.Name = 'Arial Narrow'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -284,7 +284,7 @@ object AboutDialog: TAboutDialog
       AnchorSideTop.Side = asrBottom
       Left = 112
       Height = 15
-      Top = 53
+      Top = 41
       Width = 81
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8

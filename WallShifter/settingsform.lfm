@@ -1,0 +1,12 @@
+object SettingsDialog: TSettingsDialog
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 320
+  Caption = 'SettingsDialog'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  Visible = False
+end

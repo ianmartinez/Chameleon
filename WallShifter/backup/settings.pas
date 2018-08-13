@@ -4,7 +4,7 @@ unit Settings;
 
 interface  
   const
-    BatteryModes : array [0..11] of string =
+    PercentageModes : array [0..11] of string =
       ('0%','1 to 9%','10 to 19%','20 to 29%','30 to 39%', '40 to 49%', '50 to 59%', '60 to 69%', '70 to 79%', '80 to 89%', '90 to 99%', '100%');
 
     TimeModes : array [0..23] of string =
