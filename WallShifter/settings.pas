@@ -12,7 +12,8 @@ interface
       '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM', '9 PM', '10 PM', '11 PM');
 
     WindSpeedModes : array [0..11] of string =
-      ('0 MPH','1 to 9 MPH','10 to 19 MPH','20 to 29 MPH','30 to 39 MPH', '40 to 49 MPH', '50 to 59 MPH', '60 to 69 MPH', '70 to 79 MPH', '80 to 89 MPH', '90 to 99 MPH', '100+ MPH');
+      ('0 MPH','1 to 9 MPH','10 to 19 MPH','20 to 29 MPH','30 to 39 MPH', '40 to 49 MPH', '50 to 59 MPH', '60 to 69 MPH',
+      '70 to 79 MPH', '80 to 89 MPH', '90 to 99 MPH', '100+ MPH');
 
     TemperatureModes : array [0..20] of string =
       ('<-50°F', '-49 to -40°F', '-39 to -30°F', '-29 to -19°F', '-19 to -10°F', '-9 to -1°F', '0°F','1 to 9°F','10 to 19°F','20 to 29°F','30 to 39°F',
