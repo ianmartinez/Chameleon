@@ -17,7 +17,6 @@ type
     btnSettings: TButton;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
-    Memo1: TMemo;
     TemperatureBox: TScrollBox;
     WindSpeedBox: TScrollBox;
     ConditionsBox: TScrollBox;

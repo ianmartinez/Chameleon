@@ -4882,7 +4882,7 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
-    Caption = 'Interval'
+    Caption = 'Interval:'
     ClientHeight = 35
     ClientWidth = 559
     TabOrder = 1
@@ -4944,7 +4944,7 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
-    Caption = 'Wallpapers'
+    Caption = 'Wallpapers:'
     ClientHeight = 282
     ClientWidth = 559
     TabOrder = 2
@@ -4959,13 +4959,13 @@ object WallShifterForm: TWallShifterForm
       Height = 266
       Top = 8
       Width = 543
-      ActivePage = tsTime
+      ActivePage = tsConditions
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
-      TabIndex = 1
+      TabIndex = 2
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
