@@ -65,10 +65,15 @@ implementation
     This function will calm them down:
          Foremost Agdm
   *)
-  function TitleCase(sBuffer: string):string;
+  function FormatName(sBuffer: string):string;
   var
     iLen, iIndex: integer;
-  begin
+  begin              
+    sBuffer := sBuffer.Replace('/', ' / ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace('-', ' - ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace('(', ' ( ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(')', ' ) ', [rfReplaceAll]);
+
     iLen := Length(sBuffer);
     sBuffer:= Uppercase(MidStr(sBuffer, 1, 1)) + Lowercase(MidStr(sBuffer,2, iLen));
 
@@ -76,6 +81,12 @@ implementation
       if MidStr(sBuffer, iIndex, 1) = ' ' then
           sBuffer := MidStr(sBuffer, 0, iIndex) + Uppercase(MidStr(sBuffer, iIndex + 1, 1)) + Lowercase(MidStr(sBuffer, iIndex + 2, iLen));
     end;
+    
+    sBuffer := sBuffer.Replace(' / ', '/', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' - ', '-', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' ( ', '(', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' ) ', ')', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace('Exxonmobile','ExxonMobile', [rfReplaceAll]);
 
     Result := sBuffer;
   end;
@@ -136,7 +147,7 @@ implementation
                 try
                   for i := 0 to (Count - 1) do begin
                     if Item[i].NodeName = 'station_name' then begin
-                      CurrentStation.Name := TitleCase(Item[i].FirstChild.NodeValue);
+                      CurrentStation.Name := FormatName(Item[i].FirstChild.NodeValue);
                     end       
                     else if Item[i].NodeName = 'station_id' then begin
                       CurrentStation.Id := Item[i].FirstChild.NodeValue;

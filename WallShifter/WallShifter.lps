@@ -20,6 +20,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
+        <TopLine Value="2"/>
         <CursorPos X="31" Y="9"/>
         <UsageCount Value="92"/>
         <Loaded Value="True"/>
@@ -33,7 +34,7 @@
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="9"/>
+        <TopLine Value="19"/>
         <CursorPos X="5" Y="9"/>
         <UsageCount Value="92"/>
         <Loaded Value="True"/>
@@ -44,7 +45,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="56" Y="13"/>
+        <TopLine Value="13"/>
+        <CursorPos X="66" Y="33"/>
         <UsageCount Value="58"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -56,7 +58,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="2"/>
+        <TopLine Value="8"/>
         <CursorPos X="83" Y="38"/>
         <UsageCount Value="56"/>
         <Loaded Value="True"/>
@@ -78,8 +80,8 @@
         <UnitName Value="Weather"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="57"/>
-        <CursorPos X="4" Y="61"/>
+        <TopLine Value="56"/>
+        <CursorPos X="40" Y="80"/>
         <UsageCount Value="51"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -91,7 +93,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="50"/>
+        <TopLine Value="51"/>
         <CursorPos X="59" Y="72"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>
