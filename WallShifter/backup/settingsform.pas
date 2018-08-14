@@ -14,6 +14,10 @@ type
 
   TSettingsDialog = class(TForm)
     ButtonPanel1: TButtonPanel;
+    cbStates: TComboBox;
+    cbStations: TComboBox;
+    gbState: TGroupBox;
+    gbStations: TGroupBox;
     synWeatherStationXML: TSynEdit;
     SynXMLSyn1: TSynXMLSyn;
     tsWeatherStationXML: TTabSheet;
@@ -28,6 +32,8 @@ type
 
 var
   SettingsDialog: TSettingsDialog;
+  StationsXML: string;  
+  WeatherStations: WeatherStationArray;
 
 implementation
 
@@ -38,9 +44,19 @@ implementation
 procedure TSettingsDialog.FormCreate(Sender: TObject);
 var
   Station: WeatherStation;
-  WeatherStations: WeatherStationArray;
+  StateAbbreviation: string;
 begin
-  synWeatherStationXML.Caption := GetWeatherStationXML();
+  StationsXML := GetAllWeatherStationsXML();
+  WeatherStations := GetAllWeatherStations(StationsXML);
+  synWeatherStationXML.Caption := StationsXML;
+
+  for StateAbbreviation in StateAbreviations do begin
+    cbStates.Items.Add(StateAbbreviation);
+  end;
+
+  for Station in WeatherStations do begin
+    cbStations.Items.Add(Station.Name);
+  end;
 
 (*  WeatherStations := GetAllWeatherStations();
 

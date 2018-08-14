@@ -1,6 +1,6 @@
 unit Weather;
 (*
-  Parse weather data from:
+  Get weather for the United States and Canada by parsing weather data from:
   http://w1.weather.gov/xml/current_obs/
 *)
 
@@ -8,16 +8,23 @@ unit Weather;
 {$mode objfpc}{$H+}
 
 interface
-  const AllStationsXMLFile : string = 'htt://w1.weather.gov/xml/current_obs/index.xml';
+  const AllStationsXMLFile : string = 'http://w1.weather.gov/xml/current_obs/index.xml';
 
   const WeatherConditions : array [0..23] of string =
       ('Mostly Cloudy', 'Clear', 'A Few Clouds', 'Partly Cloudy', 'Overcast', 'Fog', 'Smoke', 'Freezing Drizzle', 'Hail', 'Mixed Rain and Snow',
       'Rain and Hail', 'Heavy Mixed Rain and Snow', 'Rain Showers', 'Thunderstorm', 'Snow', 'Windy', 'Scattered Showers', 'Freezing Rain',
       'Scattered Thunderstorms', 'Drizzle', 'Heavy Rain', 'Tornado', 'Dust', 'Haze');
 
+  const StateAbreviations : array [0..63] of string =
+      ((* United States *) 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS',  'KY', 'LA',
+      'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA','RI', 'SC',
+      'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY', '----',
+       (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT');
+
   type WeatherStation = record
-	   Name: string;
-	   XmlFile: string;
+	   Name: string;      
+	   State: string;
+	   XMLUrl: string;
   end;
 
   type WeatherData = record
@@ -32,17 +39,17 @@ interface
 
   type WeatherStationArray = array of WeatherStation;
 
-  function GetWeatherStationXML(): string;
-  function CreateWeatherStation(Name: string; XmlFile: string) : WeatherStation;
-  function GetAllWeatherStations() : WeatherStationArray;
-  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
+  function GetAllWeatherStationsXML(): string;
+  function CreateWeatherStation(Name: string; State: string; XMLURL: string) : WeatherStation;
+  function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
+  function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
   function GetWeatherData(Station: WeatherStation) : WeatherData;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
 
 implementation
   uses
-    Classes, SysUtils, httpsend;
+    Classes, SysUtils, httpsend, laz2_DOM, laz2_XMLRead;
 
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
@@ -52,32 +59,104 @@ implementation
      ListOfStrings.DelimitedText   := Str;
   end;
 
-  function CreateWeatherStation(Name: string; XmlFile: string) : WeatherStation;
+  function CreateWeatherStation(Name: string; State: string; XMLURL: string) : WeatherStation;
   var
     Station: WeatherStation;
   begin
     Station.Name := Name;
-    Station.XmlFile := XmlFile;
+    Station.State := State;
+    Station.XMLUrl := XMLUrl;
 
     Result := Station;
   end;
 
-  function GetWeatherStationXML() : string;
+  function GetAllWeatherStationsXML() : string;
   var
     Response: TStringList;
   begin
     Response := TStringList.Create;
+
     Result := '';
-    if HTTPSend.HttpGetText(AllStationsXMLFile, Response) then
-      Result := Response.Text;
+    try
+      if HTTPSend.HttpGetText(AllStationsXMLFile, Response) then
+        Result := Response.Text;
+    finally
+      Response.Free();
+    end;
   end;
 
-  function GetAllWeatherStations() : WeatherStationArray;
+  function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
+  var
+    i: integer;
+    StationCount: integer = 0;
+    CurrentStation: WeatherStation;
+    Stations: WeatherStationArray;
+    Doc: TXMLDocument;
+    Child: TDOMNode;
+    StringStream: TStringStream;
+    NodeName: string;
   begin
-     Result := nil;
+    Result := nil;
+
+    if AllStationsXML <> '' then begin
+      try
+        Doc := TXMLDocument.Create;
+        StringStream := TStringStream.Create(AllStationsXML);
+        ReadXMLFile(Doc, StringStream);
+        
+        Child := Doc.DocumentElement.FirstChild;
+        while Assigned(Child) do
+            begin
+              NodeName := Child.NodeName;
+
+              if NodeName = 'station' then begin
+                // Loop through attributes of weather station
+                with Child.ChildNodes do
+                try
+                  for i := 0 to (Count - 1) do begin
+                    if Item[i].NodeName = 'station_name' then begin
+                      CurrentStation.Name := Item[i].FirstChild.NodeValue;
+                    end
+                    else if Item[i].NodeName = 'state' then begin  
+                      CurrentStation.State := Item[i].FirstChild.NodeValue;
+                    end
+                    else if Item[i].NodeName = 'xml_url' then begin
+                      CurrentStation.XMLUrl := Item[i].FirstChild.NodeValue;
+                    end;
+                  end;
+
+                  // Station is valid
+                  if CurrentStation.Name <> '' then begin
+                    // Resize array to accommodate new weather station
+                    Inc(StationCount);
+                    SetLength(Stations, StationCount);
+
+                    // Add weatherstation
+                    Stations[StationCount - 1] :=
+                      CreateWeatherStation(CurrentStation.Name, CurrentStation.State, CurrentStation.XMLUrl);
+
+                    // Reset CurrentStation
+                    CurrentStation.Name := '';
+                    CurrentStation.State := '';
+                    CurrentStation.XMLUrl := '';
+                  end;
+                finally
+                  Free;
+                end;
+              end;
+
+              Child := Child.NextSibling;
+            end;
+
+        Result := Stations;
+      finally
+        Doc.Free;
+        StringStream.Free;
+      end;
+    end;
   end;
 
-  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
+  function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
   begin
     Result := nil;
   end;
@@ -140,7 +219,7 @@ implementation
           if(LowerCase(WeatherCondition) = LowerCase(ConditionNames[ConditionNamePos])) then
             NormalizedWeatherCondition := WeatherConditions[i];
       finally
-        ConditionNames.Free;
+        ConditionNames.Free();
       end;
     end;
 

@@ -3,7 +3,7 @@ object SettingsDialog: TSettingsDialog
   Height = 373
   Top = 0
   Width = 541
-  Caption = 'SettingsDialog'
+  Caption = 'Settings'
   ClientHeight = 373
   ClientWidth = 541
   OnCreate = FormCreate
@@ -19,16 +19,99 @@ object SettingsDialog: TSettingsDialog
     Height = 321
     Top = 6
     Width = 529
-    ActivePage = tsWeatherStationXML
+    ActivePage = tsWeather
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 6
     BorderSpacing.Top = 6
     BorderSpacing.Right = 6
     BorderSpacing.Bottom = 6
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     object tsWeather: TTabSheet
       Caption = 'Weather'
+      ClientHeight = 293
+      ClientWidth = 521
+      object gbState: TGroupBox
+        AnchorSideLeft.Control = tsWeather
+        AnchorSideTop.Control = tsWeather
+        AnchorSideRight.Control = tsWeather
+        AnchorSideRight.Side = asrBottom
+        Left = 8
+        Height = 59
+        Top = 8
+        Width = 505
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
+        BorderSpacing.Right = 8
+        Caption = 'State/Province/Territory:'
+        ClientHeight = 39
+        ClientWidth = 501
+        TabOrder = 0
+        object cbStates: TComboBox
+          AnchorSideLeft.Control = gbState
+          AnchorSideTop.Control = gbState
+          AnchorSideRight.Control = gbState
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = gbState
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 23
+          Top = 8
+          Width = 485
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          AutoComplete = True
+          AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          ItemHeight = 15
+          TabOrder = 0
+        end
+      end
+      object gbStations: TGroupBox
+        AnchorSideLeft.Control = tsWeather
+        AnchorSideTop.Control = gbState
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = tsWeather
+        AnchorSideRight.Side = asrBottom
+        Left = 8
+        Height = 59
+        Top = 75
+        Width = 505
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
+        BorderSpacing.Right = 8
+        Caption = 'Available Stations:'
+        ClientHeight = 39
+        ClientWidth = 501
+        TabOrder = 1
+        object cbStations: TComboBox
+          AnchorSideLeft.Control = gbStations
+          AnchorSideTop.Control = gbStations
+          AnchorSideRight.Control = gbStations
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = gbStations
+          AnchorSideBottom.Side = asrBottom
+          Left = 8
+          Height = 23
+          Top = 8
+          Width = 485
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          AutoComplete = True
+          AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 8
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 8
+          ItemHeight = 15
+          TabOrder = 0
+        end
+      end
     end
     object tsWeatherStationXML: TTabSheet
       Caption = 'Weather Station XML'
@@ -484,6 +567,7 @@ object SettingsDialog: TSettingsDialog
         MouseTextActions = <>
         MouseSelActions = <>
         VisibleSpecialChars = [vscSpace, vscTabAtLast]
+        ReadOnly = True
         RightEdgeColor = clNone
         SelectedColor.BackPriority = 50
         SelectedColor.ForePriority = 50
@@ -562,7 +646,7 @@ object SettingsDialog: TSettingsDialog
     DefaultFilter = 'XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd'
     Enabled = False
     WantBracesParsed = False
-    left = 488
-    top = 40
+    left = 24
+    top = 320
   end
 end
