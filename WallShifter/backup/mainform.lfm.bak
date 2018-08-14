@@ -4772,6 +4772,7 @@ object WallShifterForm: TWallShifterForm
   }
   OnCreate = FormCreate
   Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
   Visible = False
   object gbShiftBy: TRadioGroup
     AnchorSideLeft.Control = Owner
@@ -4959,13 +4960,13 @@ object WallShifterForm: TWallShifterForm
       Height = 266
       Top = 8
       Width = 543
-      ActivePage = tsTime
+      ActivePage = tsConditions
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
-      TabIndex = 1
+      TabIndex = 2
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'

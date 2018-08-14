@@ -8,8 +8,9 @@ unit Weather;
 {$mode objfpc}{$H+}
 
 interface
-  const
-    WeatherConditions : array [0..23] of string =
+  const AllStationsXMLFile : string = 'htt://w1.weather.gov/xml/current_obs/index.xml';
+
+  const WeatherConditions : array [0..23] of string =
       ('Mostly Cloudy', 'Clear', 'A Few Clouds', 'Partly Cloudy', 'Overcast', 'Fog', 'Smoke', 'Freezing Drizzle', 'Hail', 'Mixed Rain and Snow',
       'Rain and Hail', 'Heavy Mixed Rain and Snow', 'Rain Showers', 'Thunderstorm', 'Snow', 'Windy', 'Scattered Showers', 'Freezing Rain',
       'Scattered Thunderstorms', 'Drizzle', 'Heavy Rain', 'Tornado', 'Dust', 'Haze');
@@ -31,21 +32,53 @@ interface
 
   type WeatherStationArray = array of WeatherStation;
 
-  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray; 
+  function GetWeatherStationXML(): string;
+  function CreateWeatherStation(Name: string; XmlFile: string) : WeatherStation;
+  function GetAllWeatherStations() : WeatherStationArray;
+  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
   function GetWeatherData(Station: WeatherStation) : WeatherData;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
-  function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;
+  function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
 
 implementation
   uses
-    Classes, SysUtils;
+    Classes, SysUtils, httpsend;
 
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
      ListOfStrings.Clear;
      ListOfStrings.Delimiter       := Delimiter;
-     ListOfStrings.StrictDelimiter := True; // Requires D2006 or newer.
+     ListOfStrings.StrictDelimiter := True;
      ListOfStrings.DelimitedText   := Str;
+  end;
+
+  function CreateWeatherStation(Name: string; XmlFile: string) : WeatherStation;
+  var
+    Station: WeatherStation;
+  begin
+    Station.Name := Name;
+    Station.XmlFile := XmlFile;
+
+    Result := Station;
+  end;
+
+  function GetWeatherStationXML() : string;
+  var
+    Response: TStringList;
+  begin
+    Result := '';
+    if HTTPSend.HttpGetText(AllStationsXMLFile, Response) then
+      Result := Response.Text;
+  end;
+
+  function GetAllWeatherStations() : WeatherStationArray;
+  begin
+     Result := nil;
+  end;
+
+  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
+  begin
+    Result := nil;
   end;
 
   function GetWeatherData(Station: WeatherStation) : WeatherData;
@@ -55,11 +88,6 @@ implementation
     Result := StationData;
   end;
 
-  function GetStationsForState(StateAbbreviation: string) : WeatherStationArray;
-  begin
-    Result := nil;
-  end;
-  
   (*
     Many weather conditions returned from weather.gov can be described
     dozens of different ways:
@@ -96,9 +124,9 @@ implementation
       'Dust|Low Drifting Dust|Blowing Dust|Sand|Blowing Sand|Low Drifting Sand|Dust/Sand Whirls|Dust/Sand Whirls in Vicinity|Dust Storm|Heavy Dust Storm|Dust Storm in Vicinity|Sand Storm|Heavy Sand Storm|Sand Storm in Vicinity',
       'Haze');
   var
-    i: Integer;
+    i: integer;
     ConditionNames: TStringList;
-    ConditionNamePos: Integer;
+    ConditionNamePos: integer;
     NormalizedWeatherCondition: string;
   begin
     NormalizedWeatherCondition := 'Invalid';
@@ -125,10 +153,10 @@ implementation
       Equation from: https://en.wikipedia.org/wiki/Heat_index#Formula
       Table: https://en.wikipedia.org/wiki/Heat_index#Table_of_values
   *)
-  function CalcHeatIndex(Temperature: Integer; Humidity: Integer) : Integer;
+  function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
   var
-    t: Integer;
-    r: Integer;
+    t: integer;
+    r: integer;
   const
     c1: double = -42.379;
     c2: double = 2.04901523;

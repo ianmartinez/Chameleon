@@ -5,17 +5,20 @@ unit SettingsForm;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, Weather;
+  Classes, SysUtils, FileUtil, SynHighlighterXML, SynEdit, Forms, Controls,
+  Graphics, Dialogs, StdCtrls, ComCtrls, ButtonPanel, Weather;
 
 type
 
   { TSettingsDialog }
 
   TSettingsDialog = class(TForm)
-    Button1: TButton;
-    Edit1: TEdit;
-    Label1: TLabel;
-    procedure Button1Click(Sender: TObject);
+    ButtonPanel1: TButtonPanel;
+    synWeatherStationXML: TSynEdit;
+    SynXMLSyn1: TSynXMLSyn;
+    tsWeatherStationXML: TTabSheet;
+    tsWeather: TTabSheet;
+    tpMain: TPageControl;
     procedure FormCreate(Sender: TObject);
   private
 
@@ -33,14 +36,16 @@ implementation
 { TSettingsDialog }
 
 procedure TSettingsDialog.FormCreate(Sender: TObject);
+var
+  Station: WeatherStation;
+  WeatherStations: WeatherStationArray;
 begin
+  synWeatherStationXML.Caption := GetWeatherStationXML();
 
+(*  WeatherStations := GetAllWeatherStations();
+
+  for Station in WeatherStations do
+      Memo1.Lines.Add(Station.Name + ' - ' + Station.XmlFile);   *)
 end;
-
-procedure TSettingsDialog.Button1Click(Sender: TObject);
-begin
-  Label1.Caption :=  NormalizeWeatherCondition(Edit1.Caption);
-end;
-
 end.
 
