@@ -18,10 +18,11 @@ interface
   const StateAbreviations : array [0..63] of string =
       ((* United States *) 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS',  'KY', 'LA',
       'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA','RI', 'SC',
-      'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY', '-',
+      'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY', '----',
        (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT');
 
   type WeatherStation = record
+     Id: string;
 	   Name: string;      
 	   State: string;
 	   XMLUrl: string;
@@ -40,7 +41,6 @@ interface
   type WeatherStationArray = array of WeatherStation;
 
   function GetAllWeatherStationsXML(): string;
-  function CreateWeatherStation(Name: string; State: string; XMLURL: string) : WeatherStation;
   function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
   function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
   function GetWeatherData(Station: WeatherStation) : WeatherData;
@@ -49,7 +49,7 @@ interface
 
 implementation
   uses
-    Classes, SysUtils, httpsend, laz2_DOM, laz2_XMLRead;
+    Classes, SysUtils, httpsend, laz2_DOM, laz2_XMLRead, StrUtils;
 
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
@@ -57,6 +57,27 @@ implementation
      ListOfStrings.Delimiter       := Delimiter;
      ListOfStrings.StrictDelimiter := True;
      ListOfStrings.DelimitedText   := Str;
+  end;
+
+  (*
+    Some stations like to scream when giving their name:
+         FOREMOST AGDM
+    This function will calm them down:
+         Foremost Agdm
+  *)
+  function TitleCase(sBuffer: string):string;
+  var
+    iLen, iIndex: integer;
+  begin
+    iLen := Length(sBuffer);
+    sBuffer:= Uppercase(MidStr(sBuffer, 1, 1)) + Lowercase(MidStr(sBuffer,2, iLen));
+
+    for iIndex := 0 to iLen do begin
+      if MidStr(sBuffer, iIndex, 1) = ' ' then
+          sBuffer := MidStr(sBuffer, 0, iIndex) + Uppercase(MidStr(sBuffer, iIndex + 1, 1)) + Lowercase(MidStr(sBuffer, iIndex + 2, iLen));
+    end;
+
+    Result := sBuffer;
   end;
 
   function CreateWeatherStation(Name: string; State: string; XMLURL: string) : WeatherStation;
@@ -116,6 +137,9 @@ implementation
                   for i := 0 to (Count - 1) do begin
                     if Item[i].NodeName = 'station_name' then begin
                       CurrentStation.Name := Item[i].FirstChild.NodeValue;
+                    end       
+                    else if Item[i].NodeName = 'station_id' then begin
+                      CurrentStation.Id := Item[i].FirstChild.NodeValue;
                     end
                     else if Item[i].NodeName = 'state' then begin  
                       CurrentStation.State := Item[i].FirstChild.NodeValue;
@@ -132,11 +156,11 @@ implementation
                     SetLength(Stations, StationCount);
 
                     // Add weatherstation
-                    Stations[StationCount - 1] :=
-                      CreateWeatherStation(CurrentStation.Name, CurrentStation.State, CurrentStation.XMLUrl);
+                    Stations[StationCount - 1] :=  CurrentStation;
 
                     // Reset CurrentStation
-                    CurrentStation.Name := '';
+                    CurrentStation.Name := '';   
+                    CurrentStation.Id := '';
                     CurrentStation.State := '';
                     CurrentStation.XMLUrl := '';
                   end;
@@ -157,8 +181,21 @@ implementation
   end;
 
   function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
+  var
+    StationCount: integer = 0;
+    CurrentStation: WeatherStation; 
+    Stations: WeatherStationArray;
   begin
-    Result := nil;
+    for CurrentStation in AllStations do begin
+      if CurrentStation.State = StateAbbreviation then begin
+        Inc(StationCount);
+        SetLength(Stations, StationCount);
+
+        Stations[StationCount - 1] := CurrentStation;
+      end;
+    end;
+
+    Result := Stations;
   end;
 
   function GetWeatherData(Station: WeatherStation) : WeatherData;

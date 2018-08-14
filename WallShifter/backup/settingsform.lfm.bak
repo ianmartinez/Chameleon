@@ -68,6 +68,7 @@ object SettingsDialog: TSettingsDialog
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
+          OnChange = cbStatesChange
           TabOrder = 0
         end
       end
@@ -646,7 +647,7 @@ object SettingsDialog: TSettingsDialog
     DefaultFilter = 'XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd'
     Enabled = False
     WantBracesParsed = False
-    left = 472
-    top = 56
+    left = 24
+    top = 320
   end
 end

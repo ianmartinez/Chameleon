@@ -68,6 +68,7 @@ object SettingsDialog: TSettingsDialog
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
+          OnChange = cbStatesChange
           TabOrder = 0
         end
       end

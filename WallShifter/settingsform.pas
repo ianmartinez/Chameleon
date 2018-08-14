@@ -23,6 +23,7 @@ type
     tsWeatherStationXML: TTabSheet;
     tsWeather: TTabSheet;
     tpMain: TPageControl;
+    procedure cbStatesChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -63,5 +64,23 @@ begin
   for Station in WeatherStations do
       Memo1.Lines.Add(Station.Name + ' - ' + Station.XmlFile);   *)
 end;
+
+procedure TSettingsDialog.cbStatesChange(Sender: TObject);  
+const
+  StateSep: string = '----';
+var             
+  Station: WeatherStation;
+  FilteredStations: WeatherStationArray;
+begin
+  if cbStates.Text <> StateSep then begin   
+    FilteredStations := GetStationsForState(WeatherStations, cbStates.Text);
+    cbStations.Clear;
+
+    for Station in FilteredStations do begin
+      cbStations.Items.Add(Station.Name);
+    end;
+  end;
+end;
+
 end.
 
