@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ComCtrls, ImageButton,
+  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ImageButton,
   Weather, Settings, AboutForm, SettingsForm, VersionSupport;
 
 type

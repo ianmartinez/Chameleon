@@ -18,12 +18,17 @@ type
     cbStations: TComboBox;
     gbState: TGroupBox;
     gbStations: TGroupBox;
+    gbStations1: TGroupBox;
+    synWeatherDataXML: TSynEdit;
+    tsWeatherData: TTabSheet;
+    txtWeather: TMemo;
     synWeatherStationXML: TSynEdit;
     SynXMLSyn1: TSynXMLSyn;
     tsWeatherStationXML: TTabSheet;
     tsWeather: TTabSheet;
     tpMain: TPageControl;
     procedure cbStatesChange(Sender: TObject);
+    procedure cbStationsChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -33,8 +38,9 @@ type
 
 var
   SettingsDialog: TSettingsDialog;
-  StationsXML: string;  
+  StationsXML: string;           
   WeatherStations: WeatherStationArray;
+  SelectedStation: WeatherStation;
 
 implementation
 
@@ -78,5 +84,16 @@ begin
     end;
   end;
 end;
+
+procedure TSettingsDialog.cbStationsChange(Sender: TObject);
+var
+  Weather: WeatherData;
+begin
+  SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
+  synWeatherDataXML.Caption := GetWeatherDataXML(SelectedStation);
+  Weather := GetWeatherData(SelectedStation);
+  txtWeather.Text := PrintWeatherReport(Weather);
+end;
+
 end.
 

@@ -10,6 +10,9 @@ unit Weather;
 interface
   const AllStationsXMLFile : string = 'http://w1.weather.gov/xml/current_obs/index.xml';
 
+  const DegF : string = '°F';
+  const DegC : string = '°C';
+
   const WeatherConditions : array [0..23] of string =
       ('Mostly Cloudy', 'Clear', 'A Few Clouds', 'Partly Cloudy', 'Overcast', 'Fog', 'Smoke', 'Freezing Drizzle', 'Hail', 'Mixed Rain and Snow',
       'Rain and Hail', 'Heavy Mixed Rain and Snow', 'Rain Showers', 'Thunderstorm', 'Snow', 'Windy', 'Scattered Showers', 'Freezing Rain',
@@ -29,21 +32,24 @@ interface
   end;
 
   type WeatherData = record
-	   Conditions: string;
-	   WindSpeed: integer;    
-	   WindDirection: integer;
+	   Conditions: string;  
 	   Temperature: integer;
-	   Humidity: integer;  
-	   Visibility: integer;
+	   Humidity: integer;
      HeatIndex: integer;
+	   WindSpeed: integer;
+	   WindDirection: string;
+	   Pressure: double;
   end;
 
   type WeatherStationArray = array of WeatherStation;
 
-  function GetAllWeatherStationsXML(): string;
+  function GetAllWeatherStationsXML() : string;
+  function GetWeatherDataXML(Station: WeatherStation) : string;
   function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
   function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
+  function GetStationByName(AllStations: WeatherStationArray; StationName: string) : WeatherStation;
   function GetWeatherData(Station: WeatherStation) : WeatherData;
+  function PrintWeatherReport(Weather: WeatherData) : string;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
 
@@ -118,6 +124,22 @@ implementation
     end;
   end;
 
+  function GetWeatherDataXML(Station: WeatherStation) : string;
+  var
+    Response: TStringList;
+    Url: string;
+  begin
+    Response := TStringList.Create;
+
+    Result := '';
+    try
+      if HTTPSend.HttpGetText(Url, Response) then
+        Result := Response.Text;
+    finally
+      Response.Free();
+    end;
+  end;
+
   function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
   var
     i: integer;
@@ -156,7 +178,9 @@ implementation
                     else if Item[i].NodeName = 'state' then begin  
                       CurrentStation.State := Item[i].FirstChild.NodeValue;
                     end
-                    else if Item[i].NodeName = 'xml_url' then begin
+                    else if Item[i].NodeName = 'xml_url' then begin      
+                      CurrentStation.XMLUrl := CurrentStation.XMLUrl.Replace('https:', 'http:', [rfReplaceAll]);
+                      CurrentStation.XMLUrl := CurrentStation.XMLUrl.Replace('//weather.gov', '//w1.weather.gov', [rfReplaceAll]);
                       CurrentStation.XMLUrl := Item[i].FirstChild.NodeValue;
                     end;
                   end;
@@ -210,11 +234,71 @@ implementation
     Result := Stations;
   end;
 
+  function GetStationByName(AllStations: WeatherStationArray; StationName: string) : WeatherStation;
+  var
+    Station: WeatherStation;
+  begin
+    for Station in AllStations do
+      if Station.Name = StationName then
+        Result := Station;
+  end;
+
   function GetWeatherData(Station: WeatherStation) : WeatherData;
   var
-    StationData: WeatherData;
+    Weather: WeatherData;
+    Doc: TXMLDocument;
+    Child: TDOMNode;
+    StringStream: TStringStream;
+    NodeName: string;
+    WeatherDataXML: string;
   begin
-    Result := StationData;
+    WeatherDataXML := GetWeatherDataXML(Station);
+
+    if WeatherDataXML <> '' then begin
+      try
+        Doc := TXMLDocument.Create;
+        StringStream := TStringStream.Create(WeatherDataXML);
+        ReadXMLFile(Doc, StringStream);
+
+        Child := Doc.DocumentElement.FirstChild;
+        while Assigned(Child) do
+            begin
+              NodeName := Child.NodeName;
+
+              if NodeName = 'weather' then begin
+                Weather.Conditions := Child.FirstChild.NodeValue;
+              end;
+
+              Child := Child.NextSibling;
+            end;
+
+        Result := Weather;
+      finally
+        Doc.Free;
+        StringStream.Free;
+      end;
+    end;
+  end;
+  
+  function PrintWeatherReport(Weather: WeatherData) : string;
+  var
+    Report: TStringList;
+  begin
+    Report := TStringList.Create;
+
+    try
+      Report.Add('Conditions: ' + Weather.Conditions);
+      Report.Add('Temperature: ' + Weather.Temperature.ToString() + DegF);
+      Report.Add('Humidity: ' + Weather.Humidity.ToString());
+      Report.Add('Heat Index: ' + Weather.HeatIndex.ToString() + DegF);
+      Report.Add('Wind Speed: ' + Weather.WindSpeed.ToString());  
+      Report.Add('Wind Direction: ' + Weather.WindDirection);    
+      Report.Add('Pressure: ' + Weather.Pressure.ToString() + 'mb');
+
+      Result := Report.Text;
+    finally
+      Report.Free;
+    end;
   end;
 
   (*
