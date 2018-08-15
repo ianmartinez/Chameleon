@@ -271,7 +271,7 @@ implementation
               NodeName := Child.NodeName;
 
               if NodeName = 'weather' then begin
-                Weather.Conditions := Child.FirstChild.NodeValue;
+                Weather.Conditions := NormalizeWeatherCondition(Child.FirstChild.NodeValue);
               end
               else if NodeName = 'temp_f' then begin
                 Weather.Temperature := Round(Child.FirstChild.NodeValue.ToDouble());
@@ -406,8 +406,10 @@ implementation
                 c7*sqr(t)*r + c8*t*sqr(r) + c9*sqr(t)*sqr(r));
     end
     else begin
-      Result := Round(0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094)));
+      Result := Round((t + (0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094))))/2);
     end;
+  end;
+
 end.
 
 

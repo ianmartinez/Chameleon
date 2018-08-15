@@ -271,7 +271,7 @@ implementation
               NodeName := Child.NodeName;
 
               if NodeName = 'weather' then begin
-                Weather.Conditions := Child.FirstChild.NodeValue;
+                Weather.Conditions := NormalizeWeatherCondition(Child.FirstChild.NodeValue);
               end
               else if NodeName = 'temp_f' then begin
                 Weather.Temperature := Round(Child.FirstChild.NodeValue.ToDouble());
@@ -402,11 +402,13 @@ implementation
     r := Humidity;
 
     if (t >= 80) and (t <= 112) then begin
+      // This is more accurate, but only works between the values above
       Result := Round(c1 + c2*t + c3*r + c4*t*r + c5*sqr(t) + c6*sqr(r) +
                 c7*sqr(t)*r + c8*t*sqr(r) + c9*sqr(t)*sqr(r));
     end
     else begin
-      Result := Round(0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094)));
+      // This is the less accurate, but works with values outside of the above range
+      Result := Round((t + (0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094))))/2);
     end;
   end;
 
