@@ -20,13 +20,13 @@ object SettingsDialog: TSettingsDialog
     Height = 321
     Top = 6
     Width = 529
-    ActivePage = tsWeatherData
+    ActivePage = tsWeather
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 6
     BorderSpacing.Top = 6
     BorderSpacing.Right = 6
     BorderSpacing.Bottom = 6
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 0
     object tsWeather: TTabSheet
       Caption = 'Weather'
@@ -95,14 +95,13 @@ object SettingsDialog: TSettingsDialog
         object cbStations: TComboBox
           AnchorSideLeft.Control = gbStations
           AnchorSideTop.Control = gbStations
-          AnchorSideRight.Control = gbStations
-          AnchorSideRight.Side = asrBottom
+          AnchorSideRight.Control = btnGo
           AnchorSideBottom.Control = gbStations
           AnchorSideBottom.Side = asrBottom
           Left = 8
           Height = 23
           Top = 8
-          Width = 485
+          Width = 436
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
@@ -111,8 +110,23 @@ object SettingsDialog: TSettingsDialog
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
-          OnChange = cbStationsChange
           TabOrder = 0
+        end
+        object btnGo: TButton
+          AnchorSideTop.Control = cbStations
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = gbStations
+          AnchorSideRight.Side = asrBottom
+          Left = 452
+          Height = 25
+          Top = 7
+          Width = 41
+          Anchors = [akTop, akRight]
+          AutoSize = True
+          BorderSpacing.Right = 8
+          Caption = 'Go'
+          OnClick = btnGoClick
+          TabOrder = 1
         end
       end
       object gbStations1: TGroupBox

@@ -13,6 +13,7 @@ type
   { TSettingsDialog }
 
   TSettingsDialog = class(TForm)
+    btnGo: TButton;
     ButtonPanel1: TButtonPanel;
     cbStates: TComboBox;
     cbStations: TComboBox;
@@ -27,8 +28,8 @@ type
     tsWeatherStationXML: TTabSheet;
     tsWeather: TTabSheet;
     tpMain: TPageControl;
+    procedure btnGoClick(Sender: TObject);
     procedure cbStatesChange(Sender: TObject);
-    procedure cbStationsChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -85,7 +86,7 @@ begin
   end;
 end;
 
-procedure TSettingsDialog.cbStationsChange(Sender: TObject);
+procedure TSettingsDialog.btnGoClick(Sender: TObject);
 var
   Weather: WeatherData;
 begin

@@ -33,9 +33,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="9"/>
+        <TopLine Value="17"/>
         <CursorPos X="73" Y="23"/>
         <UsageCount Value="104"/>
         <Loaded Value="True"/>
@@ -46,6 +45,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="1"/>
+        <TopLine Value="13"/>
         <CursorPos X="66" Y="33"/>
         <UsageCount Value="70"/>
         <Loaded Value="True"/>
@@ -91,9 +91,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="64"/>
-        <CursorPos X="3" Y="93"/>
+        <CursorPos X="54" Y="32"/>
         <UsageCount Value="61"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -167,7 +167,7 @@
         <UsageCount Value="10"/>
       </Unit16>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="weather.pas"/>
         <Caret Line="62" Column="17" TopLine="52"/>
@@ -272,6 +272,22 @@
         <Filename Value="weather.pas"/>
         <Caret Line="381" Column="48" TopLine="376"/>
       </Position26>
+      <Position27>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="93" Column="3" TopLine="64"/>
+      </Position27>
+      <Position28>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="94" Column="3" TopLine="65"/>
+      </Position28>
+      <Position29>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="93" Column="3" TopLine="64"/>
+      </Position29>
+      <Position30>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="100" Column="3" TopLine="66"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>

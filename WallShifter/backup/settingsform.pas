@@ -19,7 +19,7 @@ type
     gbState: TGroupBox;
     gbStations: TGroupBox;
     gbStations1: TGroupBox;
-    synWeatherData: TSynEdit;
+    synWeatherDataXML: TSynEdit;
     tsWeatherData: TTabSheet;
     txtWeather: TMemo;
     synWeatherStationXML: TSynEdit;
