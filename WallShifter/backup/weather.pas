@@ -31,14 +31,17 @@ interface
 	   XMLUrl: string;
   end;
 
+  (*
+    All of the values that can be reliably found in the weather data,
+    though Canada does not seem to have condition data for many locations.
+  *)
   type WeatherData = record
 	   Conditions: string;  
 	   Temperature: integer;
 	   Humidity: integer;
      HeatIndex: integer;
-	   WindSpeed: integer;
+	   WindSpeed: double;
 	   WindDirection: string;
-	   Pressure: double;
   end;
 
   type WeatherStationArray = array of WeatherStation;
@@ -127,13 +130,12 @@ implementation
   function GetWeatherDataXML(Station: WeatherStation) : string;
   var
     Response: TStringList;
-    Url: string;
   begin
     Response := TStringList.Create;
 
     Result := '';
     try
-      if HTTPSend.HttpGetText(Url, Response) then
+      if HTTPSend.HttpGetText(Station.XMLUrl, Response) then
         Result := Response.Text;
     finally
       Response.Free();
@@ -178,10 +180,10 @@ implementation
                     else if Item[i].NodeName = 'state' then begin  
                       CurrentStation.State := Item[i].FirstChild.NodeValue;
                     end
-                    else if Item[i].NodeName = 'xml_url' then begin      
+                    else if Item[i].NodeName = 'xml_url' then begin
+                      CurrentStation.XMLUrl := Item[i].FirstChild.NodeValue;
                       CurrentStation.XMLUrl := CurrentStation.XMLUrl.Replace('https:', 'http:', [rfReplaceAll]);
                       CurrentStation.XMLUrl := CurrentStation.XMLUrl.Replace('//weather.gov', '//w1.weather.gov', [rfReplaceAll]);
-                      CurrentStation.XMLUrl := Item[i].FirstChild.NodeValue;
                     end;
                   end;
 
@@ -260,6 +262,9 @@ implementation
         StringStream := TStringStream.Create(WeatherDataXML);
         ReadXMLFile(Doc, StringStream);
 
+        Weather.Conditions := 'NO DATA';
+        Weather.WindDirection := 'NO DATA';
+
         Child := Doc.DocumentElement.FirstChild;
         while Assigned(Child) do
             begin
@@ -267,11 +272,24 @@ implementation
 
               if NodeName = 'weather' then begin
                 Weather.Conditions := Child.FirstChild.NodeValue;
+              end
+              else if NodeName = 'temp_f' then begin
+                Weather.Temperature := Round(Child.FirstChild.NodeValue.ToDouble());
+              end
+              else if NodeName = 'relative_humidity' then begin
+                Weather.Humidity := Child.FirstChild.NodeValue.ToInteger();
+              end
+              else if NodeName = 'wind_mph' then begin
+                Weather.WindSpeed := Child.FirstChild.NodeValue.ToDouble();
+              end
+              else if NodeName = 'wind_dir' then begin
+                Weather.WindDirection := Child.FirstChild.NodeValue;
               end;
 
               Child := Child.NextSibling;
             end;
 
+        Weather.HeatIndex := CalcHeatIndex(Weather.Temperature, Weather.Humidity);
         Result := Weather;
       finally
         Doc.Free;
@@ -292,8 +310,7 @@ implementation
       Report.Add('Humidity: ' + Weather.Humidity.ToString());
       Report.Add('Heat Index: ' + Weather.HeatIndex.ToString() + DegF);
       Report.Add('Wind Speed: ' + Weather.WindSpeed.ToString());  
-      Report.Add('Wind Direction: ' + Weather.WindDirection);    
-      Report.Add('Pressure: ' + Weather.Pressure.ToString() + 'mb');
+      Report.Add('Wind Direction: ' + Weather.WindDirection);
 
       Result := Report.Text;
     finally
