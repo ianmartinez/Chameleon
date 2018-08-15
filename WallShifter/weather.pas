@@ -401,9 +401,15 @@ implementation
     t := Temperature;
     r := Humidity;
 
-    Result := Round(c1 + c2*t + c3*r + c4*t*r + c5*sqr(t) + c6*sqr(r) +
-              c7*sqr(t)*r + c8*t*sqr(r) + c9*sqr(t)*sqr(r));
+    if (t >= 80) and (t <= 112) then begin
+      Result := Round(c1 + c2*t + c3*r + c4*t*r + c5*sqr(t) + c6*sqr(r) +
+                c7*sqr(t)*r + c8*t*sqr(r) + c9*sqr(t)*sqr(r));
+    end
+    else begin
+      Result := Round(0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094)));
+    end;
   end;
+
 end.
 
 
