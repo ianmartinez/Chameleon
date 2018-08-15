@@ -6,6 +6,7 @@ object ImageButtonFrame: TImageButtonFrame
   ClientHeight = 250
   ClientWidth = 280
   Color = clNone
+  Constraints.MaxWidth = 500
   Constraints.MinWidth = 280
   ParentColor = False
   ParentFont = False
@@ -40,8 +41,8 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = btnPickImage
       Left = 6
-      Height = 159
-      Top = 46
+      Height = 176
+      Top = 29
       Width = 262
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 3
@@ -51,6 +52,7 @@ object ImageButtonFrame: TImageButtonFrame
       BorderSpacing.Around = 1
       BorderSpacing.InnerBorder = 1
       Center = True
+      Constraints.MaxWidth = 500
       Proportional = True
       Stretch = True
       Transparent = True
@@ -80,12 +82,11 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideRight.Control = pnlMain
       AnchorSideRight.Side = asrBottom
       Left = 5
-      Height = 32
+      Height = 15
       Top = 10
       Width = 264
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
-      AutoSize = False
       BorderSpacing.Left = 3
       BorderSpacing.Top = 8
       BorderSpacing.Right = 3

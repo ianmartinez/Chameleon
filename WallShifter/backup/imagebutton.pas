@@ -22,9 +22,10 @@ type
     procedure SetTitle(Value: string);
   private
 
-  public
-       SettingKey : string;
-       property Title : string read GetTitle write SetTitle;
+  public   
+    SettingCategory : string;
+    SettingKey : string;
+    property Title : string read GetTitle write SetTitle;
   end;
 
 implementation

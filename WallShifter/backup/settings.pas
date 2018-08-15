@@ -2,8 +2,11 @@ unit Settings;
 
 {$mode objfpc}{$H+}
 
-interface  
+interface
   const
+    Folders : array [0..6] of string =
+      ('Battery', 'Time', 'WeatherConditions', 'WindSpeed', 'Temperature', 'Humidity', 'HeatIndex');
+
     PercentageModes : array [0..11] of string =
       ('0%','1 to 9%','10 to 19%','20 to 29%','30 to 39%', '40 to 49%', '50 to 59%', '60 to 69%', '70 to 79%', '80 to 89%', '90 to 99%', '100%');
 
@@ -21,6 +24,7 @@ interface
 
   function WriteSafeString(UnsafeString: string) : string;
   function GetLocalFolder() : string;
+  function GetImagePath(Key: string; Category: string) : string;
 
 implementation  
   uses
@@ -48,6 +52,12 @@ implementation
 
   function GetLocalFolder() : string;
   begin
+    Result := ExtractFileDir(Application.ExeName);
+  end;
+
+  function GetImagePath(Key: string; Category: string) : string;
+  begin
+    Result := GetLocalFolder() + '\' + Category + '\' + Key + '.jpg';
   end;
 
 end.

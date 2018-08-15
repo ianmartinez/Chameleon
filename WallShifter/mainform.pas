@@ -51,7 +51,7 @@ type
     procedure btnAboutClick(Sender: TObject);
     procedure btnSettingsClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    function CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+    function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
   private
 
   public
@@ -73,41 +73,40 @@ var
 begin
   // Battery percentage
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
-    CreateImageButtonFrame(WriteSafeString('Battery' + PercentageModes[i]), PercentageModes[i], BatteryBox);
+    CreateImageButtonFrame('Battery', WriteSafeString(PercentageModes[i]), PercentageModes[i], BatteryBox);
   end;
 
   // Time of day
   for i:= high(TimeModes) downto low(TimeModes) do begin
-    CreateImageButtonFrame(WriteSafeString('Time' + TimeModes[i]), TimeModes[i], TimeBox);
+    CreateImageButtonFrame('Time', WriteSafeString(TimeModes[i]), TimeModes[i], TimeBox);
   end;
 
   // Weather Conditions
   for i:= high(WeatherConditions) downto low(WeatherConditions) do begin
-    CreateImageButtonFrame(WriteSafeString('WeatherConditions' + WeatherConditions[i]), WeatherConditions[i], ConditionsBox);
+    CreateImageButtonFrame('WeatherConditions', WriteSafeString(WeatherConditions[i]), WeatherConditions[i], ConditionsBox);
   end;
 
   // Wind speed
   for i:= high(WindSpeedModes) downto low(WindSpeedModes) do begin
-    CreateImageButtonFrame(WriteSafeString('WindSpeed' + WindSpeedModes[i]), WindSpeedModes[i], WindSpeedBox);
+    CreateImageButtonFrame('WindSpeed', WriteSafeString(WindSpeedModes[i]), WindSpeedModes[i], WindSpeedBox);
   end;
                  
   // Temperature
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
-    CreateImageButtonFrame(WriteSafeString('Temperature' + TemperatureModes[i]), TemperatureModes[i], TemperatureBox);
+    CreateImageButtonFrame('Temperature', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], TemperatureBox);
   end;
 
   // Humidity
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
-    CreateImageButtonFrame(WriteSafeString('Humidity' + PercentageModes[i]), PercentageModes[i], HumidityBox);
+    CreateImageButtonFrame('Humidity', WriteSafeString(PercentageModes[i]), PercentageModes[i], HumidityBox);
   end;
 
   // Heat Index
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
-    CreateImageButtonFrame(WriteSafeString('HeatIndex' + TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
+    CreateImageButtonFrame('HeatIndex', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
   end;
 
   lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
-  lblProgramName.Caption := GetLocalFolder();
 end;
 
 procedure TWallShifterForm.btnAboutClick(Sender: TObject);
@@ -120,20 +119,26 @@ begin
   SettingsDialog.ShowModal();
 end;
 
-function TWallShifterForm.CreateImageButtonFrame(_SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+function TWallShifterForm.CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
 var
   ImageButtonFrame : TImageButtonFrame;
+  ImagePath: string;
 begin
   ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);
+  ImagePath := GetImagePath(_SettingKey, _SettingCategory);
 
   with ImageButtonFrame  do begin
-    Name := _SettingKey + 'Button';
+    Name := _SettingCategory + _SettingKey + 'Button';
     Align := alLeft;
     AutoSize := True;
-    SettingKey := _SettingKey;
+    SettingKey := _SettingKey;   
+    SettingCategory := _SettingCategory;
     Title := _Title;
-
     Parent := ControlOwner;
+  end;
+
+  if fileexists(ImagePath) then begin
+    ImageButtonFrame.imgPreview.Picture.LoadFromFile(ImagePath);
   end;
 
   Result := ImageButtonFrame;
