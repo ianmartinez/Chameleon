@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="7"/>
         <CursorPos Y="23"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="100"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,8 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
+        <TopLine Value="2"/>
         <CursorPos X="31" Y="9"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="100"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -33,9 +34,9 @@
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="9"/>
+        <TopLine Value="19"/>
         <CursorPos X="5" Y="9"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="100"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -44,8 +45,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="56" Y="13"/>
-        <UsageCount Value="58"/>
+        <TopLine Value="13"/>
+        <CursorPos X="66" Y="33"/>
+        <UsageCount Value="66"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -56,9 +58,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="2"/>
+        <TopLine Value="8"/>
         <CursorPos X="83" Y="38"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="64"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -69,18 +71,17 @@
         <EditorIndex Value="6"/>
         <TopLine Value="122"/>
         <CursorPos X="10" Y="129"/>
-        <UsageCount Value="53"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="weather.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="57"/>
-        <CursorPos X="4" Y="61"/>
-        <UsageCount Value="51"/>
+        <TopLine Value="134"/>
+        <CursorPos X="22" Y="68"/>
+        <UsageCount Value="59"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,10 +91,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="50"/>
-        <CursorPos X="59" Y="72"/>
-        <UsageCount Value="49"/>
+        <TopLine Value="36"/>
+        <CursorPos X="9" Y="39"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
@@ -102,21 +104,21 @@
         <UnitName Value="WeatherReader"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="47" Y="15"/>
-        <UsageCount Value="45"/>
+        <UsageCount Value="44"/>
       </Unit8>
       <Unit9>
         <Filename Value="imageeditbutton.pas"/>
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="6"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="12"/>
       </Unit9>
       <Unit10>
         <Filename Value="customcontrols.pas"/>
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="16"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="12"/>
       </Unit10>
       <Unit11>
         <Filename Value="aboutdialog.pas"/>
@@ -125,7 +127,7 @@
         <UnitName Value="AboutDialog"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="28" Y="18"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="16"/>
       </Unit11>
       <Unit12>
         <Filename Value="C:\lazarus\lcl\interfacebase.pp"/>
@@ -133,21 +135,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="306"/>
         <CursorPos X="3" Y="122"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\resh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="42"/>
         <CursorPos X="21" Y="53"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit13>
       <Unit14>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-res\src\versiontypes.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos X="3" Y="37"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\components\lazutils\laz2_xmlread.pas"/>
@@ -156,14 +158,14 @@
         <TopLine Value="53"/>
         <CursorPos X="57" Y="61"/>
         <FoldState Value=" T7iXLP TM HjH21#"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit15>
       <Unit16>
         <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\httpsend.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="749"/>
         <CursorPos Y="768"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit16>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
