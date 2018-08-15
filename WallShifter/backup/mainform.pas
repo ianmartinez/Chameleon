@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, ColorBox, Spin, ComCtrls, ImageButton,
+  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ImageButton,
   Weather, Settings, AboutForm, SettingsForm, VersionSupport;
 
 type
@@ -107,6 +107,7 @@ begin
   end;
 
   lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
+  lblProgramName.Catpion := GetLocalFolder();
 end;
 
 procedure TWallShifterForm.btnAboutClick(Sender: TObject);
@@ -137,6 +138,5 @@ begin
 
   Result := ImageButtonFrame;
 end;
-
 end.
 

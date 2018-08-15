@@ -20,29 +20,35 @@ interface
       '40 to 49°F', '50 to 59°F', '60 to 69°F', '70 to 79°F', '80 to 89°F', '90 to 99°F', '100 to 109°F', '110 to 119°F', '120 to 129°F', '>= 130°F');
 
   function WriteSafeString(UnsafeString: string) : string;
+  function GetLocalFolder() : string;
 
 implementation  
   uses
-    Classes, SysUtils;
+    Classes, SysUtils, Forms;
 
   function WriteSafeString(UnsafeString: string) : string;
   var
-    temp: string;
+    SafeString: string;
   begin
-    temp := UnsafeString;                       
-    temp := temp.Replace(' to ','To', [rfReplaceAll]);
-    temp := temp.Replace('=','EqualTo', [rfReplaceAll]);
-    temp := temp.Replace('/','And', [rfReplaceAll]);
-    temp := temp.Replace('&','And', [rfReplaceAll]);
-    temp := temp.Replace('<','LessThan', [rfReplaceAll]);
-    temp := temp.Replace('>','MoreThan', [rfReplaceAll]);
-    temp := temp.Replace('%','Percent', [rfReplaceAll]);
-    temp := temp.Replace('-','Negative', [rfReplaceAll]);
-    temp := temp.Replace('+','Plus', [rfReplaceAll]);    
-    temp := temp.Replace('°','Deg', [rfReplaceAll]);
-    temp := temp.Replace(' ','', [rfReplaceAll]);
+    SafeString := UnsafeString;
+    SafeString := SafeString.Replace(' to ','To', [rfReplaceAll]);
+    SafeString := SafeString.Replace('=','EqualTo', [rfReplaceAll]);
+    SafeString := SafeString.Replace('/','And', [rfReplaceAll]);
+    SafeString := SafeString.Replace('&','And', [rfReplaceAll]);
+    SafeString := SafeString.Replace('<','LessThan', [rfReplaceAll]);
+    SafeString := SafeString.Replace('>','MoreThan', [rfReplaceAll]);
+    SafeString := SafeString.Replace('%','Percent', [rfReplaceAll]);
+    SafeString := SafeString.Replace('-','Negative', [rfReplaceAll]);
+    SafeString := SafeString.Replace('+','Plus', [rfReplaceAll]);
+    SafeString := SafeString.Replace('°','Deg', [rfReplaceAll]);
+    SafeString := SafeString.Replace(' ','', [rfReplaceAll]);
 
-    result := temp;
+    result := SafeString;
   end;
+
+  function GetLocalFolder() : string;
+  begin
+  end;
+
 end.
 

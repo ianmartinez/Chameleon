@@ -20,10 +20,11 @@ interface
       '40 to 49°F', '50 to 59°F', '60 to 69°F', '70 to 79°F', '80 to 89°F', '90 to 99°F', '100 to 109°F', '110 to 119°F', '120 to 129°F', '>= 130°F');
 
   function WriteSafeString(UnsafeString: string) : string;
+  function GetLocalFolder() : string;
 
 implementation  
   uses
-    Classes, SysUtils;
+    Classes, SysUtils, Forms;
 
   function WriteSafeString(UnsafeString: string) : string;
   var
@@ -44,5 +45,11 @@ implementation
 
     result := SafeString;
   end;
+
+  function GetLocalFolder() : string;
+  begin
+    Result := ExtractFileDir(Application.ExeName);
+  end;
+
 end.
 

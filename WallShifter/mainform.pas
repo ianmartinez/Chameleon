@@ -107,6 +107,7 @@ begin
   end;
 
   lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
+  lblProgramName.Caption := GetLocalFolder();
 end;
 
 procedure TWallShifterForm.btnAboutClick(Sender: TObject);
@@ -137,6 +138,5 @@ begin
 
   Result := ImageButtonFrame;
 end;
-
 end.
 
