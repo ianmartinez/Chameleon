@@ -82,6 +82,7 @@ implementation
           sBuffer := MidStr(sBuffer, 0, iIndex) + Uppercase(MidStr(sBuffer, iIndex + 1, 1)) + Lowercase(MidStr(sBuffer, iIndex + 2, iLen));
     end;
     
+    sBuffer := sBuffer.Replace(' / ', '/', [rfReplaceAll]);   
     sBuffer := sBuffer.Replace(' / ', '/', [rfReplaceAll]);
     sBuffer := sBuffer.Replace(' - ', '-', [rfReplaceAll]);
     sBuffer := sBuffer.Replace(' ( ', '(', [rfReplaceAll]);

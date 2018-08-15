@@ -69,10 +69,10 @@ implementation
   var
     iLen, iIndex: integer;
   begin              
-    sBuffer := sBuffer.Replace('/',' / ', [rfReplaceAll]);     
-    sBuffer := sBuffer.Replace('-',' - ', [rfReplaceAll]);      
-    sBuffer := sBuffer.Replace('(',' ( ', [rfReplaceAll]);
-    sBuffer := sBuffer.Replace(')',' ) ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace('/', ' / ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace('-', ' - ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace('(', ' ( ', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(')', ' ) ', [rfReplaceAll]);
 
     iLen := Length(sBuffer);
     sBuffer:= Uppercase(MidStr(sBuffer, 1, 1)) + Lowercase(MidStr(sBuffer,2, iLen));
@@ -82,10 +82,10 @@ implementation
           sBuffer := MidStr(sBuffer, 0, iIndex) + Uppercase(MidStr(sBuffer, iIndex + 1, 1)) + Lowercase(MidStr(sBuffer, iIndex + 2, iLen));
     end;
     
-    sBuffer := sBuffer.Replace(' / ','/', [rfReplaceAll]);    
-    sBuffer := sBuffer.Replace(' - ','-', [rfReplaceAll]);
-    sBuffer := sBuffer.Replace(' ( ','(', [rfReplaceAll]);
-    sBuffer := sBuffer.Replace(' ) ',')', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' / ', '/', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' - ', '-', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' ( ', '(', [rfReplaceAll]);
+    sBuffer := sBuffer.Replace(' ) ', ')', [rfReplaceAll]);
     sBuffer := sBuffer.Replace('Exxonmobile','ExxonMobile', [rfReplaceAll]);
 
     Result := sBuffer;

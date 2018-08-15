@@ -3,6 +3,7 @@ object SettingsDialog: TSettingsDialog
   Height = 373
   Top = 0
   Width = 541
+  ActiveControl = tpMain
   Caption = 'Settings'
   ClientHeight = 373
   ClientWidth = 541
@@ -19,13 +20,13 @@ object SettingsDialog: TSettingsDialog
     Height = 321
     Top = 6
     Width = 529
-    ActivePage = tsWeather
+    ActivePage = tsWeatherStationXML
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 6
     BorderSpacing.Top = 6
     BorderSpacing.Right = 6
     BorderSpacing.Bottom = 6
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     object tsWeather: TTabSheet
       Caption = 'Weather'
@@ -129,16 +130,19 @@ object SettingsDialog: TSettingsDialog
         Height = 293
         Top = 0
         Width = 521
+        BlockIndent = 1
         Anchors = [akTop, akLeft, akRight, akBottom]
+        Font.CharSet = ANSI_CHARSET
         Font.Height = -13
-        Font.Name = 'Courier New'
+        Font.Name = 'Consolas'
         Font.Pitch = fpFixed
-        Font.Quality = fqNonAntialiased
+        Font.Quality = fqDraft
         ParentColor = False
         ParentFont = False
         TabOrder = 0
         BorderStyle = bsNone
-        Gutter.Width = 57
+        Gutter.Color = clMenu
+        Gutter.Width = 55
         Gutter.MouseActions = <>
         RightGutter.Width = 0
         RightGutter.MouseActions = <>
@@ -594,9 +598,9 @@ object SettingsDialog: TSettingsDialog
             MouseActions = <>
           end
           object SynGutterLineNumber1: TSynGutterLineNumber
-            Width = 17
+            Width = 15
             MouseActions = <>
-            MarkupInfo.Background = clBtnFace
+            MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clNone
             DigitCount = 2
             ShowOnlyLineNumbersMultiplesOf = 1
@@ -646,6 +650,14 @@ object SettingsDialog: TSettingsDialog
   object SynXMLSyn1: TSynXMLSyn
     DefaultFilter = 'XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd'
     Enabled = False
+    ElementAttri.Foreground = clNavy
+    AttributeAttri.Style = [fsBold]
+    AttributeValueAttri.Foreground = clBlue
+    AttributeValueAttri.Style = []
+    TextAttri.Style = []
+    ProcessingInstructionAttri.Foreground = clGreen
+    DocTypeAttri.Foreground = clOlive
+    SymbolAttri.Foreground = clNavy
     WantBracesParsed = False
     left = 24
     top = 320

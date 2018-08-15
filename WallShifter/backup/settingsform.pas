@@ -59,11 +59,8 @@ begin
     cbStations.Items.Add(Station.Name);
   end;
 
-(*  WeatherStations := GetAllWeatherStations();
-
-  for Station in WeatherStations do
-      Memo1.Lines.Add(Station.Name + ' - ' + Station.XmlFile);   *)
 end;
+
 
 procedure TSettingsDialog.cbStatesChange(Sender: TObject);  
 const
@@ -81,6 +78,5 @@ begin
     end;
   end;
 end;
-
 end.
 
