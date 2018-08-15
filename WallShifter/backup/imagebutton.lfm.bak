@@ -3,6 +3,7 @@ object ImageButtonFrame: TImageButtonFrame
   Height = 250
   Top = 0
   Width = 280
+  AutoSize = True
   ClientHeight = 250
   ClientWidth = 280
   Color = clNone

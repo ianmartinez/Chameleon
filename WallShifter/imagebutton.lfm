@@ -7,7 +7,7 @@ object ImageButtonFrame: TImageButtonFrame
   ClientHeight = 250
   ClientWidth = 280
   Color = clNone
-  Constraints.MaxWidth = 500
+  Constraints.MaxWidth = 290
   Constraints.MinWidth = 280
   ParentColor = False
   ParentFont = False
@@ -53,7 +53,7 @@ object ImageButtonFrame: TImageButtonFrame
       BorderSpacing.Around = 1
       BorderSpacing.InnerBorder = 1
       Center = True
-      Constraints.MaxWidth = 500
+      Constraints.MaxWidth = 290
       Proportional = True
       Stretch = True
       Transparent = True
