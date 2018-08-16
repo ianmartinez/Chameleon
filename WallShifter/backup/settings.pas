@@ -57,8 +57,12 @@ implementation
 
   function GetImagePath(Key: string; Category: string) : string;
   begin
-    Result := GetLocalFolder() + '\' + Category + '\' + Key + '.jpg';
+    Result := GetLocalFolder() + '\Wallpapers\' + Category + '\' + Key + '.jpg';
   end;
 
+  function GetThumbPath(Key: string; Category: string) : string;
+  begin
+    Result := GetLocalFolder() + '\Thumb\' + Category + '\' + Key + '.jpg';
+  end;
 end.
 

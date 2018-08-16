@@ -138,7 +138,7 @@ begin
   end;
 
   if fileexists(ImagePath) then begin
-    ImageButtonFrame.imgPreview.Picture.LoadFromFile(ImagePath);
+    ImageButtonFrame.LoadThumb();
   end;
 
   Result := ImageButtonFrame;

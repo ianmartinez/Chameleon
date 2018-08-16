@@ -123,7 +123,6 @@ function TWallShifterForm.CreateImageButtonFrame(_SettingCategory: string; _Sett
 var
   ImageButtonFrame : TImageButtonFrame;
   ImagePath: string;
-  Picture: TPicture;
 begin
   ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);
   ImagePath := GetImagePath(_SettingKey, _SettingCategory);
@@ -138,14 +137,8 @@ begin
     Parent := ControlOwner;
   end;
 
-  try  
-    Picture := TPicture.Create;
-    if fileexists(ImagePath) then begin
-      Picture.LoadFromFile(ImagePath);
-      ImageButtonFrame.imgPreview.Picture := Picture;
-    end;
-  finally 
-    Picture.Free;
+  if fileexists(ImagePath) then begin
+    ImageButtonFrame.LoadThumb(_SettingCategory, _SettingKey);
   end;
 
   Result := ImageButtonFrame;

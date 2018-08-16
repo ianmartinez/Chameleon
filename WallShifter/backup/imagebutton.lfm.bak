@@ -7,7 +7,7 @@ object ImageButtonFrame: TImageButtonFrame
   ClientHeight = 250
   ClientWidth = 280
   Color = clNone
-  Constraints.MaxWidth = 500
+  Constraints.MaxWidth = 290
   Constraints.MinWidth = 280
   ParentColor = False
   ParentFont = False
@@ -34,30 +34,6 @@ object ImageButtonFrame: TImageButtonFrame
     Color = clNone
     ParentColor = False
     TabOrder = 0
-    object imgPreview: TImage
-      AnchorSideLeft.Control = pnlMain
-      AnchorSideTop.Control = lblTitle
-      AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = pnlMain
-      AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = btnPickImage
-      Left = 6
-      Height = 176
-      Top = 29
-      Width = 262
-      Anchors = [akTop, akLeft, akRight, akBottom]
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 3
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 3
-      BorderSpacing.Around = 1
-      BorderSpacing.InnerBorder = 1
-      Center = True
-      Constraints.MaxWidth = 500
-      Proportional = True
-      Stretch = True
-      Transparent = True
-    end
     object btnPickImage: TButton
       AnchorSideLeft.Control = pnlMain
       AnchorSideRight.Control = pnlMain
@@ -93,6 +69,29 @@ object ImageButtonFrame: TImageButtonFrame
       BorderSpacing.Right = 3
       Caption = 'Image'
       ParentColor = False
+    end
+    object imgPreview: TImage
+      AnchorSideLeft.Control = pnlMain
+      AnchorSideTop.Control = lblTitle
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = pnlMain
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = btnPickImage
+      Left = 10
+      Height = 168
+      Top = 33
+      Width = 254
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Center = True
+      Constraints.MaxHeight = 290
+      Constraints.MaxWidth = 290
+      Proportional = True
+      Stretch = True
     end
   end
   object dlgOpenPicture: TOpenPictureDialog
