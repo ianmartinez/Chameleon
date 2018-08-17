@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ImageButton,
+  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, ImageButton,
   Weather, Settings, AboutForm, SettingsForm, VersionSupport;
 
 type
@@ -15,6 +15,7 @@ type
 
   TWallShifterForm = class(TForm)
     btnSettings: TButton;
+    pnlButtons: TButtonPanel;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
     TemperatureBox: TScrollBox;
@@ -149,6 +150,7 @@ begin
   SettingsDialog.cbStations.SelText := ProgramSettings.WeatherStationName;
 
   if SettingsDialog.ShowModal = mrOK then begin
+    beep;
     ProgramSettings.State := SettingsDialog.cbStates.SelText;
     ProgramSettings.WeatherStationName := SettingsDialog.cbStations.SelText;
   end;

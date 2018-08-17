@@ -88,7 +88,7 @@ object ImageButtonFrame: TImageButtonFrame
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
       Center = True
-      Constraints.MaxHeight = 290
+      Constraints.MaxHeight = 3000
       Constraints.MaxWidth = 290
       Proportional = True
       Stretch = True

@@ -1,11 +1,11 @@
 object WallShifterForm: TWallShifterForm
   Left = 0
-  Height = 605
+  Height = 684
   Top = 0
   Width = 579
   ActiveControl = rbNone
   Caption = 'WallShifter 1.0'
-  ClientHeight = 605
+  ClientHeight = 684
   ClientWidth = 579
   Constraints.MinHeight = 100
   Constraints.MinWidth = 550
@@ -4944,18 +4944,18 @@ object WallShifterForm: TWallShifterForm
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = pnlButtons
     Left = 8
-    Height = 302
+    Height = 327
     Top = 303
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
+    BorderSpacing.Bottom = 8
     Caption = 'Wallpapers:'
-    ClientHeight = 282
+    ClientHeight = 307
     ClientWidth = 559
     TabOrder = 2
     object PageControl1: TPageControl
@@ -4966,7 +4966,7 @@ object WallShifterForm: TWallShifterForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 266
+      Height = 291
       Top = 8
       Width = 543
       ActivePage = tsBattery
@@ -4979,7 +4979,7 @@ object WallShifterForm: TWallShifterForm
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 238
+        ClientHeight = 263
         ClientWidth = 535
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -4989,7 +4989,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 247
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5445,5 +5445,28 @@ object WallShifterForm: TWallShifterForm
       OnClick = btnSettingsClick
       TabOrder = 1
     end
+  end
+  object pnlButtons: TButtonPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 34
+    Top = 644
+    Width = 567
+    BorderSpacing.Top = 8
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = '&Run'
+    OKButton.DefaultCaption = False
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 4
+    ShowButtons = [pbOK, pbClose]
   end
 end

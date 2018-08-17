@@ -112,7 +112,7 @@ begin
 
       imgPreview.Picture := Picture;
     finally
-      Overwrite := false;
+      OverwriteImage := false;
       Picture.Free;
     end;
   end;
