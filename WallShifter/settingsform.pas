@@ -40,8 +40,8 @@ type
 var
   SettingsDialog: TSettingsDialog;
   StationsXML: string;           
-  WeatherStations: WeatherStationArray;
-  SelectedStation: WeatherStation;
+  WeatherStations: TWeatherStationArray;
+  SelectedStation: TWeatherStation;
 
 implementation
 
@@ -51,7 +51,7 @@ implementation
 
 procedure TSettingsDialog.FormCreate(Sender: TObject);
 var
-  Station: WeatherStation;
+  Station: TWeatherStation;
   StateAbbreviation: string;
 begin
   StationsXML := GetAllWeatherStationsXML();
@@ -73,8 +73,8 @@ procedure TSettingsDialog.cbStatesChange(Sender: TObject);
 const
   StateSep: string = '----';
 var             
-  Station: WeatherStation;
-  FilteredStations: WeatherStationArray;
+  Station: TWeatherStation;
+  FilteredStations: TWeatherStationArray;
 begin
   if cbStates.Text <> StateSep then begin   
     FilteredStations := GetStationsForState(WeatherStations, cbStates.Text);
@@ -88,7 +88,7 @@ end;
 
 procedure TSettingsDialog.btnGoClick(Sender: TObject);
 var
-  Weather: WeatherData;
+  Weather: TWeatherData;
 begin
   SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
   synWeatherDataXML.Caption := GetWeatherDataXML(SelectedStation);

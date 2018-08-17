@@ -54,7 +54,6 @@ type
     procedure btnSettingsClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
-    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -63,6 +62,7 @@ type
 
 var
   WallShifterForm: TWallShifterForm;
+  WallShifterSettings: ProgramSettings;
 
 implementation
 
@@ -74,6 +74,8 @@ procedure TWallShifterForm.FormCreate(Sender: TObject);
 var
   i: integer;
 begin
+
+
   // Battery percentage
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
     CreateImageButtonFrame('Battery', WriteSafeString(PercentageModes[i]), PercentageModes[i], BatteryBox);

@@ -3,6 +3,16 @@ unit Settings;
 {$mode objfpc}{$H+}
 
 interface
+  type ProgramMode =
+    (pmNone, pmBattery, pmTime, pmWeatherConditions, pmWindSpeed, pmTemperature, pmHumidity, pmHeatIndex);
+
+  type ProgramSettings = record
+    Mode: ProgramMode;
+    Interval: integer;
+    State: string;
+    WeatherStationName: string;
+  end;
+
   const
     Folders : array [0..6] of string =
       ('Battery', 'Time', 'WeatherConditions', 'WindSpeed', 'Temperature', 'Humidity', 'HeatIndex');
@@ -24,7 +34,8 @@ interface
 
   function WriteSafeString(UnsafeString: string) : string;
   function GetLocalFolder() : string;
-  function GetImagePath(Key: string; Category: string) : string;
+  function GetImagePath(Key: string; Category: string) : string;  
+  function GetThumbPath(Key: string; Category: string) : string;
 
 implementation  
   uses

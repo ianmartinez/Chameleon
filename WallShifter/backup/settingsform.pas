@@ -13,6 +13,7 @@ type
   { TSettingsDialog }
 
   TSettingsDialog = class(TForm)
+    btnGo: TButton;
     ButtonPanel1: TButtonPanel;
     cbStates: TComboBox;
     cbStations: TComboBox;
@@ -27,8 +28,8 @@ type
     tsWeatherStationXML: TTabSheet;
     tsWeather: TTabSheet;
     tpMain: TPageControl;
+    procedure btnGoClick(Sender: TObject);
     procedure cbStatesChange(Sender: TObject);
-    procedure cbStationsChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -39,8 +40,8 @@ type
 var
   SettingsDialog: TSettingsDialog;
   StationsXML: string;           
-  WeatherStations: WeatherStationArray;
-  SelectedStation: WeatherStation;
+  WeatherStations: TWeatherStationArray;
+  SelectedStation: TWeatherStation;
 
 implementation
 
@@ -50,7 +51,7 @@ implementation
 
 procedure TSettingsDialog.FormCreate(Sender: TObject);
 var
-  Station: WeatherStation;
+  Station: TWeatherStation;
   StateAbbreviation: string;
 begin
   StationsXML := GetAllWeatherStationsXML();
@@ -72,8 +73,8 @@ procedure TSettingsDialog.cbStatesChange(Sender: TObject);
 const
   StateSep: string = '----';
 var             
-  Station: WeatherStation;
-  FilteredStations: WeatherStationArray;
+  Station: TWeatherStation;
+  FilteredStations: TWeatherStationArray;
 begin
   if cbStates.Text <> StateSep then begin   
     FilteredStations := GetStationsForState(WeatherStations, cbStates.Text);
@@ -85,7 +86,7 @@ begin
   end;
 end;
 
-procedure TSettingsDialog.cbStationsChange(Sender: TObject);
+procedure TSettingsDialog.btnGoClick(Sender: TObject);
 var
   Weather: WeatherData;
 begin

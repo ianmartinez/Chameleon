@@ -24,7 +24,7 @@ interface
       'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY', '----',
        (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT');
 
-  type WeatherStation = record
+  type TWeatherStation = record
      Id: string;
 	   Name: string;      
 	   State: string;
@@ -35,7 +35,7 @@ interface
     All of the values that can be reliably found in the weather data,
     though Canada does not seem to have condition data for many locations.
   *)
-  type WeatherData = record
+  type TWeatherData = record
 	   Conditions: string;  
 	   Temperature: integer;
 	   Humidity: integer;
@@ -44,15 +44,15 @@ interface
 	   WindDirection: string;
   end;
 
-  type WeatherStationArray = array of WeatherStation;
+  type TWeatherStationArray = array of TWeatherStation;
 
   function GetAllWeatherStationsXML() : string;
-  function GetWeatherDataXML(Station: WeatherStation) : string;
-  function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
-  function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
-  function GetStationByName(AllStations: WeatherStationArray; StationName: string) : WeatherStation;
-  function GetWeatherData(Station: WeatherStation) : WeatherData;
-  function PrintWeatherReport(Weather: WeatherData) : string;
+  function GetWeatherDataXML(Station: TWeatherStation) : string;
+  function GetAllWeatherStations(AllStationsXML: string) : TWeatherStationArray;
+  function GetStationsForState(AllStations: TWeatherStationArray; StateAbbreviation: string) : TWeatherStationArray;
+  function GetStationByName(AllStations: TWeatherStationArray; StationName: string) : TWeatherStation;
+  function GetWeatherData(Station: TWeatherStation) : TWeatherData;
+  function PrintWeatherReport(Weather: TWeatherData) : string;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
 
@@ -101,9 +101,9 @@ implementation
     Result := sBuffer;
   end;
 
-  function CreateWeatherStation(Name: string; State: string; XMLURL: string) : WeatherStation;
+  function CreateWeatherStation(Name: string; State: string; XMLURL: string) : TWeatherStation;
   var
-    Station: WeatherStation;
+    Station: TWeatherStation;
   begin
     Station.Name := Name;
     Station.State := State;
@@ -127,7 +127,7 @@ implementation
     end;
   end;
 
-  function GetWeatherDataXML(Station: WeatherStation) : string;
+  function GetWeatherDataXML(Station: TWeatherStation) : string;
   var
     Response: TStringList;
   begin
@@ -142,12 +142,12 @@ implementation
     end;
   end;
 
-  function GetAllWeatherStations(AllStationsXML: string) : WeatherStationArray;
+  function GetAllWeatherStations(AllStationsXML: string) : TWeatherStationArray;
   var
     i: integer;
     StationCount: integer = 0;
-    CurrentStation: WeatherStation;
-    Stations: WeatherStationArray;
+    CurrentStation: TWeatherStation;
+    Stations: TWeatherStationArray;
     Doc: TXMLDocument;
     Child: TDOMNode;
     StringStream: TStringStream;
@@ -218,11 +218,11 @@ implementation
     end;
   end;
 
-  function GetStationsForState(AllStations: WeatherStationArray; StateAbbreviation: string) : WeatherStationArray;
+  function GetStationsForState(AllStations: TWeatherStationArray; StateAbbreviation: string) : TWeatherStationArray;
   var
     StationCount: integer = 0;
-    CurrentStation: WeatherStation; 
-    Stations: WeatherStationArray;
+    CurrentStation: TWeatherStation; 
+    Stations: TWeatherStationArray;
   begin
     for CurrentStation in AllStations do begin
       if CurrentStation.State = StateAbbreviation then begin
@@ -236,18 +236,18 @@ implementation
     Result := Stations;
   end;
 
-  function GetStationByName(AllStations: WeatherStationArray; StationName: string) : WeatherStation;
+  function GetStationByName(AllStations: TWeatherStationArray; StationName: string) : TWeatherStation;
   var
-    Station: WeatherStation;
+    Station: TWeatherStation;
   begin
     for Station in AllStations do
       if Station.Name = StationName then
         Result := Station;
   end;
 
-  function GetWeatherData(Station: WeatherStation) : WeatherData;
+  function GetWeatherData(Station: TWeatherStation) : TWeatherData;
   var
-    Weather: WeatherData;
+    Weather: TWeatherData;
     Doc: TXMLDocument;
     Child: TDOMNode;
     StringStream: TStringStream;
@@ -298,7 +298,7 @@ implementation
     end;
   end;
   
-  function PrintWeatherReport(Weather: WeatherData) : string;
+  function PrintWeatherReport(Weather: TWeatherData) : string;
   var
     Report: TStringList;
   begin

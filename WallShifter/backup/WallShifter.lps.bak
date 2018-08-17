@@ -8,9 +8,9 @@
       <Unit0>
         <Filename Value="WallShifter.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="8"/>
-        <CursorPos X="59" Y="21"/>
-        <UsageCount Value="156"/>
+        <EditorIndex Value="7"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="157"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="50"/>
-        <CursorPos X="153" Y="56"/>
-        <UsageCount Value="156"/>
+        <TopLine Value="57"/>
+        <CursorPos X="3" Y="77"/>
+        <UsageCount Value="157"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -33,11 +33,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="104"/>
-        <CursorPos X="21" Y="115"/>
-        <UsageCount Value="156"/>
+        <TopLine Value="103"/>
+        <CursorPos X="36" Y="125"/>
+        <UsageCount Value="157"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -46,8 +45,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="62" Y="52"/>
-        <UsageCount Value="122"/>
+        <CursorPos X="42" Y="84"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -60,7 +59,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="8"/>
         <CursorPos X="78" Y="23"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -68,10 +67,10 @@
         <Filename Value="versionsupport.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="VersionSupport"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="122"/>
         <CursorPos X="10" Y="129"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="118"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -79,9 +78,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="382"/>
-        <CursorPos X="32" Y="404"/>
-        <UsageCount Value="115"/>
+        <TopLine Value="311"/>
+        <CursorPos X="38" Y="329"/>
+        <UsageCount Value="116"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -91,10 +90,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="32"/>
-        <CursorPos X="54" Y="32"/>
-        <UsageCount Value="113"/>
+        <TopLine Value="65"/>
+        <CursorPos X="13" Y="91"/>
+        <UsageCount Value="114"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
@@ -185,11 +185,10 @@
       <Unit19>
         <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
         <UnitName Value="LazUTF8Classes"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="134"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="145"/>
         <CursorPos Y="151"/>
         <UsageCount Value="15"/>
-        <Loaded Value="True"/>
       </Unit19>
       <Unit20>
         <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\blcksock.pas"/>
@@ -199,111 +198,127 @@
         <UsageCount Value="10"/>
       </Unit20>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="82" Column="12" TopLine="60"/>
+        <Caret Line="82" Column="14" TopLine="58"/>
       </Position1>
       <Position2>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="27" Column="23" TopLine="11"/>
+        <Caret Line="91" Column="15" TopLine="71"/>
       </Position2>
       <Position3>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="66" Column="22" TopLine="48"/>
+        <Caret Line="93" Column="25" TopLine="71"/>
       </Position3>
       <Position4>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="89" Column="12" TopLine="59"/>
+        <Caret Line="115" Column="26" TopLine="82"/>
       </Position4>
       <Position5>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="84" Column="32" TopLine="62"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="91" Column="36" TopLine="79"/>
       </Position5>
       <Position6>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="105" Column="46" TopLine="74"/>
+        <Filename Value="WallShifter.lpr"/>
+        <Caret Line="22" Column="31"/>
       </Position6>
       <Position7>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="30" Column="75" TopLine="18"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="79" Column="40" TopLine="70"/>
       </Position7>
       <Position8>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="110" Column="57" TopLine="83"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="19" Column="22"/>
       </Position8>
       <Position9>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="31" Column="71" TopLine="13"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="185" Column="20" TopLine="176"/>
       </Position9>
       <Position10>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="43" Column="34" TopLine="18"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="198" Column="38" TopLine="183"/>
       </Position10>
       <Position11>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="76" Column="107" TopLine="59"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="163" Column="15" TopLine="152"/>
       </Position11>
       <Position12>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="91" Column="19" TopLine="74"/>
+        <Filename Value="settings.pas"/>
+        <Caret Line="13" Column="32"/>
       </Position12>
       <Position13>
         <Filename Value="mainform.pas"/>
-        <Caret Line="141" Column="62" TopLine="112"/>
+        <Caret Line="84" Column="70" TopLine="71"/>
       </Position13>
       <Position14>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="76" Column="58" TopLine="70"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="87" Column="65" TopLine="69"/>
       </Position14>
       <Position15>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="82" Column="14" TopLine="58"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="69" Column="15" TopLine="69"/>
       </Position15>
       <Position16>
-        <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
-        <Caret Line="138" Column="28" TopLine="134"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="88" Column="106" TopLine="70"/>
       </Position16>
       <Position17>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="91" Column="15" TopLine="71"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="87" Column="65" TopLine="69"/>
       </Position17>
       <Position18>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="93" Column="25" TopLine="71"/>
+        <Caret Line="125" Column="36" TopLine="103"/>
       </Position18>
       <Position19>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="115" Column="26" TopLine="82"/>
+        <Filename Value="settings.pas"/>
+        <Caret Line="7" Column="96"/>
       </Position19>
       <Position20>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="91" Column="36" TopLine="79"/>
+        <Filename Value="WallShifter.lpr"/>
+        <Caret Line="23"/>
       </Position20>
       <Position21>
-        <Filename Value="WallShifter.lpr"/>
-        <Caret Line="22" Column="31"/>
+        <Filename Value="weather.pas"/>
+        <Caret Line="329" Column="39" TopLine="382"/>
       </Position21>
       <Position22>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="79" Column="40" TopLine="70"/>
+        <Filename Value="weather.pas"/>
+        <Caret Line="47" Column="55" TopLine="29"/>
       </Position22>
       <Position23>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="19" Column="22"/>
+        <Filename Value="weather.pas"/>
+        <Caret Line="106" Column="15" TopLine="88"/>
       </Position23>
       <Position24>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="185" Column="20" TopLine="176"/>
+        <Filename Value="weather.pas"/>
+        <Caret Line="250" Column="15" TopLine="317"/>
       </Position24>
       <Position25>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="198" Column="38" TopLine="183"/>
+        <Filename Value="weather.pas"/>
+        <Caret Line="329" Column="12" TopLine="311"/>
       </Position25>
       <Position26>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="163" Column="15" TopLine="152"/>
+        <Filename Value="weather.pas"/>
+        <Caret Line="339" Column="81" TopLine="251"/>
       </Position26>
+      <Position27>
+        <Filename Value="weather.pas"/>
+        <Caret Line="56" Column="38" TopLine="28"/>
+      </Position27>
+      <Position28>
+        <Filename Value="weather.pas"/>
+        <Caret Line="329" Column="38" TopLine="311"/>
+      </Position28>
+      <Position29>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="44" Column="21" TopLine="26"/>
+      </Position29>
+      <Position30>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="77" Column="22" TopLine="65"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>

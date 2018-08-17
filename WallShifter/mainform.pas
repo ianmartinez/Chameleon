@@ -62,6 +62,7 @@ type
 
 var
   WallShifterForm: TWallShifterForm;
+  WallShifterSettings: TProgramSettings;
 
 implementation
 
@@ -73,6 +74,8 @@ procedure TWallShifterForm.FormCreate(Sender: TObject);
 var
   i: integer;
 begin
+
+
   // Battery percentage
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
     CreateImageButtonFrame('Battery', WriteSafeString(PercentageModes[i]), PercentageModes[i], BatteryBox);

@@ -4772,6 +4772,7 @@ object WallShifterForm: TWallShifterForm
   }
   OnCreate = FormCreate
   Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
   Visible = False
   object gbShiftBy: TRadioGroup
     AnchorSideLeft.Control = Owner

@@ -3,6 +3,16 @@ unit Settings;
 {$mode objfpc}{$H+}
 
 interface
+  type TProgramMode =
+    (pmNone, pmBattery, pmTime, pmWeatherConditions, pmWindSpeed, pmTemperature, pmHumidity, pmHeatIndex);
+
+  type TProgramSettings = record
+    Mode: TProgramMode;
+    Interval: integer;
+    State: string;
+    WeatherStationName: string;
+  end;
+
   const
     Folders : array [0..6] of string =
       ('Battery', 'Time', 'WeatherConditions', 'WindSpeed', 'Temperature', 'Humidity', 'HeatIndex');
@@ -65,5 +75,16 @@ implementation
   begin
     Result := GetLocalFolder() + '\Thumb\' + Category + '\' + Key + '.jpg';
   end;
+
+  function LoadSettings() : TProgramSettings;
+  begin
+
+  end;
+
+  procedure SaveSettings(ProgramSettings: TProgramSettings);
+  begin
+
+  end;
+
 end.
 
