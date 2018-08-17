@@ -9,14 +9,13 @@ object SettingsDialog: TSettingsDialog
   ClientWidth = 541
   OnCreate = FormCreate
   Position = poOwnerFormCenter
-  LCLVersion = '1.8.4.0'
   Visible = False
   object tpMain: TPageControl
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = ButtonPanel1
+    AnchorSideBottom.Control = pnlButtons
     Left = 6
     Height = 321
     Top = 6
@@ -1205,19 +1204,21 @@ object SettingsDialog: TSettingsDialog
       end
     end
   end
-  object ButtonPanel1: TButtonPanel
+  object pnlButtons: TButtonPanel
     Left = 6
     Height = 34
     Top = 333
     Width = 529
     OKButton.Name = 'OKButton'
     OKButton.DefaultCaption = True
+    OKButton.OnClick = OKButtonClick
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
     CancelButton.DefaultCaption = True
+    CancelButton.OnClick = CancelButtonClick
     TabOrder = 1
     ShowButtons = [pbOK, pbCancel]
   end

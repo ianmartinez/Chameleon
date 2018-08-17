@@ -14,7 +14,7 @@ type
 
   TSettingsDialog = class(TForm)
     btnGo: TButton;
-    ButtonPanel1: TButtonPanel;
+    pnlButtons: TButtonPanel;
     cbStates: TComboBox;
     cbStations: TComboBox;
     gbState: TGroupBox;
@@ -29,8 +29,10 @@ type
     tsWeather: TTabSheet;
     tpMain: TPageControl;
     procedure btnGoClick(Sender: TObject);
+    procedure CancelButtonClick(Sender: TObject);
     procedure cbStatesChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure OKButtonClick(Sender: TObject);
   private
 
   public
@@ -68,6 +70,11 @@ begin
 
 end;
 
+procedure TSettingsDialog.OKButtonClick(Sender: TObject);
+begin
+  ModalResult := mrOK;
+end;
+
 
 procedure TSettingsDialog.cbStatesChange(Sender: TObject);  
 const
@@ -88,12 +95,18 @@ end;
 
 procedure TSettingsDialog.btnGoClick(Sender: TObject);
 var
-  Weather: WeatherData;
+  Weather: TWeatherData;
 begin
   SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
   synWeatherDataXML.Caption := GetWeatherDataXML(SelectedStation);
   Weather := GetWeatherData(SelectedStation);
   txtWeather.Text := PrintWeatherReport(Weather);
+end;
+
+procedure TSettingsDialog.CancelButtonClick(Sender: TObject);
+begin  
+  Self.ModalResult := mrCancel;
+  Self.Close;
 end;
 
 end.
