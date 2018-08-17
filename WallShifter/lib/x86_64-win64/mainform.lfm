@@ -4959,13 +4959,13 @@ object WallShifterForm: TWallShifterForm
       Height = 266
       Top = 8
       Width = 543
-      ActivePage = tsConditions
+      ActivePage = tsBattery
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
-      TabIndex = 2
+      TabIndex = 0
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'

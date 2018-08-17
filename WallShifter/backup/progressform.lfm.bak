@@ -1,0 +1,46 @@
+object ProgressDialog: TProgressDialog
+  Left = 0
+  Height = 64
+  Top = 0
+  Width = 320
+  Caption = 'Importing Wallpapers'
+  ClientHeight = 64
+  ClientWidth = 320
+  Visible = False
+  object lblTask: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 304
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    Caption = 'Importing wallpapers...'
+    ParentColor = False
+  end
+  object pbTask: TProgressBar
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = lblTask
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 8
+    Height = 25
+    Top = 31
+    Width = 304
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    BorderSpacing.Bottom = 8
+    Style = pbstMarquee
+    TabOrder = 0
+  end
+end

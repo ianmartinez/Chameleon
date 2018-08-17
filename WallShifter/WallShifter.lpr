@@ -7,8 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, synapse, MainForm, imagebutton, Settings, AboutForm, VersionSupport,
-  SettingsForm;
+  Forms, MainForm, imagebutton, Settings, AboutForm, VersionSupport,
+  SettingsForm, laz_synapse;
 
 {$R *.res}
 

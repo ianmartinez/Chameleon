@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ImageButton,
-  Weather, Settings, AboutForm, SettingsForm, VersionSupport;
+  Weather, Settings, AboutForm, SettingsForm, VersionSupport,
+  ProgressForm;
 
 type
 
@@ -48,6 +49,7 @@ type
     tsTemperature: TTabSheet;
     tsHeatIndex: TTabSheet;
     tsHumidity: TTabSheet;
+    dlgProgress: TProgressDialog;
     procedure btnAboutClick(Sender: TObject);
     procedure btnSettingsClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -90,7 +92,7 @@ begin
   for i:= high(WindSpeedModes) downto low(WindSpeedModes) do begin
     CreateImageButtonFrame('WindSpeed', WriteSafeString(WindSpeedModes[i]), WindSpeedModes[i], WindSpeedBox);
   end;
-                 
+
   // Temperature
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame('Temperature', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], TemperatureBox);
@@ -143,5 +145,6 @@ begin
 
   Result := ImageButtonFrame;
 end;
+
 end.
 

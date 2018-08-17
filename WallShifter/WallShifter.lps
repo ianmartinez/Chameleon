@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="19">
+    <Units Count="21">
       <Unit0>
         <Filename Value="WallShifter.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="8"/>
-        <CursorPos Y="23"/>
-        <UsageCount Value="147"/>
+        <CursorPos X="59" Y="21"/>
+        <UsageCount Value="156"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="112"/>
-        <CursorPos X="18" Y="116"/>
-        <UsageCount Value="147"/>
+        <TopLine Value="50"/>
+        <CursorPos X="153" Y="56"/>
+        <UsageCount Value="156"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -35,9 +35,9 @@
         <UnitName Value="ImageButton"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="71"/>
-        <CursorPos X="25" Y="93"/>
-        <UsageCount Value="147"/>
+        <TopLine Value="103"/>
+        <CursorPos X="36" Y="125"/>
+        <UsageCount Value="156"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -46,8 +46,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="20" Y="28"/>
-        <UsageCount Value="113"/>
+        <CursorPos X="62" Y="52"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -58,8 +58,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
         <EditorIndex Value="4"/>
+        <TopLine Value="8"/>
         <CursorPos X="78" Y="23"/>
-        <UsageCount Value="111"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -70,7 +71,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="122"/>
         <CursorPos X="10" Y="129"/>
-        <UsageCount Value="108"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -80,7 +81,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="382"/>
         <CursorPos X="32" Y="404"/>
-        <UsageCount Value="106"/>
+        <UsageCount Value="115"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -91,218 +92,218 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="65"/>
+        <TopLine Value="32"/>
         <CursorPos X="54" Y="32"/>
-        <UsageCount Value="104"/>
+        <UsageCount Value="113"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
       <Unit8>
+        <Filename Value="progressform.pas"/>
+        <ComponentName Value="ProgressDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ProgressForm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="22"/>
+      </Unit8>
+      <Unit9>
         <Filename Value="weatherreader.pas"/>
         <UnitName Value="WeatherReader"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="47" Y="15"/>
-        <UsageCount Value="40"/>
-      </Unit8>
-      <Unit9>
+        <UsageCount Value="39"/>
+      </Unit9>
+      <Unit10>
         <Filename Value="imageeditbutton.pas"/>
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="6"/>
-        <UsageCount Value="8"/>
-      </Unit9>
-      <Unit10>
+        <UsageCount Value="7"/>
+      </Unit10>
+      <Unit11>
         <Filename Value="customcontrols.pas"/>
         <UnitName Value="CustomControls"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="16"/>
-        <UsageCount Value="8"/>
-      </Unit10>
-      <Unit11>
+        <UsageCount Value="7"/>
+      </Unit11>
+      <Unit12>
         <Filename Value="aboutdialog.pas"/>
         <ComponentName Value="Form1"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutDialog"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="28" Y="18"/>
-        <UsageCount Value="12"/>
-      </Unit11>
-      <Unit12>
+        <UsageCount Value="11"/>
+      </Unit12>
+      <Unit13>
         <Filename Value="C:\lazarus\lcl\interfacebase.pp"/>
         <UnitName Value="InterfaceBase"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="306"/>
         <CursorPos X="3" Y="122"/>
-        <UsageCount Value="2"/>
-      </Unit12>
-      <Unit13>
+        <UsageCount Value="1"/>
+      </Unit13>
+      <Unit14>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\resh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="42"/>
         <CursorPos X="21" Y="53"/>
-        <UsageCount Value="2"/>
-      </Unit13>
-      <Unit14>
+        <UsageCount Value="1"/>
+      </Unit14>
+      <Unit15>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-res\src\versiontypes.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos X="3" Y="37"/>
-        <UsageCount Value="2"/>
-      </Unit14>
-      <Unit15>
+        <UsageCount Value="1"/>
+      </Unit15>
+      <Unit16>
         <Filename Value="C:\lazarus\components\lazutils\laz2_xmlread.pas"/>
         <UnitName Value="laz2_XMLRead"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="53"/>
         <CursorPos X="57" Y="61"/>
         <FoldState Value=" T7iXLP TM HjH21#"/>
-        <UsageCount Value="6"/>
-      </Unit15>
-      <Unit16>
+        <UsageCount Value="5"/>
+      </Unit16>
+      <Unit17>
         <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\httpsend.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="754"/>
         <CursorPos X="3" Y="764"/>
-        <UsageCount Value="6"/>
-      </Unit16>
-      <Unit17>
+        <UsageCount Value="5"/>
+      </Unit17>
+      <Unit18>
         <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="4311"/>
         <CursorPos Y="4328"/>
-        <UsageCount Value="6"/>
-      </Unit17>
-      <Unit18>
+        <UsageCount Value="5"/>
+      </Unit18>
+      <Unit19>
         <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
         <UnitName Value="LazUTF8Classes"/>
         <EditorIndex Value="6"/>
         <TopLine Value="134"/>
         <CursorPos Y="151"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
-      </Unit18>
+      </Unit19>
+      <Unit20>
+        <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\blcksock.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="33" Y="44"/>
+        <UsageCount Value="10"/>
+      </Unit20>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="26" HistoryIndex="25">
       <Position1>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="51" Column="39" TopLine="43"/>
+        <Caret Line="82" Column="12" TopLine="60"/>
       </Position1>
       <Position2>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="50" Column="24" TopLine="40"/>
+        <Caret Line="27" Column="23" TopLine="11"/>
       </Position2>
       <Position3>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="43" Column="49" TopLine="24"/>
+        <Caret Line="66" Column="22" TopLine="48"/>
       </Position3>
       <Position4>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="59" Column="10" TopLine="37"/>
+        <Caret Line="89" Column="12" TopLine="59"/>
       </Position4>
       <Position5>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="70" Column="28"/>
+        <Caret Line="84" Column="32" TopLine="62"/>
       </Position5>
       <Position6>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="18" Column="29"/>
+        <Caret Line="105" Column="46" TopLine="74"/>
       </Position6>
       <Position7>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="86" Column="62" TopLine="59"/>
+        <Caret Line="30" Column="75" TopLine="18"/>
       </Position7>
       <Position8>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="84" Column="39" TopLine="59"/>
+        <Caret Line="110" Column="57" TopLine="83"/>
       </Position8>
       <Position9>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="88" Column="54" TopLine="59"/>
+        <Caret Line="31" Column="71" TopLine="13"/>
       </Position9>
       <Position10>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="85" Column="28" TopLine="59"/>
+        <Caret Line="43" Column="34" TopLine="18"/>
       </Position10>
       <Position11>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="87" Column="5" TopLine="56"/>
+        <Caret Line="76" Column="107" TopLine="59"/>
       </Position11>
       <Position12>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="82" Column="12" TopLine="60"/>
+        <Caret Line="91" Column="19" TopLine="74"/>
       </Position12>
       <Position13>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="27" Column="23" TopLine="11"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="141" Column="62" TopLine="112"/>
       </Position13>
       <Position14>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="66" Column="22" TopLine="48"/>
+        <Caret Line="76" Column="58" TopLine="70"/>
       </Position14>
       <Position15>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="89" Column="12" TopLine="59"/>
+        <Caret Line="82" Column="14" TopLine="58"/>
       </Position15>
       <Position16>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="84" Column="32" TopLine="62"/>
+        <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
+        <Caret Line="138" Column="28" TopLine="134"/>
       </Position16>
       <Position17>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="105" Column="46" TopLine="74"/>
+        <Caret Line="91" Column="15" TopLine="71"/>
       </Position17>
       <Position18>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="30" Column="75" TopLine="18"/>
+        <Caret Line="93" Column="25" TopLine="71"/>
       </Position18>
       <Position19>
         <Filename Value="imagebutton.pas"/>
-        <Caret Line="31" Column="93" TopLine="78"/>
+        <Caret Line="115" Column="26" TopLine="82"/>
       </Position19>
       <Position20>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="110" Column="57" TopLine="83"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="91" Column="36" TopLine="79"/>
       </Position20>
       <Position21>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="31" Column="71" TopLine="13"/>
+        <Filename Value="WallShifter.lpr"/>
+        <Caret Line="22" Column="31"/>
       </Position21>
       <Position22>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="43" Column="34" TopLine="18"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="79" Column="40" TopLine="70"/>
       </Position22>
       <Position23>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="76" Column="107" TopLine="59"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="19" Column="22"/>
       </Position23>
       <Position24>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="91" Column="19" TopLine="74"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="185" Column="20" TopLine="176"/>
       </Position24>
       <Position25>
         <Filename Value="mainform.pas"/>
-        <Caret Line="141" Column="62" TopLine="112"/>
+        <Caret Line="198" Column="38" TopLine="183"/>
       </Position25>
       <Position26>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="76" Column="58" TopLine="70"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="163" Column="15" TopLine="152"/>
       </Position26>
-      <Position27>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="82" Column="14" TopLine="58"/>
-      </Position27>
-      <Position28>
-        <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
-        <Caret Line="138" Column="28" TopLine="134"/>
-      </Position28>
-      <Position29>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="91" Column="15" TopLine="71"/>
-      </Position29>
-      <Position30>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="93" Column="25" TopLine="71"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
