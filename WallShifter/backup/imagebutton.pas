@@ -29,7 +29,8 @@ type
     function GetTitle(): string;
     procedure SetTitle(Value: string);
     procedure LoadThumb();
-    procedure LoadFullImage();
+    procedure LoadFullImage();   
+    procedure FreeFullImage();
     procedure SaveThumb(SourceImage: string);
     property Title : string read GetTitle write SetTitle;
   end;
