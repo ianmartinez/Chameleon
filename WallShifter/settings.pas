@@ -38,7 +38,7 @@ interface
   function LoadSettings() : TProgramSettings;
   procedure SaveSettings(ProgramSettings: TProgramSettings);
 
-  function ConvertPercentage(n: integer) : string;  
+  function ConvertPercentage(const n: integer) : string;
   function ConvertSpeed(n: integer) : string;
   function ConvertTemperature(n: integer) : string;
 
@@ -144,156 +144,117 @@ implementation
     end;
   end;
 
-  function ConvertPercentage(n: integer) : string;
+  function ConvertPercentage(const n: integer) : string;
   begin
-    Result := '0%';
-
-    if n >= 100 then begin
-      Result := '100%';
-    end
-    else if (n >= 90) and (n <= 99) then begin
-      Result := '90 to 99%';
-    end
-    else if (n >= 80) and (n <= 89) then begin
-      Result := '80 to 89%';
-    end
-    else if (n >= 70) and (n <= 79) then begin
-      Result := '70 to 79%';
-    end
-    else if (n >= 60) and (n <= 69) then begin
-      Result := '60 to 69%';
-    end
-    else if (n >= 50) and (n <= 59) then begin
-      Result := '50 to 59%';
-    end
-    else if (n >= 40) and (n <= 49) then begin
-      Result := '40 to 49%';
-    end
-    else if (n >= 30) and (n <= 39) then begin
-      Result := '30 to 39%';
-    end
-    else if (n >= 20) and (n <= 29) then begin
-      Result := '20 to 29%';
-    end
-    else if (n >= 10) and (n <= 19) then begin
-      Result := '10 to 19%';
-    end
-    else if (n >= 1) and (n <= 9) then begin
-      Result := '1 to 9%';
-    end
-    else if (n <= 0) then begin
-      Result := '0%';
+    case n of
+      100:
+        Result := '100%';
+      90..99:
+        Result := '90 to 99%';  
+      80..89:
+        Result := '80 to 89%'; 
+      70..79:
+        Result := '70 to 79%';
+      60..69:
+        Result := '60 to 69%';
+      50..59:
+        Result := '50 to 59%';
+      40..49:
+        Result := '40 to 49%';
+      30..39:
+        Result := '30 to 39%';
+      20..29:
+        Result := '20 to 29%';
+      10..19:
+        Result := '10 to 19%';  
+      1..9:
+        Result := '1 to 9%'; 
+      0:
+        Result := '0%';
+      else
+        Result := '0%';
     end;
   end;
 
   function ConvertSpeed(n: integer) : string;
   begin
-    Result := '0 MPH';
-
-    if n >= 100 then begin
-      Result := '100+ MPH';
-    end
-    else if (n >= 90) and (n <= 99) then begin
-      Result := '90 to 99 MPH';
-    end
-    else if (n >= 80) and (n <= 89) then begin
-      Result := '80 to 89 MPH';
-    end
-    else if (n >= 70) and (n <= 79) then begin
-      Result := '70 to 79 MPH';
-    end
-    else if (n >= 60) and (n <= 69) then begin
-      Result := '60 to 69 MPH';
-    end
-    else if (n >= 50) and (n <= 59) then begin
-      Result := '50 to 59 MPH';
-    end
-    else if (n >= 40) and (n <= 49) then begin
-      Result := '40 to 49 MPH';
-    end
-    else if (n >= 30) and (n <= 39) then begin
-      Result := '30 to 39 MPH';
-    end
-    else if (n >= 20) and (n <= 29) then begin
-      Result := '20 to 29 MPH';
-    end
-    else if (n >= 10) and (n <= 19) then begin
-      Result := '10 to 19 MPH';
-    end
-    else if (n >= 1) and (n <= 9) then begin
-      Result := '1 to 9 MPH';
-    end
-    else if (n <= 0) then begin
-      Result := '0 MPH';
+    case n of
+      100..500:
+        Result := '100+ MPH';
+      90..99:
+        Result := '90 to 99 MPH';
+      80..89:
+        Result := '80 to 89 MPH';
+      70..79:
+        Result := '70 to 79 MPH';
+      60..69:
+        Result := '60 to 69 MPH';
+      50..59:
+        Result := '50 to 59 MPH';
+      40..49:
+        Result := '40 to 49 MPH';
+      30..39:
+        Result := '30 to 39 MPH';
+      20..29:
+        Result := '20 to 29 MPH';
+      10..19:
+        Result := '10 to 19 MPH';
+      1..9:
+        Result := '1 to 9 MPH';
+      0:
+        Result := '0 MPH';
+      else
+        Result := '0 MPH';
     end;
   end;
 
   function ConvertTemperature(n: integer) : string;
   begin
-    Result := '0°F';
-
-    if n >= 130 then begin
-      Result := '>= 130°F';
-    end                
-    else if (n >= 120) and (n <= 129) then begin
-      Result := '120 to 129°F';
-    end
-    else if (n >= 110) and (n <= 119) then begin
-      Result := '110 to 119°F';
-    end
-    else if (n >= 100) and (n <= 109) then begin
-      Result := '100 to 109°F';
-    end
-    else if (n >= 90) and (n <= 99) then begin
-      Result := '90 to 99°F';
-    end
-    else if (n >= 80) and (n <= 89) then begin
-      Result := '80 to 89°F';
-    end
-    else if (n >= 70) and (n <= 79) then begin
-      Result := '70 to 79°F';
-    end
-    else if (n >= 60) and (n <= 69) then begin
-      Result := '60 to 69°F';
-    end
-    else if (n >= 50) and (n <= 59) then begin
-      Result := '50 to 59°F';
-    end
-    else if (n >= 40) and (n <= 49) then begin
-      Result := '40 to 49°F';
-    end
-    else if (n >= 30) and (n <= 39) then begin
-      Result := '30 to 39°F';
-    end
-    else if (n >= 20) and (n <= 29) then begin
-      Result := '20 to 29°F';
-    end
-    else if (n >= 10) and (n <= 19) then begin
-      Result := '10 to 19°F';
-    end
-    else if (n >= 1) and (n <= 9) then begin
-      Result := '1 to 9°F';
-    end
-    else if (n = 0) then begin
-      Result := '0°F';
-    end
-    else if (n >= -9) and (n <= -1) then begin
-      Result := '-9 to -1°F';
-    end
-    else if (n >= -19) and (n <= -10) then begin
-      Result := '-19 to -10°F';
-    end
-    else if (n >= -29) and (n <= -20) then begin
-      Result := '-29 to -20°F';
-    end
-    else if (n >= -39) and (n <= -30) then begin
-      Result := '-39 to -30°F';
-    end
-    else if (n >= -49) and (n <= -40) then begin
-      Result := '-49 to -40°F';
-    end 
-    else if (n <+ -50) then begin
-      Result := '<= -50°F';
+    case n of
+      130..500:
+        Result := '>= 130°F';   
+      120..129:
+        Result := '120 to 129°F';
+      110..119:
+        Result := '110 to 119°F';
+      100..109:
+        Result := '100 to 109°F';
+      90..99:
+        Result := '90 to 99°F';
+      80..89:
+        Result := '80 to 89°F';
+      70..79:
+        Result := '70 to 79°F';
+      60..69:
+        Result := '60 to 69°F';
+      50..59:
+        Result := '50 to 59°F';
+      40..49:
+        Result := '40 to 49°F';
+      30..39:
+        Result := '30 to 39°F';
+      20..29:
+        Result := '20 to 29°F';
+      10..19:
+        Result := '10 to 19°F';
+      1..9:
+        Result := '1 to 9°F';
+      0:
+        Result := '0°F';   
+      -9..-1:
+        Result := '-9 to -1°F';    
+      -19..-10:
+        Result := '-19 to -10°F';
+      -29..-20:
+        Result := '-29 to -20°F';  
+      -39..-30:
+        Result := '-39 to -30°F';
+      -49..-40:
+        Result := '-49 to -40°F';
+      -500..-50:
+        Result := '<= -50°F';
+      else
+        Result := '0°F';
     end;
   end;
 
@@ -357,6 +318,5 @@ implementation
   begin
     Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).HeatIndex);
   end;
-
 end.
 

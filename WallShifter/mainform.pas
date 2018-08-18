@@ -220,7 +220,7 @@ end;
 
 procedure TWallShifterForm.OKButtonClick(Sender: TObject);
 begin
-  ShowMessage(GetBattery());
+  ShowMessage(GetHumidity(ProgramSettings.WeatherStationName));
  // Application.Minimize;
 end;
 

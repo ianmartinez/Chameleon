@@ -220,7 +220,7 @@ end;
 
 procedure TWallShifterForm.OKButtonClick(Sender: TObject);
 begin
-  ShowMessage(GetTime());
+  ShowMessage(GetHeatIndex(ProgramSettings.WeatherStationName));
  // Application.Minimize;
 end;
 
