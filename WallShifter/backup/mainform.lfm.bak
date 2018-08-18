@@ -1,11 +1,11 @@
 object WallShifterForm: TWallShifterForm
   Left = 0
-  Height = 605
+  Height = 684
   Top = 0
   Width = 579
   ActiveControl = rbNone
   Caption = 'WallShifter 1.0'
-  ClientHeight = 605
+  ClientHeight = 684
   ClientWidth = 579
   Constraints.MinHeight = 100
   Constraints.MinWidth = 550
@@ -4946,7 +4946,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = pnlButtons
     Left = 8
-    Height = 248
+    Height = 327
     Top = 303
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -4955,7 +4955,7 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
     Caption = 'Wallpapers:'
-    ClientHeight = 228
+    ClientHeight = 307
     ClientWidth = 559
     TabOrder = 2
     object PageControl1: TPageControl
@@ -4966,20 +4966,20 @@ object WallShifterForm: TWallShifterForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 212
+      Height = 291
       Top = 8
       Width = 543
-      ActivePage = tsBattery
+      ActivePage = tsConditions
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
-      TabIndex = 0
+      TabIndex = 2
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 184
+        ClientHeight = 263
         ClientWidth = 535
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -4989,7 +4989,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 168
+          Height = 247
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5037,7 +5037,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsConditions: TTabSheet
         Caption = 'Weather Conditions'
-        ClientHeight = 238
+        ClientHeight = 263
         ClientWidth = 535
         object ConditionsBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5047,7 +5047,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 247
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5066,7 +5066,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsWindSpeed: TTabSheet
         Caption = 'Wind Speed'
-        ClientHeight = 238
+        ClientHeight = 263
         ClientWidth = 535
         object WindSpeedBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5076,7 +5076,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 247
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5095,7 +5095,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsTemperature: TTabSheet
         Caption = 'Temperature'
-        ClientHeight = 238
+        ClientHeight = 263
         ClientWidth = 535
         object TemperatureBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5105,7 +5105,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 247
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5454,12 +5454,13 @@ object WallShifterForm: TWallShifterForm
     AnchorSideBottom.Side = asrBottom
     Left = 6
     Height = 34
-    Top = 565
+    Top = 644
     Width = 567
     BorderSpacing.Top = 8
     OKButton.Name = 'OKButton'
     OKButton.Caption = '&Run'
     OKButton.DefaultCaption = False
+    OKButton.OnClick = OKButtonClick
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'

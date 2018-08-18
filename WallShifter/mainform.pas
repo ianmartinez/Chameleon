@@ -55,6 +55,7 @@ type
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
     procedure ModeChange(Sender: TObject);
+    procedure OKButtonClick(Sender: TObject);
     procedure spIntervalChange(Sender: TObject);
   private
 
@@ -215,6 +216,12 @@ begin
   else begin
     ProgramSettings.Mode := pmNone;
   end;
+end;
+
+procedure TWallShifterForm.OKButtonClick(Sender: TObject);
+begin
+  ShowMessage(GetBattery());
+ // Application.Minimize;
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
