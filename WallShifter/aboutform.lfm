@@ -20,8 +20,8 @@ object AboutDialog: TAboutDialog
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 8
-    Height = 465
-    Top = 127
+    Height = 440
+    Top = 152
     Width = 572
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -31,7 +31,7 @@ object AboutDialog: TAboutDialog
     Lines.Strings = (
       'MIT License'
       ''
-      'Copyright (c) 2018 Ian Martinez'
+      'Copyright (c) 2018 Atlinsoft'
       ''
       'Permission is hereby granted, free of charge, to any person obtaining a copy'
       'of this software and associated documentation files (the "Software"), to deal'
@@ -61,7 +61,7 @@ object AboutDialog: TAboutDialog
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
-    Height = 111
+    Height = 128
     Top = 8
     Width = 572
     Anchors = [akTop, akLeft, akRight]
@@ -69,23 +69,28 @@ object AboutDialog: TAboutDialog
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
-    BorderSpacing.Bottom = 8
+    BorderSpacing.Bottom = 16
     BevelOuter = bvNone
-    ClientHeight = 111
-    ClientWidth = 572
+    BorderStyle = bsSingle
+    ClientHeight = 124
+    ClientWidth = 568
+    Color = 15461346
+    ParentColor = False
     TabOrder = 1
     object Image1: TImage
+      AnchorSideLeft.Control = pnlTop
+      AnchorSideTop.Control = pnlTop
       AnchorSideBottom.Control = pnlTop
       AnchorSideBottom.Side = asrBottom
       Left = 8
       Height = 96
-      Top = 8
+      Top = 14
       Width = 96
       Anchors = [akTop, akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 8
-      BorderSpacing.Top = 8
-      BorderSpacing.Bottom = 7
+      BorderSpacing.Top = 14
+      BorderSpacing.Bottom = 14
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963F514000089504E47
         0D0A1A0A0000000D4948445200000060000000600806000000E2987738000000
@@ -258,38 +263,53 @@ object AboutDialog: TAboutDialog
         F07ED083B40000000049454E44AE426082
       }
     end
-    object lblProgramName: TLabel
+    object pnlLabels: TPanel
       AnchorSideLeft.Control = Image1
       AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Image1
+      AnchorSideTop.Side = asrCenter
       Left = 112
-      Height = 25
-      Top = 8
-      Width = 92
+      Height = 68
+      Top = 28
+      Width = 152
+      AutoSize = True
       BorderSpacing.Left = 8
-      BorderSpacing.Top = 8
-      Caption = 'WallShifter'
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -21
-      Font.Name = 'Arial Narrow'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
-    end
-    object lblAuthor: TLabel
-      AnchorSideLeft.Control = Image1
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = lblProgramName
-      AnchorSideTop.Side = asrBottom
-      Left = 112
-      Height = 15
-      Top = 41
-      Width = 81
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 8
-      Caption = 'By Ian Martinez'
-      ParentColor = False
+      BevelOuter = bvNone
+      ClientHeight = 68
+      ClientWidth = 152
+      TabOrder = 0
+      object lblAuthor: TLabel
+        AnchorSideLeft.Control = pnlLabels
+        AnchorSideTop.Control = pnlLabels
+        Left = 8
+        Height = 15
+        Top = 8
+        Width = 48
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
+        Caption = 'Atlinsoft'
+        Font.Color = 3552556
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lblProgramName: TLabel
+        AnchorSideLeft.Control = pnlLabels
+        AnchorSideTop.Control = lblAuthor
+        AnchorSideTop.Side = asrBottom
+        Left = 8
+        Height = 37
+        Top = 31
+        Width = 144
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
+        Caption = 'WallShifter'
+        Font.Color = 7756044
+        Font.Height = -27
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
     end
   end
 end

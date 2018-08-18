@@ -13,9 +13,12 @@ type
   { TAboutDialog }
 
   TAboutDialog = class(TForm)
+    btnAbout: TButton;
+    btnSettings: TButton;
     Image1: TImage;
-    lblProgramName: TLabel;
     lblAuthor: TLabel;
+    lblProgramName: TLabel;
+    pnlLabels: TPanel;
     pnlTop: TPanel;
     txtAbout: TMemo;
     procedure FormCreate(Sender: TObject);

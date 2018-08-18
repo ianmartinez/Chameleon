@@ -72,7 +72,6 @@ end;
 
 procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
-
   if State <> '' then
     cbStates.SelText := State;
   if WeatherStationName <> ''  then

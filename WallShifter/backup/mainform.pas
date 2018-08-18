@@ -15,6 +15,9 @@ type
 
   TWallShifterForm = class(TForm)
     btnSettings: TButton;
+    lblAuthor: TLabel;
+    lblProgramName: TLabel;
+    pnlLabels: TPanel;
     pnlButtons: TButtonPanel;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
@@ -27,7 +30,6 @@ type
     gbInterval: TGroupBox;
     gbWallpapers: TGroupBox;
     Image1: TImage;
-    lblProgramName: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     PageControl1: TPageControl;
@@ -234,6 +236,7 @@ begin
   Application.Minimize;      
   tmrWallpaper.Interval := LongWord(spInterval.Value * 1000);
   tmrWallpaper.Enabled := true;
+  tmrWallpaperTimer(Sender);
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
@@ -272,7 +275,7 @@ begin
     end;
 
    WallpaperPath := GetImagePath(KeyName, CategoryName);
-   ShowMessage(WallpaperPath);
+   // ShowMessage(WallpaperPath);
 
    SetDesktopWallpaper(WallpaperPath);
 end;

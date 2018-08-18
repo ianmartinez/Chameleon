@@ -12,7 +12,7 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="Per-monitor"/>
-        <TextName Value="AtlinUtils.WallShifter"/>
+        <TextName Value="AtlinSoft.WallShifter"/>
         <TextDesc Value="Dynamically change desktop wallpapers"/>
       </XPManifest>
       <Icon Value="0"/>

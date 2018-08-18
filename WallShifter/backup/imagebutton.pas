@@ -23,14 +23,11 @@ type
   public   
     SettingCategory : string;
     SettingKey : string;
-    Thumb: TPicture;    
-    FullImage: TPicture;
+    Thumb: TPicture;
     OverwriteImage: Boolean;
     function GetTitle(): string;
     procedure SetTitle(Value: string);
     procedure LoadThumb();
-    procedure LoadFullImage();   
-    procedure FreeFullImage();
     procedure SaveThumb(SourceImage: string);
     property Title : string read GetTitle write SetTitle;
   end;
@@ -135,20 +132,6 @@ begin
   else begin
     imgPreview.Picture.LoadFromFile(ThumbPath);
   end;
-end;
-
-procedure TImageButtonFrame.LoadFullImage();
-var
-  ImagePath: string;
-begin
-  FullImage.Create;
-  ImagePath :=  GetImagePath(SettingKey, SettingCategory);
-  FullImage.LoadFromFile(ImagePath);
-end;
-
-procedure TImageButtonFrame.FreeFullImage();
-begin
-  FullImage.Free;
 end;
 end.
 

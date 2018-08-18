@@ -14,8 +14,9 @@ type
 
   TAboutDialog = class(TForm)
     Image1: TImage;
-    lblProgramName: TLabel;
     lblAuthor: TLabel;
+    lblProgramName: TLabel;
+    pnlLabels: TPanel;
     pnlTop: TPanel;
     txtAbout: TMemo;
     procedure FormCreate(Sender: TObject);
