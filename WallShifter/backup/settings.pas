@@ -38,6 +38,8 @@ interface
   function LoadSettings() : TProgramSettings;
   procedure SaveSettings(ProgramSettings: TProgramSettings);
 
+  function GetCategoryName(const m: TProgramMode) : string;
+
   function ConvertPercentage(const n: integer) : string;
   function ConvertSpeed(n: integer) : string;
   function ConvertTemperature(n: integer) : string;
@@ -144,6 +146,30 @@ implementation
       INI.UpdateFile;
     finally
       INI.Free;
+    end;
+  end;
+
+  function GetCategoryName(const m: TProgramMode) : string;
+  begin
+    case m of
+      pmNone:
+        Result := '';
+      pmBattery:
+        Result := 'Battery';
+      pmTime:
+        Result := 'Time';
+      pmWeatherConditions:
+        Result := 'WeatherConditions';
+      pmWindSpeed:
+        Result := 'WindSpeed';
+      pmTemperature:
+        Result := 'Temperature';
+      pmHumidity:
+        Result := 'Humidity';
+      pmHeatIndex:
+        Result := 'HeatIndex';
+      else
+        Result := '';
     end;
   end;
 
@@ -324,7 +350,6 @@ implementation
 
   procedure SetDesktopWallpaper(WallpaperPath: string);
   begin
-    ShowMessage(WallpaperPath);
     SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, pchar(WallpaperPath), SPIF_SENDCHANGE);
   end;
 end.

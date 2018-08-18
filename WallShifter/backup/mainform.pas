@@ -19,6 +19,7 @@ type
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
     TemperatureBox: TScrollBox;
+    tmrWallpaper: TTimer;
     WindSpeedBox: TScrollBox;
     ConditionsBox: TScrollBox;
     TimeBox: TScrollBox;
@@ -54,9 +55,11 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+    procedure FormWindowStateChange(Sender: TObject);
     procedure ModeChange(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
     procedure spIntervalChange(Sender: TObject);
+    procedure tmrWallpaperTimer(Sender: TObject);
   private
 
   public
@@ -187,6 +190,12 @@ begin
   Result := ImageButtonFrame;
 end;
 
+procedure TWallShifterForm.FormWindowStateChange(Sender: TObject);
+begin
+  if WindowState <> wsMinimized then
+    tmrWallpaper.Enabled := false;
+end;
+
 procedure TWallShifterForm.ModeChange(Sender: TObject);
 begin
   if rbNone.Checked then begin
@@ -222,14 +231,50 @@ end;
 
 procedure TWallShifterForm.OKButtonClick(Sender: TObject);
 begin
-  SetDesktopWallpaper(GetImagePath('Time', '9AM'));
- // Application.Minimize;
+  Application.Minimize;      
+  tmrWallpaper.Interval := LongWord(spInterval.Value * 1000);
+  tmrWallpaper.Enabled := true;
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
 begin
   ProgramSettings.Interval := spInterval.Value;
   SaveSettings(ProgramSettings);
+end;
+
+procedure TWallShifterForm.tmrWallpaperTimer(Sender: TObject);
+var
+  CategoryName: string;
+  KeyName: string;
+  WallpaperPath: string;
+begin
+  CategoryName := GetCategoryName(ProgramSettings.Mode);
+
+  case ProgramSettings.Mode of
+      pmNone:
+        exit;
+      pmBattery:
+        KeyName := WriteSafeString(GetBattery());
+      pmTime:
+        KeyName := WriteSafeString(GetTime());
+      pmWeatherConditions:
+        KeyName := WriteSafeString(GetWeatherConditions(ProgramSettings.WeatherStationName));
+      pmWindSpeed:
+        KeyName := WriteSafeString(GetWindSpeed(ProgramSettings.WeatherStationName));
+      pmTemperature:
+        KeyName := WriteSafeString(GetTemperature(ProgramSettings.WeatherStationName));
+      pmHumidity:
+        KeyName := WriteSafeString(GetHumidity(ProgramSettings.WeatherStationName));
+      pmHeatIndex:
+        KeyName := WriteSafeString(GetHeatIndex(ProgramSettings.WeatherStationName));
+      else
+        exit;
+    end;
+
+   WallpaperPath := GetImagePath(KeyName, CategoryName);
+   ShowMessage(WallpaperPath);
+
+   SetDesktopWallpaper(WallpaperPath);
 end;
 
 end.

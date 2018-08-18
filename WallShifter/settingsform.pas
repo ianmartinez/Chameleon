@@ -32,6 +32,7 @@ type
     procedure CancelButtonClick(Sender: TObject);
     procedure cbStatesChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
   private
 
@@ -67,7 +68,10 @@ begin
   for Station in WeatherStations do begin
     cbStations.Items.Add(Station.Name);
   end;
+end;
 
+procedure TSettingsDialog.FormShow(Sender: TObject);
+begin
   if State <> '' then
     cbStates.SelText := State;
   if WeatherStationName <> ''  then

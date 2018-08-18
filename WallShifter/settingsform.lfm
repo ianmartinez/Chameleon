@@ -8,8 +8,8 @@ object SettingsDialog: TSettingsDialog
   ClientHeight = 373
   ClientWidth = 541
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poOwnerFormCenter
-  LCLVersion = '1.8.4.0'
   Visible = False
   object tpMain: TPageControl
     AnchorSideLeft.Control = Owner

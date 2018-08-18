@@ -4772,6 +4772,7 @@ object WallShifterForm: TWallShifterForm
   }
   OnClose = FormClose
   OnCreate = FormCreate
+  OnWindowStateChange = FormWindowStateChange
   Position = poScreenCenter
   Visible = False
   object gbShiftBy: TRadioGroup
@@ -5469,5 +5470,11 @@ object WallShifterForm: TWallShifterForm
     CancelButton.DefaultCaption = True
     TabOrder = 4
     ShowButtons = [pbOK, pbClose]
+  end
+  object tmrWallpaper: TTimer
+    Enabled = False
+    OnTimer = tmrWallpaperTimer
+    left = 528
+    top = 48
   end
 end
