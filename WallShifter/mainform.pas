@@ -222,7 +222,7 @@ end;
 
 procedure TWallShifterForm.OKButtonClick(Sender: TObject);
 begin
-  ShowMessage(GetHumidity(ProgramSettings.WeatherStationName));
+  SetDesktopWallpaper(GetImagePath('9AM', 'Time'));
  // Application.Minimize;
 end;
 

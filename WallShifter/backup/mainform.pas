@@ -222,13 +222,14 @@ end;
 
 procedure TWallShifterForm.OKButtonClick(Sender: TObject);
 begin
-  ShowMessage(GetHumidity(ProgramSettings.WeatherStationName));
+  SetDesktopWallpaper(GetImagePath('Time', '9AM'));
  // Application.Minimize;
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
 begin
   ProgramSettings.Interval := spInterval.Value;
+  SaveSettings(ProgramSettings);
 end;
 
 end.

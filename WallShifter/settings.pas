@@ -42,16 +42,19 @@ interface
   function ConvertSpeed(n: integer) : string;
   function ConvertTemperature(n: integer) : string;
 
-  function GetBattery(): string;
-  function GetTime(): string;
-  function GetWeatherConditions(WeatherStationName: string): string;  
-  function GetWindSpeed(WeatherStationName: string): string;       
-  function GetTemperature(WeatherStationName: string): string;
-  function GetHumidity(WeatherStationName: string): string;
-  function GetHeatIndex(WeatherStationName: string): string;
+  function GetBattery() : string;
+  function GetTime() : string;
+  function GetWeatherConditions(WeatherStationName: string) : string;
+  function GetWindSpeed(WeatherStationName: string) : string;
+  function GetTemperature(WeatherStationName: string) : string;
+  function GetHumidity(WeatherStationName: string) : string;
+  function GetHeatIndex(WeatherStationName: string) : string;
+
+  procedure SetDesktopWallpaper(WallpaperPath: string);
+
 implementation  
   uses
-    Classes, SysUtils, Forms, IniFiles, typinfo, windows, weather;
+    Classes, SysUtils, Forms, IniFiles, typinfo, windows, weather, Dialogs;
 
   function WriteSafeString(UnsafeString: string) : string;
   var
@@ -294,29 +297,34 @@ implementation
     end;
   end;
 
-  function GetWeatherConditions(WeatherStationName: string): string;
+  function GetWeatherConditions(WeatherStationName: string) : string;
   begin
     Result := GetWeatherByStationName(WeatherStationName).Conditions;
   end;
 
-  function GetWindSpeed(WeatherStationName: string): string;
+  function GetWindSpeed(WeatherStationName: string) : string;
   begin
     Result := ConvertSpeed(Round(GetWeatherByStationName(WeatherStationName).WindSpeed));
   end;
 
-  function GetTemperature(WeatherStationName: string): string;
+  function GetTemperature(WeatherStationName: string) : string;
   begin
     Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).Temperature);
   end;
 
-  function GetHumidity(WeatherStationName: string): string;
+  function GetHumidity(WeatherStationName: string) : string;
   begin
     Result := ConvertPercentage(GetWeatherByStationName(WeatherStationName).Humidity);
   end;
 
-  function GetHeatIndex(WeatherStationName: string): string;
+  function GetHeatIndex(WeatherStationName: string) : string;
   begin
     Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).HeatIndex);
+  end;
+
+  procedure SetDesktopWallpaper(WallpaperPath: string);
+  begin
+    SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, pchar(WallpaperPath), SPIF_SENDCHANGE);
   end;
 end.
 
