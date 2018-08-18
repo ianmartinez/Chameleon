@@ -36,6 +36,8 @@ type
   private
 
   public
+    State: string;
+    WeatherStationName: string;
 
   end;
 
@@ -43,7 +45,6 @@ var
   SettingsDialog: TSettingsDialog;
   StationsXML: string;           
   WeatherStations: TWeatherStationArray;
-  SelectedStation: TWeatherStation;
 
 implementation
 
@@ -94,7 +95,8 @@ begin
 end;
 
 procedure TSettingsDialog.btnGoClick(Sender: TObject);
-var
+var                
+  SelectedStation: TWeatherStation;
   Weather: TWeatherData;
 begin
   SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
@@ -105,8 +107,7 @@ end;
 
 procedure TSettingsDialog.CancelButtonClick(Sender: TObject);
 begin  
-  Self.ModalResult := mrCancel;
-  Self.Close;
+  ModalResult := mrCancel;
 end;
 
 end.

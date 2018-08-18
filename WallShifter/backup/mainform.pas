@@ -147,13 +147,13 @@ end;
 
 procedure TWallShifterForm.btnSettingsClick(Sender: TObject);
 begin
-  SettingsDialog.cbStates.SelText := ProgramSettings.State;
-  SettingsDialog.cbStations.SelText := ProgramSettings.WeatherStationName;
+  SettingsDialog.State := ProgramSettings.State;
+  SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
 
   if SettingsDialog.ShowModal = mrOK then begin
-    beep;
     ProgramSettings.State := SettingsDialog.cbStates.SelText;
     ProgramSettings.WeatherStationName := SettingsDialog.cbStations.SelText;
+    SaveSettings(ProgramSettings);
   end;
 end;
 
@@ -216,11 +216,13 @@ begin
   else begin
     ProgramSettings.Mode := pmNone;
   end;
+
+  SaveSettings(ProgramSettings);
 end;
 
 procedure TWallShifterForm.OKButtonClick(Sender: TObject);
 begin
-  ShowMessage(GetHeatIndex(ProgramSettings.WeatherStationName));
+  ShowMessage(GetHumidity(ProgramSettings.WeatherStationName));
  // Application.Minimize;
 end;
 

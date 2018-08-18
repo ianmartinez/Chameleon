@@ -36,14 +36,14 @@ type
   private
 
   public
-
+    State: string;
+    WeatherStationName: string;
   end;
 
 var
   SettingsDialog: TSettingsDialog;
   StationsXML: string;           
   WeatherStations: TWeatherStationArray;
-  SelectedStation: TWeatherStation;
 
 implementation
 
@@ -68,6 +68,10 @@ begin
     cbStations.Items.Add(Station.Name);
   end;
 
+  if State <> '' then
+    cbStates.SelText := State;
+  if WeatherStationName <> ''  then
+    cbStations.SelText := WeatherStationName;
 end;
 
 procedure TSettingsDialog.OKButtonClick(Sender: TObject);
@@ -94,7 +98,8 @@ begin
 end;
 
 procedure TSettingsDialog.btnGoClick(Sender: TObject);
-var
+var                
+  SelectedStation: TWeatherStation;
   Weather: TWeatherData;
 begin
   SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
