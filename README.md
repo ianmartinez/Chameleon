@@ -2,4 +2,4 @@
 Dynamically change your desktop wallpaper
 
 ## Requirements
-Windows XP or higher
+Windows Vista or higher
