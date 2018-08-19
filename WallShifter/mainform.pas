@@ -158,8 +158,8 @@ begin
   SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
 
   if SettingsDialog.ShowModal = mrOK then begin
-    ProgramSettings.State := SettingsDialog.cbStates.SelText;
-    ProgramSettings.WeatherStationName := SettingsDialog.cbStations.SelText;
+    ProgramSettings.State := SettingsDialog.cbStates.Text;
+    ProgramSettings.WeatherStationName := SettingsDialog.cbStations.Text;
     SaveSettings(ProgramSettings);
   end;
 end;
@@ -241,6 +241,7 @@ begin
   tmrWallpaperTimer(Sender);
   trayWallShifter.ShowBalloonHint;
 
+  // Hide taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Hide);
 end;
 
@@ -285,7 +286,9 @@ end;
 
 procedure TWallShifterForm.trayWallShifterDblClick(Sender: TObject);
 begin
-  Application.Restore;               
+  Application.Restore;
+
+  // Show taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Show);
 end;
 

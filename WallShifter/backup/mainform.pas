@@ -158,8 +158,8 @@ begin
   SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
 
   if SettingsDialog.ShowModal = mrOK then begin
-    ProgramSettings.State := SettingsDialog.cbStates.SelText;
-    ProgramSettings.WeatherStationName := SettingsDialog.cbStations.SelText;
+    ProgramSettings.State := SettingsDialog.cbStates.Text;
+    ProgramSettings.WeatherStationName := SettingsDialog.cbStations.Text;
     SaveSettings(ProgramSettings);
   end;
 end;
@@ -241,8 +241,10 @@ begin
   tmrWallpaperTimer(Sender);
   trayWallShifter.ShowBalloonHint;
 
-
   ShowWindow(WidgetSet.AppHandle, SW_Hide);
+
+  ShowMessage(ProgramSettings.WeatherStationName);
+  ShowMessage(GetWeatherConditions(ProgramSettings.WeatherStationName));
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
@@ -286,7 +288,8 @@ end;
 
 procedure TWallShifterForm.trayWallShifterDblClick(Sender: TObject);
 begin
-  Application.Restore;
+  Application.Restore;               
+  ShowWindow(WidgetSet.AppHandle, SW_Show);
 end;
 
 end.
