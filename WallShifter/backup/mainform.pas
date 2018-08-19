@@ -143,7 +143,8 @@ begin
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame('HeatIndex', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
   end;
-
+  
+  Caption := 'Atlinsoft WallShifter ' + VersionSupport.GetProductVersion;
   lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
 end;
 
@@ -241,10 +242,8 @@ begin
   tmrWallpaperTimer(Sender);
   trayWallShifter.ShowBalloonHint;
 
+  // Hide taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Hide);
-
-  ShowMessage(ProgramSettings.WeatherStationName);
-  ShowMessage(GetWeatherConditions(ProgramSettings.WeatherStationName));
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
@@ -288,7 +287,9 @@ end;
 
 procedure TWallShifterForm.trayWallShifterDblClick(Sender: TObject);
 begin
-  Application.Restore;               
+  Application.Restore;
+
+  // Show taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Show);
 end;
 

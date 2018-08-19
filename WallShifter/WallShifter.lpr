@@ -13,6 +13,7 @@ uses
 {$R *.res}
 
 begin
+  Application.Title := 'Atlinsoft WallShifter';
   Application.Scaled := True;
   RequireDerivedFormResource := True;
   Application.Initialize;

@@ -4,7 +4,7 @@ object WallShifterForm: TWallShifterForm
   Top = 0
   Width = 579
   ActiveControl = rbNone
-  Caption = 'WallShifter 1.0'
+  Caption = 'Atlinsoft WallShifter'
   ClientHeight = 684
   ClientWidth = 579
   Constraints.MinHeight = 100
@@ -10426,7 +10426,7 @@ object WallShifterForm: TWallShifterForm
     Hint = 'Atlinsoft WallShifter'
     Visible = True
     OnDblClick = trayWallShifterDblClick
-    left = 432
+    left = 424
     top = 64
   end
 end

@@ -143,7 +143,8 @@ begin
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame('HeatIndex', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
   end;
-
+  
+  Caption := 'Atlinsoft WallShifter ' + VersionSupport.GetProductVersion;
   lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
 end;
 

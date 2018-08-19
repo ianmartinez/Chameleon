@@ -13,8 +13,6 @@ type
   { TAboutDialog }
 
   TAboutDialog = class(TForm)
-    btnAbout: TButton;
-    btnSettings: TButton;
     Image1: TImage;
     lblAuthor: TLabel;
     lblProgramName: TLabel;
