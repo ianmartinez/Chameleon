@@ -3,7 +3,7 @@ object AboutDialog: TAboutDialog
   Height = 600
   Top = 0
   Width = 588
-  ActiveControl = txtAbout
+  ActiveControl = txtLicense
   BorderStyle = bsDialog
   Caption = 'About'
   ClientHeight = 600
@@ -11,71 +11,23 @@ object AboutDialog: TAboutDialog
   OnCreate = FormCreate
   Position = poOwnerFormCenter
   Visible = False
-  object txtAbout: TMemo
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = pnlTop
-    AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
-    Left = 8
-    Height = 444
-    Top = 148
-    Width = 572
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Left = 8
-    BorderSpacing.Top = 8
-    BorderSpacing.Right = 8
-    BorderSpacing.Bottom = 8
-    HideSelection = False
-    Lines.Strings = (
-      'MIT License'
-      ''
-      'Copyright (c) 2018 Atlinsoft, Ian Martinez'
-      ''
-      'Permission is hereby granted, free of charge, to any person obtaining a copy'
-      'of this software and associated documentation files (the "Software"), to deal'
-      'in the Software without restriction, including without limitation the rights'
-      'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'
-      'copies of the Software, and to permit persons to whom the Software is'
-      'furnished to do so, subject to the following conditions:'
-      ''
-      'The above copyright notice and this permission notice shall be included in all'
-      'copies or substantial portions of the Software.'
-      ''
-      'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR'
-      'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,'
-      'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE'
-      'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER'
-      'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,'
-      'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
-      'SOFTWARE.'
-    )
-    ReadOnly = True
-    ScrollBars = ssAutoVertical
-    TabOrder = 0
-  end
   object pnlTop: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 8
+    Left = 0
     Height = 124
-    Top = 8
-    Width = 572
+    Top = 0
+    Width = 588
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
-    BorderSpacing.Left = 8
-    BorderSpacing.Top = 8
-    BorderSpacing.Right = 8
     BorderSpacing.Bottom = 16
     BevelOuter = bvNone
     ClientHeight = 124
-    ClientWidth = 572
+    ClientWidth = 588
     ParentColor = False
-    TabOrder = 1
+    TabOrder = 0
     object Image1: TImage
       AnchorSideLeft.Control = pnlTop
       AnchorSideTop.Control = pnlTop
@@ -314,7 +266,7 @@ object AboutDialog: TAboutDialog
       AnchorSideRight.Control = pnlTop
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
-      Left = 487
+      Left = 503
       Height = 25
       Top = 14
       Width = 77
@@ -328,6 +280,115 @@ object AboutDialog: TAboutDialog
       Constraints.MinHeight = 25
       OnClick = btnWebsiteClick
       TabOrder = 1
+    end
+  end
+  object PageControl1: TPageControl
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = pnlTop
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = pnlTop
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 8
+    Height = 452
+    Top = 140
+    Width = 572
+    ActivePage = tsChangelog
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    BorderSpacing.Bottom = 8
+    TabIndex = 1
+    TabOrder = 1
+    object tsLicense: TTabSheet
+      Caption = 'License'
+      ClientHeight = 424
+      ClientWidth = 564
+      object txtLicense: TMemo
+        AnchorSideLeft.Control = tsLicense
+        AnchorSideTop.Control = tsLicense
+        AnchorSideRight.Control = tsLicense
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = tsLicense
+        AnchorSideBottom.Side = asrBottom
+        Left = 4
+        Height = 416
+        Top = 4
+        Width = 556
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        BorderSpacing.Bottom = 4
+        BorderStyle = bsNone
+        HideSelection = False
+        Lines.Strings = (
+          'MIT License'
+          ''
+          'Copyright (c) 2018 Atlinsoft, Ian Martinez'
+          ''
+          'Permission is hereby granted, free of charge, to any person obtaining a copy'
+          'of this software and associated documentation files (the "Software"), to deal'
+          'in the Software without restriction, including without limitation the rights'
+          'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'
+          'copies of the Software, and to permit persons to whom the Software is'
+          'furnished to do so, subject to the following conditions:'
+          ''
+          'The above copyright notice and this permission notice shall be included in all'
+          'copies or substantial portions of the Software.'
+          ''
+          'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR'
+          'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,'
+          'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE'
+          'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER'
+          'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,'
+          'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
+          'SOFTWARE.'
+        )
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
+    end
+    object tsChangelog: TTabSheet
+      Caption = 'Changelog'
+      ClientHeight = 424
+      ClientWidth = 564
+      object txtChangelog: TMemo
+        AnchorSideLeft.Control = tsLicense
+        AnchorSideTop.Control = tsLicense
+        AnchorSideRight.Control = tsLicense
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = tsLicense
+        AnchorSideBottom.Side = asrBottom
+        Left = 4
+        Height = 416
+        Top = 4
+        Width = 556
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        BorderSpacing.Bottom = 4
+        BorderStyle = bsNone
+        HideSelection = False
+        Lines.Strings = (
+          'Version 1.1 (August 20, 2018)'
+          '  - Add changelog tab to about dialog'
+          '  - Logo is now smaller in header'
+          '  - Header is gray instead of blue'
+          '  - Auto-completes on the states dropdown now trigger the weather stations dropdown to reload'#9
+          '  - Weather stations dropdown is now sorted'
+          '   '
+          'Version 1.0 (August 18, 2018)'
+          '  - Initial Release'
+        )
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
     end
   end
 end

@@ -4802,7 +4802,8 @@ object WallShifterForm: TWallShifterForm
     ChildSizing.ControlsPerLine = 4
     ClientHeight = 85
     ClientWidth = 559
-    TabOrder = 0
+    TabOrder = 1
+    TabStop = True
     object rbNone: TRadioButton
       Left = 6
       Height = 39
@@ -4895,7 +4896,8 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Interval:'
     ClientHeight = 35
     ClientWidth = 559
-    TabOrder = 1
+    TabOrder = 2
+    TabStop = True
     object Label2: TLabel
       AnchorSideLeft.Control = gbInterval
       AnchorSideTop.Control = gbInterval
@@ -4958,7 +4960,8 @@ object WallShifterForm: TWallShifterForm
     Caption = 'Wallpapers:'
     ClientHeight = 314
     ClientWidth = 559
-    TabOrder = 2
+    TabOrder = 4
+    TabStop = True
     object PageControl1: TPageControl
       AnchorSideLeft.Control = gbWallpapers
       AnchorSideTop.Control = gbWallpapers
@@ -5009,7 +5012,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsTime: TTabSheet
         Caption = 'Time'
-        ClientHeight = 238
+        ClientHeight = 270
         ClientWidth = 535
         object TimeBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5019,7 +5022,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 254
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5038,7 +5041,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsConditions: TTabSheet
         Caption = 'Weather Conditions'
-        ClientHeight = 238
+        ClientHeight = 270
         ClientWidth = 535
         object ConditionsBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5048,7 +5051,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 254
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5067,7 +5070,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsWindSpeed: TTabSheet
         Caption = 'Wind Speed'
-        ClientHeight = 263
+        ClientHeight = 270
         ClientWidth = 535
         object WindSpeedBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5077,7 +5080,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 247
+          Height = 254
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5096,7 +5099,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsTemperature: TTabSheet
         Caption = 'Temperature'
-        ClientHeight = 263
+        ClientHeight = 270
         ClientWidth = 535
         object TemperatureBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5106,7 +5109,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 247
+          Height = 254
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5125,7 +5128,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsHumidity: TTabSheet
         Caption = 'Humidity'
-        ClientHeight = 238
+        ClientHeight = 270
         ClientWidth = 535
         object HumidityBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5135,7 +5138,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 254
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5154,7 +5157,7 @@ object WallShifterForm: TWallShifterForm
       end
       object tsHeatIndex: TTabSheet
         Caption = 'Heat Index'
-        ClientHeight = 238
+        ClientHeight = 270
         ClientWidth = 535
         object HeatIndexBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5164,7 +5167,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 222
+          Height = 254
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5205,7 +5208,7 @@ object WallShifterForm: TWallShifterForm
     ClientWidth = 563
     Color = 14474460
     ParentColor = False
-    TabOrder = 3
+    TabOrder = 0
     object Image1: TImage
       AnchorSideLeft.Control = pnlTop
       AnchorSideTop.Control = pnlTop
@@ -5349,7 +5352,7 @@ object WallShifterForm: TWallShifterForm
       Caption = 'About...'
       Constraints.MinHeight = 25
       OnClick = btnAboutClick
-      TabOrder = 0
+      TabOrder = 1
     end
     object btnSettings: TButton
       AnchorSideLeft.Side = asrBottom
@@ -5369,7 +5372,7 @@ object WallShifterForm: TWallShifterForm
       Caption = 'Settings...'
       Constraints.MinHeight = 25
       OnClick = btnSettingsClick
-      TabOrder = 1
+      TabOrder = 0
     end
     object pnlLabels: TPanel
       AnchorSideLeft.Control = Image1
@@ -5441,7 +5444,7 @@ object WallShifterForm: TWallShifterForm
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
     CancelButton.DefaultCaption = True
-    TabOrder = 4
+    TabOrder = 3
     ShowButtons = [pbOK, pbClose]
   end
   object tmrWallpaper: TTimer

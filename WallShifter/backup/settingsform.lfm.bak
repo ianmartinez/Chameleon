@@ -10,7 +10,6 @@ object SettingsDialog: TSettingsDialog
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poOwnerFormCenter
-  LCLVersion = '1.8.4.0'
   Visible = False
   object tpMain: TPageControl
     AnchorSideLeft.Control = Owner
@@ -66,12 +65,14 @@ object SettingsDialog: TSettingsDialog
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+          AutoDropDown = True
           BorderSpacing.Left = 8
           BorderSpacing.Top = 8
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
           OnChange = cbStatesChange
+          OnSelect = cbStatesChange
           TabOrder = 0
         end
       end
@@ -107,6 +108,7 @@ object SettingsDialog: TSettingsDialog
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+          AutoDropDown = True
           BorderSpacing.Left = 8
           BorderSpacing.Top = 8
           BorderSpacing.Right = 8

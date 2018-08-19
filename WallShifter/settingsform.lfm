@@ -65,12 +65,14 @@ object SettingsDialog: TSettingsDialog
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+          AutoDropDown = True
           BorderSpacing.Left = 8
           BorderSpacing.Top = 8
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
           OnChange = cbStatesChange
+          OnSelect = cbStatesChange
           TabOrder = 0
         end
       end
@@ -106,11 +108,13 @@ object SettingsDialog: TSettingsDialog
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+          AutoDropDown = True
           BorderSpacing.Left = 8
           BorderSpacing.Top = 8
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
+          Sorted = True
           TabOrder = 0
         end
         object btnGo: TButton

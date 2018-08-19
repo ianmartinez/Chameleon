@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, VersionSupport, lclintf;
+  ExtCtrls, VersionSupport, lclintf, ComCtrls;
 
 type
 
@@ -17,9 +17,13 @@ type
     Image1: TImage;
     lblAuthor: TLabel;
     lblProgramName: TLabel;
+    PageControl1: TPageControl;
     pnlLabels: TPanel;
     pnlTop: TPanel;
-    txtAbout: TMemo;
+    tsLicense: TTabSheet;
+    tsChangelog: TTabSheet;
+    txtLicense: TMemo;
+    txtChangelog: TMemo;
     procedure btnWebsiteClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private

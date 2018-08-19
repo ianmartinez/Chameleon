@@ -1,0 +1,9 @@
+Version 1.1 (August 20, 2018)
+  - Add changelog tab to about dialog
+  - Logo is now smaller in header
+  - Header is gray instead of blue
+  - Auto-completes on the states dropdown now trigger the weather stations dropdown to reload	
+  - Weather stations dropdown is now sorted
+   
+Version 1.0 (August 18, 2018)
+  - Initial Release
