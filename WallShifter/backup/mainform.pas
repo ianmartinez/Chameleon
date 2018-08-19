@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, ImageButton,
-  Weather, Settings, AboutForm, SettingsForm, VersionSupport;
+  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, Menus,
+  ImageButton, Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, InterfaceBase;
 
 type
 
@@ -23,6 +23,7 @@ type
     HumidityBox: TScrollBox;
     TemperatureBox: TScrollBox;
     tmrWallpaper: TTimer;
+    trayWallShifter: TTrayIcon;
     WindSpeedBox: TScrollBox;
     ConditionsBox: TScrollBox;
     TimeBox: TScrollBox;
@@ -62,6 +63,7 @@ type
     procedure OKButtonClick(Sender: TObject);
     procedure spIntervalChange(Sender: TObject);
     procedure tmrWallpaperTimer(Sender: TObject);
+    procedure trayWallShifterDblClick(Sender: TObject);
   private
 
   public
@@ -237,6 +239,10 @@ begin
   tmrWallpaper.Interval := LongWord(spInterval.Value * 1000);
   tmrWallpaper.Enabled := true;
   tmrWallpaperTimer(Sender);
+  trayWallShifter.ShowBalloonHint;
+
+
+  ShowWindow(WidgetSet.AppHandle, SW_Hide);
 end;
 
 procedure TWallShifterForm.spIntervalChange(Sender: TObject);
@@ -275,9 +281,12 @@ begin
     end;
 
    WallpaperPath := GetImagePath(KeyName, CategoryName);
-   // ShowMessage(WallpaperPath);
-
    SetDesktopWallpaper(WallpaperPath);
+end;
+
+procedure TWallShifterForm.trayWallShifterDblClick(Sender: TObject);
+begin
+  Application.Restore;
 end;
 
 end.

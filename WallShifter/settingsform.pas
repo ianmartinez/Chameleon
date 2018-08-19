@@ -72,10 +72,12 @@ end;
 
 procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
-  if State <> '' then
-    cbStates.SelText := State;
-  if WeatherStationName <> ''  then
-    cbStations.SelText := WeatherStationName;
+  if State <> '' then begin
+    cbStates.Text := State;
+  end;
+  if WeatherStationName <> ''  then begin
+    cbStations.Text := WeatherStationName;
+  end;
 end;
 
 procedure TSettingsDialog.OKButtonClick(Sender: TObject);
