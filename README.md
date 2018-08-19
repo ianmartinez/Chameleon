@@ -1,7 +1,13 @@
 # WallShifter
 Dynamically change your desktop wallpaper based on the current battery, time of day, weather conditions, wind speed, temperature, humidity, or heat index. 
 
-![Windows 10 Screenshot](https://github.com/ianmartinez/WallShifter/raw/master/Screenshots/Windows%2010.PNG)          
+![Windows 10 Screenshot](https://github.com/ianmartinez/WallShifter/raw/master/Screenshots/Windows%2010.PNG)       
+   
+## Download
+##### [WallShifter latest release x86](https://github.com/ianmartinez/WallShifter/raw/master/Release/WallShifter32.exe)
+##### [WallShifter latest release x64](https://github.com/ianmartinez/WallShifter/raw/master/Release/WallShifter64.exe)
+##### [Wallpaper Pack](https://github.com/ianmartinez/WallShifter/raw/master/Release/Wallpapers.zip):
+> A collection of high quality 4K wallpapers for each case that you can use by simply extracting them into the same directory as the WallShifter executable. These are the images used in the screenshots. 
 
 ## Minimum Requirements
 Wallshifter is fairly light on resources while it's running. The minimum requirements are:
