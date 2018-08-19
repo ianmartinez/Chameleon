@@ -6,8 +6,8 @@ Dynamically change your desktop wallpaper based on the current battery, time of 
 ## Download
 ##### [WallShifter latest release x86](https://github.com/ianmartinez/WallShifter/raw/master/Release/WallShifter32.exe)
 ##### [WallShifter latest release x64](https://github.com/ianmartinez/WallShifter/raw/master/Release/WallShifter64.exe)
-##### [Wallpaper Pack](https://github.com/ianmartinez/WallShifter/raw/master/Release/Wallpapers.zip):
-> A collection of high quality 4K wallpapers for each case that you can use by simply extracting them into the same directory as the WallShifter executable. These are the images used in the screenshots. 
+##### [Wallpaper Pack](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ianmartinez/WallShifter/tree/master/WallShifter/Wallpapers):
+> A collection of high quality 4K wallpapers for each setting.  You can use them by simply extracting them into the same directory as the WallShifter executable and lauching the program. It will generate thumbnail files for the images on startup. This may take a while, depending on your CPU.
 
 ## Minimum Requirements
 Wallshifter is fairly light on resources while it's running. The minimum requirements are:
