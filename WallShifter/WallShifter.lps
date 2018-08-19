@@ -20,8 +20,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="41"/>
+        <TopLine Value="51"/>
         <CursorPos X="56" Y="55"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -46,9 +45,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="280"/>
+        <TopLine Value="290"/>
         <CursorPos X="40" Y="297"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="172"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -58,9 +57,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos X="36" Y="9"/>
-        <UsageCount Value="168"/>
+        <TopLine Value="17"/>
+        <CursorPos X="77" Y="42"/>
+        <UsageCount Value="170"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -71,7 +72,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="201"/>
         <CursorPos X="47" Y="223"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -81,7 +82,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="259"/>
         <CursorPos X="33" Y="227"/>
-        <UsageCount Value="163"/>
+        <UsageCount Value="165"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -94,7 +95,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="75"/>
         <CursorPos X="32" Y="75"/>
-        <UsageCount Value="161"/>
+        <UsageCount Value="163"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>

@@ -20,8 +20,8 @@ object AboutDialog: TAboutDialog
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 8
-    Height = 440
-    Top = 152
+    Height = 452
+    Top = 140
     Width = 572
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -61,21 +61,16 @@ object AboutDialog: TAboutDialog
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 8
-    Height = 128
-    Top = 8
-    Width = 572
+    Left = 0
+    Height = 124
+    Top = 0
+    Width = 588
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
-    BorderSpacing.Left = 8
-    BorderSpacing.Top = 8
-    BorderSpacing.Right = 8
     BorderSpacing.Bottom = 16
     BevelOuter = bvNone
-    BorderStyle = bsSingle
     ClientHeight = 124
-    ClientWidth = 568
-    Color = 15461346
+    ClientWidth = 588
     ParentColor = False
     TabOrder = 1
     object Image1: TImage
@@ -289,7 +284,6 @@ object AboutDialog: TAboutDialog
         BorderSpacing.Left = 8
         BorderSpacing.Top = 8
         Caption = 'Atlinsoft'
-        Font.Color = 3552556
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -305,7 +299,6 @@ object AboutDialog: TAboutDialog
         BorderSpacing.Left = 8
         BorderSpacing.Top = 8
         Caption = 'WallShifter'
-        Font.Color = 7756044
         Font.Height = -27
         Font.Style = [fsBold]
         ParentColor = False
@@ -318,7 +311,7 @@ object AboutDialog: TAboutDialog
       AnchorSideRight.Control = pnlTop
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
-      Left = 483
+      Left = 503
       Height = 25
       Top = 14
       Width = 77

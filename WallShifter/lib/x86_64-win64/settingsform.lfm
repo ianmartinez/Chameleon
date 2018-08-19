@@ -10,7 +10,6 @@ object SettingsDialog: TSettingsDialog
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poOwnerFormCenter
-  LCLVersion = '1.8.4.0'
   Visible = False
   object tpMain: TPageControl
     AnchorSideLeft.Control = Owner
