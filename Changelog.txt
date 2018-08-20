@@ -1,3 +1,6 @@
+Version 1.2 (September 1, 2018)
+  - Fixed a few invalid weather conditions begin returned from weather.gov
+
 Version 1.1 (August 20, 2018)
   - Add changelog tab to about dialog
   - Logo is now smaller in header

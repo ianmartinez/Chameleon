@@ -358,18 +358,27 @@ implementation
     ConditionNames: TStringList;
     ConditionNamePos: integer;
     NormalizedWeatherCondition: string;
+    MatchFound : boolean = false;
   begin
-    NormalizedWeatherCondition := 'Invalid';
+    NormalizedWeatherCondition := 'Invalid: ' + WeatherCondition;
 
     for i := low(WeatherConditions) to high(WeatherConditions) do begin
       ConditionNames := TStringList.Create;
       try
         SplitString('|', WeatherConditionsIrregular[i], ConditionNames);
         for ConditionNamePos := 0 to ConditionNames.Count - 1 do
-          if(LowerCase(WeatherCondition) = LowerCase(ConditionNames[ConditionNamePos])) then
+          if(LowerCase(WeatherCondition) = LowerCase(ConditionNames[ConditionNamePos])) then begin
             NormalizedWeatherCondition := WeatherConditions[i];
+            MatchFound := true;
+          end;
       finally
         ConditionNames.Free();
+      end;
+    end;
+
+    if not MatchFound then begin     
+      if WeatherCondition.ToLower.Contains('thunderstorm') then begin
+        NormalizedWeatherCondition := 'Thunderstorm';
       end;
     end;
 

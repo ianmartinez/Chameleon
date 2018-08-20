@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="10"/>
-    <BuildModes Count="2" Active="Debug">
+    <BuildModes Count="2" Active="Default">
       <Item1 Name="Debug">
         <CompilerOptions>
           <Version Value="11"/>
@@ -91,8 +91,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="52"/>
-        <CursorPos X="56" Y="55"/>
+        <TopLine Value="53"/>
+        <CursorPos X="90" Y="87"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -118,7 +118,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="290"/>
         <CursorPos X="40" Y="297"/>
-        <UsageCount Value="173"/>
+        <UsageCount Value="176"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -128,11 +128,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="17"/>
+        <TopLine Value="21"/>
         <CursorPos X="77" Y="46"/>
-        <UsageCount Value="171"/>
+        <UsageCount Value="174"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -143,17 +142,18 @@
         <EditorIndex Value="6"/>
         <TopLine Value="201"/>
         <CursorPos X="47" Y="223"/>
-        <UsageCount Value="168"/>
+        <UsageCount Value="171"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="weather.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="259"/>
-        <CursorPos X="33" Y="227"/>
-        <UsageCount Value="166"/>
+        <TopLine Value="348"/>
+        <CursorPos X="5" Y="362"/>
+        <UsageCount Value="169"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -166,7 +166,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="75"/>
         <CursorPos X="32" Y="75"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>

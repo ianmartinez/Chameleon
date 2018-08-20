@@ -326,7 +326,7 @@ implementation
     This function normalizes them to match those in the array WeatherConditions
     declared above.
   *)
-  function NormalizeWeatherCondition(TWeatherCondition: string) : string;
+  function NormalizeWeatherCondition(WeatherCondition: string) : string;
   const
     WeatherConditionsIrregular : array [0..23] of string =
       ('Mostly Cloudy|Mostly Cloudy with Haze|Mostly Cloudy and Breezy',
@@ -358,18 +358,27 @@ implementation
     ConditionNames: TStringList;
     ConditionNamePos: integer;
     NormalizedWeatherCondition: string;
+    bool MatchFound : bool = false;
   begin
-    NormalizedWeatherCondition := 'Invalid';
+    NormalizedWeatherCondition := 'Invalid: ' + WeatherCondition;
 
     for i := low(WeatherConditions) to high(WeatherConditions) do begin
       ConditionNames := TStringList.Create;
       try
         SplitString('|', WeatherConditionsIrregular[i], ConditionNames);
         for ConditionNamePos := 0 to ConditionNames.Count - 1 do
-          if(LowerCase(WeatherCondition) = LowerCase(ConditionNames[ConditionNamePos])) then
+          if(LowerCase(WeatherCondition) = LowerCase(ConditionNames[ConditionNamePos])) then begin
             NormalizedWeatherCondition := WeatherConditions[i];
+            MatchFound := true;
+          end;
       finally
         ConditionNames.Free();
+      end;
+    end;
+
+    if not MatchFound then begin     
+      if WeatherCondition.ToLower.Contains('thunderstorm') then begin
+        NormalizedWeatherCondition := 'Thunderstorm';
       end;
     end;
 

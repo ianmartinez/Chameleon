@@ -4973,13 +4973,13 @@ object WallShifterForm: TWallShifterForm
       Height = 298
       Top = 8
       Width = 543
-      ActivePage = tsHeatIndex
+      ActivePage = tsBattery
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 8
       BorderSpacing.Top = 8
       BorderSpacing.Right = 8
       BorderSpacing.Bottom = 8
-      TabIndex = 6
+      TabIndex = 0
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
@@ -5008,7 +5008,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
       object tsTime: TTabSheet
@@ -5038,7 +5037,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
       object tsConditions: TTabSheet
@@ -5068,7 +5066,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
       object tsWindSpeed: TTabSheet
@@ -5098,7 +5095,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
       object tsTemperature: TTabSheet
@@ -5128,7 +5124,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
       object tsHumidity: TTabSheet
@@ -5158,7 +5153,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
       object tsHeatIndex: TTabSheet
@@ -5188,7 +5182,6 @@ object WallShifterForm: TWallShifterForm
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           TabOrder = 0
-          TabStop = True
         end
       end
     end
