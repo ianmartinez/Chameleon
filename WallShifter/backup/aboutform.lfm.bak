@@ -294,13 +294,13 @@ object AboutDialog: TAboutDialog
     Height = 452
     Top = 140
     Width = 572
-    ActivePage = tsChangelog
+    ActivePage = tsLicense
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     object tsLicense: TTabSheet
       Caption = 'License'

@@ -1,4 +1,6 @@
-Version 1.2 (September 1, 2018)
+Version 9 (September 1, 2018)
+  - Change name to Chameleon
+  - New icon
   - Fixed a few invalid weather conditions begin returned from weather.gov
 
 Version 1.1 (August 20, 2018)

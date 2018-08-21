@@ -108,8 +108,7 @@ var
   SelectedStation: TWeatherStation;
   Weather: TWeatherData;
 begin
-  if cbStations.Text = '' then
-    exit;
+  if cbStations.Text = '' then exit;
 
   SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
   synWeatherDataXML.Caption := GetWeatherDataXML(SelectedStation);

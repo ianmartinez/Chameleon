@@ -91,7 +91,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="53"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="80"/>
         <CursorPos X="90" Y="87"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -118,7 +119,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="107"/>
         <CursorPos X="40" Y="297"/>
-        <UsageCount Value="184"/>
+        <UsageCount Value="186"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -131,7 +132,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="21"/>
         <CursorPos X="77" Y="46"/>
-        <UsageCount Value="182"/>
+        <UsageCount Value="184"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -142,7 +143,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="201"/>
         <CursorPos X="47" Y="223"/>
-        <UsageCount Value="179"/>
+        <UsageCount Value="181"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -152,7 +153,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="355"/>
         <CursorPos X="29" Y="323"/>
-        <UsageCount Value="177"/>
+        <UsageCount Value="179"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -162,11 +163,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="89"/>
+        <TopLine Value="91"/>
         <CursorPos X="10" Y="112"/>
-        <UsageCount Value="175"/>
+        <UsageCount Value="177"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
@@ -216,21 +216,21 @@
         <TopLine Value="53"/>
         <CursorPos X="57" Y="61"/>
         <FoldState Value=" T7iXLP TM HjH21#"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit13>
       <Unit14>
         <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\httpsend.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="754"/>
         <CursorPos X="3" Y="764"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="4311"/>
         <CursorPos Y="4328"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit15>
       <Unit16>
         <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
@@ -248,7 +248,7 @@
         <UsageCount Value="5"/>
       </Unit17>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="mainform.pas"/>
         <Caret Line="278" Column="59" TopLine="249"/>
@@ -365,10 +365,6 @@
         <Filename Value="weather.pas"/>
         <Caret Line="381" Column="41" TopLine="363"/>
       </Position29>
-      <Position30>
-        <Filename Value="settingsform.pas"/>
-        <Caret Line="75" Column="32" TopLine="89"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
