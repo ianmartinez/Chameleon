@@ -358,7 +358,7 @@ implementation
     ConditionNames: TStringList;
     ConditionNamePos: integer;
     NormalizedWeatherCondition: string;
-    bool MatchFound : bool = false;
+    MatchFound : boolean = false;
   begin
     NormalizedWeatherCondition := 'Invalid: ' + WeatherCondition;
 

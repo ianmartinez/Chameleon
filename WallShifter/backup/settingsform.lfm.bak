@@ -114,6 +114,7 @@ object SettingsDialog: TSettingsDialog
           BorderSpacing.Right = 8
           BorderSpacing.Bottom = 8
           ItemHeight = 15
+          Sorted = True
           TabOrder = 0
         end
         object btnGo: TButton

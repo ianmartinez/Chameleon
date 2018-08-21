@@ -326,6 +326,7 @@ implementation
     This function normalizes them to match those in the array WeatherConditions
     declared above.
   *)
+
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   const
     WeatherConditionsIrregular : array [0..23] of string =
