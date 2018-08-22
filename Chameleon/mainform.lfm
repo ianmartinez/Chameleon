@@ -5565,7 +5565,7 @@ object ChameleonForm: TChameleonForm
   object trayIcon: TTrayIcon
     BalloonFlags = bfInfo
     BalloonHint = 'Double click tray icon to restore.'
-    BalloonTitle = 'WallShifter Is Running'
+    BalloonTitle = 'Chameleon Is Running'
     Icon.Data = {
       3A65020000000100080000000000010020007C41000086000000808000000100
       200028080100024200006060000001002000A89400002A4A0100404000000100
@@ -10474,7 +10474,7 @@ object ChameleonForm: TChameleonForm
       0000FFFF00000000000000000000000000000000000000000000000000000000
       00000000000000000000000000000000000000000000FFFF0000FFFF0000
     }
-    Hint = 'Atlinsoft WallShifter'
+    Hint = 'Chameleon'
     Visible = True
     OnDblClick = trayIconDblClick
     left = 448

@@ -4821,7 +4821,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 105
-    Top = 191
+    Top = 195
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
@@ -4830,7 +4830,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 8
     Caption = 'Change By:'
     ChildSizing.LeftRightSpacing = 6
-    ChildSizing.TopBottomSpacing = 8
+    ChildSizing.TopBottomSpacing = 10
     ChildSizing.HorizontalSpacing = 8
     ChildSizing.VerticalSpacing = 8
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
@@ -4845,8 +4845,8 @@ object ChameleonForm: TChameleonForm
     TabStop = True
     object rbNone: TRadioButton
       Left = 6
-      Height = 31
-      Top = 8
+      Height = 29
+      Top = 10
       Width = 123
       Caption = 'None'
       Checked = True
@@ -4856,8 +4856,8 @@ object ChameleonForm: TChameleonForm
     end
     object rbBattery: TRadioButton
       Left = 137
-      Height = 31
-      Top = 8
+      Height = 29
+      Top = 10
       Width = 128
       Caption = 'Battery'
       OnChange = ModeChange
@@ -4865,8 +4865,8 @@ object ChameleonForm: TChameleonForm
     end
     object rbTime: TRadioButton
       Left = 273
-      Height = 31
-      Top = 8
+      Height = 29
+      Top = 10
       Width = 110
       Caption = 'Time'
       OnChange = ModeChange
@@ -4874,8 +4874,8 @@ object ChameleonForm: TChameleonForm
     end
     object rbConditions: TRadioButton
       Left = 391
-      Height = 31
-      Top = 8
+      Height = 29
+      Top = 10
       Width = 162
       Caption = 'Weather Conditions'
       OnChange = ModeChange
@@ -4883,7 +4883,7 @@ object ChameleonForm: TChameleonForm
     end
     object rbWindSpeed: TRadioButton
       Left = 6
-      Height = 30
+      Height = 28
       Top = 47
       Width = 123
       Caption = 'Wind Speed'
@@ -4892,7 +4892,7 @@ object ChameleonForm: TChameleonForm
     end
     object rbTemperature: TRadioButton
       Left = 137
-      Height = 30
+      Height = 28
       Top = 47
       Width = 128
       Caption = 'Temperature'
@@ -4901,7 +4901,7 @@ object ChameleonForm: TChameleonForm
     end
     object rbHumidity: TRadioButton
       Left = 273
-      Height = 30
+      Height = 28
       Top = 47
       Width = 110
       Caption = 'Humidity'
@@ -4910,7 +4910,7 @@ object ChameleonForm: TChameleonForm
     end
     object rbHeatIndex: TRadioButton
       Left = 391
-      Height = 30
+      Height = 28
       Top = 47
       Width = 162
       Caption = 'Heat Index'
@@ -4926,7 +4926,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 55
-    Top = 304
+    Top = 308
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
@@ -4988,8 +4988,8 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = pnlButtons
     Left = 8
-    Height = 357
-    Top = 367
+    Height = 353
+    Top = 371
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -4997,7 +4997,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
     Caption = 'Wallpapers:'
-    ClientHeight = 337
+    ClientHeight = 333
     ClientWidth = 559
     TabOrder = 4
     TabStop = True
@@ -5009,7 +5009,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 321
+      Height = 317
       Top = 8
       Width = 543
       ActivePage = tsBattery
@@ -5022,7 +5022,7 @@ object ChameleonForm: TChameleonForm
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 293
+        ClientHeight = 289
         ClientWidth = 535
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5032,7 +5032,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 277
+          Height = 273
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5507,7 +5507,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
-    Height = 55
+    Height = 59
     Top = 128
     Width = 563
     Anchors = [akTop, akLeft, akRight]
@@ -5517,7 +5517,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 8
     Caption = 'Change:'
     ChildSizing.LeftRightSpacing = 6
-    ChildSizing.TopBottomSpacing = 8
+    ChildSizing.TopBottomSpacing = 10
     ChildSizing.HorizontalSpacing = 8
     ChildSizing.VerticalSpacing = 8
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
@@ -5526,13 +5526,13 @@ object ChameleonForm: TChameleonForm
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 4
-    ClientHeight = 35
+    ClientHeight = 39
     ClientWidth = 559
     TabOrder = 5
     object rbBoth: TRadioButton
       Left = 6
       Height = 19
-      Top = 8
+      Top = 10
       Width = 165
       Caption = 'Both'
       Checked = True
@@ -5542,7 +5542,7 @@ object ChameleonForm: TChameleonForm
     object rbWallpaper: TRadioButton
       Left = 179
       Height = 19
-      Top = 8
+      Top = 10
       Width = 193
       Caption = 'Wallpaper'
       TabOrder = 0
@@ -5550,7 +5550,7 @@ object ChameleonForm: TChameleonForm
     object rbColors: TRadioButton
       Left = 380
       Height = 19
-      Top = 8
+      Top = 10
       Width = 173
       Caption = 'Colors'
       TabOrder = 2
