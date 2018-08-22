@@ -8,7 +8,7 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, MainForm, imagebutton, Settings, AboutForm, VersionSupport,
-  SettingsForm, laz_synapse;
+  SettingsForm, laz_synapse, Win32;
 
 {$R *.res}
 

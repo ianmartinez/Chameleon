@@ -43,7 +43,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="8">
+    <Units Count="9">
       <Unit0>
         <Filename Value="Chameleon.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -95,6 +95,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
       </Unit7>
+      <Unit8>
+        <Filename Value="win32.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Win32"/>
+      </Unit8>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

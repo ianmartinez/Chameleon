@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, Menus,
-  ImageButton, Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, InterfaceBase;
+  ImageButton, Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, Win32, InterfaceBase;
 
 type
 
@@ -286,7 +286,7 @@ begin
     end;
 
    WallpaperPath := GetImagePath(KeyName, CategoryName);
-   SetDesktopWallpaper(WallpaperPath);
+   SetWallpaper(WallpaperPath);
 end;
 
 procedure TChameleonForm.trayIconDblClick(Sender: TObject);

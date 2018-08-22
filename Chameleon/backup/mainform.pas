@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, Menus,
-  ImageButton, Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, InterfaceBase;
+  ImageButton, Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, Win32, InterfaceBase;
 
 type
 

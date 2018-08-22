@@ -52,11 +52,9 @@ interface
   function GetHumidity(WeatherStationName: string) : string;
   function GetHeatIndex(WeatherStationName: string) : string;
 
-  procedure SetDesktopWallpaper(WallpaperPath: string);
-
 implementation  
   uses
-    Classes, SysUtils, Forms, IniFiles, typinfo, windows, weather, Dialogs;
+    Classes, SysUtils, Forms, IniFiles, typinfo, weather, Dialogs, windows;
 
   function WriteSafeString(UnsafeString: string) : string;
   var
@@ -346,11 +344,6 @@ implementation
   function GetHeatIndex(WeatherStationName: string) : string;
   begin
     Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).HeatIndex);
-  end;
-
-  procedure SetDesktopWallpaper(WallpaperPath: string);
-  begin
-    SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, pchar(WallpaperPath), SPIF_SENDCHANGE);
   end;
 end.
 
