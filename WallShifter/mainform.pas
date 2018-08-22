@@ -15,7 +15,7 @@ type
 
   TWallShifterForm = class(TForm)
     btnSettings: TButton;
-    lblAuthor: TLabel;
+    lblVersion: TLabel;
     lblProgramName: TLabel;
     pnlLabels: TPanel;
     pnlButtons: TButtonPanel;
@@ -145,7 +145,7 @@ begin
   end;
   
   Caption := 'Atlinsoft WallShifter ' + VersionSupport.GetProductVersion;
-  lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
+  lblVersion.Caption :=  VersionSupport.GetProductVersion;
 end;
 
 procedure TWallShifterForm.btnAboutClick(Sender: TObject);

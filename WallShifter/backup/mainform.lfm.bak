@@ -4854,7 +4854,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 105
-    Top = 124
+    Top = 128
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
@@ -4958,7 +4958,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 55
-    Top = 237
+    Top = 241
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
@@ -5020,8 +5020,8 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = pnlButtons
     Left = 8
-    Height = 330
-    Top = 300
+    Height = 326
+    Top = 304
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -5029,7 +5029,7 @@ object WallShifterForm: TWallShifterForm
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
     Caption = 'Wallpapers:'
-    ClientHeight = 310
+    ClientHeight = 306
     ClientWidth = 559
     TabOrder = 4
     TabStop = True
@@ -5041,7 +5041,7 @@ object WallShifterForm: TWallShifterForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 294
+      Height = 290
       Top = 8
       Width = 543
       ActivePage = tsBattery
@@ -5054,7 +5054,7 @@ object WallShifterForm: TWallShifterForm
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 266
+        ClientHeight = 262
         ClientWidth = 535
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5064,7 +5064,7 @@ object WallShifterForm: TWallShifterForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 250
+          Height = 246
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5263,7 +5263,7 @@ object WallShifterForm: TWallShifterForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
-    Height = 100
+    Height = 104
     Top = 8
     Width = 563
     Anchors = [akTop, akLeft, akRight]
@@ -5275,7 +5275,7 @@ object WallShifterForm: TWallShifterForm
     BevelColor = 13158600
     BevelInner = bvSpace
     BevelOuter = bvSpace
-    ClientHeight = 100
+    ClientHeight = 104
     ClientWidth = 563
     Color = 14474460
     ParentColor = False
@@ -5293,7 +5293,7 @@ object WallShifterForm: TWallShifterForm
       AutoSize = True
       BorderSpacing.Left = 8
       BorderSpacing.Top = 16
-      BorderSpacing.Bottom = 16
+      BorderSpacing.Bottom = 20
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869637E0D000089504E47
         0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
@@ -5463,16 +5463,17 @@ object WallShifterForm: TWallShifterForm
       ClientHeight = 63
       ClientWidth = 133
       TabOrder = 2
-      object lblAuthor: TLabel
+      object lblVersion: TLabel
         AnchorSideLeft.Control = pnlLabels
-        AnchorSideTop.Control = pnlLabels
+        AnchorSideTop.Control = lblProgramName
+        AnchorSideTop.Side = asrBottom
         Left = 8
         Height = 15
-        Top = 8
-        Width = 48
+        Top = 48
+        Width = 61
         BorderSpacing.Left = 8
         BorderSpacing.Top = 8
-        Caption = 'Atlinsoft'
+        Caption = 'Version 1.0'
         Font.Color = 5460819
         Font.Style = [fsBold]
         ParentColor = False
@@ -5480,11 +5481,10 @@ object WallShifterForm: TWallShifterForm
       end
       object lblProgramName: TLabel
         AnchorSideLeft.Control = pnlLabels
-        AnchorSideTop.Control = lblAuthor
-        AnchorSideTop.Side = asrBottom
+        AnchorSideTop.Control = pnlLabels
         Left = 8
         Height = 32
-        Top = 31
+        Top = 8
         Width = 125
         BorderSpacing.Left = 8
         BorderSpacing.Top = 8

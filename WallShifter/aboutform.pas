@@ -15,7 +15,7 @@ type
   TAboutDialog = class(TForm)
     btnWebsite: TButton;
     Image1: TImage;
-    lblAuthor: TLabel;
+    lblVersion: TLabel;
     lblProgramName: TLabel;
     PageControl1: TPageControl;
     pnlLabels: TPanel;
@@ -43,12 +43,12 @@ implementation
 
 procedure TAboutDialog.FormCreate(Sender: TObject);
 begin
-    lblProgramName.Caption := 'WallShifter ' + VersionSupport.GetProductVersion;
+    lblVersion.Caption :=  VersionSupport.GetProductVersion;
 end;
 
 procedure TAboutDialog.btnWebsiteClick(Sender: TObject);
 begin
-  OpenURL('http://www.atlinsoft.com');
+  OpenURL('http://www.ianmtz.com');
 end;
 
 end.

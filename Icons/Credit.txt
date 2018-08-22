@@ -1,3 +1,4 @@
-Based off of an icon from Xomo Basics by Laura Reen:
-Icon: https://www.iconfinder.com/icons/1622830/gallery_landskape_mountains_nature_photo_picture_icon
-Set: https://www.iconfinder.com/iconsets/xomo-basics
+Based off of an icon from the Circle icons by Nick Roach:
+Icon: https://www.iconfinder.com/icons/1055018/brush_paint_paint_brush_icon
+Set: https://www.iconfinder.com/iconsets/circle-icons-1
+License: http://www.gnu.org/copyleft/gpl.html

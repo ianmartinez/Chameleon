@@ -5454,25 +5454,26 @@ object WallShifterForm: TWallShifterForm
       AnchorSideTop.Side = asrCenter
       AnchorSideBottom.Side = asrCenter
       Left = 82
-      Height = 63
-      Top = 19
+      Height = 55
+      Top = 23
       Width = 133
       AutoSize = True
       BorderSpacing.Left = 8
       BevelOuter = bvNone
-      ClientHeight = 63
+      ClientHeight = 55
       ClientWidth = 133
       TabOrder = 2
-      object lblAuthor: TLabel
+      object lblVersion: TLabel
         AnchorSideLeft.Control = pnlLabels
-        AnchorSideTop.Control = pnlLabels
+        AnchorSideTop.Control = lblProgramName
+        AnchorSideTop.Side = asrBottom
         Left = 8
         Height = 15
-        Top = 8
-        Width = 48
+        Top = 40
+        Width = 61
         BorderSpacing.Left = 8
         BorderSpacing.Top = 8
-        Caption = 'Atlinsoft'
+        Caption = 'Version 1.0'
         Font.Color = 5460819
         Font.Style = [fsBold]
         ParentColor = False
@@ -5480,14 +5481,12 @@ object WallShifterForm: TWallShifterForm
       end
       object lblProgramName: TLabel
         AnchorSideLeft.Control = pnlLabels
-        AnchorSideTop.Control = lblAuthor
-        AnchorSideTop.Side = asrBottom
+        AnchorSideTop.Control = pnlLabels
         Left = 8
         Height = 32
-        Top = 31
+        Top = 0
         Width = 125
         BorderSpacing.Left = 8
-        BorderSpacing.Top = 8
         Caption = 'WallShifter'
         Font.Color = 3158064
         Font.Height = -24
