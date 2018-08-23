@@ -13,7 +13,6 @@ type
 
   TImageButtonFrame = class(TFrame)
     btnPickImage: TButton;
-    btnColor: TColorButton;
     imgPreview: TImage;
     dlgOpenPicture: TOpenPictureDialog;
     lblTitle: TLabel;

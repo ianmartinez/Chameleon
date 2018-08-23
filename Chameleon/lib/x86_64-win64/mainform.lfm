@@ -1,11 +1,11 @@
 object ChameleonForm: TChameleonForm
   Left = 0
-  Height = 778
+  Height = 687
   Top = 0
   Width = 579
   ActiveControl = rbNone
   Caption = 'Chameleon'
-  ClientHeight = 778
+  ClientHeight = 687
   ClientWidth = 579
   Constraints.MinHeight = 100
   Constraints.MinWidth = 550
@@ -4812,17 +4812,16 @@ object ChameleonForm: TChameleonForm
   OnCreate = FormCreate
   OnWindowStateChange = FormWindowStateChange
   Position = poScreenCenter
-  LCLVersion = '1.8.4.0'
   Visible = False
   object gbChangeBy: TRadioGroup
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = gbChange
+    AnchorSideTop.Control = pnlTop
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 105
-    Top = 195
+    Top = 128
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
@@ -4927,7 +4926,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 55
-    Top = 308
+    Top = 241
     Width = 563
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
@@ -4989,8 +4988,8 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = pnlButtons
     Left = 8
-    Height = 353
-    Top = 371
+    Height = 329
+    Top = 304
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -4998,7 +4997,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
     Caption = 'Wallpapers:'
-    ClientHeight = 333
+    ClientHeight = 309
     ClientWidth = 559
     TabOrder = 4
     TabStop = True
@@ -5010,7 +5009,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 317
+      Height = 293
       Top = 8
       Width = 543
       ActivePage = tsBattery
@@ -5023,7 +5022,7 @@ object ChameleonForm: TChameleonForm
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 289
+        ClientHeight = 265
         ClientWidth = 535
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5033,7 +5032,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 273
+          Height = 249
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5485,7 +5484,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideBottom.Side = asrBottom
     Left = 6
     Height = 34
-    Top = 738
+    Top = 647
     Width = 567
     BorderSpacing.Top = 8
     OKButton.Name = 'OKButton'
@@ -5500,62 +5499,6 @@ object ChameleonForm: TChameleonForm
     CancelButton.DefaultCaption = True
     TabOrder = 3
     ShowButtons = [pbOK, pbClose]
-  end
-  object gbChange: TGroupBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = pnlTop
-    AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    Left = 8
-    Height = 59
-    Top = 128
-    Width = 563
-    Anchors = [akTop, akLeft, akRight]
-    AutoSize = True
-    BorderSpacing.Left = 8
-    BorderSpacing.Top = 8
-    BorderSpacing.Right = 8
-    Caption = 'Change:'
-    ChildSizing.LeftRightSpacing = 6
-    ChildSizing.TopBottomSpacing = 10
-    ChildSizing.HorizontalSpacing = 8
-    ChildSizing.VerticalSpacing = 8
-    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-    ChildSizing.EnlargeVertical = crsHomogenousChildResize
-    ChildSizing.ShrinkHorizontal = crsScaleChilds
-    ChildSizing.ShrinkVertical = crsScaleChilds
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 4
-    ClientHeight = 39
-    ClientWidth = 559
-    TabOrder = 5
-    object rbBoth: TRadioButton
-      Left = 6
-      Height = 19
-      Top = 10
-      Width = 165
-      Caption = 'Both'
-      Checked = True
-      TabOrder = 1
-      TabStop = True
-    end
-    object rbWallpaper: TRadioButton
-      Left = 179
-      Height = 19
-      Top = 10
-      Width = 193
-      Caption = 'Wallpaper'
-      TabOrder = 0
-    end
-    object rbColors: TRadioButton
-      Left = 380
-      Height = 19
-      Top = 10
-      Width = 173
-      Caption = 'Colors'
-      TabOrder = 2
-    end
   end
   object tmrTheme: TTimer
     Enabled = False

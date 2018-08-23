@@ -2,12 +2,12 @@ object ImageButtonFrame: TImageButtonFrame
   Left = 0
   Height = 250
   Top = 0
-  Width = 280
+  Width = 350
   AutoSize = True
   ClientHeight = 250
-  ClientWidth = 280
+  ClientWidth = 350
   Color = clNone
-  Constraints.MaxWidth = 290
+  Constraints.MaxWidth = 350
   Constraints.MinWidth = 280
   ParentColor = False
   ParentFont = False
@@ -22,7 +22,7 @@ object ImageButtonFrame: TImageButtonFrame
     Left = 3
     Height = 244
     Top = 3
-    Width = 274
+    Width = 344
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -30,7 +30,7 @@ object ImageButtonFrame: TImageButtonFrame
     BorderSpacing.Bottom = 3
     BevelInner = bvLowered
     ClientHeight = 244
-    ClientWidth = 274
+    ClientWidth = 344
     Color = clNone
     ParentColor = False
     TabOrder = 0
@@ -43,7 +43,7 @@ object ImageButtonFrame: TImageButtonFrame
       Left = 5
       Height = 25
       Top = 209
-      Width = 264
+      Width = 334
       Anchors = [akLeft, akRight, akBottom]
       AutoSize = True
       BorderSpacing.Left = 3
@@ -61,7 +61,7 @@ object ImageButtonFrame: TImageButtonFrame
       Left = 5
       Height = 15
       Top = 10
-      Width = 264
+      Width = 334
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 3
@@ -72,15 +72,15 @@ object ImageButtonFrame: TImageButtonFrame
     end
     object imgPreview: TImage
       AnchorSideLeft.Control = pnlMain
-      AnchorSideTop.Control = btnColor
+      AnchorSideTop.Control = lblTitle
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = pnlMain
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = btnPickImage
       Left = 10
-      Height = 128
-      Top = 73
-      Width = 254
+      Height = 168
+      Top = 33
+      Width = 324
       Anchors = [akTop, akLeft, akRight, akBottom]
       AutoSize = True
       BorderSpacing.Left = 8
@@ -89,27 +89,9 @@ object ImageButtonFrame: TImageButtonFrame
       BorderSpacing.Bottom = 8
       Center = True
       Constraints.MaxHeight = 3000
-      Constraints.MaxWidth = 290
+      Constraints.MaxWidth = 350
       Proportional = True
       Stretch = True
-    end
-    object btnColor: TColorButton
-      AnchorSideLeft.Control = pnlMain
-      AnchorSideTop.Control = lblTitle
-      AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = pnlMain
-      AnchorSideRight.Side = asrBottom
-      Left = 10
-      Height = 32
-      Top = 33
-      Width = 254
-      Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 8
-      BorderSpacing.Right = 8
-      BorderWidth = 2
-      ButtonColorSize = 16
-      ButtonColor = clNavy
     end
   end
   object dlgOpenPicture: TOpenPictureDialog

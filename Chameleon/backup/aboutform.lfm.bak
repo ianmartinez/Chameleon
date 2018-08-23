@@ -3,7 +3,7 @@ object AboutDialog: TAboutDialog
   Height = 600
   Top = 0
   Width = 588
-  ActiveControl = txtLicense
+  ActiveControl = btnWebsite
   BorderStyle = bsDialog
   Caption = 'About'
   ClientHeight = 600
@@ -390,6 +390,12 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 2.0 (September 1, 2018)'
+          '  - Change name to Chameleon'
+          '  - Change DWM colors along with wallpaper'
+          '  - New icon'
+          '  - Fixed a few invalid weather conditions being returned from weather.gov'
+          ''
           'Version 1.1 (August 20, 2018)'
           '  - Add changelog tab to about dialog'
           '  - Logo is now smaller in header'

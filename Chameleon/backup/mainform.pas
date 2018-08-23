@@ -15,16 +15,12 @@ type
 
   TChameleonForm = class(TForm)
     btnSettings: TButton;
-    gbChange: TGroupBox;
     lblVersion: TLabel;
     lblProgramName: TLabel;
     pnlLabels: TPanel;
     pnlButtons: TButtonPanel;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
-    rbBoth: TRadioButton;
-    rbWallpaper: TRadioButton;
-    rbColors: TRadioButton;
     TemperatureBox: TScrollBox;
     tmrTheme: TTimer;
     trayIcon: TTrayIcon;
@@ -286,7 +282,7 @@ begin
     end;
 
    WallpaperPath := GetImagePath(KeyName, CategoryName);
-   SetDesktopWallpaper(WallpaperPath);
+   SetWallpaper(WallpaperPath);
 end;
 
 procedure TChameleonForm.trayIconDblClick(Sender: TObject);
