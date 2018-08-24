@@ -1,11 +1,11 @@
 object ChameleonForm: TChameleonForm
   Left = 0
-  Height = 778
+  Height = 687
   Top = 0
   Width = 579
   ActiveControl = rbNone
   Caption = 'Chameleon'
-  ClientHeight = 778
+  ClientHeight = 687
   ClientWidth = 579
   Constraints.MinHeight = 100
   Constraints.MinWidth = 550
@@ -4988,7 +4988,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = pnlButtons
     Left = 8
-    Height = 420
+    Height = 329
     Top = 304
     Width = 563
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -4997,7 +4997,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
     Caption = 'Wallpapers:'
-    ClientHeight = 400
+    ClientHeight = 309
     ClientWidth = 559
     TabOrder = 4
     TabStop = True
@@ -5009,7 +5009,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = gbWallpapers
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 384
+      Height = 293
       Top = 8
       Width = 543
       ActivePage = tsBattery
@@ -5022,7 +5022,7 @@ object ChameleonForm: TChameleonForm
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 356
+        ClientHeight = 265
         ClientWidth = 535
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5032,7 +5032,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 340
+          Height = 249
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
@@ -5484,7 +5484,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideBottom.Side = asrBottom
     Left = 6
     Height = 34
-    Top = 738
+    Top = 647
     Width = 567
     BorderSpacing.Top = 8
     OKButton.Name = 'OKButton'

@@ -15,6 +15,7 @@
         <TextName Value="Chameleon"/>
         <TextDesc Value="Dynamically change themes"/>
       </XPManifest>
+      <Icon Value="0"/>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
