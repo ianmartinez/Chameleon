@@ -390,6 +390,9 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 1.5 (September 28, 2018)'
+          '  - Call Unicode Win32 API functions to improve localization'
+          ''
           'Version 1.4 (September 28, 2018)'
           '  - Fixed time localization bug'
           ''

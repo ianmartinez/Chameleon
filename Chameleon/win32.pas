@@ -4,13 +4,12 @@ unit Win32;
 interface
   procedure SetWallpaper(WallpaperPath: string);
 
-
 implementation               
   uses
-    Classes, SysUtils, Windows, Graphics;
+    Classes, SysUtils, Windows, Graphics;             
 
   procedure SetWallpaper(WallpaperPath: string);
   begin
-    SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, pchar(WallpaperPath), SPIF_SENDCHANGE);
+    SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, StringToOleStr(WallpaperPath), SPIF_SENDCHANGE);
   end;
 end.
