@@ -32,7 +32,8 @@ interface
       '40 to 49°F', '50 to 59°F', '60 to 69°F', '70 to 79°F', '80 to 89°F', '90 to 99°F', '100 to 109°F', '110 to 119°F', '120 to 129°F', '>= 130°F');
 
   function WriteSafeString(UnsafeString: string) : string;
-  function GetLocalFolder() : string;
+  function GetLocalFolder() : string;                
+  function GetLogPath() : string;
   function GetImagePath(Key: string; Category: string) : string;  
   function GetThumbPath(Key: string; Category: string) : string; 
   function LoadSettings() : TProgramSettings;
@@ -54,7 +55,7 @@ interface
 
 implementation  
   uses
-    Classes, SysUtils, Forms, IniFiles, typinfo, weather, Dialogs;
+    Classes, SysUtils, Forms, IniFiles, typinfo, weather, Dialogs, windows;
 
   function WriteSafeString(UnsafeString: string) : string;
   var
@@ -90,7 +91,11 @@ implementation
   begin
     Result := GetLocalFolder() + '\Thumb\' + Category + '\' + Key + '.jpg';
   end;
-
+          
+  function GetLogFilePath() : string;
+  begin
+    Result := GetLocalFolder() + '\chameleon.log';
+  end;
   
   function GetSettingsFilePath() : string;
   begin

@@ -390,6 +390,9 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 1.3 (September 28, 2018)'
+          '  -  Add logging'
+          ''
           'Version 1.2 (August 22, 2018)'
           '  - Change name to Chameleon'
           '  - New icon'

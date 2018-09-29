@@ -93,7 +93,7 @@ var
   Station: TWeatherStation;
   FilteredStations: TWeatherStationArray;
 begin
-  if cbStates.Text <> StateSep then begin   
+  if cbStates.Text <> StateSep then begin
     FilteredStations := GetStationsForState(WeatherStations, cbStates.Text);
     cbStations.Clear;
 

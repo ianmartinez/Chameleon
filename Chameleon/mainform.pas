@@ -6,8 +6,9 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, Menus,
-  ImageButton, Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, Win32, InterfaceBase;
+  ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, Menus, ImageButton,
+  Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, Win32,
+  eventlog, InterfaceBase;
 
 type
 
@@ -15,6 +16,7 @@ type
 
   TChameleonForm = class(TForm)
     btnSettings: TButton;
+    wallLog: TEventLog;
     lblVersion: TLabel;
     lblProgramName: TLabel;
     pnlLabels: TPanel;
@@ -143,7 +145,12 @@ begin
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame('HeatIndex', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
   end;
-  
+
+  // Init event log
+  wallLog.LogType := ltFile;
+  wallLog.FileName := GetLogFilePath();
+  wallLog.Active := True;
+
   Caption := 'Chameleon ' + VersionSupport.GetProductVersion;
   lblVersion.Caption :=  'Version ' + VersionSupport.GetProductVersion;
 end;
@@ -281,7 +288,11 @@ begin
         exit;
     end;
 
-   WallpaperPath := GetImagePath(KeyName, CategoryName);
+   WallpaperPath := GetImagePath(KeyName, CategoryName);      
+
+   wallLog.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
+   if not fileexists(WallpaperPath) then wallLog.Error('"' + WallpaperPath + '" does not exist!');
+
    SetWallpaper(WallpaperPath);
 end;
 

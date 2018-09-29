@@ -10428,4 +10428,16 @@ object ChameleonForm: TChameleonForm
     left = 448
     top = 64
   end
+  object wallLog: TEventLog
+    AppendContent = True
+    LogType = ltSystem
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    left = 376
+    top = 64
+  end
 end
