@@ -33,7 +33,7 @@ interface
 
   function WriteSafeString(UnsafeString: string) : string;
   function GetLocalFolder() : string;                
-  function GetLogPath() : string;
+  function GetLogFilePath() : string;
   function GetImagePath(Key: string; Category: string) : string;  
   function GetThumbPath(Key: string; Category: string) : string; 
   function LoadSettings() : TProgramSettings;
@@ -305,12 +305,10 @@ implementation
   end;
 
   function GetTime() : string;
-  var
-    current_time : TDateTime;
   begin
-    current_time := Now;
-
-    Result := formatdatetime('h ampm', current_time);
+     DefaultFormatSettings.TimeAMString := 'in the morning';         
+     DefaultFormatSettings.TimePMString := 'in the night';
+    Result := formatdatetime('h ampm', Now);
   end;
 
   function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;

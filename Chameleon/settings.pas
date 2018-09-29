@@ -305,12 +305,10 @@ implementation
   end;
 
   function GetTime() : string;
-  var
-    current_time : TDateTime;
   begin
-    current_time := Now;
-
-    Result := formatdatetime('h ampm', current_time);
+     DefaultFormatSettings.TimeAMString := 'AM';
+     DefaultFormatSettings.TimePMString := 'PM';
+    Result := formatdatetime('h ampm', Now);
   end;
 
   function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;

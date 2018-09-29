@@ -290,7 +290,7 @@ begin
 
    WallpaperPath := GetImagePath(KeyName, CategoryName);      
 
-   wallLog.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' at ' + KeyName);
+   wallLog.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
    if not fileexists(WallpaperPath) then wallLog.Error('"' + WallpaperPath + '" does not exist!');
 
    SetWallpaper(WallpaperPath);

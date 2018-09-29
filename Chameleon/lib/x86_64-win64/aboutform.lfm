@@ -390,6 +390,9 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 1.4 (September 28, 2018)'
+          '  - Fixed time localization bug'
+          ''
           'Version 1.3 (September 28, 2018)'
           '  -  Add logging'
           ''
