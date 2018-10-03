@@ -21,7 +21,7 @@
       <UseVersionInfo Value="True"/>
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="5"/>
-      <StringTable CompanyName="Ian Martinez" ProductName="Chameleon"/>
+      <StringTable CompanyName="Ian Martinez" ProductName="Chameleon" ProductVersion="1.6.0.0"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>

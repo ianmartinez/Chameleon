@@ -8,18 +8,24 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons, EditBtn, Spin, ComCtrls, ButtonPanel, Menus, ImageButton,
   Weather, Settings, AboutForm, SettingsForm, VersionSupport, Windows, Win32,
-  eventlog, InterfaceBase;
+  eventlog, InterfaceBase, lclintf;
 
 type
 
   { TChameleonForm }
 
   TChameleonForm = class(TForm)
+    btnAbout: TButton;
     btnSettings: TButton;
-    wallLog: TEventLog;
-    lblVersion: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    imgLogo: TImage;
+    lblPatreon: TLabel;
     lblProgramName: TLabel;
+    lblVersion: TLabel;
     pnlLabels: TPanel;
+    pnlTop: TPanel;
+    wallLog: TEventLog;
     pnlButtons: TButtonPanel;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
@@ -29,15 +35,12 @@ type
     WindSpeedBox: TScrollBox;
     ConditionsBox: TScrollBox;
     TimeBox: TScrollBox;
-    btnAbout: TButton;
     gbInterval: TGroupBox;
     gbWallpapers: TGroupBox;
-    imgLogo: TImage;
     Label2: TLabel;
     Label3: TLabel;
     PageControl1: TPageControl;
     gbChangeBy: TRadioGroup;
-    pnlTop: TPanel;
     rbHeatIndex: TRadioButton;
     rbNone: TRadioButton;
     rbBattery: TRadioButton;
@@ -61,6 +64,7 @@ type
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
     procedure FormWindowStateChange(Sender: TObject);
+    procedure lblPatreonClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
     procedure spIntervalChange(Sender: TObject);
@@ -208,6 +212,11 @@ begin
     tmrTheme.Enabled := false;
 end;
 
+procedure TChameleonForm.lblPatreonClick(Sender: TObject);
+begin
+  OpenURL('https://patreon.com/ianmartinez');
+end;
+
 procedure TChameleonForm.ModeChange(Sender: TObject);
 begin
   if rbNone.Checked then begin
@@ -264,6 +273,7 @@ var
   CategoryName: string;
   KeyName: string;
   WallpaperPath: string;
+  Data: string;
 begin
   CategoryName := GetCategoryName(ProgramSettings.Mode);
 
@@ -271,22 +281,25 @@ begin
       pmNone:
         exit;
       pmBattery:
-        KeyName := WriteSafeString(GetBattery());
+        Data := GetBattery();
       pmTime:
-        KeyName := WriteSafeString(GetTime());
+        Data := GetTime();
       pmWeatherConditions:
-        KeyName := WriteSafeString(GetWeatherConditions(ProgramSettings.WeatherStationName));
+        Data := GetWeatherConditions(ProgramSettings.WeatherStationName);
       pmWindSpeed:
-        KeyName := WriteSafeString(GetWindSpeed(ProgramSettings.WeatherStationName));
+        Data := GetWindSpeed(ProgramSettings.WeatherStationName);
       pmTemperature:
-        KeyName := WriteSafeString(GetTemperature(ProgramSettings.WeatherStationName));
+        Data := GetTemperature(ProgramSettings.WeatherStationName);
       pmHumidity:
-        KeyName := WriteSafeString(GetHumidity(ProgramSettings.WeatherStationName));
+        Data := GetHumidity(ProgramSettings.WeatherStationName);
       pmHeatIndex:
-        KeyName := WriteSafeString(GetHeatIndex(ProgramSettings.WeatherStationName));
+        Data := GetHeatIndex(ProgramSettings.WeatherStationName);
       else
         exit;
     end;
+
+   trayIcon.Hint := Data;
+   KeyName := WriteSafeString(Data);
 
    WallpaperPath := GetImagePath(KeyName, CategoryName);      
 
@@ -301,7 +314,8 @@ begin
   Application.Restore;
 
   // Show taskbar icon
-  ShowWindow(WidgetSet.AppHandle, SW_Show);
+  ShowWindow(WidgetSet.AppHandle, SW_Show);        
+  trayIcon.Hint := 'Chameleon';
 end;
 
 end.

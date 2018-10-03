@@ -309,13 +309,13 @@ object AboutDialog: TAboutDialog
     Height = 452
     Top = 140
     Width = 572
-    ActivePage = tsChangelog
+    ActivePage = tsLicense
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     object tsLicense: TTabSheet
       Caption = 'License'
@@ -390,6 +390,9 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 1.6 (October 3, 2018)'
+          '  - Icon in tray now shows hint with last detected value'
+          ''
           'Version 1.5 (September 28, 2018)'
           '  - Call Unicode Win32 API functions to improve localization'
           ''
