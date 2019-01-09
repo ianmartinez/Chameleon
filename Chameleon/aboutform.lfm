@@ -1,13 +1,14 @@
 object AboutDialog: TAboutDialog
-  Left = 0
-  Height = 600
-  Top = 0
-  Width = 588
+  Left = 558
+  Height = 1200
+  Top = 490
+  Width = 1176
   ActiveControl = btnWebsite
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 600
-  ClientWidth = 588
+  ClientHeight = 1200
+  ClientWidth = 1176
+  DesignTimePPI = 192
   OnCreate = FormCreate
   Position = poOwnerFormCenter
   Visible = False
@@ -17,31 +18,32 @@ object AboutDialog: TAboutDialog
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 0
-    Height = 124
+    Height = 152
     Top = 0
-    Width = 588
+    Width = 1176
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
-    BorderSpacing.Bottom = 16
+    BorderSpacing.Bottom = 32
     BevelOuter = bvNone
-    ClientHeight = 124
-    ClientWidth = 588
+    ClientHeight = 152
+    ClientWidth = 1176
     ParentColor = False
+    ParentFont = False
     TabOrder = 0
     object Image1: TImage
       AnchorSideLeft.Control = pnlTop
       AnchorSideTop.Control = pnlTop
       AnchorSideBottom.Control = pnlTop
       AnchorSideBottom.Side = asrBottom
-      Left = 8
+      Left = 16
       Height = 96
-      Top = 14
+      Top = 28
       Width = 96
       Anchors = [akTop, akLeft, akBottom]
       AutoSize = True
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 14
-      BorderSpacing.Bottom = 14
+      BorderSpacing.Left = 16
+      BorderSpacing.Top = 28
+      BorderSpacing.Bottom = 28
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963FA16000089504E47
         0D0A1A0A0000000D4948445200000060000000600806000000E2987738000000
@@ -235,26 +237,27 @@ object AboutDialog: TAboutDialog
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Image1
       AnchorSideTop.Side = asrCenter
-      Left = 112
-      Height = 60
-      Top = 32
-      Width = 152
+      Left = 128
+      Height = 120
+      Top = 16
+      Width = 300
       AutoSize = True
-      BorderSpacing.Left = 8
+      BorderSpacing.Left = 16
       BevelOuter = bvNone
-      ClientHeight = 60
-      ClientWidth = 152
+      ClientHeight = 120
+      ClientWidth = 300
+      ParentFont = False
       TabOrder = 0
       object lblVersion: TLabel
         AnchorSideLeft.Control = pnlLabels
         AnchorSideTop.Control = lblProgramName
         AnchorSideTop.Side = asrBottom
-        Left = 8
-        Height = 15
-        Top = 45
-        Width = 61
-        BorderSpacing.Left = 8
-        BorderSpacing.Top = 8
+        Left = 16
+        Height = 32
+        Top = 88
+        Width = 127
+        BorderSpacing.Left = 16
+        BorderSpacing.Top = 16
         Caption = 'Version 1.0'
         Font.Style = [fsBold]
         ParentColor = False
@@ -263,13 +266,13 @@ object AboutDialog: TAboutDialog
       object lblProgramName: TLabel
         AnchorSideLeft.Control = pnlLabels
         AnchorSideTop.Control = pnlLabels
-        Left = 8
-        Height = 37
+        Left = 16
+        Height = 72
         Top = 0
-        Width = 144
-        BorderSpacing.Left = 8
+        Width = 284
+        BorderSpacing.Left = 16
         Caption = 'Chameleon'
-        Font.Height = -27
+        Font.Height = -54
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -281,19 +284,20 @@ object AboutDialog: TAboutDialog
       AnchorSideRight.Control = pnlTop
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
-      Left = 503
-      Height = 25
-      Top = 14
-      Width = 77
+      Left = 1033
+      Height = 50
+      Top = 28
+      Width = 127
       Anchors = [akTop, akRight]
       AutoSize = True
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 14
-      BorderSpacing.Right = 8
-      BorderSpacing.Bottom = 8
+      BorderSpacing.Left = 16
+      BorderSpacing.Top = 28
+      BorderSpacing.Right = 16
+      BorderSpacing.Bottom = 16
       Caption = 'Website...'
-      Constraints.MinHeight = 25
+      Constraints.MinHeight = 50
       OnClick = btnWebsiteClick
+      ParentFont = False
       TabOrder = 1
     end
   end
@@ -305,22 +309,24 @@ object AboutDialog: TAboutDialog
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 8
-    Height = 452
-    Top = 140
-    Width = 572
+    Left = 16
+    Height = 1000
+    Top = 184
+    Width = 1144
     ActivePage = tsLicense
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Left = 8
-    BorderSpacing.Top = 8
-    BorderSpacing.Right = 8
-    BorderSpacing.Bottom = 8
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    BorderSpacing.Right = 16
+    BorderSpacing.Bottom = 16
+    ParentFont = False
     TabIndex = 0
     TabOrder = 1
     object tsLicense: TTabSheet
       Caption = 'License'
-      ClientHeight = 424
-      ClientWidth = 564
+      ClientHeight = 942
+      ClientWidth = 1128
+      ParentFont = False
       object txtLicense: TMemo
         AnchorSideLeft.Control = tsLicense
         AnchorSideTop.Control = tsLicense
@@ -328,15 +334,15 @@ object AboutDialog: TAboutDialog
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = tsLicense
         AnchorSideBottom.Side = asrBottom
-        Left = 4
-        Height = 416
-        Top = 4
-        Width = 556
+        Left = 8
+        Height = 926
+        Top = 8
+        Width = 1112
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Left = 4
-        BorderSpacing.Top = 4
-        BorderSpacing.Right = 4
-        BorderSpacing.Bottom = 4
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
+        BorderSpacing.Right = 8
+        BorderSpacing.Bottom = 8
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
@@ -362,6 +368,7 @@ object AboutDialog: TAboutDialog
           'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
           'SOFTWARE.'
         )
+        ParentFont = False
         ReadOnly = True
         ScrollBars = ssAutoVertical
         TabOrder = 0
@@ -369,8 +376,9 @@ object AboutDialog: TAboutDialog
     end
     object tsChangelog: TTabSheet
       Caption = 'Changelog'
-      ClientHeight = 424
-      ClientWidth = 564
+      ClientHeight = 942
+      ClientWidth = 1128
+      ParentFont = False
       object txtChangelog: TMemo
         AnchorSideLeft.Control = tsLicense
         AnchorSideTop.Control = tsLicense
@@ -378,18 +386,21 @@ object AboutDialog: TAboutDialog
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = tsLicense
         AnchorSideBottom.Side = asrBottom
-        Left = 4
-        Height = 416
-        Top = 4
-        Width = 556
+        Left = 8
+        Height = 934
+        Top = 8
+        Width = 1120
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Left = 4
-        BorderSpacing.Top = 4
-        BorderSpacing.Right = 4
-        BorderSpacing.Bottom = 4
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
+        BorderSpacing.Right = 8
+        BorderSpacing.Bottom = 8
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 1.7 (January 9, 2019)'
+          '  - Fix error when fetching weather data due to changes with the weather server (thanks a lot, NOAA)'
+          '  '
           'Version 1.6 (October 3, 2018)'
           '  - Icon in tray now shows hint with last detected value'
           ''
@@ -417,6 +428,7 @@ object AboutDialog: TAboutDialog
           'Version 1.0 (August 18, 2018)'
           '  - Initial Release'
         )
+        ParentFont = False
         ReadOnly = True
         ScrollBars = ssAutoVertical
         TabOrder = 0

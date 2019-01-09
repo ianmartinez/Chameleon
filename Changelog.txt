@@ -1,3 +1,6 @@
+Version 1.7 (January 9, 2019)
+  - Fix error when fetching weather data due to changes with the weather server (Thanks a lot, NOAA)
+  
 Version 1.6 (October 3, 2018)
   - Icon in tray now shows hint with last detected value
 

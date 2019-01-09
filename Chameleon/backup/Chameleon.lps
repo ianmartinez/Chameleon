@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Count="2" Active="Debug">
+      <Item1 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="Chameleon"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="openssl"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Linking>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item1>
+      <Item2 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="ChameleonRelease"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <Units Count="30">
+      <Unit0>
+        <Filename Value="Chameleon.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="11"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ChameleonForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainForm"/>
+        <CursorPos X="55" Y="10"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="imagebutton.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ImageButtonFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="ImageButton"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="11"/>
+        <CursorPos X="12" Y="45"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="settings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Settings"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="290"/>
+        <CursorPos X="19" Y="306"/>
+        <UsageCount Value="209"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="aboutform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AboutForm"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="13"/>
+        <CursorPos X="7" Y="13"/>
+        <UsageCount Value="207"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="versionsupport.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VersionSupport"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="141"/>
+        <CursorPos X="60" Y="147"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="weather.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Weather"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="104"/>
+        <CursorPos Y="121"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="settingsform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SettingsDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SettingsForm"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="43"/>
+        <CursorPos X="3" Y="60"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="win32.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Win32"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="37" Y="13"/>
+        <UsageCount Value="50"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="progressform.pas"/>
+        <ComponentName Value="ProgressDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ProgressForm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="15"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="weatherreader.pas"/>
+        <UnitName Value="WeatherReader"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="47" Y="15"/>
+        <UsageCount Value="32"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="imageeditbutton.pas"/>
+        <UnitName Value="CustomControls"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="customcontrols.pas"/>
+        <UnitName Value="CustomControls"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="16"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="aboutdialog.pas"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AboutDialog"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="28" Y="18"/>
+        <UsageCount Value="4"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\components\lazutils\laz2_xmlread.pas"/>
+        <UnitName Value="laz2_XMLRead"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="57" Y="61"/>
+        <FoldState Value=" T7iXLP TM HjH21#"/>
+        <UsageCount Value="8"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\httpsend.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="754"/>
+        <CursorPos X="3" Y="764"/>
+        <UsageCount Value="8"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4311"/>
+        <CursorPos Y="4328"/>
+        <UsageCount Value="8"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
+        <UnitName Value="LazUTF8Classes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="145"/>
+        <CursorPos Y="151"/>
+        <UsageCount Value="8"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="W:\Large Downloads\skychart-4.0-3575-src.tar\skychart-4.0-3575-src\skychart\component\synapse\source\lib\blcksock.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="33" Y="44"/>
+        <UsageCount Value="3"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="imagebutton.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="85"/>
+        <CursorPos X="34" Y="96"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\components\synedit\synedittextsystemcharwidth.pas"/>
+        <UnitName Value="SynEditTextSystemCharWidth"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <CursorPos X="6" Y="136"/>
+        <UsageCount Value="8"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\components\synedit\synhighlighterxml.pas"/>
+        <UnitName Value="SynHighlighterXML"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="744"/>
+        <CursorPos X="27" Y="751"/>
+        <UsageCount Value="8"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\components\synedit\synhighlighterlfm.pas"/>
+        <UnitName Value="SynHighlighterLFM"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="249"/>
+        <CursorPos X="27" Y="266"/>
+        <UsageCount Value="8"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win\wininc\ascdef.inc"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="288"/>
+        <CursorPos X="26" Y="295"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win\wininc\base.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos X="12" Y="440"/>
+        <UsageCount Value="8"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win\wininc\unifun.inc"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="18"/>
+        <CursorPos X="78" Y="36"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus\lcl\lclintf.pas"/>
+        <UnitName Value="LCLIntf"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="65"/>
+        <CursorPos X="10" Y="82"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="openssl\libeay32.dll"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="openssl\ssleay32.dll"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-web\src\base\fphttpclient.pp"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="1406"/>
+        <CursorPos X="11" Y="1431"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit29>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="weather.pas"/>
+        <Caret Line="121" Column="19" TopLine="114"/>
+      </Position1>
+      <Position2>
+        <Filename Value="weather.pas"/>
+        <Caret Line="155" Column="77" TopLine="152"/>
+      </Position2>
+      <Position3>
+        <Filename Value="weather.pas"/>
+        <Caret Line="166" Column="72" TopLine="153"/>
+      </Position3>
+      <Position4>
+        <Filename Value="weather.pas"/>
+        <Caret Line="8" Column="22"/>
+      </Position4>
+      <Position5>
+        <Filename Value="weather.pas"/>
+        <Caret Line="132" Column="7" TopLine="121"/>
+      </Position5>
+      <Position6>
+        <Filename Value="weather.pas"/>
+        <Caret Line="131" Column="19" TopLine="111"/>
+      </Position6>
+      <Position7>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-web\src\base\fphttpclient.pp"/>
+        <Caret Line="183" Column="15" TopLine="180"/>
+      </Position7>
+      <Position8>
+        <Filename Value="weather.pas"/>
+        <Caret Line="138" Column="9" TopLine="114"/>
+      </Position8>
+      <Position9>
+        <Filename Value="weather.pas"/>
+        <Caret Line="144" Column="69"/>
+      </Position9>
+      <Position10>
+        <Filename Value="weather.pas"/>
+        <Caret Line="11" Column="45"/>
+      </Position10>
+      <Position11>
+        <Filename Value="weather.pas"/>
+        <Caret Line="126" TopLine="106"/>
+      </Position11>
+      <Position12>
+        <Filename Value="weather.pas"/>
+        <Caret Line="175" Column="31" TopLine="145"/>
+      </Position12>
+      <Position13>
+        <Filename Value="weather.pas"/>
+        <Caret Line="126" TopLine="106"/>
+      </Position13>
+      <Position14>
+        <Filename Value="weather.pas"/>
+        <Caret Line="127" Column="21" TopLine="106"/>
+      </Position14>
+      <Position15>
+        <Filename Value="weather.pas"/>
+        <Caret Line="131" TopLine="106"/>
+      </Position15>
+      <Position16>
+        <Filename Value="weather.pas"/>
+        <Caret Line="127" Column="29" TopLine="102"/>
+      </Position16>
+      <Position17>
+        <Filename Value="weather.pas"/>
+        <Caret Line="11" Column="88"/>
+      </Position17>
+      <Position18>
+        <Filename Value="weather.pas"/>
+        <Caret Line="62" Column="98" TopLine="54"/>
+      </Position18>
+      <Position19>
+        <Filename Value="weather.pas"/>
+        <Caret Line="49" Column="28" TopLine="46"/>
+      </Position19>
+      <Position20>
+        <Filename Value="weather.pas"/>
+        <Caret Line="49" Column="41" TopLine="32"/>
+      </Position20>
+      <Position21>
+        <Filename Value="weather.pas"/>
+        <Caret Line="123" Column="22" TopLine="99"/>
+      </Position21>
+      <Position22>
+        <Filename Value="weather.pas"/>
+        <Caret Line="116" Column="41" TopLine="99"/>
+      </Position22>
+      <Position23>
+        <Filename Value="weather.pas"/>
+        <Caret Line="120" Column="77" TopLine="118"/>
+      </Position23>
+      <Position24>
+        <Filename Value="weather.pas"/>
+        <Caret Line="129" Column="15" TopLine="121"/>
+      </Position24>
+      <Position25>
+        <Filename Value="weather.pas"/>
+        <Caret Line="130" Column="19" TopLine="113"/>
+      </Position25>
+      <Position26>
+        <Filename Value="weather.pas"/>
+        <Caret Line="138" Column="52" TopLine="119"/>
+      </Position26>
+      <Position27>
+        <Filename Value="weather.pas"/>
+        <Caret Line="136" Column="62" TopLine="113"/>
+      </Position27>
+      <Position28>
+        <Filename Value="weather.pas"/>
+        <Caret Line="143" Column="20" TopLine="126"/>
+      </Position28>
+      <Position29>
+        <Filename Value="weather.pas"/>
+        <Caret Line="133" Column="71" TopLine="104"/>
+      </Position29>
+      <Position30>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="13" Column="7" TopLine="6"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="7">
+      <Item1>
+        <Expression Value="Station.XMLUrl"/>
+      </Item1>
+      <Item2>
+        <Expression Value="WeatherDataXML"/>
+      </Item2>
+      <Item3>
+        <Expression Value="Response"/>
+      </Item3>
+      <Item4>
+        <Expression Value="ImagePath"/>
+      </Item4>
+      <Item5>
+        <Expression Value="ThumbDir"/>
+      </Item5>
+      <Item6>
+        <Expression Value="CreateDir"/>
+      </Item6>
+      <Item7>
+        <Expression Value="Client"/>
+      </Item7>
+    </Watches>
+  </Debugging>
+</CONFIG>

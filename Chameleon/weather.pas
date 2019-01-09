@@ -8,7 +8,7 @@ unit Weather;
 {$mode objfpc}{$H+}
 
 interface
-  const AllStationsXMLFile : string = 'http://w1.weather.gov/xml/current_obs/index.xml';
+  const AllStationsXMLFile : string = 'https://w1.weather.gov/xml/current_obs/index.xml';
 
   const DegF : string = '°F';
   const DegC : string = '°C';
@@ -45,7 +45,8 @@ interface
   end;
 
   type TWeatherStationArray = array of TWeatherStation;
-
+                                                
+  function DownloadTextFile(Url: string; FilePath: string) : string;
   function GetAllWeatherStationsXML() : string;
   function GetWeatherDataXML(Station: TWeatherStation) : string;
   function GetAllWeatherStations(AllStationsXML: string) : TWeatherStationArray;
@@ -58,7 +59,7 @@ interface
 
 implementation
   uses
-    Classes, SysUtils, httpsend, laz2_DOM, laz2_XMLRead, StrUtils;
+    Classes, SysUtils, laz2_DOM, laz2_XMLRead, StrUtils, URLMon;
 
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
@@ -111,35 +112,37 @@ implementation
 
     Result := Station;
   end;
-
-  function GetAllWeatherStationsXML() : string;
+     
+  function DownloadTextFile(Url: string; FilePath: string) : string;
   var
-    Response: TStringList;
+     FileStrings: TStringList;
   begin
-    Response := TStringList.Create;
-
-    Result := '';
-    try
-      if HTTPSend.HttpGetText(AllStationsXMLFile, Response) then
-        Result := Response.Text;
-    finally
-      Response.Free();
+    if URLDownloadToFile(nil, PChar(Url), PChar(FilePath), 0, nil) = 0 then begin
+      FileStrings := TStringList.Create;
+      try
+        FileStrings.LoadFromFile(FilePath);
+        Result := FileStrings.Text;
+      finally
+        FileStrings.Free;
+      end;
+    end
+    else begin
+      Result := '';
     end;
   end;
 
-  function GetWeatherDataXML(Station: TWeatherStation) : string;
-  var
-    Response: TStringList;
+  function GetAllWeatherStationsXML() : string;
+  const
+    TempWeatherStationsFile : string = 'WeatherStations.xml';
   begin
-    Response := TStringList.Create;
+    Result := DownloadTextFile(AllStationsXMLFile, TempWeatherStationsFile);
+  end;
 
-    Result := '';
-    try
-      if HTTPSend.HttpGetText(Station.XMLUrl, Response) then
-        Result := Response.Text;
-    finally
-      Response.Free();
-    end;
+  function GetWeatherDataXML(Station: TWeatherStation) : string; 
+  const
+    TempWeatherDataFile : string = 'WeatherData.xml';
+  begin
+    Result := DownloadTextFile(Station.XMLUrl, TempWeatherDataFile);
   end;
 
   function GetAllWeatherStations(AllStationsXML: string) : TWeatherStationArray;

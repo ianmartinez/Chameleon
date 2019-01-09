@@ -13,7 +13,6 @@ uses
 {$R *.res}
 
 begin
-  Application.Title := 'Chameleon';
   Application.Scaled := True;
   RequireDerivedFormResource := True;
   Application.Initialize;

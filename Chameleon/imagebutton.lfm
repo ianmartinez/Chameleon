@@ -1,14 +1,15 @@
 object ImageButtonFrame: TImageButtonFrame
   Left = 0
-  Height = 250
+  Height = 500
   Top = 0
-  Width = 336
+  Width = 672
   AutoSize = True
-  ClientHeight = 250
-  ClientWidth = 336
+  ClientHeight = 500
+  ClientWidth = 672
   Color = clNone
-  Constraints.MaxWidth = 350
-  Constraints.MinWidth = 280
+  Constraints.MaxWidth = 700
+  Constraints.MinWidth = 560
+  DesignTimePPI = 192
   ParentColor = False
   ParentFont = False
   TabOrder = 0
@@ -19,20 +20,21 @@ object ImageButtonFrame: TImageButtonFrame
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 3
-    Height = 244
-    Top = 3
-    Width = 330
+    Left = 6
+    Height = 488
+    Top = 6
+    Width = 660
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Left = 3
-    BorderSpacing.Top = 3
-    BorderSpacing.Right = 3
-    BorderSpacing.Bottom = 3
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
     BevelInner = bvLowered
-    ClientHeight = 244
-    ClientWidth = 330
+    ClientHeight = 488
+    ClientWidth = 660
     Color = clNone
     ParentColor = False
+    ParentFont = False
     TabOrder = 0
     object btnPickImage: TButton
       AnchorSideLeft.Control = pnlMain
@@ -40,17 +42,18 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = pnlMain
       AnchorSideBottom.Side = asrBottom
-      Left = 5
-      Height = 25
-      Top = 209
-      Width = 320
+      Left = 8
+      Height = 42
+      Top = 428
+      Width = 644
       Anchors = [akLeft, akRight, akBottom]
       AutoSize = True
-      BorderSpacing.Left = 3
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 8
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 16
       Caption = 'Pick Image...'
       OnClick = btnPickImageClick
+      ParentFont = False
       TabOrder = 0
     end
     object lblTitle: TLabel
@@ -58,17 +61,18 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideTop.Control = pnlMain
       AnchorSideRight.Control = pnlMain
       AnchorSideRight.Side = asrBottom
-      Left = 5
-      Height = 15
-      Top = 10
-      Width = 320
+      Left = 8
+      Height = 32
+      Top = 18
+      Width = 644
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 8
-      BorderSpacing.Right = 3
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 16
+      BorderSpacing.Right = 6
       Caption = 'Image'
       ParentColor = False
+      ParentFont = False
     end
     object imgPreview: TImage
       AnchorSideLeft.Control = pnlMain
@@ -77,26 +81,26 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideRight.Control = pnlMain
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = btnPickImage
-      Left = 10
-      Height = 168
-      Top = 33
-      Width = 310
+      Left = 18
+      Height = 346
+      Top = 66
+      Width = 624
       Anchors = [akTop, akLeft, akRight, akBottom]
       AutoSize = True
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 8
-      BorderSpacing.Right = 8
-      BorderSpacing.Bottom = 8
+      BorderSpacing.Left = 16
+      BorderSpacing.Top = 16
+      BorderSpacing.Right = 16
+      BorderSpacing.Bottom = 16
       Center = True
-      Constraints.MaxHeight = 3000
-      Constraints.MaxWidth = 350
+      Constraints.MaxHeight = 6000
+      Constraints.MaxWidth = 700
       Proportional = True
       Stretch = True
     end
   end
   object dlgOpenPicture: TOpenPictureDialog
     Filter = 'Image files (*.png;*.bmp;*.jpeg;*.jpg;*.gif)|*.png;*.bmp;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*'
-    left = 64
-    top = 88
+    left = 128
+    top = 176
   end
 end
