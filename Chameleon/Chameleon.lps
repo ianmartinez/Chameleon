@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="11"/>
-    <BuildModes Count="2" Active="Default">
+    <BuildModes Count="2" Active="Release">
       <Item1 Name="Debug">
         <CompilerOptions>
           <Version Value="11"/>
@@ -72,6 +72,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="185"/>
         <CursorPos X="25" Y="198"/>
         <UsageCount Value="200"/>
@@ -130,10 +131,9 @@
         <Filename Value="weather.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="8"/>
-        <CursorPos X="16" Y="82"/>
+        <TopLine Value="12"/>
+        <CursorPos X="24" Y="29"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
       </Unit6>
