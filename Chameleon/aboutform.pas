@@ -43,7 +43,7 @@ implementation
 
 procedure TAboutDialog.FormCreate(Sender: TObject);
 begin
-    lblVersion.Caption := 'Version ' + VersionSupport.GetProductVersion;
+    lblVersion.Caption := 'Version ' + VersionSupport.GetFileVersion;
 end;
 
 procedure TAboutDialog.btnWebsiteClick(Sender: TObject);

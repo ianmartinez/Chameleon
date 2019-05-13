@@ -1,7 +1,7 @@
 object AboutDialog: TAboutDialog
-  Left = 0
+  Left = 558
   Height = 600
-  Top = 0
+  Top = 490
   Width = 588
   ActiveControl = btnWebsite
   BorderStyle = bsDialog
@@ -10,7 +10,6 @@ object AboutDialog: TAboutDialog
   ClientWidth = 588
   OnCreate = FormCreate
   Position = poOwnerFormCenter
-  Visible = False
   object pnlTop: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -27,6 +26,7 @@ object AboutDialog: TAboutDialog
     ClientHeight = 124
     ClientWidth = 588
     ParentColor = False
+    ParentFont = False
     TabOrder = 0
     object Image1: TImage
       AnchorSideLeft.Control = pnlTop
@@ -244,6 +244,7 @@ object AboutDialog: TAboutDialog
       BevelOuter = bvNone
       ClientHeight = 60
       ClientWidth = 152
+      ParentFont = False
       TabOrder = 0
       object lblVersion: TLabel
         AnchorSideLeft.Control = pnlLabels
@@ -294,6 +295,7 @@ object AboutDialog: TAboutDialog
       Caption = 'Website...'
       Constraints.MinHeight = 25
       OnClick = btnWebsiteClick
+      ParentFont = False
       TabOrder = 1
     end
   end
@@ -315,12 +317,14 @@ object AboutDialog: TAboutDialog
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
     BorderSpacing.Bottom = 8
+    ParentFont = False
     TabIndex = 0
     TabOrder = 1
     object tsLicense: TTabSheet
       Caption = 'License'
       ClientHeight = 424
       ClientWidth = 564
+      ParentFont = False
       object txtLicense: TMemo
         AnchorSideLeft.Control = tsLicense
         AnchorSideTop.Control = tsLicense
@@ -342,7 +346,7 @@ object AboutDialog: TAboutDialog
         Lines.Strings = (
           'MIT License'
           ''
-          'Copyright (c) 2018 Ian Martinez'
+          'Copyright (c) 2019 Ian Martinez'
           ''
           'Permission is hereby granted, free of charge, to any person obtaining a copy'
           'of this software and associated documentation files (the "Software"), to deal'
@@ -362,6 +366,7 @@ object AboutDialog: TAboutDialog
           'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
           'SOFTWARE.'
         )
+        ParentFont = False
         ReadOnly = True
         ScrollBars = ssAutoVertical
         TabOrder = 0
@@ -371,6 +376,7 @@ object AboutDialog: TAboutDialog
       Caption = 'Changelog'
       ClientHeight = 424
       ClientWidth = 564
+      ParentFont = False
       object txtChangelog: TMemo
         AnchorSideLeft.Control = tsLicense
         AnchorSideTop.Control = tsLicense
@@ -390,6 +396,12 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 1.8 (May 12, 2019)'
+          '  - Add the autostart "-a" command line flag that makes Chameleon automatically start running'
+          ''
+          'Version 1.7 (January 9, 2019)'
+          '  - Fix error when fetching weather data due to changes with the weather server (thanks a lot, NOAA)'
+          '  '
           'Version 1.6 (October 3, 2018)'
           '  - Icon in tray now shows hint with last detected value'
           ''
@@ -417,6 +429,7 @@ object AboutDialog: TAboutDialog
           'Version 1.0 (August 18, 2018)'
           '  - Initial Release'
         )
+        ParentFont = False
         ReadOnly = True
         ScrollBars = ssAutoVertical
         TabOrder = 0

@@ -20,6 +20,7 @@ type
     Image1: TImage;
     Image2: TImage;
     imgLogo: TImage;
+    imgPatreon: TImage;
     lblPatreon: TLabel;
     lblProgramName: TLabel;
     lblVersion: TLabel;
@@ -60,9 +61,11 @@ type
     tsHumidity: TTabSheet;
     procedure btnAboutClick(Sender: TObject);
     procedure btnSettingsClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+    procedure FormShow(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
     procedure lblPatreonClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
@@ -71,7 +74,8 @@ type
     procedure tmrThemeTimer(Sender: TObject);
     procedure trayIconDblClick(Sender: TObject);
   private
-
+    FirstShow: boolean;
+    AutoStart: boolean;
   public
 
   end;
@@ -155,8 +159,10 @@ begin
   wallLog.FileName := GetLogFilePath();
   wallLog.Active := True;
 
-  Caption := 'Chameleon ' + VersionSupport.GetProductVersion;
-  lblVersion.Caption :=  'Version ' + VersionSupport.GetProductVersion;
+  Caption := 'Chameleon ' + VersionSupport.GetFileVersion;
+  lblVersion.Caption :=  'Version ' + VersionSupport.GetFileVersion;
+
+  FirstShow := True;
 end;
 
 procedure TChameleonForm.btnAboutClick(Sender: TObject);
@@ -174,6 +180,22 @@ begin
     ProgramSettings.WeatherStationName := SettingsDialog.cbStations.Text;
     SaveSettings(ProgramSettings);
   end;
+end;
+
+procedure TChameleonForm.FormActivate(Sender: TObject);
+begin
+   if FirstShow = True then begin
+    Refresh();
+    if ParamCount > 0 then begin
+      if ParamStr(1).Equals('-a') then begin
+         OKButtonClick(nil);
+         WindowState := wsMinimized;
+         AutoStart := True;
+      end;
+    end;
+  end;
+
+  FirstShow := False;
 end;
 
 procedure TChameleonForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -204,6 +226,11 @@ begin
   end;
 
   Result := ImageButtonFrame;
+end;
+
+procedure TChameleonForm.FormShow(Sender: TObject);
+begin
+
 end;
 
 procedure TChameleonForm.FormWindowStateChange(Sender: TObject);
@@ -312,6 +339,16 @@ end;
 procedure TChameleonForm.trayIconDblClick(Sender: TObject);
 begin
   Application.Restore;
+
+  // If the application is restoring from the
+  // first time after auto-starting, the size is
+  // all messed up, so this will force windows to
+  // resize it to a normal state
+  if AutoStart then begin
+    WindowState := wsMaximized;
+    WindowState := wsNormal;
+    AutoStart := False;
+  end;
 
   // Show taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Show);        

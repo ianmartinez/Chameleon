@@ -4808,11 +4808,12 @@ object ChameleonForm: TChameleonForm
     0040FF000041FF000041FF000041FF000034DF00003BDF000048FF000047FF00
     0047FF000046FF00003AFF000045FF00004CFF
   }
+  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   OnWindowStateChange = FormWindowStateChange
   Position = poScreenCenter
-  Visible = False
   object gbChangeBy: TRadioGroup
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Side = asrBottom
@@ -5166,7 +5167,7 @@ object ChameleonForm: TChameleonForm
       end
       object tsHumidity: TTabSheet
         Caption = 'Humidity'
-        ClientHeight = 262
+        ClientHeight = 265
         ClientWidth = 535
         object HumidityBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5176,7 +5177,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 8
-          Height = 246
+          Height = 249
           Top = 8
           Width = 519
           HorzScrollBar.Increment = 1
