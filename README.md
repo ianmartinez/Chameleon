@@ -13,7 +13,7 @@ Dynamically change your desktop wallpaper based on the current battery, time of 
 Chameleon 2.0 is currently in development:
 - A dedicated installer that has the program automatically runs at startup
 - Show weather conditions with icon in tray
-- Fix compression on images
+- Fix compression on images imported for use as wallpapers
 - Code cleanup
 - New icon
 
