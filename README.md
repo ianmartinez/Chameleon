@@ -9,6 +9,12 @@ Dynamically change your desktop wallpaper based on the current battery, time of 
 ##### [Wallpaper Pack](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ianmartinez/Chameleon/tree/master/Chameleon/Wallpapers):
 > A collection of high quality 4K wallpapers for each setting.  You can use them by simply extracting them into the same directory as the Chameleon executable and lauching the program. On startup, it will generate thumbnail files for the images. This may take a while (a couple minutes), depending on your CPU. 
 
+## Minimum Requirements   
+Chameleon 2.0 is currently in development:
+- A dedicated installer that has the program automatically runs at startup
+- Show weather conditions with icon in tray
+- Code cleanup
+
 ## Minimum Requirements
 Chameleon is fairly light on resources while it's running. The minimum requirements are:
 - OS: Windows Vista or higher             
