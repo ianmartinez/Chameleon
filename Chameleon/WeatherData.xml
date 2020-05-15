@@ -17,28 +17,28 @@
 	<station_id>KSAT</station_id>
 	<latitude>29.53278</latitude>
 	<longitude>-98.46361</longitude>
-	<observation_time>Last Updated on May 12 2019, 8:51 pm CDT</observation_time>
-        <observation_time_rfc822>Sun, 12 May 2019 20:51:00 -0500</observation_time_rfc822>
-	<weather>A Few Clouds</weather>
-	<temperature_string>69.0 F (20.6 C)</temperature_string>
-	<temp_f>69.0</temp_f>
-	<temp_c>20.6</temp_c>
-	<relative_humidity>68</relative_humidity>
-	<wind_string>East at 6.9 MPH (6 KT)</wind_string>
-	<wind_dir>East</wind_dir>
-	<wind_degrees>100</wind_degrees>
+	<observation_time>Last Updated on May 15 2020, 10:51 am CDT</observation_time>
+        <observation_time_rfc822>Fri, 15 May 2020 10:51:00 -0500</observation_time_rfc822>
+	<weather>Overcast</weather>
+	<temperature_string>79.0 F (26.1 C)</temperature_string>
+	<temp_f>79.0</temp_f>
+	<temp_c>26.1</temp_c>
+	<relative_humidity>77</relative_humidity>
+	<wind_string>Southeast at 6.9 MPH (6 KT)</wind_string>
+	<wind_dir>Southeast</wind_dir>
+	<wind_degrees>130</wind_degrees>
 	<wind_mph>6.9</wind_mph>
 	<wind_kt>6</wind_kt>
-	<pressure_string>1010.5 mb</pressure_string>
-	<pressure_mb>1010.5</pressure_mb>
-	<pressure_in>29.89</pressure_in>
-	<dewpoint_string>57.9 F (14.4 C)</dewpoint_string>
-	<dewpoint_f>57.9</dewpoint_f>
-	<dewpoint_c>14.4</dewpoint_c>
+	<pressure_string>1009.6 mb</pressure_string>
+	<pressure_mb>1009.6</pressure_mb>
+	<pressure_in>29.87</pressure_in>
+	<dewpoint_string>71.1 F (21.7 C)</dewpoint_string>
+	<dewpoint_f>71.1</dewpoint_f>
+	<dewpoint_c>21.7</dewpoint_c>
 	<visibility_mi>10.00</visibility_mi>
  	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
 	<two_day_history_url>http://www.weather.gov/data/obhistory/KSAT.html</two_day_history_url>
-	<icon_url_name>nfew.png</icon_url_name>
+	<icon_url_name>ovc.png</icon_url_name>
 	<ob_url>http://www.weather.gov/data/METAR/KSAT.1.txt</ob_url>
 	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
 	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
