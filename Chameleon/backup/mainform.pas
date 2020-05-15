@@ -228,11 +228,6 @@ begin
   Result := ImageButtonFrame;
 end;
 
-procedure TChameleonForm.FormShow(Sender: TObject);
-begin
-
-end;
-
 procedure TChameleonForm.FormWindowStateChange(Sender: TObject);
 begin
   if WindowState <> wsMinimized then

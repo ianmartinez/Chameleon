@@ -65,7 +65,6 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
-    procedure FormShow(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
     procedure lblPatreonClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
@@ -226,11 +225,6 @@ begin
   end;
 
   Result := ImageButtonFrame;
-end;
-
-procedure TChameleonForm.FormShow(Sender: TObject);
-begin
-
 end;
 
 procedure TChameleonForm.FormWindowStateChange(Sender: TObject);

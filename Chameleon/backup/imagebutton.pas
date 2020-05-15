@@ -98,18 +98,22 @@ begin
         if not directoryexists(ImageDir) then
           forcedirectories(ImageDir);
 
-        Picture.SaveToFile(ImagePath);
+        (* Delete the old image *)
+        if fileexists(ImagePath) the
+           deletefile(ImagePath);
+
+        (* Copy over the new image *)
+        copyfile(SourceImage, ImagePath);
       end;
 
       (* Generate the thumbnail *)
       ResizeBitmap(Picture.Bitmap, imgPreview.Height);
-
       ThumbDir := ExtractFilePath(ThumbPath);
+
       if not directoryexists(ThumbDir) then
         forcedirectories(ThumbDir);
 
       Picture.SaveToFile(ThumbPath);
-
       imgPreview.Picture := Picture;
     finally
       OverwriteImage := false;
