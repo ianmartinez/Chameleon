@@ -16,6 +16,7 @@ Chameleon 2.0 is currently in development:
 - Fix compression on images imported for use as wallpapers
 - Code cleanup
 - New icon
+- Support high-DPI displays
 
 ## Minimum Requirements
 Chameleon is fairly light on resources while it's running. The minimum requirements are:
