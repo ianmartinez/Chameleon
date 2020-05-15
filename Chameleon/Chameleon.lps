@@ -132,8 +132,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="12"/>
-        <CursorPos X="24" Y="29"/>
+        <TopLine Value="217"/>
+        <CursorPos X="96" Y="232"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -335,7 +335,7 @@
         <Loaded Value="True"/>
       </Unit30>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="mainform.pas"/>
         <Caret Line="165" Column="21" TopLine="145"/>
@@ -452,6 +452,10 @@
         <Filename Value="mainform.pas"/>
         <Caret Line="67" Column="4" TopLine="46"/>
       </Position29>
+      <Position30>
+        <Filename Value="aboutform.pas"/>
+        <Caret Line="38" TopLine="12"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -459,15 +463,6 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="weather.pas"/>
-        <Line Value="239"/>
-      </Item1>
-    </BreakPoints>
     <Watches Count="7">
       <Item1>
         <Expression Value="Station.XMLUrl"/>
