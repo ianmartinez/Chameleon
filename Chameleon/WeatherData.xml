@@ -13,33 +13,31 @@
 	</image>
 	<suggested_pickup>15 minutes after the hour</suggested_pickup>
 	<suggested_pickup_period>60</suggested_pickup_period>
-	<location>San Antonio, San Antonio International Airport, TX</location>
-	<station_id>KSAT</station_id>
-	<latitude>29.53278</latitude>
-	<longitude>-98.46361</longitude>
-	<observation_time>Last Updated on May 15 2020, 10:51 am CDT</observation_time>
-        <observation_time_rfc822>Fri, 15 May 2020 10:51:00 -0500</observation_time_rfc822>
-	<weather>Overcast</weather>
-	<temperature_string>79.0 F (26.1 C)</temperature_string>
-	<temp_f>79.0</temp_f>
-	<temp_c>26.1</temp_c>
-	<relative_humidity>77</relative_humidity>
-	<wind_string>Southeast at 6.9 MPH (6 KT)</wind_string>
-	<wind_dir>Southeast</wind_dir>
-	<wind_degrees>130</wind_degrees>
-	<wind_mph>6.9</wind_mph>
-	<wind_kt>6</wind_kt>
-	<pressure_string>1009.6 mb</pressure_string>
-	<pressure_mb>1009.6</pressure_mb>
-	<pressure_in>29.87</pressure_in>
-	<dewpoint_string>71.1 F (21.7 C)</dewpoint_string>
-	<dewpoint_f>71.1</dewpoint_f>
-	<dewpoint_c>21.7</dewpoint_c>
+	<location>Albertville, Albertville Municipal Airport, AL</location>
+	<station_id>K8A0</station_id>
+	<latitude>34.22889</latitude>
+	<longitude>-86.25556</longitude>
+	<observation_time>Last Updated on May 15 2020, 11:55 am CDT</observation_time>
+        <observation_time_rfc822>Fri, 15 May 2020 11:55:00 -0500</observation_time_rfc822>
+	<weather>Fair</weather>
+	<temperature_string>75.0 F (24.0 C)</temperature_string>
+	<temp_f>75.0</temp_f>
+	<temp_c>24.0</temp_c>
+	<relative_humidity>61</relative_humidity>
+	<wind_string>South at 5.8 MPH (5 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>190</wind_degrees>
+	<wind_mph>5.8</wind_mph>
+	<wind_kt>5</wind_kt>
+	<pressure_in>30.11</pressure_in>
+	<dewpoint_string>60.8 F (16.0 C)</dewpoint_string>
+	<dewpoint_f>60.8</dewpoint_f>
+	<dewpoint_c>16.0</dewpoint_c>
 	<visibility_mi>10.00</visibility_mi>
  	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
-	<two_day_history_url>http://www.weather.gov/data/obhistory/KSAT.html</two_day_history_url>
-	<icon_url_name>ovc.png</icon_url_name>
-	<ob_url>http://www.weather.gov/data/METAR/KSAT.1.txt</ob_url>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/K8A0.html</two_day_history_url>
+	<icon_url_name>skc.png</icon_url_name>
+	<ob_url>http://www.weather.gov/data/METAR/K8A0.1.txt</ob_url>
 	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
 	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
 	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
