@@ -341,7 +341,7 @@ begin
 
     if IsWeather then
     begin
-       Weather := GetWeatherData(GetStationByName(ProgramSettings.WeatherStationName));
+       Weather := GetWeatherByStationName(ProgramSettings.WeatherStationName);
        trayIcon.Hint := PrintWeatherReport(Weather);
     end
     else

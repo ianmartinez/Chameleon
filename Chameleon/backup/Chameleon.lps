@@ -74,7 +74,7 @@
         <UnitName Value="MainForm"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="323"/>
-        <CursorPos X="37" Y="344"/>
+        <CursorPos X="78" Y="344"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -98,8 +98,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="309"/>
-        <CursorPos X="15" Y="329"/>
+        <TopLine Value="296"/>
+        <CursorPos X="7" Y="312"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -132,8 +132,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="34"/>
-        <CursorPos X="28" Y="54"/>
+        <TopLine Value="37"/>
+        <CursorPos X="35" Y="55"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -454,7 +454,7 @@
       </Position29>
       <Position30>
         <Filename Value="mainform.pas"/>
-        <Caret Line="344" Column="92" TopLine="330"/>
+        <Caret Line="344" Column="37" TopLine="323"/>
       </Position30>
     </JumpHistory>
     <RunParams>
