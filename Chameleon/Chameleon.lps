@@ -72,7 +72,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="47"/>
         <CursorPos X="4" Y="68"/>
         <UsageCount Value="200"/>
@@ -131,6 +130,7 @@
         <Filename Value="weather.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="12"/>
         <CursorPos X="24" Y="29"/>
@@ -335,7 +335,7 @@
         <Loaded Value="True"/>
       </Unit30>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="mainform.pas"/>
         <Caret Line="165" Column="21" TopLine="145"/>
@@ -444,18 +444,6 @@
         <Filename Value="imagebutton.pas"/>
         <Caret Line="106" Column="42" TopLine="80"/>
       </Position27>
-      <Position28>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="187" Column="14" TopLine="202"/>
-      </Position28>
-      <Position29>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="30" Column="15" TopLine="98"/>
-      </Position29>
-      <Position30>
-        <Filename Value="imagebutton.pas"/>
-        <Caret Line="31" Column="15" TopLine="81"/>
-      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
