@@ -17,7 +17,6 @@ type
   TChameleonForm = class(TForm)
     btnAbout: TButton;
     btnSettings: TButton;
-    Image1: TImage;
     Image2: TImage;
     imgLogo: TImage;
     imgPatreon: TImage;

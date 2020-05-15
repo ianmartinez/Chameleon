@@ -17,7 +17,6 @@ type
   TChameleonForm = class(TForm)
     btnAbout: TButton;
     btnSettings: TButton;
-    Image1: TImage;
     Image2: TImage;
     imgLogo: TImage;
     imgPatreon: TImage;
@@ -65,7 +64,6 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
-    procedure FormShow(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
     procedure lblPatreonClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
