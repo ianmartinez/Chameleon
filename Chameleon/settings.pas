@@ -311,19 +311,6 @@ implementation
     Result := formatdatetime('h ampm', Now);
   end;
 
-  function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;
-  var
-    SelectedStation: TWeatherStation;
-    WeatherStations: TWeatherStationArray;
-  begin
-    if (WeatherStationName <> '') then begin
-      WeatherStations := GetAllWeatherStations(GetAllWeatherStationsXML());
-      SelectedStation := GetStationByName(WeatherStations, WeatherStationName);
-
-      Result := GetWeatherData(SelectedStation);
-    end;
-  end;
-
   function GetWeatherConditions(WeatherStationName: string) : string;
   begin
     Result := GetWeatherByStationName(WeatherStationName).Conditions;

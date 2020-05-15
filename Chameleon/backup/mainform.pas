@@ -294,6 +294,8 @@ var
   KeyName: string;
   WallpaperPath: string;
   Data: string;
+  IsWeather: boolean = false;
+  Weather: TWeatherData;
 begin
   CategoryName := GetCategoryName(ProgramSettings.Mode);
 
@@ -301,28 +303,52 @@ begin
       pmNone:
         exit;
       pmBattery:
-        Data := GetBattery();
+        begin
+          Data := GetBattery();
+        end;
       pmTime:
-        Data := GetTime();
+        begin
+          Data := GetTime();
+        end;
       pmWeatherConditions:
-        Data := GetWeatherConditions(ProgramSettings.WeatherStationName);
+        begin
+          Data := GetWeatherConditions(ProgramSettings.WeatherStationName);
+          IsWeather := True;
+        end;
       pmWindSpeed:
-        Data := GetWindSpeed(ProgramSettings.WeatherStationName);
+        begin
+          Data := GetWindSpeed(ProgramSettings.WeatherStationName);
+          IsWeather := True;
+        end;
       pmTemperature:
-        Data := GetTemperature(ProgramSettings.WeatherStationName);
+        begin
+          Data := GetTemperature(ProgramSettings.WeatherStationName);
+          IsWeather := True;
+        end;
       pmHumidity:
-        Data := GetHumidity(ProgramSettings.WeatherStationName);
+        begin
+          Data := GetHumidity(ProgramSettings.WeatherStationName);
+          IsWeather := True;
+        end;
       pmHeatIndex:
-        Data := GetHeatIndex(ProgramSettings.WeatherStationName);
+        begin
+          Data := GetHeatIndex(ProgramSettings.WeatherStationName);
+          IsWeather := True;
+        end;
       else
         exit;
     end;
 
-   trayIcon.Hint := Data;
+    if IsWeather then
+    begin
+       Weather := GetWeatherData(GetStationByName(ProgramSettings.WeatherStationName));
+       trayIcon.Hint := PrintWeatherReport(Weather);
+    end
+    else
+       trayIcon.Hint := Data;
+
    KeyName := WriteSafeString(Data);
-
-   WallpaperPath := GetImagePath(KeyName, CategoryName);      
-
+   WallpaperPath := GetImagePath(KeyName, CategoryName);
    wallLog.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
    if not fileexists(WallpaperPath) then wallLog.Error('"' + WallpaperPath + '" does not exist!');
 

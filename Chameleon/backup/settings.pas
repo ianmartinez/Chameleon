@@ -306,8 +306,8 @@ implementation
 
   function GetTime() : string;
   begin
-     DefaultFormatSettings.TimeAMString := 'in the morning';         
-     DefaultFormatSettings.TimePMString := 'in the night';
+     DefaultFormatSettings.TimeAMString := 'AM';
+     DefaultFormatSettings.TimePMString := 'PM';
     Result := formatdatetime('h ampm', Now);
   end;
 

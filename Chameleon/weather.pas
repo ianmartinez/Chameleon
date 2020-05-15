@@ -52,6 +52,7 @@ interface
   function GetAllWeatherStations(AllStationsXML: string) : TWeatherStationArray;
   function GetStationsForState(AllStations: TWeatherStationArray; StateAbbreviation: string) : TWeatherStationArray;
   function GetStationByName(AllStations: TWeatherStationArray; StationName: string) : TWeatherStation;
+  function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;
   function GetWeatherData(Station: TWeatherStation) : TWeatherData;
   function PrintWeatherReport(Weather: TWeatherData) : string;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
@@ -246,6 +247,19 @@ implementation
     for Station in AllStations do
       if Station.Name = StationName then
         Result := Station;
+  end;
+
+  function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;
+  var
+    SelectedStation: TWeatherStation;
+    WeatherStations: TWeatherStationArray;
+  begin
+    if (WeatherStationName <> '') then begin
+      WeatherStations := GetAllWeatherStations(GetAllWeatherStationsXML());
+      SelectedStation := GetStationByName(WeatherStations, WeatherStationName);
+
+      Result := GetWeatherData(SelectedStation);
+    end;
   end;
 
   function GetWeatherData(Station: TWeatherStation) : TWeatherData;

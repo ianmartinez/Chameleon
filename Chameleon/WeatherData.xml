@@ -17,26 +17,26 @@
 	<station_id>K8A0</station_id>
 	<latitude>34.22889</latitude>
 	<longitude>-86.25556</longitude>
-	<observation_time>Last Updated on May 15 2020, 11:55 am CDT</observation_time>
-        <observation_time_rfc822>Fri, 15 May 2020 11:55:00 -0500</observation_time_rfc822>
-	<weather>Fair</weather>
-	<temperature_string>75.0 F (24.0 C)</temperature_string>
-	<temp_f>75.0</temp_f>
-	<temp_c>24.0</temp_c>
-	<relative_humidity>61</relative_humidity>
-	<wind_string>South at 5.8 MPH (5 KT)</wind_string>
+	<observation_time>Last Updated on May 15 2020, 12:55 pm CDT</observation_time>
+        <observation_time_rfc822>Fri, 15 May 2020 12:55:00 -0500</observation_time_rfc822>
+	<weather>Partly Cloudy</weather>
+	<temperature_string>77.0 F (25.0 C)</temperature_string>
+	<temp_f>77.0</temp_f>
+	<temp_c>25.0</temp_c>
+	<relative_humidity>54</relative_humidity>
+	<wind_string>South at 9.2 MPH (8 KT)</wind_string>
 	<wind_dir>South</wind_dir>
-	<wind_degrees>190</wind_degrees>
-	<wind_mph>5.8</wind_mph>
-	<wind_kt>5</wind_kt>
-	<pressure_in>30.11</pressure_in>
-	<dewpoint_string>60.8 F (16.0 C)</dewpoint_string>
-	<dewpoint_f>60.8</dewpoint_f>
-	<dewpoint_c>16.0</dewpoint_c>
+	<wind_degrees>170</wind_degrees>
+	<wind_mph>9.2</wind_mph>
+	<wind_kt>8</wind_kt>
+	<pressure_in>30.09</pressure_in>
+	<dewpoint_string>59.0 F (15.0 C)</dewpoint_string>
+	<dewpoint_f>59.0</dewpoint_f>
+	<dewpoint_c>15.0</dewpoint_c>
 	<visibility_mi>10.00</visibility_mi>
  	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
 	<two_day_history_url>http://www.weather.gov/data/obhistory/K8A0.html</two_day_history_url>
-	<icon_url_name>skc.png</icon_url_name>
+	<icon_url_name>sct.png</icon_url_name>
 	<ob_url>http://www.weather.gov/data/METAR/K8A0.1.txt</ob_url>
 	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
 	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
