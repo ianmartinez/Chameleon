@@ -362,14 +362,14 @@ object AboutDialog: TAboutDialog
     Height = 726
     Top = 162
     Width = 858
-    ActivePage = tsLicense
+    ActivePage = tsChangelog
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 12
     BorderSpacing.Top = 12
     BorderSpacing.Right = 12
     BorderSpacing.Bottom = 12
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 1
     object tsLicense: TTabSheet
       Caption = 'License'
@@ -419,14 +419,14 @@ object AboutDialog: TAboutDialog
         )
         ParentFont = False
         ReadOnly = True
-        ScrollBars = ssAutoVertical
+        ScrollBars = ssAutoBoth
         TabOrder = 0
       end
     end
     object tsChangelog: TTabSheet
       Caption = 'Changelog'
-      ClientHeight = 424
-      ClientWidth = 564
+      ClientHeight = 688
+      ClientWidth = 850
       ParentFont = False
       object txtChangelog: TMemo
         AnchorSideLeft.Control = tsLicense
@@ -436,9 +436,9 @@ object AboutDialog: TAboutDialog
         AnchorSideBottom.Control = tsLicense
         AnchorSideBottom.Side = asrBottom
         Left = 6
-        Height = 416
+        Height = 680
         Top = 6
-        Width = 556
+        Width = 842
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Left = 6
         BorderSpacing.Top = 6
@@ -447,6 +447,13 @@ object AboutDialog: TAboutDialog
         BorderStyle = bsNone
         HideSelection = False
         Lines.Strings = (
+          'Version 2.0 (May 22, 2020)'
+          '  - Support high-DPI displays'
+          '  - Dedicated installer that has the program automatically runs at startup'
+          '  - Fix compression on images imported for use as wallpapers'
+          '  - Code cleanup'
+          '  - New icon'
+          ''
           'Version 1.8 (May 12, 2019)'
           '  - Add the autostart "-a" command line flag that makes Chameleon automatically start running'
           ''

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1331393525"/>
+  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1351329191"/>
   <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq -FiC:\Users\ianma\Documents\GitHub\Chameleon\Chameleon\lib\x86_64-win64 -FlC:\Users\ianma\Documents\GitHub\Chameleon\Chameleon\openssl -FuC:\lazarus\components\fpweb\lib\x86_64-win64 -FuC:\lazarus\components\sqldb\lib\x86_64-win64\win32 -FuC:\lazarus\components\ideintf\units\x86_64-win64\win32 -FuC:\lazarus\components\synedit\units\x86_64-win64\win32 -FuC:\lazarus\components\lazcontrols\lib\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\codetools\units\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 -FuC:\Users\ianma\Documents\GitHub\Chameleon\Chameleon\ -FUC:\Users\ianma\Documents\GitHub\Chameleon\Chameleon\lib\x86_64-win64\ -FEC:\Users\ianma\Documents\GitHub\Chameleon\Chameleon\ -oC:\Users\ianma\Documents\GitHub\Chameleon\Chameleon\Chameleon.exe -dLCL -dLCLwin32 Chameleon.lpr"/>
 </CONFIG>

@@ -5258,14 +5258,14 @@ object ChameleonForm: TChameleonForm
       Height = 447
       Top = 12
       Width = 816
-      ActivePage = tsBattery
+      ActivePage = tsTime
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 12
       BorderSpacing.Top = 12
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 12
       ParentFont = False
-      TabIndex = 0
+      TabIndex = 1
       TabOrder = 0
       object tsBattery: TTabSheet
         Caption = 'Battery'
@@ -5300,8 +5300,8 @@ object ChameleonForm: TChameleonForm
       end
       object tsTime: TTabSheet
         Caption = 'Time'
-        ClientHeight = 262
-        ClientWidth = 535
+        ClientHeight = 409
+        ClientWidth = 808
         ParentFont = False
         object TimeBox: TScrollBox
           AnchorSideLeft.Control = tsBattery
@@ -5311,9 +5311,9 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = tsBattery
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 246
+          Height = 393
           Top = 12
-          Width = 519
+          Width = 792
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5792,9 +5792,9 @@ object ChameleonForm: TChameleonForm
       AnchorSideTop.Control = pnlTop
       AnchorSideRight.Control = pnlTop
       AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Side = asrBottom
+      AnchorSideBottom.Control = imgPatreon
       Left = 742
-      Height = 53
+      Height = 48
       Top = 26
       Width = 88
       Anchors = [akTop, akRight, akBottom]
@@ -5802,6 +5802,7 @@ object ChameleonForm: TChameleonForm
       BorderSpacing.Left = 12
       BorderSpacing.Top = 24
       BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 32
       Caption = 'About...'
       Constraints.MinHeight = 38
       OnClick = btnAboutClick
@@ -5812,9 +5813,9 @@ object ChameleonForm: TChameleonForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = pnlTop
       AnchorSideRight.Control = btnAbout
-      AnchorSideBottom.Side = asrBottom
+      AnchorSideBottom.Control = imgPatreon
       Left = 628
-      Height = 53
+      Height = 48
       Top = 26
       Width = 102
       Anchors = [akTop, akRight, akBottom]
@@ -5822,6 +5823,7 @@ object ChameleonForm: TChameleonForm
       BorderSpacing.Left = 12
       BorderSpacing.Top = 24
       BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 32
       Caption = 'Settings...'
       Constraints.MinHeight = 38
       OnClick = btnSettingsClick

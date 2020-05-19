@@ -362,14 +362,14 @@ object AboutDialog: TAboutDialog
     Height = 726
     Top = 162
     Width = 858
-    ActivePage = tsLicense
+    ActivePage = tsChangelog
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 12
     BorderSpacing.Top = 12
     BorderSpacing.Right = 12
     BorderSpacing.Bottom = 12
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 1
     object tsLicense: TTabSheet
       Caption = 'License'
@@ -419,7 +419,7 @@ object AboutDialog: TAboutDialog
         )
         ParentFont = False
         ReadOnly = True
-        ScrollBars = ssAutoVertical
+        ScrollBars = ssAutoBoth
         TabOrder = 0
       end
     end

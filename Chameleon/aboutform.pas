@@ -48,7 +48,7 @@ end;
 
 procedure TAboutDialog.btnWebsiteClick(Sender: TObject);
 begin
-  OpenURL('http://www.ianmtz.com');
+  OpenURL('https://www.ianmtz.com/Chameleon');
 end;
 
 end.
