@@ -78,6 +78,8 @@ begin
   if WeatherStationName <> ''  then begin
     cbStations.Text := WeatherStationName;
   end;
+
+  cbStatesChange(Sender);
 end;
 
 procedure TSettingsDialog.OKButtonClick(Sender: TObject);

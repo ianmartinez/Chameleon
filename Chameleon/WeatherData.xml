@@ -13,31 +13,33 @@
 	</image>
 	<suggested_pickup>15 minutes after the hour</suggested_pickup>
 	<suggested_pickup_period>60</suggested_pickup_period>
-	<location>Albertville, Albertville Municipal Airport, AL</location>
-	<station_id>K8A0</station_id>
-	<latitude>34.22889</latitude>
-	<longitude>-86.25556</longitude>
-	<observation_time>Last Updated on May 15 2020, 12:55 pm CDT</observation_time>
-        <observation_time_rfc822>Fri, 15 May 2020 12:55:00 -0500</observation_time_rfc822>
+	<location>Albuquerque, Albuquerque International Airport, NM</location>
+	<station_id>KABQ</station_id>
+	<latitude>35.04167</latitude>
+	<longitude>-106.61472</longitude>
+	<observation_time>Last Updated on May 18 2020, 9:52 pm MDT</observation_time>
+        <observation_time_rfc822>Mon, 18 May 2020 21:52:00 -0600</observation_time_rfc822>
 	<weather>Partly Cloudy</weather>
 	<temperature_string>77.0 F (25.0 C)</temperature_string>
 	<temp_f>77.0</temp_f>
 	<temp_c>25.0</temp_c>
-	<relative_humidity>54</relative_humidity>
-	<wind_string>South at 9.2 MPH (8 KT)</wind_string>
+	<relative_humidity>14</relative_humidity>
+	<wind_string>South at 11.5 MPH (10 KT)</wind_string>
 	<wind_dir>South</wind_dir>
 	<wind_degrees>170</wind_degrees>
-	<wind_mph>9.2</wind_mph>
-	<wind_kt>8</wind_kt>
-	<pressure_in>30.09</pressure_in>
-	<dewpoint_string>59.0 F (15.0 C)</dewpoint_string>
-	<dewpoint_f>59.0</dewpoint_f>
-	<dewpoint_c>15.0</dewpoint_c>
+	<wind_mph>11.5</wind_mph>
+	<wind_kt>10</wind_kt>
+	<pressure_string>1006.4 mb</pressure_string>
+	<pressure_mb>1006.4</pressure_mb>
+	<pressure_in>29.99</pressure_in>
+	<dewpoint_string>25.0 F (-3.9 C)</dewpoint_string>
+	<dewpoint_f>25.0</dewpoint_f>
+	<dewpoint_c>-3.9</dewpoint_c>
 	<visibility_mi>10.00</visibility_mi>
  	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
-	<two_day_history_url>http://www.weather.gov/data/obhistory/K8A0.html</two_day_history_url>
-	<icon_url_name>sct.png</icon_url_name>
-	<ob_url>http://www.weather.gov/data/METAR/K8A0.1.txt</ob_url>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KABQ.html</two_day_history_url>
+	<icon_url_name>nsct.png</icon_url_name>
+	<ob_url>http://www.weather.gov/data/METAR/KABQ.1.txt</ob_url>
 	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
 	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
 	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
