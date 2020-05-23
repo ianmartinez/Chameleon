@@ -72,7 +72,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="160"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="152"/>
         <CursorPos X="7" Y="152"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -97,7 +98,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="295"/>
+        <TopLine Value="297"/>
         <CursorPos X="7" Y="312"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
@@ -130,10 +131,8 @@
         <Filename Value="weather.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="485"/>
-        <CursorPos X="8" Y="526"/>
+        <CursorPos X="14" Y="20"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
       </Unit6>

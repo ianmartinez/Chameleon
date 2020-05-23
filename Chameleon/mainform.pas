@@ -15,62 +15,62 @@ type
   { TChameleonForm }
 
   TChameleonForm = class(TForm)
-    btnAbout: TButton;
-    btnSettings: TButton;
+    AboutButton: TButton;
+    SettingsButton: TButton;
     Image2: TImage;
-    imgLogo: TImage;
-    imgPatreon: TImage;
-    lblPatreon: TLabel;
-    lblProgramName: TLabel;
-    lblVersion: TLabel;
-    pnlLabels: TPanel;
-    pnlTop: TPanel;
-    wallLog: TEventLog;
-    pnlButtons: TButtonPanel;
+    LogoImage: TImage;
+    PatreonImage: TImage;
+    PatreonLinkLabel: TLabel;
+    ProgramNameLabel: TLabel;
+    VersionLabel: TLabel;
+    LabelsPanel: TPanel;
+    TopPanel: TPanel;
+    ChameleonLogger: TEventLog;
+    ButtonsPanel: TButtonPanel;
     HeatIndexBox: TScrollBox;
     HumidityBox: TScrollBox;
     TemperatureBox: TScrollBox;
-    tmrTheme: TTimer;
-    trayIcon: TTrayIcon;
+    WallpaperTimer: TTimer;
+    ChameleonTrayIcon: TTrayIcon;
     WindSpeedBox: TScrollBox;
     ConditionsBox: TScrollBox;
     TimeBox: TScrollBox;
-    gbInterval: TGroupBox;
-    gbWallpapers: TGroupBox;
-    Label2: TLabel;
-    Label3: TLabel;
-    PageControl1: TPageControl;
-    gbChangeBy: TRadioGroup;
-    rbHeatIndex: TRadioButton;
-    rbNone: TRadioButton;
-    rbBattery: TRadioButton;
-    rbTime: TRadioButton;
-    rbConditions: TRadioButton;
-    rbWindSpeed: TRadioButton;
-    rbTemperature: TRadioButton;
-    rbHumidity: TRadioButton;
+    IntervalGroupBox: TGroupBox;
+    WallpapersGroupBox: TGroupBox;
+    RefreshEveryLabel: TLabel;
+    RefreshSecondsLabel: TLabel;
+    WallpapersTabControl: TPageControl;
+    ChangeByGroup: TRadioGroup;
+    HeatIndexRadioButton: TRadioButton;
+    NoneRadioButton: TRadioButton;
+    BatteryRadioButton: TRadioButton;
+    TimeRadioButton: TRadioButton;
+    ConditionsRadioButton: TRadioButton;
+    WindSpeedRadioButton: TRadioButton;
+    TemperatureRadioButton: TRadioButton;
+    HumidityRadioButton: TRadioButton;
     BatteryBox: TScrollBox;
-    spInterval: TSpinEdit;
-    tsBattery: TTabSheet;
-    tsTime: TTabSheet;
-    tsConditions: TTabSheet;
-    tsWindSpeed: TTabSheet;
-    tsTemperature: TTabSheet;
-    tsHeatIndex: TTabSheet;
-    tsHumidity: TTabSheet;
-    procedure btnAboutClick(Sender: TObject);
-    procedure btnSettingsClick(Sender: TObject);
+    InveralSpinEdit: TSpinEdit;
+    BatteryTab: TTabSheet;
+    TimeTab: TTabSheet;
+    ConditionsTab: TTabSheet;
+    WindSpeedTab: TTabSheet;
+    TemperatureTab: TTabSheet;
+    HeatIndexTab: TTabSheet;
+    HumidityTab: TTabSheet;
+    procedure AboutButtonClick(Sender: TObject);
+    procedure SettingsButtonClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
     procedure FormWindowStateChange(Sender: TObject);
-    procedure lblPatreonClick(Sender: TObject);
+    procedure PatreonLinkLabelClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
-    procedure spIntervalChange(Sender: TObject);
-    procedure tmrThemeTimer(Sender: TObject);
-    procedure trayIconDblClick(Sender: TObject);
+    procedure InveralSpinEditChange(Sender: TObject);
+    procedure WallpaperTimerTimer(Sender: TObject);
+    procedure ChameleonTrayIconDblClick(Sender: TObject);
   private
     FirstShow: boolean;
     AutoStart: boolean;
@@ -96,26 +96,26 @@ begin
 
   case ProgramSettings.Mode of
     pmNone:
-      rbNone.Checked := true;
+      NoneRadioButton.Checked := true;
     pmBattery:
-      rbBattery.Checked := true;
+      BatteryRadioButton.Checked := true;
     pmTime:
-      rbTime.Checked := true;
+      TimeRadioButton.Checked := true;
     pmWeatherConditions:
-      rbConditions.Checked := true;
+      ConditionsRadioButton.Checked := true;
     pmWindSpeed:
-      rbWindSpeed.Checked := true;
+      WindSpeedRadioButton.Checked := true;
     pmTemperature:
-      rbTemperature.Checked := true;
+      TemperatureRadioButton.Checked := true;
     pmHumidity:
-      rbHumidity.Checked := true;
+      HumidityRadioButton.Checked := true;
     pmHeatIndex:
-      rbHeatIndex.Checked := true;
+      HeatIndexRadioButton.Checked := true;
     else
-      rbNone.Checked := true;
+      NoneRadioButton.Checked := true;
   end;
 
-  spInterval.Value := ProgramSettings.Interval;
+  InveralSpinEdit.Value := ProgramSettings.Interval;
 
   // Battery percentage
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
@@ -153,22 +153,22 @@ begin
   end;
 
   // Init event log
-  wallLog.LogType := ltFile;
-  wallLog.FileName := GetLogFilePath();
-  wallLog.Active := True;
+  ChameleonLogger.LogType := ltFile;
+  ChameleonLogger.FileName := GetLogFilePath();
+  ChameleonLogger.Active := True;
 
   Caption := 'Chameleon ' + VersionSupport.GetFileVersion;
-  lblVersion.Caption :=  'Version ' + VersionSupport.GetFileVersion;
+  VersionLabel.Caption :=  'Version ' + VersionSupport.GetFileVersion;
 
   FirstShow := True;
 end;
 
-procedure TChameleonForm.btnAboutClick(Sender: TObject);
+procedure TChameleonForm.AboutButtonClick(Sender: TObject);
 begin
   AboutDialog.ShowModal();
 end;
 
-procedure TChameleonForm.btnSettingsClick(Sender: TObject);
+procedure TChameleonForm.SettingsButtonClick(Sender: TObject);
 begin
   SettingsDialog.State := ProgramSettings.State;
   SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
@@ -229,38 +229,38 @@ end;
 procedure TChameleonForm.FormWindowStateChange(Sender: TObject);
 begin
   if WindowState <> wsMinimized then
-    tmrTheme.Enabled := false;
+    WallpaperTimer.Enabled := false;
 end;
 
-procedure TChameleonForm.lblPatreonClick(Sender: TObject);
+procedure TChameleonForm.PatreonLinkLabelClick(Sender: TObject);
 begin
   OpenURL('https://www.patreon.com/ianmartinez');
 end;
 
 procedure TChameleonForm.ModeChange(Sender: TObject);
 begin
-  if rbNone.Checked then begin
+  if NoneRadioButton.Checked then begin
     ProgramSettings.Mode := pmNone;
   end
-  else if rbBattery.Checked then begin
+  else if BatteryRadioButton.Checked then begin
     ProgramSettings.Mode := pmBattery;
   end
-  else if rbTime.Checked then begin
+  else if TimeRadioButton.Checked then begin
     ProgramSettings.Mode := pmTime;
   end
-  else if rbConditions.Checked then begin
+  else if ConditionsRadioButton.Checked then begin
     ProgramSettings.Mode := pmWeatherConditions;
   end
-  else if rbWindSpeed.Checked then begin
+  else if WindSpeedRadioButton.Checked then begin
     ProgramSettings.Mode := pmWindSpeed;
   end
-  else if rbTemperature.Checked then begin
+  else if TemperatureRadioButton.Checked then begin
     ProgramSettings.Mode := pmTemperature;
   end
-  else if rbHumidity.Checked then begin
+  else if HumidityRadioButton.Checked then begin
     ProgramSettings.Mode := pmHumidity;
   end
-  else if rbHeatIndex.Checked then begin
+  else if HeatIndexRadioButton.Checked then begin
     ProgramSettings.Mode := pmHeatIndex;
   end
   else begin
@@ -273,22 +273,22 @@ end;
 procedure TChameleonForm.OKButtonClick(Sender: TObject);
 begin
   Application.Minimize;      
-  tmrTheme.Interval := LongWord(spInterval.Value * 1000);
-  tmrTheme.Enabled := true;
-  tmrThemeTimer(Sender);
-  trayIcon.ShowBalloonHint;
+  WallpaperTimer.Interval := LongWord(InveralSpinEdit.Value * 1000);
+  WallpaperTimer.Enabled := true;
+  WallpaperTimerTimer(Sender);
+  ChameleonTrayIcon.ShowBalloonHint;
 
   // Hide taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Hide);
 end;
 
-procedure TChameleonForm.spIntervalChange(Sender: TObject);
+procedure TChameleonForm.InveralSpinEditChange(Sender: TObject);
 begin
-  ProgramSettings.Interval := spInterval.Value;
+  ProgramSettings.Interval := InveralSpinEdit.Value;
   SaveSettings(ProgramSettings);
 end;
 
-procedure TChameleonForm.tmrThemeTimer(Sender: TObject);
+procedure TChameleonForm.WallpaperTimerTimer(Sender: TObject);
 var
   CategoryName: string;
   KeyName: string;
@@ -342,20 +342,20 @@ begin
     if IsWeather then
     begin
        Weather := GetWeatherByStationName(ProgramSettings.WeatherStationName);
-       trayIcon.Hint := PrintWeatherReport(Weather);
+       ChameleonTrayIcon.Hint := PrintWeatherReport(Weather);
     end
     else
-       trayIcon.Hint := Data;
+       ChameleonTrayIcon.Hint := Data;
 
    KeyName := WriteSafeString(Data);
    WallpaperPath := GetImagePath(KeyName, CategoryName);
-   wallLog.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
-   if not fileexists(WallpaperPath) then wallLog.Error('"' + WallpaperPath + '" does not exist!');
+   ChameleonLogger.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
+   if not fileexists(WallpaperPath) then ChameleonLogger.Error('"' + WallpaperPath + '" does not exist!');
 
    SetWallpaper(WallpaperPath);
 end;
 
-procedure TChameleonForm.trayIconDblClick(Sender: TObject);
+procedure TChameleonForm.ChameleonTrayIconDblClick(Sender: TObject);
 begin
   Application.Restore;
 
@@ -371,8 +371,7 @@ begin
 
   // Show taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Show);        
-  trayIcon.Hint := 'Chameleon';
+  ChameleonTrayIcon.Hint := 'Chameleon';
 end;
 
 end.
-

@@ -16,7 +16,7 @@ type
     imgPreview: TImage;
     dlgOpenPicture: TOpenPictureDialog;
     lblTitle: TLabel;
-    pnlMain: TPanel;
+    MainPanel: TPanel;
     procedure btnPickImageClick(Sender: TObject);
   private
 

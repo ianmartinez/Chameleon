@@ -72,9 +72,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="157"/>
-        <CursorPos X="74" Y="178"/>
+        <TopLine Value="160"/>
+        <CursorPos X="7" Y="152"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -97,9 +96,10 @@
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="295"/>
-        <CursorPos X="7" Y="312"/>
+        <TopLine Value="18"/>
+        <CursorPos X="5" Y="365"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -132,8 +132,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="37"/>
-        <CursorPos X="35" Y="55"/>
+        <TopLine Value="13"/>
+        <CursorPos X="12" Y="34"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -157,7 +157,7 @@
         <UnitName Value="Win32"/>
         <EditorIndex Value="8"/>
         <CursorPos X="13" Y="5"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="60"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -274,7 +274,7 @@
         <EditorIndex Value="10"/>
         <TopLine Value="288"/>
         <CursorPos X="26" Y="295"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit23>
       <Unit24>
@@ -289,7 +289,7 @@
         <EditorIndex Value="9"/>
         <TopLine Value="18"/>
         <CursorPos X="78" Y="36"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit25>
       <Unit26>
@@ -323,7 +323,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="1406"/>
         <CursorPos X="11" Y="1431"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="17"/>
         <Loaded Value="True"/>
       </Unit29>
       <Unit30>
@@ -331,7 +331,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="109"/>
         <CursorPos X="15" Y="120"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit30>
     </Units>

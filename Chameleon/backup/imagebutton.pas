@@ -99,7 +99,7 @@ begin
           forcedirectories(ImageDir);
 
         (* Delete the old image *)
-        if fileexists(ImagePath) the
+        if fileexists(ImagePath) then
            deletefile(ImagePath);
 
         (* Copy over the new image *)

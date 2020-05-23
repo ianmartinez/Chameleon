@@ -336,4 +336,3 @@ implementation
     Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).HeatIndex);
   end;
 end.
-

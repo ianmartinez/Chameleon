@@ -13,7 +13,7 @@ object ImageButtonFrame: TImageButtonFrame
   ParentColor = False
   ParentFont = False
   TabOrder = 0
-  object pnlMain: TPanel
+  object MainPanel: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
@@ -21,31 +21,31 @@ object ImageButtonFrame: TImageButtonFrame
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 4
-    Height = 488
+    Height = 367
     Top = 4
-    Width = 660
+    Width = 496
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 4
     BorderSpacing.Top = 4
     BorderSpacing.Right = 4
     BorderSpacing.Bottom = 4
     BevelInner = bvLowered
-    ClientHeight = 488
-    ClientWidth = 660
+    ClientHeight = 367
+    ClientWidth = 496
     Color = clNone
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     object btnPickImage: TButton
-      AnchorSideLeft.Control = pnlMain
-      AnchorSideRight.Control = pnlMain
+      AnchorSideLeft.Control = MainPanel
+      AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = pnlMain
+      AnchorSideBottom.Control = MainPanel
       AnchorSideBottom.Side = asrBottom
       Left = 6
-      Height = 42
-      Top = 428
-      Width = 644
+      Height = 35
+      Top = 318
+      Width = 484
       Anchors = [akLeft, akRight, akBottom]
       AutoSize = True
       BorderSpacing.Left = 4
@@ -57,14 +57,14 @@ object ImageButtonFrame: TImageButtonFrame
       TabOrder = 0
     end
     object lblTitle: TLabel
-      AnchorSideLeft.Control = pnlMain
-      AnchorSideTop.Control = pnlMain
-      AnchorSideRight.Control = pnlMain
+      AnchorSideLeft.Control = MainPanel
+      AnchorSideTop.Control = MainPanel
+      AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
       Left = 6
-      Height = 32
+      Height = 25
       Top = 14
-      Width = 644
+      Width = 484
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 4
@@ -75,16 +75,16 @@ object ImageButtonFrame: TImageButtonFrame
       ParentFont = False
     end
     object imgPreview: TImage
-      AnchorSideLeft.Control = pnlMain
+      AnchorSideLeft.Control = MainPanel
       AnchorSideTop.Control = lblTitle
       AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = pnlMain
+      AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = btnPickImage
-      Left = 113
-      Height = 346
-      Top = 50
-      Width = 525
+      Left = 14
+      Height = 255
+      Top = 51
+      Width = 468
       Anchors = [akTop, akLeft, akRight, akBottom]
       AutoSize = True
       BorderSpacing.Left = 12
