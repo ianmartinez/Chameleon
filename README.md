@@ -1,4 +1,4 @@
-![Icon](https://github.com/ianmartinez/Chameleon/raw/master/Icons/128.png)
+![Icon](https://raw.githubusercontent.com/ianmartinez/Chameleon/master/Icons/Chameleon-256x256.png)
 # Chameleon
 Dynamically change your desktop wallpaper based on the current battery, time of day, weather conditions, wind speed, temperature, humidity, or heat index. 
 
@@ -16,6 +16,8 @@ Chameleon 2.0 is currently in development:
 - Code cleanup
 - New icon
 - Support high-DPI displays
+- Updated wallpaper pack
+- Settings and wallpapers are now stored in ~/ChameleonApp directory
 
 ## Minimum Requirements
 Chameleon is fairly light on resources while it's running. The minimum requirements are:
