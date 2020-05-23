@@ -1,4 +1,4 @@
-![Icon](https://raw.githubusercontent.com/ianmartinez/Chameleon/master/Icons/Chameleon-256x256.png)
+![Icon](https://raw.githubusercontent.com/ianmartinez/Chameleon/master/Icons/Chameleon-128x128.png)
 # Chameleon
 Dynamically change your desktop wallpaper based on the current battery, time of day, weather conditions, wind speed, temperature, humidity, or heat index. 
 
