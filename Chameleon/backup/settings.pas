@@ -87,8 +87,10 @@ implementation
   end;
 
   function GetSettingsFolder() : string;
+  var
+    SettingsFolder: String;
   begin
-    Result := ExcludeTrailingPathDelimiter(GetUserDir) + PathDelim + 'Chameleon';
+    Result := ExcludeTrailingPathDelimiter(GetUserDir) + PathDelim + 'ChameleonApp';
   end;
 
   function GetImagePath(Key: string; Category: string) : string;
