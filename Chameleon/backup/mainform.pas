@@ -174,8 +174,8 @@ begin
   SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
 
   if SettingsDialog.ShowModal = mrOK then begin
-    ProgramSettings.State := SettingsDialog.cbStates.Text;
-    ProgramSettings.WeatherStationName := SettingsDialog.cbStations.Text;
+    ProgramSettings.State := SettingsDialog.StateCombo.Text;
+    ProgramSettings.WeatherStationName := SettingsDialog.StationsCombo.Text;
     SaveSettings(ProgramSettings);
   end;
 end;
@@ -234,7 +234,7 @@ end;
 
 procedure TChameleonForm.lblPatreonClick(Sender: TObject);
 begin
-  OpenURL('https://patreon.com/ianmartinez');
+  OpenURL('https://www.patreon.com/ianmartinez');
 end;
 
 procedure TChameleonForm.ModeChange(Sender: TObject);

@@ -13,24 +13,24 @@ type
   { TSettingsDialog }
 
   TSettingsDialog = class(TForm)
-    btnGo: TButton;
-    pnlButtons: TButtonPanel;
-    cbStates: TComboBox;
-    cbStations: TComboBox;
-    gbState: TGroupBox;
-    gbStations: TGroupBox;
-    gbStations1: TGroupBox;
-    synWeatherDataXML: TSynEdit;
-    tsWeatherData: TTabSheet;
-    txtWeather: TMemo;
-    synWeatherStationXML: TSynEdit;
-    SynXMLSyn1: TSynXMLSyn;
-    tsWeatherStationXML: TTabSheet;
-    tsWeather: TTabSheet;
-    tpMain: TPageControl;
-    procedure btnGoClick(Sender: TObject);
+    GoButton: TButton;
+    ButtonsPanel: TButtonPanel;
+    StatesComboBox: TComboBox;
+    StationsComboBox: TComboBox;
+    StateGroupBox: TGroupBox;
+    StationsGroupBox: TGroupBox;
+    CurrentWeatherGroupBox: TGroupBox;
+    WeatherDataXmlEdit: TSynEdit;
+    WeatherDataXmlTab: TTabSheet;
+    WeatherMemo: TMemo;
+    WeatherStationXMLEdit: TSynEdit;
+    XmlSyntaxHighlighter: TSynXMLSyn;
+    WeatherStationXmlTab: TTabSheet;
+    WeatherTab: TTabSheet;
+    MainTabControl: TPageControl;
+    procedure GoButtonClick(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
-    procedure cbStatesChange(Sender: TObject);
+    procedure StatesComboBoxChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
@@ -59,25 +59,27 @@ var
 begin
   StationsXML := GetAllWeatherStationsXML();
   WeatherStations := GetAllWeatherStations(StationsXML);
-  synWeatherStationXML.Caption := StationsXML;
+  WeatherStationXMLEdit.Caption := StationsXML;
 
   for StateAbbreviation in StateAbreviations do begin
-    cbStates.Items.Add(StateAbbreviation);
+    StatesComboBox.Items.Add(StateAbbreviation);
   end;
 
   for Station in WeatherStations do begin
-    cbStations.Items.Add(Station.Name);
+    StationsComboBox.Items.Add(Station.Name);
   end;
 end;
 
 procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
   if State <> '' then begin
-    cbStates.Text := State;
+    StatesComboBox.Text := State;
   end;
   if WeatherStationName <> ''  then begin
-    cbStations.Text := WeatherStationName;
+    StationsComboBox.Text := WeatherStationName;
   end;
+
+  cbStatesChange(Sender);
 end;
 
 procedure TSettingsDialog.OKButtonClick(Sender: TObject);
@@ -86,34 +88,34 @@ begin
 end;
 
 
-procedure TSettingsDialog.cbStatesChange(Sender: TObject);  
+procedure TSettingsDialog.StatesComboBoxChange(Sender: TObject);
 const
   StateSep: string = '----';
 var             
   Station: TWeatherStation;
   FilteredStations: TWeatherStationArray;
 begin
-  if cbStates.Text <> StateSep then begin
-    FilteredStations := GetStationsForState(WeatherStations, cbStates.Text);
-    cbStations.Clear;
+  if StatesComboBox.Text <> StateSep then begin
+    FilteredStations := GetStationsForState(WeatherStations, StatesComboBox.Text);
+    StationsComboBox.Clear;
 
     for Station in FilteredStations do begin
-      cbStations.Items.Add(Station.Name);
+      StationsComboBox.Items.Add(Station.Name);
     end;
   end;
 end;
 
-procedure TSettingsDialog.btnGoClick(Sender: TObject);
+procedure TSettingsDialog.GoButtonClick(Sender: TObject);
 var                
   SelectedStation: TWeatherStation;
   Weather: TWeatherData;
 begin
-  if cbStations.Text = '' then exit;
+  if StationsComboBox.Text = '' then exit;
 
-  SelectedStation := GetStationByName(WeatherStations, cbStations.Text);
-  synWeatherDataXML.Caption := GetWeatherDataXML(SelectedStation);
+  SelectedStation := GetStationByName(WeatherStations, StationsComboBox.Text);
+  WeatherDataXmlEdit.Caption := GetWeatherDataXML(SelectedStation);
   Weather := GetWeatherData(SelectedStation);
-  txtWeather.Text := PrintWeatherReport(Weather);
+  WeatherMemo.Text := PrintWeatherReport(Weather);
 end;
 
 procedure TSettingsDialog.CancelButtonClick(Sender: TObject);

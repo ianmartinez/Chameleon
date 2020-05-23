@@ -174,8 +174,8 @@ begin
   SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
 
   if SettingsDialog.ShowModal = mrOK then begin
-    ProgramSettings.State := SettingsDialog.cbStates.Text;
-    ProgramSettings.WeatherStationName := SettingsDialog.cbStations.Text;
+    ProgramSettings.State := SettingsDialog.StatesComboBox.Text;
+    ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
     SaveSettings(ProgramSettings);
   end;
 end;

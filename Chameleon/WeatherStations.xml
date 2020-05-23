@@ -835,17 +835,6 @@
 	</station>
 
 	<station>
-		<station_id>PAKP</station_id>
-		<state>AK</state>
-            	<station_name>Anaktuvuk Pass, Anaktuvuk Pass Airport</station_name>
-		<latitude>68.13361</latitude>
-		<longitude>-151.74333</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/PAKP.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/PAKP.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/PAKP.xml</xml_url>
-	</station>
-
-	<station>
 		<station_id>PAKW</station_id>
 		<state>AK</state>
             	<station_name>Klawock - Klawock Airport</station_name>
@@ -1187,6 +1176,17 @@
 	</station>
 
 	<station>
+		<station_id>PAHY</station_id>
+		<state>AK</state>
+            	<station_name>Hydaburg - Hydaburg Seaplane Base</station_name>
+		<latitude>55.2</latitude>
+		<longitude>-132.83333</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/PAHY.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/PAHY.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/PAHY.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>PAEC</station_id>
 		<state>AK</state>
             	<station_name>Chulitna, Chulitna Airport</station_name>
@@ -1426,17 +1426,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/PAPH.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/PAPH.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/PAPH.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>PAPT</station_id>
-		<state>AK</state>
-            	<station_name>Puntilla</station_name>
-		<latitude>62.1</latitude>
-		<longitude>-152.75</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/PAPT.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/PAPT.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/PAPT.xml</xml_url>
 	</station>
 
 	<station>
@@ -2009,6 +1998,17 @@
             	<html_url>http://w1.weather.gov/data/obhistory/PANW.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/PANW.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/PANW.xml</xml_url>
+	</station>
+
+	<station>
+		<station_id>PAOO</station_id>
+		<state>AK</state>
+            	<station_name>Toksook Bay</station_name>
+		<latitude>60.53352</latitude>
+		<longitude>-165.1143</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/PAOO.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/PAOO.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/PAOO.xml</xml_url>
 	</station>
 
 	<station>
@@ -2691,17 +2691,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KBVX.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KBVX.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KBVX.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>KBYH</station_id>
-		<state>AR</state>
-            	<station_name>Eaker Air Force Base</station_name>
-		<latitude>35.96667</latitude>
-		<longitude>-89.95</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KBYH.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KBYH.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KBYH.xml</xml_url>
 	</station>
 
 	<station>
@@ -4564,6 +4553,17 @@
 	</station>
 
 	<station>
+		<station_id>KNUQ</station_id>
+		<state>CA</state>
+            	<station_name>Mountain View, Moffett Field</station_name>
+		<latitude>37.40583</latitude>
+		<longitude>-122.04806</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KNUQ.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KNUQ.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KNUQ.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>KNXP</station_id>
 		<state>CA</state>
             	<station_name>Twentynine Palms SELF Airport</station_name>
@@ -5697,17 +5697,6 @@
 	</station>
 
 	<station>
-		<station_id>KLAA</station_id>
-		<state>CO</state>
-            	<station_name>Lamar Municipal Airport</station_name>
-		<latitude>38.07178</latitude>
-		<longitude>-102.68745</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KLAA.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KLAA.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KLAA.xml</xml_url>
-	</station>
-
-	<station>
 		<station_id>KLHX</station_id>
 		<state>CO</state>
             	<station_name>La Junta Municipal Airport</station_name>
@@ -6024,6 +6013,17 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KFLY.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KFLY.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KFLY.xml</xml_url>
+	</station>
+
+	<station>
+		<station_id>K2V5</station_id>
+		<state>CO</state>
+            	<station_name>Wray Municipal Airport</station_name>
+		<latitude>40.09929</latitude>
+		<longitude>-102.24308</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/K2V5.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/K2V5.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/K2V5.xml</xml_url>
 	</station>
 
 	<station>
@@ -11835,6 +11835,17 @@
 	</station>
 
 	<station>
+		<station_id>KSCF</station_id>
+		<state>LA</state>
+            	<station_name>S MARSH268 OIL PLATFORM</station_name>
+		<latitude>29.12</latitude>
+		<longitude>-91.87</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KSCF.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KSCF.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KSCF.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>KMNE</station_id>
 		<state>LA</state>
             	<station_name>Minden Airport</station_name>
@@ -11986,17 +11997,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KOPL.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KOPL.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KOPL.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>KAPS</station_id>
-		<state>LA</state>
-            	<station_name>Port of South Louisiana Executive Regional Airport</station_name>
-		<latitude>30.08747</latitude>
-		<longitude>-90.58283</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KAPS.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KAPS.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KAPS.xml</xml_url>
 	</station>
 
 	<station>
@@ -12605,28 +12605,6 @@
 	</station>
 
 	<station>
-		<station_id>KCGS</station_id>
-		<state>MD</state>
-            	<station_name>College Park Airport</station_name>
-		<latitude>38.9806</latitude>
-		<longitude>-76.9223</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KCGS.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KCGS.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KCGS.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>KW29</station_id>
-		<state>MD</state>
-            	<station_name>Bay Bridge Field</station_name>
-		<latitude>38.9767</latitude>
-		<longitude>-76.33</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KW29.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KW29.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KW29.xml</xml_url>
-	</station>
-
-	<station>
 		<station_id>KGAI</station_id>
 		<state>MD</state>
             	<station_name>Gaithersburg - Montgomery County Airport</station_name>
@@ -12635,17 +12613,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KGAI.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KGAI.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KGAI.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>KDMW</station_id>
-		<state>MD</state>
-            	<station_name>Carroll County Regional Jack B Poage Field</station_name>
-		<latitude>39.6083</latitude>
-		<longitude>-77.0077</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KDMW.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KDMW.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KDMW.xml</xml_url>
 	</station>
 
 	<station>
@@ -15047,6 +15014,17 @@
 	</station>
 
 	<station>
+		<station_id>KMBY</station_id>
+		<state>MO</state>
+            	<station_name>MOBERLY</station_name>
+		<latitude>39.46383</latitude>
+		<longitude>-92.427</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KMBY.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KMBY.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KMBY.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>KMYJ</station_id>
 		<state>MO</state>
             	<station_name>Mexico Memorial Airport</station_name>
@@ -15121,6 +15099,17 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KMAW.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KMAW.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KMAW.xml</xml_url>
+	</station>
+
+	<station>
+		<station_id>KRAW</station_id>
+		<state>MO</state>
+            	<station_name>Warsaw Municipal Airport</station_name>
+		<latitude>38.3469</latitude>
+		<longitude>-93.3454</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KRAW.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KRAW.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KRAW.xml</xml_url>
 	</station>
 
 	<station>
@@ -16023,17 +16012,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/CERM.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/CERM.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/CERM.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>K2DP</station_id>
-		<state>NC</state>
-            	<station_name>Dare County Gunnery Range</station_name>
-		<latitude>35.66667</latitude>
-		<longitude>-75.9</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/K2DP.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/K2DP.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/K2DP.xml</xml_url>
 	</station>
 
 	<station>
@@ -18655,6 +18633,17 @@
 	</station>
 
 	<station>
+		<station_id>CYAW</station_id>
+		<state>NS</state>
+            	<station_name>Shearwater N. S.</station_name>
+		<latitude>44.6364</latitude>
+		<longitude>-63.50655</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/CYAW.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/CYAW.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/CYAW.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>CWEF</station_id>
 		<state>NS</state>
             	<station_name>Saint Paul Island Meteorological Aeronautical Presentation System</station_name>
@@ -19158,6 +19147,17 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KHND.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KHND.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KHND.xml</xml_url>
+	</station>
+
+	<station>
+		<station_id>KHTH</station_id>
+		<state>NV</state>
+            	<station_name>Hawthorne Industrial Airport</station_name>
+		<latitude>38.54482</latitude>
+		<longitude>-118.63137</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KHTH.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KHTH.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KHTH.xml</xml_url>
 	</station>
 
 	<station>
@@ -24716,17 +24716,6 @@
 	</station>
 
 	<station>
-		<station_id>KGCY</station_id>
-		<state>TN</state>
-            	<station_name>Greeneville-Greene County Municipal Airport</station_name>
-		<latitude>36.19601</latitude>
-		<longitude>-82.81099</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KGCY.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KGCY.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KGCY.xml</xml_url>
-	</station>
-
-	<station>
 		<station_id>KM02</station_id>
 		<state>TN</state>
             	<station_name>Dickson Municipal Airport</station_name>
@@ -25816,17 +25805,6 @@
 	</station>
 
 	<station>
-		<station_id>KBKS</station_id>
-		<state>TX</state>
-            	<station_name>Falfurrias, Brooks County Airport</station_name>
-		<latitude>27.20667</latitude>
-		<longitude>-98.12111</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KBKS.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KBKS.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KBKS.xml</xml_url>
-	</station>
-
-	<station>
 		<station_id>KBPG</station_id>
 		<state>TX</state>
             	<station_name>Big Spring, Big Spring McMahon-Wrinkle Airport</station_name>
@@ -26509,6 +26487,17 @@
 	</station>
 
 	<station>
+		<station_id>KBQX</station_id>
+		<state>TX</state>
+            	<station_name>BRAZOS 451 OIL PLATFORM</station_name>
+		<latitude>28.5</latitude>
+		<longitude>-95.72</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KBQX.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KBQX.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KBQX.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>KEMK</station_id>
 		<state>TX</state>
             	<station_name>E BREAKS OIL PLATFORM</station_name>
@@ -26605,17 +26594,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KAXH.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KAXH.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KAXH.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>KCVB</station_id>
-		<state>TX</state>
-            	<station_name>Castroville Municipal Airport</station_name>
-		<latitude>29.34192</latitude>
-		<longitude>-98.8509</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KCVB.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KCVB.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KCVB.xml</xml_url>
 	</station>
 
 	<station>
@@ -26748,6 +26726,17 @@
             	<html_url>http://w1.weather.gov/data/obhistory/K66R.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/K66R.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/K66R.xml</xml_url>
+	</station>
+
+	<station>
+		<station_id>KELA</station_id>
+		<state>TX</state>
+            	<station_name>Eagle Lake</station_name>
+		<latitude>29.6006</latitude>
+		<longitude>-96.3219</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KELA.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KELA.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KELA.xml</xml_url>
 	</station>
 
 	<station>
@@ -27089,6 +27078,17 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KTVY.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KTVY.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KTVY.xml</xml_url>
+	</station>
+
+	<station>
+		<station_id>KU16</station_id>
+		<state>UT</state>
+            	<station_name>Eagle Range</station_name>
+		<latitude>41.06064</latitude>
+		<longitude>-113.07148</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KU16.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KU16.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KU16.xml</xml_url>
 	</station>
 
 	<station>
@@ -27862,6 +27862,17 @@
 	</station>
 
 	<station>
+		<station_id>KTGI</station_id>
+		<state>VA</state>
+            	<station_name>Tangier Island Airport</station_name>
+		<latitude>37.82587</latitude>
+		<longitude>-75.99766</longitude>
+            	<html_url>http://w1.weather.gov/data/obhistory/KTGI.html</html_url>
+            	<rss_url>http://weather.gov/xml/current_obs/KTGI.rss</rss_url>
+            	<xml_url>http://weather.gov/xml/current_obs/KTGI.xml</xml_url>
+	</station>
+
+	<station>
 		<station_id>TIST</station_id>
 		<state>VI</state>
             	<station_name>King Airport, St. Thomas</station_name>
@@ -28398,17 +28409,6 @@
             	<html_url>http://w1.weather.gov/data/obhistory/KNOW.html</html_url>
             	<rss_url>http://weather.gov/xml/current_obs/KNOW.rss</rss_url>
             	<xml_url>http://weather.gov/xml/current_obs/KNOW.xml</xml_url>
-	</station>
-
-	<station>
-		<station_id>KORS</station_id>
-		<state>WA</state>
-            	<station_name>Eastsound, Orcas Island Airport</station_name>
-		<latitude>48.70806</latitude>
-		<longitude>-122.91028</longitude>
-            	<html_url>http://w1.weather.gov/data/obhistory/KORS.html</html_url>
-            	<rss_url>http://weather.gov/xml/current_obs/KORS.rss</rss_url>
-            	<xml_url>http://weather.gov/xml/current_obs/KORS.xml</xml_url>
 	</station>
 
 	<station>

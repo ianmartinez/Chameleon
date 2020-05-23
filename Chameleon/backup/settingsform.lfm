@@ -1,12 +1,13 @@
 object SettingsDialog: TSettingsDialog
   Left = 0
-  Height = 373
+  Height = 560
   Top = 0
-  Width = 541
-  ActiveControl = tpMain
+  Width = 812
+  ActiveControl = MainTabControl
   Caption = 'Settings'
-  ClientHeight = 373
-  ClientWidth = 541
+  ClientHeight = 560
+  ClientWidth = 812
+  DesignTimePPI = 144
   Icon.Data = {
     8F5702000000010008000000000001002000D133000086000000808000000100
     200028080100573400006060000001002000A89400007F3C0100404000000100
@@ -4809,191 +4810,200 @@ object SettingsDialog: TSettingsDialog
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poOwnerFormCenter
-  Visible = False
-  object tpMain: TPageControl
+  object MainTabControl: TPageControl
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = pnlButtons
-    Left = 6
-    Height = 321
-    Top = 6
-    Width = 529
-    ActivePage = tsWeather
+    AnchorSideBottom.Control = ButtonsPanel
+    Left = 9
+    Height = 490
+    Top = 9
+    Width = 794
+    ActivePage = WeatherTab
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Left = 6
-    BorderSpacing.Top = 6
-    BorderSpacing.Right = 6
-    BorderSpacing.Bottom = 6
+    BorderSpacing.Left = 9
+    BorderSpacing.Top = 9
+    BorderSpacing.Right = 9
+    BorderSpacing.Bottom = 9
+    ParentFont = False
     TabIndex = 0
     TabOrder = 0
-    object tsWeather: TTabSheet
+    object WeatherTab: TTabSheet
       Caption = 'Weather'
-      ClientHeight = 293
-      ClientWidth = 521
-      object gbState: TGroupBox
-        AnchorSideLeft.Control = tsWeather
-        AnchorSideTop.Control = tsWeather
-        AnchorSideRight.Control = tsWeather
+      ClientHeight = 452
+      ClientWidth = 786
+      ParentFont = False
+      object StateGroupBox: TGroupBox
+        AnchorSideLeft.Control = WeatherTab
+        AnchorSideTop.Control = WeatherTab
+        AnchorSideRight.Control = WeatherTab
         AnchorSideRight.Side = asrBottom
-        Left = 8
-        Height = 59
-        Top = 8
-        Width = 505
+        Left = 12
+        Height = 87
+        Top = 12
+        Width = 762
         Anchors = [akTop, akLeft, akRight]
         AutoSize = True
-        BorderSpacing.Left = 8
-        BorderSpacing.Top = 8
-        BorderSpacing.Right = 8
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 12
+        BorderSpacing.Right = 12
         Caption = 'State/Province/Territory:'
-        ClientHeight = 39
-        ClientWidth = 501
+        ClientHeight = 57
+        ClientWidth = 758
+        ParentFont = False
         TabOrder = 0
-        object cbStates: TComboBox
-          AnchorSideLeft.Control = gbState
-          AnchorSideTop.Control = gbState
-          AnchorSideRight.Control = gbState
+        object StatesComboBox: TComboBox
+          AnchorSideLeft.Control = StateGroupBox
+          AnchorSideTop.Control = StateGroupBox
+          AnchorSideRight.Control = StateGroupBox
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = gbState
+          AnchorSideBottom.Control = StateGroupBox
           AnchorSideBottom.Side = asrBottom
-          Left = 8
-          Height = 23
-          Top = 8
-          Width = 485
+          Left = 12
+          Height = 33
+          Top = 12
+          Width = 734
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
           AutoDropDown = True
-          BorderSpacing.Left = 8
-          BorderSpacing.Top = 8
-          BorderSpacing.Right = 8
-          BorderSpacing.Bottom = 8
-          ItemHeight = 15
-          OnChange = cbStatesChange
-          OnSelect = cbStatesChange
+          BorderSpacing.Left = 12
+          BorderSpacing.Top = 12
+          BorderSpacing.Right = 12
+          BorderSpacing.Bottom = 12
+          ItemHeight = 25
+          OnChange = StatesComboBoxChange
+          OnSelect = StatesComboBoxChange
+          ParentFont = False
           TabOrder = 0
         end
       end
-      object gbStations: TGroupBox
-        AnchorSideLeft.Control = tsWeather
-        AnchorSideTop.Control = gbState
+      object StationsGroupBox: TGroupBox
+        AnchorSideLeft.Control = WeatherTab
+        AnchorSideTop.Control = StateGroupBox
         AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = tsWeather
+        AnchorSideRight.Control = WeatherTab
         AnchorSideRight.Side = asrBottom
-        Left = 8
-        Height = 59
-        Top = 75
-        Width = 505
+        Left = 12
+        Height = 87
+        Top = 111
+        Width = 762
         Anchors = [akTop, akLeft, akRight]
         AutoSize = True
-        BorderSpacing.Left = 8
-        BorderSpacing.Top = 8
-        BorderSpacing.Right = 8
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 12
+        BorderSpacing.Right = 12
         Caption = 'Available Stations:'
-        ClientHeight = 39
-        ClientWidth = 501
+        ClientHeight = 57
+        ClientWidth = 758
+        ParentFont = False
         TabOrder = 1
-        object cbStations: TComboBox
-          AnchorSideLeft.Control = gbStations
-          AnchorSideTop.Control = gbStations
-          AnchorSideRight.Control = btnGo
-          AnchorSideBottom.Control = gbStations
+        object StationsComboBox: TComboBox
+          AnchorSideLeft.Control = StationsGroupBox
+          AnchorSideTop.Control = StationsGroupBox
+          AnchorSideRight.Control = GoButton
+          AnchorSideBottom.Control = StationsGroupBox
           AnchorSideBottom.Side = asrBottom
-          Left = 8
-          Height = 23
-          Top = 8
-          Width = 436
+          Left = 12
+          Height = 33
+          Top = 12
+          Width = 673
           Anchors = [akTop, akLeft, akRight, akBottom]
           AutoComplete = True
           AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
           AutoDropDown = True
-          BorderSpacing.Left = 8
-          BorderSpacing.Top = 8
-          BorderSpacing.Right = 8
-          BorderSpacing.Bottom = 8
-          ItemHeight = 15
+          BorderSpacing.Left = 12
+          BorderSpacing.Top = 12
+          BorderSpacing.Right = 12
+          BorderSpacing.Bottom = 12
+          ItemHeight = 25
+          ParentFont = False
           Sorted = True
           TabOrder = 0
         end
-        object btnGo: TButton
-          AnchorSideTop.Control = cbStations
+        object GoButton: TButton
+          AnchorSideTop.Control = StationsComboBox
           AnchorSideTop.Side = asrCenter
-          AnchorSideRight.Control = gbStations
+          AnchorSideRight.Control = StationsGroupBox
           AnchorSideRight.Side = asrBottom
-          Left = 452
-          Height = 25
-          Top = 7
-          Width = 41
+          Left = 697
+          Height = 35
+          Top = 11
+          Width = 49
           Anchors = [akTop, akRight]
           AutoSize = True
-          BorderSpacing.Right = 8
+          BorderSpacing.Right = 12
           Caption = 'Go'
-          OnClick = btnGoClick
+          OnClick = GoButtonClick
+          ParentFont = False
           TabOrder = 1
         end
       end
-      object gbStations1: TGroupBox
-        AnchorSideLeft.Control = tsWeather
-        AnchorSideTop.Control = gbStations
+      object CurrentWeatherGroupBox: TGroupBox
+        AnchorSideLeft.Control = WeatherTab
+        AnchorSideTop.Control = StationsGroupBox
         AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = tsWeather
+        AnchorSideRight.Control = WeatherTab
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = tsWeather
+        AnchorSideBottom.Control = WeatherTab
         AnchorSideBottom.Side = asrBottom
-        Left = 8
-        Height = 143
-        Top = 142
-        Width = 505
+        Left = 12
+        Height = 230
+        Top = 210
+        Width = 762
         Anchors = [akTop, akLeft, akRight, akBottom]
         AutoSize = True
-        BorderSpacing.Left = 8
-        BorderSpacing.Top = 8
-        BorderSpacing.Right = 8
-        BorderSpacing.Bottom = 8
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 12
+        BorderSpacing.Right = 12
+        BorderSpacing.Bottom = 12
         Caption = 'Current Weather:'
-        ClientHeight = 123
-        ClientWidth = 501
+        ClientHeight = 200
+        ClientWidth = 758
+        ParentFont = False
         TabOrder = 2
-        object txtWeather: TMemo
-          AnchorSideLeft.Control = gbStations1
-          AnchorSideTop.Control = gbStations1
-          AnchorSideRight.Control = gbStations1
+        object WeatherMemo: TMemo
+          AnchorSideLeft.Control = CurrentWeatherGroupBox
+          AnchorSideTop.Control = CurrentWeatherGroupBox
+          AnchorSideRight.Control = CurrentWeatherGroupBox
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = gbStations1
+          AnchorSideBottom.Control = CurrentWeatherGroupBox
           AnchorSideBottom.Side = asrBottom
-          Left = 8
-          Height = 107
-          Top = 8
-          Width = 485
+          Left = 12
+          Height = 176
+          Top = 12
+          Width = 734
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 8
-          BorderSpacing.Top = 8
-          BorderSpacing.Right = 8
-          BorderSpacing.Bottom = 8
+          BorderSpacing.Left = 12
+          BorderSpacing.Top = 12
+          BorderSpacing.Right = 12
+          BorderSpacing.Bottom = 12
+          ParentFont = False
           TabOrder = 0
         end
       end
     end
-    object tsWeatherStationXML: TTabSheet
+    object WeatherStationXmlTab: TTabSheet
       Caption = 'Weather Station XML'
-      ClientHeight = 293
-      ClientWidth = 521
-      inline synWeatherStationXML: TSynEdit
-        AnchorSideLeft.Control = tsWeatherStationXML
-        AnchorSideTop.Control = tsWeatherStationXML
-        AnchorSideRight.Control = tsWeatherStationXML
+      ClientHeight = 452
+      ClientWidth = 786
+      ParentFont = False
+      inline WeatherStationXMLEdit: TSynEdit
+        AnchorSideLeft.Control = WeatherStationXmlTab
+        AnchorSideTop.Control = WeatherStationXmlTab
+        AnchorSideRight.Control = WeatherStationXmlTab
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = tsWeatherStationXML
+        AnchorSideBottom.Control = WeatherStationXmlTab
         AnchorSideBottom.Side = asrBottom
         Left = 0
-        Height = 293
+        Height = 452
         Top = 0
-        Width = 521
+        Width = 786
         BlockIndent = 1
         Anchors = [akTop, akLeft, akRight, akBottom]
         Font.CharSet = ANSI_CHARSET
-        Font.Height = -13
+        Font.Height = -20
         Font.Name = 'Consolas'
         Font.Pitch = fpFixed
         Font.Quality = fqDraft
@@ -5002,11 +5012,11 @@ object SettingsDialog: TSettingsDialog
         TabOrder = 0
         BorderStyle = bsNone
         Gutter.Color = clMenu
-        Gutter.Width = 55
+        Gutter.Width = 90
         Gutter.MouseActions = <>
         RightGutter.Width = 0
         RightGutter.MouseActions = <>
-        Highlighter = SynXMLSyn1
+        Highlighter = XmlSyntaxHighlighter
         Keystrokes = <        
           item
             Command = ecUp
@@ -5455,11 +5465,11 @@ object SettingsDialog: TSettingsDialog
         LineHighlightColor.Foreground = clNone
         inline SynLeftGutterPartList1: TSynGutterPartList
           object SynGutterMarks1: TSynGutterMarks
-            Width = 24
+            Width = 36
             MouseActions = <>
           end
           object SynGutterLineNumber1: TSynGutterLineNumber
-            Width = 15
+            Width = 23
             MouseActions = <>
             MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clNone
@@ -5469,19 +5479,20 @@ object SettingsDialog: TSettingsDialog
             LeadingZeros = False
           end
           object SynGutterChanges1: TSynGutterChanges
-            Width = 4
+            Width = 6
             MouseActions = <>
             ModifiedColor = 59900
             SavedColor = clGreen
           end
           object SynGutterSeparator1: TSynGutterSeparator
-            Width = 2
+            Width = 3
             MouseActions = <>
             MarkupInfo.Background = clWhite
             MarkupInfo.Foreground = clGray
           end
           object SynGutterCodeFolding1: TSynGutterCodeFolding
             AutoSize = False
+            Width = 22
             MouseActions = <>
             MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clGray
@@ -5491,25 +5502,26 @@ object SettingsDialog: TSettingsDialog
         end
       end
     end
-    object tsWeatherData: TTabSheet
+    object WeatherDataXmlTab: TTabSheet
       Caption = 'Weather Data XML'
-      ClientHeight = 293
-      ClientWidth = 521
-      inline synWeatherDataXML: TSynEdit
-        AnchorSideLeft.Control = tsWeatherStationXML
-        AnchorSideTop.Control = tsWeatherStationXML
-        AnchorSideRight.Control = tsWeatherStationXML
+      ClientHeight = 452
+      ClientWidth = 786
+      ParentFont = False
+      inline WeatherDataXmlEdit: TSynEdit
+        AnchorSideLeft.Control = WeatherStationXmlTab
+        AnchorSideTop.Control = WeatherStationXmlTab
+        AnchorSideRight.Control = WeatherStationXmlTab
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = tsWeatherStationXML
+        AnchorSideBottom.Control = WeatherStationXmlTab
         AnchorSideBottom.Side = asrBottom
         Left = 0
-        Height = 293
+        Height = 452
         Top = 0
-        Width = 521
+        Width = 786
         BlockIndent = 1
         Anchors = [akTop, akLeft, akRight, akBottom]
         Font.CharSet = ANSI_CHARSET
-        Font.Height = -13
+        Font.Height = -20
         Font.Name = 'Consolas'
         Font.Pitch = fpFixed
         Font.Quality = fqDraft
@@ -5518,11 +5530,11 @@ object SettingsDialog: TSettingsDialog
         TabOrder = 0
         BorderStyle = bsNone
         Gutter.Color = clMenu
-        Gutter.Width = 55
+        Gutter.Width = 90
         Gutter.MouseActions = <>
         RightGutter.Width = 0
         RightGutter.MouseActions = <>
-        Highlighter = SynXMLSyn1
+        Highlighter = XmlSyntaxHighlighter
         Keystrokes = <        
           item
             Command = ecUp
@@ -5971,11 +5983,11 @@ object SettingsDialog: TSettingsDialog
         LineHighlightColor.Foreground = clNone
         inline SynLeftGutterPartList1: TSynGutterPartList
           object SynGutterMarks1: TSynGutterMarks
-            Width = 24
+            Width = 36
             MouseActions = <>
           end
           object SynGutterLineNumber1: TSynGutterLineNumber
-            Width = 15
+            Width = 23
             MouseActions = <>
             MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clNone
@@ -5985,19 +5997,20 @@ object SettingsDialog: TSettingsDialog
             LeadingZeros = False
           end
           object SynGutterChanges1: TSynGutterChanges
-            Width = 4
+            Width = 6
             MouseActions = <>
             ModifiedColor = 59900
             SavedColor = clGreen
           end
           object SynGutterSeparator1: TSynGutterSeparator
-            Width = 2
+            Width = 3
             MouseActions = <>
             MarkupInfo.Background = clWhite
             MarkupInfo.Foreground = clGray
           end
           object SynGutterCodeFolding1: TSynGutterCodeFolding
             AutoSize = False
+            Width = 22
             MouseActions = <>
             MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clGray
@@ -6008,11 +6021,12 @@ object SettingsDialog: TSettingsDialog
       end
     end
   end
-  object pnlButtons: TButtonPanel
-    Left = 6
-    Height = 34
-    Top = 333
-    Width = 529
+  object ButtonsPanel: TButtonPanel
+    Left = 9
+    Height = 43
+    Top = 508
+    Width = 794
+    BorderSpacing.Around = 9
     OKButton.Name = 'OKButton'
     OKButton.DefaultCaption = True
     OKButton.OnClick = OKButtonClick
@@ -6026,7 +6040,7 @@ object SettingsDialog: TSettingsDialog
     TabOrder = 1
     ShowButtons = [pbOK, pbCancel]
   end
-  object SynXMLSyn1: TSynXMLSyn
+  object XmlSyntaxHighlighter: TSynXMLSyn
     DefaultFilter = 'XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd'
     Enabled = False
     ElementAttri.Foreground = clNavy
@@ -6038,7 +6052,7 @@ object SettingsDialog: TSettingsDialog
     DocTypeAttri.Foreground = clOlive
     SymbolAttri.Foreground = clNavy
     WantBracesParsed = False
-    left = 24
-    top = 320
+    left = 36
+    top = 480
   end
 end
