@@ -14,21 +14,30 @@ interface
   const DegC : string = '°C';
 
   const WeatherConditions : array [0..23] of string =
-      ('Mostly Cloudy', 'Clear', 'A Few Clouds', 'Partly Cloudy', 'Overcast', 'Fog', 'Smoke', 'Freezing Drizzle', 'Hail', 'Mixed Rain and Snow',
-      'Rain and Hail', 'Heavy Mixed Rain and Snow', 'Rain Showers', 'Thunderstorm', 'Snow', 'Windy', 'Scattered Showers', 'Freezing Rain',
-      'Scattered Thunderstorms', 'Drizzle', 'Heavy Rain', 'Tornado', 'Dust', 'Haze');
+      ('Mostly Cloudy', 'Clear', 'A Few Clouds', 'Partly Cloudy', 'Overcast',
+      'Fog', 'Smoke', 'Freezing Drizzle', 'Hail', 'Mixed Rain and Snow',
+      'Rain and Hail', 'Heavy Mixed Rain and Snow', 'Rain Showers', 'Thunderstorm',
+      'Snow', 'Windy', 'Scattered Showers', 'Freezing Rain', 'Scattered Thunderstorms',
+      'Drizzle', 'Heavy Rain', 'Tornado', 'Dust', 'Haze');
 
   const StateAbreviations : array [0..63] of string =
-      ((* United States *) 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS',  'KY', 'LA',
-      'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA','RI', 'SC',
+      ((* United States *) 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL',
+      'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS',  'KY', 'LA',
+      'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE',
+      'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA','RI', 'SC',
       'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY', '----',
-       (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT');
+       (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE',
+       'QC', 'SK', 'YT');
 
+  (*
+    All of the information needed for displaying weather stations
+    and fetching their weather data.
+  *)
   type TWeatherStation = record
-     Id: string;
-	   Name: string;      
-	   State: string;
-	   XMLUrl: string;
+       Id: string;
+       Name: string;
+       State: string;
+       XMLUrl: string;
   end;
 
   (*
@@ -36,12 +45,12 @@ interface
     though Canada does not seem to have condition data for many locations.
   *)
   type TWeatherData = record
-	   Conditions: string;  
-	   Temperature: integer;
-	   Humidity: integer;
-     HeatIndex: integer;
-	   WindSpeed: double;
-	   WindDirection: string;
+       Conditions: string;
+       Temperature: integer;
+       Humidity: integer;
+       HeatIndex: integer;
+       WindSpeed: double;
+       WindDirection: string;
   end;
 
   type TWeatherStationArray = array of TWeatherStation;
@@ -90,7 +99,9 @@ implementation
 
     for iIndex := 0 to iLen do begin
       if MidStr(sBuffer, iIndex, 1) = ' ' then
-          sBuffer := MidStr(sBuffer, 0, iIndex) + Uppercase(MidStr(sBuffer, iIndex + 1, 1)) + Lowercase(MidStr(sBuffer, iIndex + 2, iLen));
+          sBuffer := MidStr(sBuffer, 0, iIndex)
+                     + Uppercase(MidStr(sBuffer, iIndex + 1, 1))
+                     + Lowercase(MidStr(sBuffer, iIndex + 2, iLen));
     end;
     
     sBuffer := sBuffer.Replace(' / ', '/', [rfReplaceAll]);   
@@ -103,6 +114,10 @@ implementation
     Result := sBuffer;
   end;
 
+  (*
+    Create a weather station with a name, state, and a URL to fetch it's weather
+    XML data from.
+  *)
   function CreateWeatherStation(Name: string; State: string; XMLURL: string) : TWeatherStation;
   var
     Station: TWeatherStation;
@@ -113,7 +128,10 @@ implementation
 
     Result := Station;
   end;
-     
+
+  (*
+    Download a text file from a url into a file.
+  *)
   function DownloadTextFile(Url: string; FilePath: string) : string;
   var
      FileStrings: TStringList;
@@ -132,6 +150,9 @@ implementation
     end;
   end;
 
+  (*
+    Get the XML file that lists the available weather stations.
+  *)
   function GetAllWeatherStationsXML() : string;
   const
     TempWeatherStationsFile : string = 'WeatherStations.xml';
@@ -139,6 +160,9 @@ implementation
     Result := DownloadTextFile(AllStationsXMLFile, TempWeatherStationsFile);
   end;
 
+  (*
+    Get the raw weather XML for a given weather station.
+  *)
   function GetWeatherDataXML(Station: TWeatherStation) : string; 
   const
     TempWeatherDataFile : string = 'WeatherData.xml';
@@ -146,6 +170,9 @@ implementation
     Result := DownloadTextFile(Station.XMLUrl, TempWeatherDataFile);
   end;
 
+  (*
+    Get all weather stations in a stations list XML file.
+  *)
   function GetAllWeatherStations(AllStationsXML: string) : TWeatherStationArray;
   var
     i: integer;
@@ -222,6 +249,9 @@ implementation
     end;
   end;
 
+  (*
+    Get an array of weather stations in a given state.
+  *)
   function GetStationsForState(AllStations: TWeatherStationArray; StateAbbreviation: string) : TWeatherStationArray;
   var
     StationCount: integer = 0;
@@ -240,6 +270,9 @@ implementation
     Result := Stations;
   end;
 
+  (*
+    Get a weather station by name.
+  *)
   function GetStationByName(AllStations: TWeatherStationArray; StationName: string) : TWeatherStation;
   var
     Station: TWeatherStation;
@@ -249,6 +282,9 @@ implementation
         Result := Station;
   end;
 
+  (*
+    Get weather data by a station name.
+  *)
   function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;
   var
     SelectedStation: TWeatherStation;
@@ -262,6 +298,9 @@ implementation
     end;
   end;
 
+  (*
+    Fetch the weather data for a given weather station.
+  *)
   function GetWeatherData(Station: TWeatherStation) : TWeatherData;
   var
     Weather: TWeatherData;
@@ -314,7 +353,10 @@ implementation
       end;
     end;
   end;
-  
+
+  (*
+    Print all of the weather data as a string.
+  *)
   function PrintWeatherReport(Weather: TWeatherData) : string;
   var
     Report: TStringList;
@@ -440,5 +482,3 @@ implementation
   end;
 
 end.
-
-
