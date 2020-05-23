@@ -2,6 +2,9 @@ unit Settings;
 
 {$mode objfpc}{$H+}
 
+(*
+  Handles the loading and saving of user settings.
+*)
 interface
   type TProgramMode =
       (pmNone, pmBattery, pmTime, pmWeatherConditions, pmWindSpeed, pmTemperature, pmHumidity, pmHeatIndex);
@@ -32,7 +35,8 @@ interface
       '40 to 49°F', '50 to 59°F', '60 to 69°F', '70 to 79°F', '80 to 89°F', '90 to 99°F', '100 to 109°F', '110 to 119°F', '120 to 129°F', '>= 130°F');
 
   function WriteSafeString(UnsafeString: string) : string;
-  function GetLocalFolder() : string;                
+  function GetAppFolder() : string;               
+  function GetSettingsFolder() : string;
   function GetLogFilePath() : string;
   function GetImagePath(Key: string; Category: string) : string;  
   function GetThumbPath(Key: string; Category: string) : string; 
@@ -77,29 +81,34 @@ implementation
     result := SafeString;
   end;
 
-  function GetLocalFolder() : string;
+  function GetAppFolder() : string;
   begin
     Result := ExtractFileDir(Application.ExeName);
   end;
 
+  function GetSettingsFolder() : string;
+  begin
+    Result := ExcludeTrailingPathDelimiter(GetUserDir) + PathDelim + 'Chameleon';
+  end;
+
   function GetImagePath(Key: string; Category: string) : string;
   begin
-    Result := GetLocalFolder() + '\Wallpapers\' + Category + '\' + Key + '.jpg';
+    Result := GetSettingsFolder() + PathDelim + 'Wallpapers' + PathDelim + Category + PathDelim + Key + '.jpg';
   end;
 
   function GetThumbPath(Key: string; Category: string) : string;
   begin
-    Result := GetLocalFolder() + '\Thumb\' + Category + '\' + Key + '.jpg';
+    Result := GetSettingsFolder() + PathDelim + 'Thumb' + PathDelim + Category + PathDelim + Key + '.jpg';
   end;
           
   function GetLogFilePath() : string;
   begin
-    Result := GetLocalFolder() + '\chameleon.log';
+    Result := GetSettingsFolder() + PathDelim + 'Chameleon.log';
   end;
   
   function GetSettingsFilePath() : string;
   begin
-    Result := GetLocalFolder() + '\Settings.ini';
+    Result := GetSettingsFolder() + PathDelim + 'Settings.ini';
   end;
 
   function LoadSettings() : TProgramSettings;

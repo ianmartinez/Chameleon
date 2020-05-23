@@ -5258,14 +5258,14 @@ object ChameleonForm: TChameleonForm
       Height = 447
       Top = 12
       Width = 816
-      ActivePage = HeatIndexTab
+      ActivePage = BatteryTab
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 12
       BorderSpacing.Top = 12
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 12
       ParentFont = False
-      TabIndex = 6
+      TabIndex = 0
       TabOrder = 0
       object BatteryTab: TTabSheet
         Caption = 'Battery'

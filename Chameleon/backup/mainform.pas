@@ -182,9 +182,14 @@ end;
 
 procedure TChameleonForm.FormActivate(Sender: TObject);
 begin
+  (* If this is the first time showing the form *)
    if FirstShow = True then begin
     Refresh();
+
+    (* Check for command line arguments *)
     if ParamCount > 0 then begin
+     (* The argument -a means to start running in the background
+        automatically *)
       if ParamStr(1).Equals('-a') then begin
          OKButtonClick(nil);
          WindowState := wsMinimized;
@@ -201,7 +206,8 @@ begin
   SaveSettings(ProgramSettings);
 end;
 
-function TChameleonForm.CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+function TChameleonForm.CreateImageButtonFrame(_SettingCategory: string;
+  _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
 var
   ImageButtonFrame : TImageButtonFrame;
   ImagePath: string;
