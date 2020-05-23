@@ -13,31 +13,33 @@
 	</image>
 	<suggested_pickup>15 minutes after the hour</suggested_pickup>
 	<suggested_pickup_period>60</suggested_pickup_period>
-	<location>Auburn Municipal Airport, CA</location>
-	<station_id>KAUN</station_id>
-	<latitude>38.95535</latitude>
-	<longitude>-121.08636</longitude>
-	<observation_time>Last Updated on May 23 2020, 9:55 am PDT</observation_time>
-        <observation_time_rfc822>Sat, 23 May 2020 09:55:00 -0700</observation_time_rfc822>
+	<location>Bentonville, Bentonville Municipal Airport/Louise M Thaden Field, AR</location>
+	<station_id>KVBT</station_id>
+	<latitude>36.35</latitude>
+	<longitude>-94.21667</longitude>
+	<observation_time>Last Updated on May 23 2020, 11:56 am CDT</observation_time>
+        <observation_time_rfc822>Sat, 23 May 2020 11:56:00 -0500</observation_time_rfc822>
 	<weather>Fair</weather>
-	<temperature_string>70.0 F (21.0 C)</temperature_string>
-	<temp_f>70.0</temp_f>
-	<temp_c>21.0</temp_c>
-	<relative_humidity>27</relative_humidity>
-	<wind_string>Calm</wind_string>
-	<wind_dir>North</wind_dir>
-	<wind_degrees>0</wind_degrees>
-	<wind_mph>0.0</wind_mph>
-	<wind_kt>0</wind_kt>
-	<pressure_in>29.95</pressure_in>
-	<dewpoint_string>33.8 F (1.0 C)</dewpoint_string>
-	<dewpoint_f>33.8</dewpoint_f>
-	<dewpoint_c>1.0</dewpoint_c>
+	<temperature_string>79.0 F (26.1 C)</temperature_string>
+	<temp_f>79.0</temp_f>
+	<temp_c>26.1</temp_c>
+	<relative_humidity>54</relative_humidity>
+	<wind_string>South at 10.4 MPH (9 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>190</wind_degrees>
+	<wind_mph>10.4</wind_mph>
+	<wind_kt>9</wind_kt>
+	<pressure_string>1012.5 mb</pressure_string>
+	<pressure_mb>1012.5</pressure_mb>
+	<pressure_in>29.93</pressure_in>
+	<dewpoint_string>61.0 F (16.1 C)</dewpoint_string>
+	<dewpoint_f>61.0</dewpoint_f>
+	<dewpoint_c>16.1</dewpoint_c>
 	<visibility_mi>10.00</visibility_mi>
  	<icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
-	<two_day_history_url>http://www.weather.gov/data/obhistory/KAUN.html</two_day_history_url>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KVBT.html</two_day_history_url>
 	<icon_url_name>skc.png</icon_url_name>
-	<ob_url>http://www.weather.gov/data/METAR/KAUN.1.txt</ob_url>
+	<ob_url>http://www.weather.gov/data/METAR/KVBT.1.txt</ob_url>
 	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
 	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
 	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
