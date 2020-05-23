@@ -275,7 +275,7 @@ begin
   Application.Minimize;      
   WallpaperTimer.Interval := LongWord(InveralSpinEdit.Value * 1000);
   WallpaperTimer.Enabled := true;
-  WallpaperTimer(Sender);
+  WallpaperTimerTimer(Sender);
   ChameleonTrayIcon.ShowBalloonHint;
 
   // Hide taskbar icon

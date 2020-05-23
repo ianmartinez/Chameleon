@@ -73,8 +73,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="180"/>
-        <CursorPos X="27" Y="344"/>
+        <CursorPos X="53" Y="58"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -98,8 +97,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="297"/>
-        <CursorPos X="7" Y="312"/>
+        <CursorPos X="51" Y="6"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -122,7 +120,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="VersionSupport"/>
         <EditorIndex Value="11"/>
-        <TopLine Value="43"/>
+        <TopLine Value="203"/>
         <CursorPos X="10" Y="50"/>
         <UsageCount Value="204"/>
         <Loaded Value="True"/>
@@ -144,8 +142,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="75"/>
-        <CursorPos X="3" Y="82"/>
+        <TopLine Value="74"/>
+        <CursorPos X="20" Y="94"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>

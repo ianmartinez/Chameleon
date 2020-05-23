@@ -2,15 +2,18 @@ unit Settings;
 
 {$mode objfpc}{$H+}
 
+(*
+  Handles the loading and saving of user settings.
+*)
 interface
   type TProgramMode =
-    (pmNone, pmBattery, pmTime, pmWeatherConditions, pmWindSpeed, pmTemperature, pmHumidity, pmHeatIndex);
+      (pmNone, pmBattery, pmTime, pmWeatherConditions, pmWindSpeed, pmTemperature, pmHumidity, pmHeatIndex);
 
   type TProgramSettings = record
-    Mode: TProgramMode;
-    Interval: integer;
-    State: string;
-    WeatherStationName: string;
+      Mode: TProgramMode;
+      Interval: integer;
+      State: string;
+      WeatherStationName: string;
   end;
 
   const Folders : array [0..6] of string =
@@ -306,8 +309,8 @@ implementation
 
   function GetTime() : string;
   begin
-     DefaultFormatSettings.TimeAMString := 'AM';
-     DefaultFormatSettings.TimePMString := 'PM';
+    DefaultFormatSettings.TimeAMString := 'AM';
+    DefaultFormatSettings.TimePMString := 'PM';
     Result := formatdatetime('h ampm', Now);
   end;
 
