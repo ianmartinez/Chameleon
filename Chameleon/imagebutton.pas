@@ -12,12 +12,12 @@ type
   { TImageButtonFrame }
 
   TImageButtonFrame = class(TFrame)
-    btnPickImage: TButton;
-    imgPreview: TImage;
-    dlgOpenPicture: TOpenPictureDialog;
-    lblTitle: TLabel;
+    PickImageButton: TButton;
+    PreviewImage: TImage;
+    OpenPictureDialog: TOpenPictureDialog;
+    ImageTitleLabel: TLabel;
     MainPanel: TPanel;
-    procedure btnPickImageClick(Sender: TObject);
+    procedure PickImageButtonClick(Sender: TObject);
   private
 
   public   
@@ -37,12 +37,12 @@ implementation
 
 { TImageButtonFrame }
 
-procedure TImageButtonFrame.btnPickImageClick(Sender: TObject);
+procedure TImageButtonFrame.PickImageButtonClick(Sender: TObject);
 begin
-  if dlgOpenPicture.Execute then
-    if FileExists(dlgOpenPicture.FileName) then begin
+  if OpenPictureDialog.Execute then
+    if FileExists(OpenPictureDialog.FileName) then begin
       OverwriteImage := true;
-      SaveThumb(dlgOpenPicture.FileName);
+      SaveThumb(OpenPictureDialog.FileName);
     end
     else
       raise Exception.Create('File does not exist.');
@@ -50,12 +50,12 @@ end;
 
 function TImageButtonFrame.GetTitle() : string;
 begin
-  Result := lblTitle.Caption;
+  Result := ImageTitleLabel.Caption;
 end;
 
 procedure TImageButtonFrame.SetTitle(Value: string);
 begin
-  lblTitle.Caption := Value;
+  ImageTitleLabel.Caption := Value;
 end;
 
 procedure ResizeBitmap(Bitmap: TBitmap; NewHeight: integer);
@@ -107,14 +107,14 @@ begin
       end;
 
       (* Generate the thumbnail *)
-      ResizeBitmap(Picture.Bitmap, imgPreview.Height);
+      ResizeBitmap(Picture.Bitmap, PreviewImage.Height);
       ThumbDir := ExtractFilePath(ThumbPath);
 
       if not directoryexists(ThumbDir) then
         forcedirectories(ThumbDir);
 
       Picture.SaveToFile(ThumbPath);
-      imgPreview.Picture := Picture;
+      PreviewImage.Picture := Picture;
     finally
       OverwriteImage := false;
       Picture.Free;
@@ -134,7 +134,7 @@ begin
     SaveThumb(ImagePath);
   end
   else begin
-    imgPreview.Picture.LoadFromFile(ThumbPath);
+    PreviewImage.Picture.LoadFromFile(ThumbPath);
   end;
 end;
 end.

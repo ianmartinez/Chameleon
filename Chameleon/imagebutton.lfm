@@ -13,6 +13,8 @@ object ImageButtonFrame: TImageButtonFrame
   ParentColor = False
   ParentFont = False
   TabOrder = 0
+  DesignLeft = -1
+  DesignTop = -1
   object MainPanel: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -36,7 +38,7 @@ object ImageButtonFrame: TImageButtonFrame
     ParentColor = False
     ParentFont = False
     TabOrder = 0
-    object btnPickImage: TButton
+    object PickImageButton: TButton
       AnchorSideLeft.Control = MainPanel
       AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
@@ -52,11 +54,11 @@ object ImageButtonFrame: TImageButtonFrame
       BorderSpacing.Right = 4
       BorderSpacing.Bottom = 12
       Caption = 'Pick Image...'
-      OnClick = btnPickImageClick
+      OnClick = PickImageButtonClick
       ParentFont = False
       TabOrder = 0
     end
-    object lblTitle: TLabel
+    object ImageTitleLabel: TLabel
       AnchorSideLeft.Control = MainPanel
       AnchorSideTop.Control = MainPanel
       AnchorSideRight.Control = MainPanel
@@ -74,13 +76,13 @@ object ImageButtonFrame: TImageButtonFrame
       ParentColor = False
       ParentFont = False
     end
-    object imgPreview: TImage
+    object PreviewImage: TImage
       AnchorSideLeft.Control = MainPanel
-      AnchorSideTop.Control = lblTitle
+      AnchorSideTop.Control = ImageTitleLabel
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = btnPickImage
+      AnchorSideBottom.Control = PickImageButton
       Left = 14
       Height = 255
       Top = 51
@@ -98,7 +100,7 @@ object ImageButtonFrame: TImageButtonFrame
       Stretch = True
     end
   end
-  object dlgOpenPicture: TOpenPictureDialog
+  object OpenPictureDialog: TOpenPictureDialog
     Filter = 'Image files (*.png;*.bmp;*.jpeg;*.jpg;*.gif)|*.png;*.bmp;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*'
     left = 96
     top = 132
