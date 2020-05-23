@@ -37,7 +37,9 @@ interface
   function WriteSafeString(UnsafeString: string) : string;
   function GetAppLocation() : string;               
   function GetSettingsDir() : string;
-  function GetLogFilePath() : string;
+  function GetLogFilePath() : string; 
+  function GetWeatherStationsXmlPath() : string;  
+  function GetWeatherDataXmlPath() : string;
   function GetImagePath(Key: string; Category: string) : string;  
   function GetThumbPath(Key: string; Category: string) : string; 
   function LoadSettings() : TProgramSettings;
@@ -112,6 +114,16 @@ implementation
   function GetLogFilePath() : string;
   begin
     Result := GetSettingsDir() + PathDelim + 'Chameleon.log';
+  end;
+
+  function GetWeatherStationsXmlPath() : string;
+  begin
+    Result := GetSettingsDir() + PathDelim + 'WeatherStations.xml';
+  end;
+
+  function GetWeatherDataXmlPath() : string;
+  begin
+    Result := GetSettingsDir() + PathDelim + 'WeatherData.xml';
   end;
   
   function GetSettingsFilePath() : string;

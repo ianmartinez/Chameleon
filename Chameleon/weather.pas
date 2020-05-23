@@ -69,7 +69,7 @@ interface
 
 implementation
   uses
-    Classes, SysUtils, laz2_DOM, laz2_XMLRead, StrUtils, URLMon;
+    Classes, SysUtils, laz2_DOM, laz2_XMLRead, StrUtils, URLMon, Settings;
 
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
@@ -154,10 +154,8 @@ implementation
     Get the XML file that lists the available weather stations.
   *)
   function GetAllWeatherStationsXML() : string;
-  const
-    TempWeatherStationsFile : string = 'WeatherStations.xml';
   begin
-    Result := DownloadTextFile(AllStationsXMLFile, TempWeatherStationsFile);
+    Result := DownloadTextFile(AllStationsXMLFile, GetWeatherStationsXmlPath());
   end;
 
   (*
@@ -167,7 +165,7 @@ implementation
   const
     TempWeatherDataFile : string = 'WeatherData.xml';
   begin
-    Result := DownloadTextFile(Station.XMLUrl, TempWeatherDataFile);
+    Result := DownloadTextFile(Station.XMLUrl, GetWeatherDataXmlPath());
   end;
 
   (*

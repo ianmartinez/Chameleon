@@ -26,18 +26,18 @@ interface
       'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE',
       'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA','RI', 'SC',
       'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY', '----',
-       (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE',
-       'QC', 'SK', 'YT');
+      (* Canada *) 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE',
+      'QC', 'SK', 'YT');
 
   (*
     All of the information needed for displaying weather stations
     and fetching their weather data.
   *)
   type TWeatherStation = record
-       Id: string;
-       Name: string;
-       State: string;
-       XMLUrl: string;
+      Id: string;
+      Name: string;
+      State: string;
+      XMLUrl: string;
   end;
 
   (*
@@ -45,12 +45,12 @@ interface
     though Canada does not seem to have condition data for many locations.
   *)
   type TWeatherData = record
-       Conditions: string;
-       Temperature: integer;
-       Humidity: integer;
-       HeatIndex: integer;
-       WindSpeed: double;
-       WindDirection: string;
+      Conditions: string;
+      Temperature: integer;
+      Humidity: integer;
+      HeatIndex: integer;
+      WindSpeed: double;
+      WindDirection: string;
   end;
 
   type TWeatherStationArray = array of TWeatherStation;
@@ -69,14 +69,14 @@ interface
 
 implementation
   uses
-    Classes, SysUtils, laz2_DOM, laz2_XMLRead, StrUtils, URLMon;
+    Classes, SysUtils, laz2_DOM, laz2_XMLRead, StrUtils, URLMon, Settings;
 
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
-     ListOfStrings.Clear;
-     ListOfStrings.Delimiter       := Delimiter;
-     ListOfStrings.StrictDelimiter := True;
-     ListOfStrings.DelimitedText   := Str;
+    ListOfStrings.Clear;
+    ListOfStrings.Delimiter       := Delimiter;
+    ListOfStrings.StrictDelimiter := True;
+    ListOfStrings.DelimitedText   := Str;
   end;
 
   (*
@@ -154,10 +154,8 @@ implementation
     Get the XML file that lists the available weather stations.
   *)
   function GetAllWeatherStationsXML() : string;
-  const
-    TempWeatherStationsFile : string = 'WeatherStations.xml';
   begin
-    Result := DownloadTextFile(AllStationsXMLFile, TempWeatherStationsFile);
+    Result := DownloadTextFile(AllStationsXMLFile, GetWeatherStationsXmlPath());
   end;
 
   (*
@@ -480,5 +478,4 @@ implementation
       Result := Round((t + (0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094))))/2);
     end;
   end;
-
 end.

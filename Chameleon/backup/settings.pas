@@ -36,8 +36,10 @@ interface
 
   function WriteSafeString(UnsafeString: string) : string;
   function GetAppLocation() : string;               
-  function GetSettingsFolder() : string;
-  function GetLogFilePath() : string;
+  function GetSettingsDir() : string;
+  function GetLogFilePath() : string; 
+  function GetWeatherStationsXmlPath() : string;  
+  function GetWeatherDataXmlPath() : string;
   function GetImagePath(Key: string; Category: string) : string;  
   function GetThumbPath(Key: string; Category: string) : string; 
   function LoadSettings() : TProgramSettings;
