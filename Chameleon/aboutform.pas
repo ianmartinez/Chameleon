@@ -13,19 +13,24 @@ type
   { TAboutDialog }
 
   TAboutDialog = class(TForm)
-    btnWebsite: TButton;
-    Image1: TImage;
-    lblVersion: TLabel;
-    lblProgramName: TLabel;
-    PageControl1: TPageControl;
-    pnlLabels: TPanel;
-    pnlTop: TPanel;
-    tsLicense: TTabSheet;
-    tsChangelog: TTabSheet;
-    txtLicense: TMemo;
-    txtChangelog: TMemo;
-    procedure btnWebsiteClick(Sender: TObject);
+    GitHubButton: TButton;
+    WebsiteButton: TButton;
+    LogoImage: TImage;
+    PatreonImage: TImage;
+    PatreonLinkLabel: TLabel;
+    ProgramNameLabel: TLabel;
+    VersionLabel: TLabel;
+    InfoPageControl: TPageControl;
+    LabelPanel: TPanel;
+    TopPanel: TPanel;
+    LicenseTab: TTabSheet;
+    ChangelogTab: TTabSheet;
+    LicenseMemo: TMemo;
+    ChangelogMemo: TMemo;
     procedure FormCreate(Sender: TObject);
+    procedure GitHubButtonClick(Sender: TObject);
+    procedure PatreonLinkLabelClick(Sender: TObject);
+    procedure WebsiteButtonClick(Sender: TObject);
   private
 
   public
@@ -43,12 +48,22 @@ implementation
 
 procedure TAboutDialog.FormCreate(Sender: TObject);
 begin
-    lblVersion.Caption := 'Version ' + VersionSupport.GetFileVersion;
+    VersionLabel.Caption := 'Version ' + VersionSupport.GetFileVersion;
 end;
 
-procedure TAboutDialog.btnWebsiteClick(Sender: TObject);
+procedure TAboutDialog.GitHubButtonClick(Sender: TObject);
+begin                     
+  OpenURL('https://ianmtz.com/Chameleon');
+end;
+
+procedure TAboutDialog.PatreonLinkLabelClick(Sender: TObject);
 begin
-  OpenURL('https://www.ianmtz.com/Chameleon');
+  OpenURL('https://www.patreon.com/ianmartinez');
+end;
+
+procedure TAboutDialog.WebsiteButtonClick(Sender: TObject);
+begin                      
+  OpenURL('https://github.com/ianmartinez/Chameleon');
 end;
 
 end.

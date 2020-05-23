@@ -234,7 +234,7 @@ end;
 
 procedure TChameleonForm.lblPatreonClick(Sender: TObject);
 begin
-  OpenURL('https://patreon.com/ianmartinez');
+  OpenURL('https://www.patreon.com/ianmartinez');
 end;
 
 procedure TChameleonForm.ModeChange(Sender: TObject);

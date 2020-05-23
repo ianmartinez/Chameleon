@@ -3,7 +3,6 @@ object AboutDialog: TAboutDialog
   Height = 900
   Top = 490
   Width = 882
-  ActiveControl = btnWebsite
   BorderStyle = bsDialog
   Caption = 'About'
   ClientHeight = 900
@@ -11,38 +10,187 @@ object AboutDialog: TAboutDialog
   DesignTimePPI = 144
   OnCreate = FormCreate
   Position = poOwnerFormCenter
-  object pnlTop: TPanel
+  object InfoPageControl: TPageControl
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = TopPanel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 12
+    Height = 698
+    Top = 190
+    Width = 858
+    ActivePage = ChangelogTab
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 12
+    BorderSpacing.Top = 12
+    BorderSpacing.Right = 12
+    BorderSpacing.Bottom = 12
+    ParentFont = False
+    TabIndex = 1
+    TabOrder = 0
+    object LicenseTab: TTabSheet
+      Caption = 'License'
+      ClientHeight = 660
+      ClientWidth = 850
+      ParentFont = False
+      object LicenseMemo: TMemo
+        AnchorSideLeft.Control = LicenseTab
+        AnchorSideTop.Control = LicenseTab
+        AnchorSideRight.Control = LicenseTab
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = LicenseTab
+        AnchorSideBottom.Side = asrBottom
+        Left = 6
+        Height = 648
+        Top = 6
+        Width = 838
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 6
+        BorderSpacing.Top = 6
+        BorderSpacing.Right = 6
+        BorderSpacing.Bottom = 6
+        BorderStyle = bsNone
+        HideSelection = False
+        Lines.Strings = (
+          'MIT License'
+          ''
+          'Copyright (c) 2018-2020 Ian Martinez'
+          ''
+          'Permission is hereby granted, free of charge, to any person obtaining a copy'
+          'of this software and associated documentation files (the "Software"), to deal'
+          'in the Software without restriction, including without limitation the rights'
+          'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'
+          'copies of the Software, and to permit persons to whom the Software is'
+          'furnished to do so, subject to the following conditions:'
+          ''
+          'The above copyright notice and this permission notice shall be included in all'
+          'copies or substantial portions of the Software.'
+          ''
+          'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR'
+          'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,'
+          'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE'
+          'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER'
+          'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,'
+          'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
+          'SOFTWARE.'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+    object ChangelogTab: TTabSheet
+      Caption = 'Changelog'
+      ClientHeight = 660
+      ClientWidth = 850
+      ParentFont = False
+      object ChangelogMemo: TMemo
+        AnchorSideLeft.Control = LicenseTab
+        AnchorSideTop.Control = LicenseTab
+        AnchorSideRight.Control = LicenseTab
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = LicenseTab
+        AnchorSideBottom.Side = asrBottom
+        Left = 6
+        Height = 652
+        Top = 6
+        Width = 842
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 6
+        BorderSpacing.Top = 6
+        BorderSpacing.Right = 6
+        BorderSpacing.Bottom = 6
+        BorderStyle = bsNone
+        HideSelection = False
+        Lines.Strings = (
+          'Version 2.0 (May 22, 2020)'
+          '  - Support high-DPI displays'
+          '  - Dedicated installer that has the program automatically runs at startup'
+          '  - Fix compression on images imported for use as wallpapers'
+          '  - Code cleanup'
+          '  - New icon'
+          ''
+          'Version 1.8 (May 12, 2019)'
+          '  - Add the autostart "-a" command line flag that makes Chameleon automatically start running'
+          ''
+          'Version 1.7 (January 9, 2019)'
+          '  - Fix error when fetching weather data due to changes with the weather server (thanks a lot, NOAA)'
+          '  '
+          'Version 1.6 (October 3, 2018)'
+          '  - Icon in tray now shows hint with last detected value'
+          ''
+          'Version 1.5 (September 28, 2018)'
+          '  - Call Unicode Win32 API functions to improve localization'
+          ''
+          'Version 1.4 (September 28, 2018)'
+          '  - Fixed time localization bug'
+          ''
+          'Version 1.3 (September 28, 2018)'
+          '  -  Add logging'
+          ''
+          'Version 1.2 (August 22, 2018)'
+          '  - Change name to Chameleon'
+          '  - New icon'
+          '  - Fixed a few invalid weather conditions being returned from weather.gov'
+          ''
+          'Version 1.1 (August 20, 2018)'
+          '  - Add changelog tab to about dialog'
+          '  - Logo is now smaller in header'
+          '  - Header is gray instead of blue'
+          '  - Auto-completes on the states dropdown now trigger the weather stations dropdown to reload'#9
+          '  - Weather stations dropdown is now sorted'
+          '   '
+          'Version 1.0 (August 18, 2018)'
+          '  - Initial Release'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
+    end
+  end
+  object TopPanel: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 0
-    Height = 138
-    Top = 0
-    Width = 882
+    Left = 12
+    Height = 154
+    Top = 12
+    Width = 858
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
+    BorderSpacing.Left = 12
+    BorderSpacing.Top = 12
+    BorderSpacing.Right = 12
     BorderSpacing.Bottom = 24
-    BevelOuter = bvNone
-    ClientHeight = 138
-    ClientWidth = 882
+    BevelColor = 13158600
+    BevelInner = bvSpace
+    BevelOuter = bvSpace
+    ClientHeight = 154
+    ClientWidth = 858
+    Color = 14474460
     ParentColor = False
     ParentFont = False
-    TabOrder = 0
-    object Image1: TImage
-      AnchorSideLeft.Control = pnlTop
-      AnchorSideTop.Control = pnlTop
-      AnchorSideBottom.Control = pnlTop
+    TabOrder = 1
+    object LogoImage: TImage
+      AnchorSideLeft.Control = TopPanel
+      AnchorSideTop.Control = TopPanel
+      AnchorSideBottom.Control = TopPanel
       AnchorSideBottom.Side = asrBottom
-      Left = 12
+      Left = 14
       Height = 96
-      Top = 21
+      Top = 26
       Width = 96
       Anchors = [akTop, akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 12
-      BorderSpacing.Top = 21
-      BorderSpacing.Bottom = 21
+      BorderSpacing.Top = 24
+      BorderSpacing.Bottom = 30
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963291D000089504E47
         0D0A1A0A0000000D4948445200000060000000600806000000E2987738000000
@@ -281,217 +429,157 @@ object AboutDialog: TAboutDialog
         44AE426082
       }
     end
-    object pnlLabels: TPanel
-      AnchorSideLeft.Control = Image1
+    object WebsiteButton: TButton
       AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = Image1
+      AnchorSideTop.Control = TopPanel
+      AnchorSideBottom.Control = PatreonImage
+      Left = 654
+      Height = 48
+      Top = 26
+      Width = 90
+      Anchors = [akTop, akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 24
+      BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 32
+      Caption = 'Website'
+      Constraints.MinHeight = 38
+      OnClick = WebsiteButtonClick
+      ParentFont = False
+      TabOrder = 0
+    end
+    object LabelPanel: TPanel
+      AnchorSideLeft.Control = LogoImage
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = LogoImage
       AnchorSideTop.Side = asrCenter
-      Left = 120
-      Height = 92
-      Top = 23
-      Width = 229
+      AnchorSideBottom.Side = asrCenter
+      Left = 122
+      Height = 85
+      Top = 32
+      Width = 200
       AutoSize = True
       BorderSpacing.Left = 12
       BevelOuter = bvNone
-      ClientHeight = 92
-      ClientWidth = 229
+      ClientHeight = 85
+      ClientWidth = 200
       ParentFont = False
-      TabOrder = 0
-      object lblVersion: TLabel
-        AnchorSideLeft.Control = pnlLabels
-        AnchorSideTop.Control = lblProgramName
+      TabOrder = 1
+      object VersionLabel: TLabel
+        AnchorSideLeft.Control = LabelPanel
+        AnchorSideTop.Control = ProgramNameLabel
         AnchorSideTop.Side = asrBottom
         Left = 12
         Height = 25
-        Top = 67
+        Top = 60
         Width = 93
         BorderSpacing.Left = 12
         BorderSpacing.Top = 12
         Caption = 'Version 1.0'
+        Font.Color = 5460819
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
-      object lblProgramName: TLabel
-        AnchorSideLeft.Control = pnlLabels
-        AnchorSideTop.Control = pnlLabels
+      object ProgramNameLabel: TLabel
+        AnchorSideLeft.Control = LabelPanel
+        AnchorSideTop.Control = LabelPanel
         Left = 12
-        Height = 55
+        Height = 48
         Top = 0
-        Width = 217
+        Width = 188
         BorderSpacing.Left = 12
         Caption = 'Chameleon'
-        Font.Height = -41
+        Font.Color = 3158064
+        Font.Height = -36
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
     end
-    object btnWebsite: TButton
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = pnlTop
-      AnchorSideRight.Control = pnlTop
-      AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Side = asrBottom
-      Left = 768
-      Height = 38
-      Top = 21
-      Width = 102
+    object PatreonImage: TImage
+      AnchorSideTop.Control = PatreonLinkLabel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = PatreonLinkLabel
+      Left = 647
+      Height = 24
+      Top = 106
+      Width = 24
       Anchors = [akTop, akRight]
       AutoSize = True
-      BorderSpacing.Left = 12
-      BorderSpacing.Top = 21
+      BorderSpacing.Top = 24
       BorderSpacing.Right = 12
-      BorderSpacing.Bottom = 12
-      Caption = 'Website...'
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869631703000089504E47
+        0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000
+        0467414D410000B18F0BFC6105000000206348524D00007A26000080840000FA
+        00000080E8000075300000EA6000003A98000017709CBA513C00000009704859
+        7300000EC300000EC301C76FA8640000000774494D4507E2051D16110258B78D
+        E50000001874455874536F667477617265007061696E742E6E657420342E312E
+        31632A9C4B0000025649444154484BAD55CF4B545114BE4444D022FBB12B492A
+        088268D7FFD0266C51E9F30781D9AA52242242B2A836216D5241B07D545A501A
+        0D2D8A681D24381ABA896A57846349CD9BF93AE7DD73EF3B6FC6F7E6617EF00D
+        F3EE39F7FBE69E77EE199305B4996604E602DACD4B62915822AE10E7A3358E51
+        8EA4E7074E993DB4719C44CA44346085F888F25B647B3628F1046D585602963D
+        DB81CB872D7B9A92314B3E5DABC8AC0D4AB848E45F6437B1D0E3EBC0E759D481
+        D79E0C01E7766813DEDB2F7249E08C394EC1D0278F0440E9BBA8658073463AB4
+        4995785A642DA29AEBB23CBC0654ABA290137CD2D8A4840EB357E4A3BA4FF8E0
+        FDF67AF1F02FF0B1004CDFB39C7D4D6B65092A8C766A93074EBC991E6C69B8E6
+        B56529BE05FA0FEA8D9603878085F7922458F901F4EE743921B5F13EF762ED22
+        1F5363EE0DD0B52516AD65F7D67A93C99B713C307D863E66FC82EE96F21FA06F
+        7F9C9C463E892ED797B9381698577C824FD103F7B9C687E9A45016F99D68F4EE
+        72B14536B0DDC31748E3D99DA448165F0CCB26C195232EF69B0DECC3E031890A
+        B8555DAC11D30D5637C6805B58E3FC6E178B4A641FD66BC02DCCF7C4E16B51C7
+        0BFF67C02DCCF74463EA561C6F33971A1B049BD66E575EE37BA2F1EBA7EEA030
+        1AE17E439A01FFCA4A486D3B033CBF0B3CBD6DBFF33DA9C558971367CAA8C863
+        9007FA06EB61E717D76BC0B36BAC5B8B27C7B50FA419746E06E6DFD184AD4840
+        F06D81FE706EE89A3BF10191B6F0C13403C7B3DBA8250F00578FDAB1A2639625
+        7AA9274536864F686490CEEC3F7D9F98DF6095B8442CF0388E667E2A8CF90704
+        A5B793081B7DB40000000049454E44AE426082
+      }
+    end
+    object PatreonLinkLabel: TLabel
+      AnchorSideRight.Control = TopPanel
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = TopPanel
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 683
+      Height = 25
+      Top = 106
+      Width = 161
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 21
+      Caption = 'Donate on Patreon'
+      Font.Color = 1401518
+      Font.Style = [fsBold, fsUnderline]
+      ParentColor = False
+      ParentFont = False
+      OnClick = PatreonLinkLabelClick
+    end
+    object GitHubButton: TButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = TopPanel
+      AnchorSideRight.Control = TopPanel
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PatreonImage
+      Left = 762
+      Height = 48
+      Top = 26
+      Width = 82
+      Anchors = [akTop, akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 24
+      BorderSpacing.Right = 12
+      BorderSpacing.Bottom = 32
+      Caption = 'GitHub'
       Constraints.MinHeight = 38
-      OnClick = btnWebsiteClick
+      OnClick = GitHubButtonClick
       ParentFont = False
-      TabOrder = 1
-    end
-  end
-  object PageControl1: TPageControl
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = pnlTop
-    AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = pnlTop
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
-    Left = 12
-    Height = 726
-    Top = 162
-    Width = 858
-    ActivePage = tsChangelog
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Left = 12
-    BorderSpacing.Top = 12
-    BorderSpacing.Right = 12
-    BorderSpacing.Bottom = 12
-    ParentFont = False
-    TabIndex = 1
-    TabOrder = 1
-    object tsLicense: TTabSheet
-      Caption = 'License'
-      ClientHeight = 688
-      ClientWidth = 850
-      ParentFont = False
-      object txtLicense: TMemo
-        AnchorSideLeft.Control = tsLicense
-        AnchorSideTop.Control = tsLicense
-        AnchorSideRight.Control = tsLicense
-        AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = tsLicense
-        AnchorSideBottom.Side = asrBottom
-        Left = 6
-        Height = 676
-        Top = 6
-        Width = 838
-        Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Left = 6
-        BorderSpacing.Top = 6
-        BorderSpacing.Right = 6
-        BorderSpacing.Bottom = 6
-        BorderStyle = bsNone
-        HideSelection = False
-        Lines.Strings = (
-          'MIT License'
-          ''
-          'Copyright (c) 2018-2020 Ian Martinez'
-          ''
-          'Permission is hereby granted, free of charge, to any person obtaining a copy'
-          'of this software and associated documentation files (the "Software"), to deal'
-          'in the Software without restriction, including without limitation the rights'
-          'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'
-          'copies of the Software, and to permit persons to whom the Software is'
-          'furnished to do so, subject to the following conditions:'
-          ''
-          'The above copyright notice and this permission notice shall be included in all'
-          'copies or substantial portions of the Software.'
-          ''
-          'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR'
-          'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,'
-          'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE'
-          'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER'
-          'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,'
-          'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
-          'SOFTWARE.'
-        )
-        ParentFont = False
-        ReadOnly = True
-        ScrollBars = ssAutoBoth
-        TabOrder = 0
-      end
-    end
-    object tsChangelog: TTabSheet
-      Caption = 'Changelog'
-      ClientHeight = 688
-      ClientWidth = 850
-      ParentFont = False
-      object txtChangelog: TMemo
-        AnchorSideLeft.Control = tsLicense
-        AnchorSideTop.Control = tsLicense
-        AnchorSideRight.Control = tsLicense
-        AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = tsLicense
-        AnchorSideBottom.Side = asrBottom
-        Left = 6
-        Height = 680
-        Top = 6
-        Width = 842
-        Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Left = 6
-        BorderSpacing.Top = 6
-        BorderSpacing.Right = 6
-        BorderSpacing.Bottom = 6
-        BorderStyle = bsNone
-        HideSelection = False
-        Lines.Strings = (
-          'Version 2.0 (May 22, 2020)'
-          '  - Support high-DPI displays'
-          '  - Dedicated installer that has the program automatically runs at startup'
-          '  - Fix compression on images imported for use as wallpapers'
-          '  - Code cleanup'
-          '  - New icon'
-          ''
-          'Version 1.8 (May 12, 2019)'
-          '  - Add the autostart "-a" command line flag that makes Chameleon automatically start running'
-          ''
-          'Version 1.7 (January 9, 2019)'
-          '  - Fix error when fetching weather data due to changes with the weather server (thanks a lot, NOAA)'
-          '  '
-          'Version 1.6 (October 3, 2018)'
-          '  - Icon in tray now shows hint with last detected value'
-          ''
-          'Version 1.5 (September 28, 2018)'
-          '  - Call Unicode Win32 API functions to improve localization'
-          ''
-          'Version 1.4 (September 28, 2018)'
-          '  - Fixed time localization bug'
-          ''
-          'Version 1.3 (September 28, 2018)'
-          '  -  Add logging'
-          ''
-          'Version 1.2 (August 22, 2018)'
-          '  - Change name to Chameleon'
-          '  - New icon'
-          '  - Fixed a few invalid weather conditions being returned from weather.gov'
-          ''
-          'Version 1.1 (August 20, 2018)'
-          '  - Add changelog tab to about dialog'
-          '  - Logo is now smaller in header'
-          '  - Header is gray instead of blue'
-          '  - Auto-completes on the states dropdown now trigger the weather stations dropdown to reload'#9
-          '  - Weather stations dropdown is now sorted'
-          '   '
-          'Version 1.0 (August 18, 2018)'
-          '  - Initial Release'
-        )
-        ParentFont = False
-        ReadOnly = True
-        ScrollBars = ssAutoVertical
-        TabOrder = 0
-      end
+      TabOrder = 2
     end
   end
 end
