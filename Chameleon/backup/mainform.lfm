@@ -5898,7 +5898,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideTop.Control = PatreonLinkLabel
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = PatreonLinkLabel
-      Left = 625
+      Left = 618
       Height = 24
       Top = 106
       Width = 24
@@ -5941,14 +5941,14 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = TopPanel
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 661
+      Left = 654
       Height = 25
       Top = 106
-      Width = 161
+      Width = 168
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 21
-      Caption = 'Donate on Patreon'
+      Caption = 'Support on Patreon'
       Font.Color = 1401518
       Font.Style = [fsBold, fsUnderline]
       ParentColor = False
@@ -5965,7 +5965,7 @@ object ChameleonForm: TChameleonForm
   object ChameleonTrayIcon: TTrayIcon
     BalloonFlags = bfInfo
     BalloonHint = 'Double click tray icon to restore.'
-    BalloonTitle = 'Chameleon Is Running'
+    BalloonTitle = 'Chameleon is running'
     Icon.Data = {
       BB7F02000000010008000000000001002000FD5B000086000000808000000100
       200028080100835C00006060000001002000A8940000AB640100404000000100

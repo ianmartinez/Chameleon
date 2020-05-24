@@ -73,14 +73,12 @@ type
     procedure RunAutomatically();
   private
     FirstShow: boolean;
-    AutoStart: boolean;
   public
 
   end;
 
 var
   ChameleonForm: TChameleonForm;
-  ProgramSettings: TProgramSettings;
 
 implementation
 
@@ -92,8 +90,7 @@ procedure TChameleonForm.FormCreate(Sender: TObject);
 var
   i: integer;
 begin
-  ProgramSettings := LoadSettings();
-
+  (* Load the UI from the settings *)
   case ProgramSettings.Mode of
     pmNone:
       NoneRadioButton.Checked := true;
@@ -170,8 +167,6 @@ end;
 
 procedure TChameleonForm.SettingsButtonClick(Sender: TObject);
 begin
-  SettingsDialog.Settings := ProgramSettings;
-
   if SettingsDialog.ShowModal = mrOK then begin
     ProgramSettings.State := SettingsDialog.StatesComboBox.Text;
     ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
@@ -187,26 +182,15 @@ procedure TChameleonForm.FormActivate(Sender: TObject);
 begin
   (* If this is the first time showing the form *)
    if FirstShow = True then begin
-    Refresh();
+     Refresh();
 
-    (* Check for command line arguments *)
-    if ParamCount > 0 then begin
-     (* The argument -a means to start running in the background
-        automatically *)
-      if ParamStr(1).Equals('-a') then begin
+     (* Auto start if enabled *)
+     if ProgramSettings.AutoStartNeeded then begin
        RunAutomatically();
-      end
-     (* The argument -s means to start running in the background
-      automatically, only if 'Run at Startup'  is checked *)
-      else if ParamStr(1).Equals('-s') then begin
-        if ProgramSettings.RunAtStartup then begin
-          RunAutomatically();
-        end;
-      end;
-    end;
-  end;
+     end;
+   end;
 
-  FirstShow := False;
+   FirstShow := False;
 end;
 
 procedure TChameleonForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -291,7 +275,7 @@ end;
 
 procedure TChameleonForm.OKButtonClick(Sender: TObject);
 begin
-  Application.Minimize;      
+  Application.Minimize();      
   WallpaperTimer.Interval := LongWord(InveralSpinEdit.Value * 1000);
   WallpaperTimer.Enabled := true;
   WallpaperTimerTimer(Sender);
@@ -385,14 +369,17 @@ begin
   // first time after auto-starting, the size is
   // all messed up, so this will force windows to
   // resize it to a normal state
-  if AutoStart then begin
+  if ProgramSettings.AutoStartNeeded then begin
     WindowState := wsMaximized;
     WindowState := wsNormal;
-    AutoStart := False;
+    ProgramSettings.AutoStartNeeded := False;
   end;
 
   // Show taskbar icon
-  ShowWindow(WidgetSet.AppHandle, SW_Show);        
+  ShowWindow(WidgetSet.AppHandle, SW_Show);
+  Visible := True;
+  WindowState := wsNormal;
+  BringToFront();
   ChameleonTrayIcon.Hint := 'Chameleon';
 end;
 
@@ -400,7 +387,7 @@ procedure TChameleonForm.RunAutomatically();
 begin
   OKButtonClick(nil);
   WindowState := wsMinimized;
-  AutoStart := True;
+  ProgramSettings.AutoStartNeeded := True;
 end;
 
 end.

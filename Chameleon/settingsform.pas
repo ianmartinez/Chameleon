@@ -42,7 +42,7 @@ type
   private
 
   public
-    Settings: TProgramSettings;
+
   end;
 
 var
@@ -76,18 +76,18 @@ end;
 
 procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
-  RunAtStartupCheckbox.Checked := Settings.RunAtStartup;
-  ShowChameleonRunningCheckbox.Checked := Settings.ShowChameleonIsRunning;
-  AlwaysShowWeatherCheckbox.Checked := Settings.AlwaysShowWeather;
+  RunAtStartupCheckbox.Checked := ProgramSettings.RunAtStartup;
+  ShowChameleonRunningCheckbox.Checked := ProgramSettings.ShowChameleonIsRunning;
+  AlwaysShowWeatherCheckbox.Checked := ProgramSettings.AlwaysShowWeather;
 
-  if Settings.State <> '' then begin
-    StatesComboBox.Text := Settings.State;
+  if ProgramSettings.State <> '' then begin
+    StatesComboBox.Text := ProgramSettings.State;
   end;
 
   StatesComboBoxChange(Sender);
 
-  if Settings.WeatherStationName <> ''  then begin
-    StationsComboBox.Text := Settings.WeatherStationName;
+  if ProgramSettings.WeatherStationName <> ''  then begin
+    StationsComboBox.Text := ProgramSettings.WeatherStationName;
   end;
 end;
 

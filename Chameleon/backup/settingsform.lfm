@@ -4854,11 +4854,11 @@ object SettingsDialog: TSettingsDialog
       Left = 9
       Height = 29
       Top = 9
-      Width = 144
+      Width = 142
       BorderSpacing.Left = 9
       BorderSpacing.Top = 9
       BorderSpacing.Bottom = 9
-      Caption = 'Run at Startup'
+      Caption = 'Run at startup'
       TabOrder = 0
     end
     object ShowChameleonRunningCheckbox: TCheckBox
@@ -4869,10 +4869,10 @@ object SettingsDialog: TSettingsDialog
       Left = 9
       Height = 29
       Top = 47
-      Width = 362
+      Width = 359
       BorderSpacing.Top = 9
       BorderSpacing.Bottom = 9
-      Caption = 'Show "Chameleon is running" Notification'
+      Caption = 'Show "Chameleon is running" notification'
       Checked = True
       State = cbChecked
       TabOrder = 1
@@ -4883,14 +4883,14 @@ object SettingsDialog: TSettingsDialog
       AnchorSideTop.Control = RunGroupBox
       AnchorSideBottom.Control = RunGroupBox
       AnchorSideBottom.Side = asrBottom
-      Left = 380
+      Left = 377
       Height = 29
       Top = 9
-      Width = 262
+      Width = 253
       BorderSpacing.Left = 9
       BorderSpacing.Top = 9
       BorderSpacing.Bottom = 9
-      Caption = 'Always Show Weather in Tray'
+      Caption = 'Always show weather in tray'
       TabOrder = 2
     end
   end
@@ -5093,8 +5093,8 @@ object SettingsDialog: TSettingsDialog
       end
       object WeatherStationXmlTab: TTabSheet
         Caption = 'Weather Station XML'
-        ClientHeight = 452
-        ClientWidth = 786
+        ClientHeight = 445
+        ClientWidth = 752
         ParentFont = False
         inline WeatherStationXMLEdit: TSynEdit
           AnchorSideLeft.Control = WeatherStationXmlTab
@@ -5104,9 +5104,9 @@ object SettingsDialog: TSettingsDialog
           AnchorSideBottom.Control = WeatherStationXmlTab
           AnchorSideBottom.Side = asrBottom
           Left = 0
-          Height = 452
+          Height = 445
           Top = 0
-          Width = 786
+          Width = 752
           BlockIndent = 1
           Anchors = [akTop, akLeft, akRight, akBottom]
           Font.CharSet = ANSI_CHARSET
@@ -5119,7 +5119,7 @@ object SettingsDialog: TSettingsDialog
           TabOrder = 0
           BorderStyle = bsNone
           Gutter.Color = clMenu
-          Gutter.Width = 83
+          Gutter.Width = 90
           Gutter.MouseActions = <>
           RightGutter.Width = 0
           RightGutter.MouseActions = <>
@@ -5611,8 +5611,8 @@ object SettingsDialog: TSettingsDialog
       end
       object WeatherDataXmlTab: TTabSheet
         Caption = 'Weather Data XML'
-        ClientHeight = 452
-        ClientWidth = 786
+        ClientHeight = 445
+        ClientWidth = 752
         ParentFont = False
         inline WeatherDataXmlEdit: TSynEdit
           AnchorSideLeft.Control = WeatherStationXmlTab
@@ -5622,9 +5622,9 @@ object SettingsDialog: TSettingsDialog
           AnchorSideBottom.Control = WeatherStationXmlTab
           AnchorSideBottom.Side = asrBottom
           Left = 0
-          Height = 452
+          Height = 445
           Top = 0
-          Width = 786
+          Width = 752
           BlockIndent = 1
           Anchors = [akTop, akLeft, akRight, akBottom]
           Font.CharSet = ANSI_CHARSET
@@ -5637,7 +5637,7 @@ object SettingsDialog: TSettingsDialog
           TabOrder = 0
           BorderStyle = bsNone
           Gutter.Color = clMenu
-          Gutter.Width = 83
+          Gutter.Width = 90
           Gutter.MouseActions = <>
           RightGutter.Width = 0
           RightGutter.MouseActions = <>

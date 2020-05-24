@@ -5898,7 +5898,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideTop.Control = PatreonLinkLabel
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = PatreonLinkLabel
-      Left = 625
+      Left = 618
       Height = 24
       Top = 106
       Width = 24
@@ -5941,14 +5941,14 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = TopPanel
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 661
+      Left = 654
       Height = 25
       Top = 106
-      Width = 161
+      Width = 168
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 21
-      Caption = 'Donate on Patreon'
+      Caption = 'Support on Patreon'
       Font.Color = 1401518
       Font.Style = [fsBold, fsUnderline]
       ParentColor = False

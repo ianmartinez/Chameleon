@@ -52,8 +52,8 @@ begin
 end;
 
 procedure TAboutDialog.GitHubButtonClick(Sender: TObject);
-begin                     
-  OpenURL('https://ianmtz.com/Chameleon');
+begin                             
+  OpenURL('https://github.com/ianmartinez/Chameleon');
 end;
 
 procedure TAboutDialog.PatreonLinkLabelClick(Sender: TObject);
@@ -62,8 +62,8 @@ begin
 end;
 
 procedure TAboutDialog.WebsiteButtonClick(Sender: TObject);
-begin                      
-  OpenURL('https://github.com/ianmartinez/Chameleon');
+begin
+  OpenURL('https://ianmtz.com/Chameleon');
 end;
 
 end.
