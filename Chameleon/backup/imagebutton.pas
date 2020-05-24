@@ -23,6 +23,7 @@ type
   public   
     SettingCategory : string;
     SettingKey : string;
+    FullName: string;
     Thumb: TPicture;
     OverwriteImage: Boolean;
     function GetTitle(): string;
@@ -39,6 +40,7 @@ implementation
 
 procedure TImageButtonFrame.ChangeImageButtonClick(Sender: TObject);
 begin
+  OpenPictureDialog.Title := 'Change Wallpaper for ' + ImageTitleLabel.Caption;
   if OpenPictureDialog.Execute then
     if FileExists(OpenPictureDialog.FileName) then begin
       OverwriteImage := true;

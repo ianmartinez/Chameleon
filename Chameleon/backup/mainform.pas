@@ -118,37 +118,37 @@ begin
 
   // Battery percentage
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
-    CreateImageButtonFrame('Battery', WriteSafeString(PercentageModes[i]), PercentageModes[i], BatteryBox);
+    CreateImageButtonFrame('Battery', PercentageModes[i], PercentageModes[i], BatteryBox);
   end;
 
   // Time of day
   for i:= high(TimeModes) downto low(TimeModes) do begin
-    CreateImageButtonFrame('Time', WriteSafeString(TimeModes[i]), TimeModes[i], TimeBox);
+    CreateImageButtonFrame('Time', TimeModes[i], TimeModes[i], TimeBox);
   end;
 
   // Weather Conditions
   for i:= high(WeatherConditions) downto low(WeatherConditions) do begin
-    CreateImageButtonFrame('WeatherConditions', WriteSafeString(WeatherConditions[i]), WeatherConditions[i], ConditionsBox);
+    CreateImageButtonFrame('WeatherConditions', WeatherConditions[i], WeatherConditions[i], ConditionsBox);
   end;
 
   // Wind speed
   for i:= high(WindSpeedModes) downto low(WindSpeedModes) do begin
-    CreateImageButtonFrame('WindSpeed', WriteSafeString(WindSpeedModes[i]), WindSpeedModes[i], WindSpeedBox);
+    CreateImageButtonFrame('WindSpeed', WindSpeedModes[i], WindSpeedModes[i], WindSpeedBox);
   end;
 
   // Temperature
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
-    CreateImageButtonFrame('Temperature', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], TemperatureBox);
+    CreateImageButtonFrame('Temperature', TemperatureModes[i], TemperatureModes[i], TemperatureBox);
   end;
 
   // Humidity
   for i:= high(PercentageModes) downto low(PercentageModes) do begin
-    CreateImageButtonFrame('Humidity', WriteSafeString(PercentageModes[i]), PercentageModes[i], HumidityBox);
+    CreateImageButtonFrame('Humidity', PercentageModes[i], PercentageModes[i], HumidityBox);
   end;
 
   // Heat Index
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
-    CreateImageButtonFrame('HeatIndex', WriteSafeString(TemperatureModes[i]), TemperatureModes[i], HeatIndexBox);
+    CreateImageButtonFrame('HeatIndex', TemperatureModes[i], TemperatureModes[i], HeatIndexBox);
   end;
 
   // Init event log
@@ -213,15 +213,18 @@ function TChameleonForm.CreateImageButtonFrame(_SettingCategory: string;
 var
   ImageButtonFrame : TImageButtonFrame;
   ImagePath: string;
+  SafeKey: string;
 begin
   ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);
   ImagePath := GetImagePath(_SettingKey, _SettingCategory);
+  SafeKey := WriteSafeString(_SettingKey);
 
-  with ImageButtonFrame  do begin
-    Name := _SettingCategory + _SettingKey + 'Button';
+  with ImageButtonFrame do begin
+    Name := _SettingCategory + SafeKey + 'Button';
     Align := alLeft;
     AutoSize := True;
-    SettingKey := _SettingKey;   
+    FullName := _SettingKey + ' (' +  _SettingCategory + ')';
+    SettingKey := SafeKey;
     SettingCategory := _SettingCategory;
     Title := _Title;
     Parent := ControlOwner;
