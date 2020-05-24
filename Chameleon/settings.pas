@@ -14,6 +14,9 @@ interface
       Interval: integer;
       State: string;
       WeatherStationName: string;
+      RunAtStartup: boolean;
+      ShowChameleonIsRunning: boolean;
+      AlwaysShowWeather: boolean;
   end;
 
   const Folders : array [0..6] of string =
@@ -147,6 +150,9 @@ implementation
         ProgramSettings.Interval := INI.ReadInteger('Program','Interval', 60);
         ProgramSettings.State := INI.ReadString('Weather', 'State', '');
         ProgramSettings.WeatherStationName := INI.ReadString('Weather', 'WeatherStationName', '');
+        ProgramSettings.RunAtStartup := INI.ReadBool('Run', 'RunAtStartup', False);        
+        ProgramSettings.ShowChameleonIsRunning := INI.ReadBool('Run', 'ShowChameleonIsRunning', True);
+        ProgramSettings.AlwaysShowWeather := INI.ReadBool('Run', 'AlwaysShowWeather', False);
       finally
         INI.Free;
       end;
@@ -155,7 +161,10 @@ implementation
       ProgramSettings.Mode := pmNone;
       ProgramSettings.Interval := 60;
       ProgramSettings.State := '';
-      ProgramSettings.WeatherStationName := '';
+      ProgramSettings.WeatherStationName := '';      
+        ProgramSettings.RunAtStartup := False;
+        ProgramSettings.ShowChameleonIsRunning := True;
+        ProgramSettings.AlwaysShowWeather := False;
     end;
 
     Result := ProgramSettings;
@@ -174,6 +183,9 @@ implementation
       INI.WriteInteger('Program', 'Interval', ProgramSettings.Interval);
       INI.WriteString('Weather', 'State', ProgramSettings.State);          
       INI.WriteString('Weather', 'WeatherStationName', ProgramSettings.WeatherStationName);
+      INI.WriteBool('Run', 'RunAtStartup', ProgramSettings.RunAtStartup);
+      INI.WriteBool('Run', 'ShowChameleonIsRunning', ProgramSettings.ShowChameleonIsRunning);
+      INI.WriteBool('Run', 'AlwaysShowWeather', ProgramSettings.AlwaysShowWeather);
 
       INI.UpdateFile;
     finally
