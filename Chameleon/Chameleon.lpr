@@ -45,8 +45,7 @@ begin
     Application.CreateForm(TChameleonForm, ChameleonForm);
     Application.CreateForm(TAboutDialog, AboutDialog);
     Application.CreateForm(TSettingsDialog, SettingsDialog);
+    Application.Run;
   end;
-
-  Application.Run;
 end.
 

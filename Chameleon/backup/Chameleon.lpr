@@ -27,13 +27,13 @@ begin
    (* The argument -a means to start running in the background
    automatically *)
    if ParamStr(1).Equals('-a') then begin
-     ProgramSettings.LaunchedWithAutoStart := True;
+     ProgramSettings.AutoStartNeeded := True;
    end
    (* The argument -s means to start running in the background
    automatically, only if 'Run at Startup'  is checked *)
    else if ParamStr(1).Equals('-s') then begin
      if ProgramSettings.RunAtStartup then begin
-        ProgramSettings.LaunchedWithAutoStart := True;
+        ProgramSettings.AutoStartNeeded := True;
      end else begin (* If not, just close *)
        ShouldLoad := False;
        Application.Terminate();

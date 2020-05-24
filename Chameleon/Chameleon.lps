@@ -62,7 +62,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="17"/>
         <TopLine Value="9"/>
-        <CursorPos X="119" Y="39"/>
+        <CursorPos X="100" Y="30"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -73,6 +73,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="352"/>
         <CursorPos X="34" Y="390"/>
         <UsageCount Value="200"/>
@@ -97,9 +98,9 @@
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
-        <CursorPos X="49" Y="21"/>
+        <TopLine Value="16"/>
+        <CursorPos X="58" Y="13"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -157,7 +158,7 @@
         <UnitName Value="Win32"/>
         <EditorIndex Value="13"/>
         <CursorPos X="13" Y="5"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -355,7 +356,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1319"/>
         <CursorPos X="14" Y="1340"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit33>
       <Unit34>
         <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
@@ -387,14 +388,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="259"/>
         <CursorPos X="14" Y="1338"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit37>
       <Unit38>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\systemh.inc"/>
         <EditorIndex Value="1"/>
         <TopLine Value="1376"/>
         <CursorPos X="36" Y="1395"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit38>
     </Units>
