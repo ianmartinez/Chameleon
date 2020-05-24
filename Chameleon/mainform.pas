@@ -62,7 +62,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    function CreateImageButtonFrame(_SettingCategory: string; _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+    function CreateImageButtonFrame(ImageCategory: string; ImageKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
     procedure FormWindowStateChange(Sender: TObject);
     procedure PatreonLinkLabelClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
@@ -128,7 +128,7 @@ begin
 
   // Weather Conditions
   for i:= high(WeatherConditions) downto low(WeatherConditions) do begin
-    CreateImageButtonFrame('WeatherConditions', WeatherConditions[i], WeatherConditions[i], ConditionsBox);
+    CreateImageButtonFrame('Weather Conditions', WeatherConditions[i], WeatherConditions[i], ConditionsBox);
   end;
 
   // Wind speed
@@ -148,7 +148,7 @@ begin
 
   // Heat Index
   for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
-    CreateImageButtonFrame('HeatIndex', TemperatureModes[i], TemperatureModes[i], HeatIndexBox);
+    CreateImageButtonFrame('Heat Index', TemperatureModes[i], TemperatureModes[i], HeatIndexBox);
   end;
 
   // Init event log
@@ -208,25 +208,27 @@ begin
   SaveSettings(ProgramSettings);
 end;
 
-function TChameleonForm.CreateImageButtonFrame(_SettingCategory: string;
-  _SettingKey: string; _Title: string; ControlOwner: TWinControl) : TImageButtonFrame;
+function TChameleonForm.CreateImageButtonFrame(ImageCategory: string;
+  ImageKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
 var
   ImageButtonFrame : TImageButtonFrame;
   ImagePath: string;
+  SafeCategory: string;
   SafeKey: string;
 begin
-  ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);  
-  SafeKey := WriteSafeString(_SettingKey);
-  ImagePath := GetImagePath(SafeKey, _SettingCategory);
+  ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);
+  SafeCategory := WriteSafeString(ImageCategory);
+  SafeKey := WriteSafeString(ImageKey);
+  ImagePath := GetImagePath(SafeKey, SafeCategory);
 
   with ImageButtonFrame do begin
-    Name := _SettingCategory + SafeKey + 'Button';
+    Name := SafeCategory + SafeKey + 'Button';
     Align := alLeft;
     AutoSize := True;
-    FullName := _SettingKey + ' (' +  _SettingCategory + ')';
+    FullName := ImageKey + ' (' +  ImageCategory + ')';
     SettingKey := SafeKey;
-    SettingCategory := _SettingCategory;
-    Title := _Title;
+    SettingCategory := SafeCategory;
+    Title := ImageTitle;
     Parent := ControlOwner;
   end;
 

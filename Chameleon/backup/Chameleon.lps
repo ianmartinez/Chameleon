@@ -72,8 +72,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="206"/>
-        <CursorPos X="38" Y="224"/>
+        <CursorPos X="36" Y="220"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -85,7 +86,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
         <TopLine Value="28"/>
         <CursorPos X="71" Y="43"/>
@@ -98,7 +98,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="148"/>
+        <TopLine Value="235"/>
         <CursorPos X="124" Y="332"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
