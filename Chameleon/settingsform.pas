@@ -75,11 +75,12 @@ begin
   if State <> '' then begin
     StatesComboBox.Text := State;
   end;
+
+  StatesComboBoxChange(Sender);
+
   if WeatherStationName <> ''  then begin
     StationsComboBox.Text := WeatherStationName;
   end;
-
-  StatesComboBoxChange(Sender);
 end;
 
 procedure TSettingsDialog.OKButtonClick(Sender: TObject);

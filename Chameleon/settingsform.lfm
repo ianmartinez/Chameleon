@@ -4810,6 +4810,7 @@ object SettingsDialog: TSettingsDialog
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poOwnerFormCenter
+  LCLVersion = '2.0.8.0'
   object MainTabControl: TPageControl
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -5012,7 +5013,7 @@ object SettingsDialog: TSettingsDialog
         TabOrder = 0
         BorderStyle = bsNone
         Gutter.Color = clMenu
-        Gutter.Width = 90
+        Gutter.Width = 83
         Gutter.MouseActions = <>
         RightGutter.Width = 0
         RightGutter.MouseActions = <>
@@ -5530,7 +5531,7 @@ object SettingsDialog: TSettingsDialog
         TabOrder = 0
         BorderStyle = bsNone
         Gutter.Color = clMenu
-        Gutter.Width = 90
+        Gutter.Width = 83
         Gutter.MouseActions = <>
         RightGutter.Width = 0
         RightGutter.MouseActions = <>
