@@ -19,7 +19,6 @@ type
     GoButton: TButton;
     ButtonsPanel: TButtonPanel;
     ShowChameleonRunningCheckbox: TCheckBox;
-    AlwaysShowWeatherCheckbox: TCheckBox;
     StatesComboBox: TComboBox;
     StationsComboBox: TComboBox;
     StateGroupBox: TGroupBox;
@@ -80,7 +79,7 @@ begin
   ShowChameleonRunningCheckbox.Checked := ProgramSettings.ShowChameleonIsRunning;
   AlwaysShowWeatherCheckbox.Checked := ProgramSettings.AlwaysShowWeather;
 
-  if Settings.State <> '' then begin
+  if ProgramSettings.State <> '' then begin
     StatesComboBox.Text := ProgramSettings.State;
   end;
 

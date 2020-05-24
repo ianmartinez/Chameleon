@@ -19,7 +19,6 @@ type
     GoButton: TButton;
     ButtonsPanel: TButtonPanel;
     ShowChameleonRunningCheckbox: TCheckBox;
-    AlwaysShowWeatherCheckbox: TCheckBox;
     StatesComboBox: TComboBox;
     StationsComboBox: TComboBox;
     StateGroupBox: TGroupBox;
@@ -78,7 +77,6 @@ procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
   RunAtStartupCheckbox.Checked := ProgramSettings.RunAtStartup;
   ShowChameleonRunningCheckbox.Checked := ProgramSettings.ShowChameleonIsRunning;
-  AlwaysShowWeatherCheckbox.Checked := ProgramSettings.AlwaysShowWeather;
 
   if ProgramSettings.State <> '' then begin
     StatesComboBox.Text := ProgramSettings.State;

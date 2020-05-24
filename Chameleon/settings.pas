@@ -16,7 +16,6 @@ interface
       WeatherStationName: string;
       RunAtStartup: boolean;
       ShowChameleonIsRunning: boolean;
-      AlwaysShowWeather: boolean;
        (* Flag if one of the args passes to the program called for
        an autostart and it hasn't been done yet. *)
       AutoStartNeeded: boolean;
@@ -54,19 +53,15 @@ interface
   function LoadSettings() : TProgramSettings;
   procedure SaveSettings(ProgramSettings: TProgramSettings);
 
-  function GetCategoryName(const m: TProgramMode) : string;
+  function GetCategoryName(const m: TProgramMode) : string; 
+  function GetCategoryTitle(const m: TProgramMode) : string;
 
   function ConvertPercentage(const n: integer) : string;
-  function ConvertSpeed(n: integer) : string;
+  function ConvertSpeed(d: double) : string;
   function ConvertTemperature(n: integer) : string;
 
   function GetBattery() : string;
   function GetTime() : string;
-  function GetWeatherConditions(WeatherStationName: string) : string;
-  function GetWindSpeed(WeatherStationName: string) : string;
-  function GetTemperature(WeatherStationName: string) : string;
-  function GetHumidity(WeatherStationName: string) : string;
-  function GetHeatIndex(WeatherStationName: string) : string;
 
 implementation  
   uses
@@ -158,7 +153,6 @@ implementation
         ProgramSettings.WeatherStationName := INI.ReadString('Weather', 'WeatherStationName', '');
         ProgramSettings.RunAtStartup := INI.ReadBool('Run', 'RunAtStartup', False);        
         ProgramSettings.ShowChameleonIsRunning := INI.ReadBool('Run', 'ShowChameleonIsRunning', True);
-        ProgramSettings.AlwaysShowWeather := INI.ReadBool('Run', 'AlwaysShowWeather', False);
       finally
         INI.Free;
       end;
@@ -170,7 +164,6 @@ implementation
       ProgramSettings.WeatherStationName := '';      
         ProgramSettings.RunAtStartup := False;
         ProgramSettings.ShowChameleonIsRunning := True;
-        ProgramSettings.AlwaysShowWeather := False;
     end;
 
     Result := ProgramSettings;
@@ -191,7 +184,6 @@ implementation
       INI.WriteString('Weather', 'WeatherStationName', ProgramSettings.WeatherStationName);
       INI.WriteBool('Run', 'RunAtStartup', ProgramSettings.RunAtStartup);
       INI.WriteBool('Run', 'ShowChameleonIsRunning', ProgramSettings.ShowChameleonIsRunning);
-      INI.WriteBool('Run', 'AlwaysShowWeather', ProgramSettings.AlwaysShowWeather);
 
       INI.UpdateFile;
     finally
@@ -218,6 +210,30 @@ implementation
         Result := 'Humidity';
       pmHeatIndex:
         Result := 'HeatIndex';
+      else
+        Result := '';
+    end;
+  end;
+
+  function GetCategoryTitle(const m: TProgramMode) : string;
+  begin
+    case m of
+      pmNone:
+        Result := '';
+      pmBattery:
+        Result := 'Battery';
+      pmTime:
+        Result := 'Time';
+      pmWeatherConditions:
+        Result := 'Weather Conditions';
+      pmWindSpeed:
+        Result := 'Wind Speed';
+      pmTemperature:
+        Result := 'Temperature';
+      pmHumidity:
+        Result := 'Humidity';
+      pmHeatIndex:
+        Result := 'Heat Index';
       else
         Result := '';
     end;
@@ -255,8 +271,12 @@ implementation
     end;
   end;
 
-  function ConvertSpeed(n: integer) : string;
+  function ConvertSpeed(d: double) : string;
+  var
+    n: Integer;
   begin
+    n := Round(d);
+
     case n of
       100..500:
         Result := '100+ MPH';
@@ -356,30 +376,5 @@ implementation
     DefaultFormatSettings.TimeAMString := 'AM';
     DefaultFormatSettings.TimePMString := 'PM';
     Result := formatdatetime('h ampm', Now);
-  end;
-
-  function GetWeatherConditions(WeatherStationName: string) : string;
-  begin
-    Result := GetWeatherByStationName(WeatherStationName).Conditions;
-  end;
-
-  function GetWindSpeed(WeatherStationName: string) : string;
-  begin
-    Result := ConvertSpeed(Round(GetWeatherByStationName(WeatherStationName).WindSpeed));
-  end;
-
-  function GetTemperature(WeatherStationName: string) : string;
-  begin
-    Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).Temperature);
-  end;
-
-  function GetHumidity(WeatherStationName: string) : string;
-  begin
-    Result := ConvertPercentage(GetWeatherByStationName(WeatherStationName).Humidity);
-  end;
-
-  function GetHeatIndex(WeatherStationName: string) : string;
-  begin
-    Result := ConvertTemperature(GetWeatherByStationName(WeatherStationName).HeatIndex);
   end;
 end.

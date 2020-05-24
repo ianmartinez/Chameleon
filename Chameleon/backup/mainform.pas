@@ -172,7 +172,6 @@ begin
     ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
     ProgramSettings.RunAtStartup := SettingsDialog.RunAtStartupCheckbox.Checked;  
     ProgramSettings.ShowChameleonIsRunning := SettingsDialog.ShowChameleonRunningCheckbox.Checked;
-    ProgramSettings.AlwaysShowWeather := SettingsDialog.AlwaysShowWeatherCheckbox.Checked;
 
     SaveSettings(ProgramSettings);
   end;
@@ -185,9 +184,12 @@ begin
      Refresh();
 
      (* Auto start if enabled *)
-     if ProgramSettings.LaunchedWithAutoStart then begin
+     if ProgramSettings.AutoStartNeeded then begin
        RunAutomatically();
      end;
+
+     WindowState := wsNormal;
+     BringToFront();
    end;
 
    FirstShow := False;
@@ -300,14 +302,18 @@ var
   KeyName: string;
   WallpaperPath: string;
   Data: string;
-  IsWeather: boolean = false;
   Weather: TWeatherData;
+  TrayReport: TStringList;
+  InvalidStation: Boolean;
 begin
   CategoryName := GetCategoryName(ProgramSettings.Mode);
+  (* Get weather *)
+  InvalidStation := ProgramSettings.WeatherStationName.Equals('');
+  if not InvalidStation then begin
+    Weather := GetWeatherByStationName(ProgramSettings.WeatherStationName);
+  end;
 
   case ProgramSettings.Mode of
-      pmNone:
-        exit;
       pmBattery:
         begin
           Data := GetBattery();
@@ -318,47 +324,52 @@ begin
         end;
       pmWeatherConditions:
         begin
-          Data := GetWeatherConditions(ProgramSettings.WeatherStationName);
-          IsWeather := True;
+          Data := Weather.Conditions;
         end;
       pmWindSpeed:
         begin
-          Data := GetWindSpeed(ProgramSettings.WeatherStationName);
-          IsWeather := True;
+          Data := ConvertSpeed(Weather.WindSpeed);
         end;
       pmTemperature:
         begin
-          Data := GetTemperature(ProgramSettings.WeatherStationName);
-          IsWeather := True;
+          Data := ConvertTemperature(Weather.Temperature);
         end;
       pmHumidity:
         begin
-          Data := GetHumidity(ProgramSettings.WeatherStationName);
-          IsWeather := True;
+          Data := ConvertPercentage(Weather.Humidity);
         end;
       pmHeatIndex:
         begin
-          Data := GetHeatIndex(ProgramSettings.WeatherStationName);
-          IsWeather := True;
+          Data := ConvertPercentage(Weather.HeatIndex);
         end;
-      else
-        exit;
+      else (* No or invalid mode *)
+        Data := '';
     end;
 
-    if IsWeather then
-    begin
-       Weather := GetWeatherByStationName(ProgramSettings.WeatherStationName);
-       ChameleonTrayIcon.Hint := PrintWeatherReport(Weather);
-    end
-    else
-       ChameleonTrayIcon.Hint := Data;
+    (* Set the tray icon hint to the report *)
+    TrayReport := TStringList.Create;
+    try
+      TrayReport.Add('Wallpaper: ' + GetCategoryTitle(ProgramSettings.Mode));
+      if not InvalidStation then begin
+        TrayReport.Add(PrintWeatherReport(Weather));
+      end;
+      ChameleonTrayIcon.Hint := TrayReport.Text;
+    finally
+      TrayReport.Free;
+    end;
 
-   KeyName := WriteSafeString(Data);
-   WallpaperPath := GetImagePath(KeyName, CategoryName);
-   ChameleonLogger.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
-   if not fileexists(WallpaperPath) then ChameleonLogger.Error('"' + WallpaperPath + '" does not exist!');
+    (* Set the wallpaper if there is any data (i.e. not pmNone) *)
+    if not Data.Equals('') then begin
+      KeyName := WriteSafeString(Data);
+      WallpaperPath := GetImagePath(KeyName, CategoryName);
+      ChameleonLogger.Info('Changing wallpaper to "' + WallpaperPath + '" for ' + CategoryName + ' = ' + KeyName);
 
-   SetWallpaper(WallpaperPath);
+      if not fileexists(WallpaperPath) then begin
+        ChameleonLogger.Error('"' + WallpaperPath + '" does not exist!');
+      end;
+
+      SetWallpaper(WallpaperPath);
+    end;
 end;
 
 procedure TChameleonForm.ChameleonTrayIconDblClick(Sender: TObject);
@@ -369,10 +380,10 @@ begin
   // first time after auto-starting, the size is
   // all messed up, so this will force windows to
   // resize it to a normal state
-  if ProgramSettings.LaunchedWithAutoStart then begin
+  if ProgramSettings.AutoStartNeeded then begin
     WindowState := wsMaximized;
     WindowState := wsNormal;
-    ProgramSettings.LaunchedWithAutoStart := False;
+    ProgramSettings.AutoStartNeeded := False;
   end;
 
   // Show taskbar icon
@@ -387,7 +398,7 @@ procedure TChameleonForm.RunAutomatically();
 begin
   OKButtonClick(nil);
   WindowState := wsMinimized;
-  ProgramSettings.LaunchedWithAutoStart := True;
+  ProgramSettings.AutoStartNeeded := True;
 end;
 
 end.

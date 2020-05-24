@@ -165,7 +165,7 @@ implementation
   const
     TempWeatherDataFile : string = 'WeatherData.xml';
   begin
-    Result := DownloadTextFile(Station.XMLUrl, TempWeatherDataFile);
+    Result := DownloadTextFile(Station.XMLUrl, GetWeatherDataXmlPath());
   end;
 
   (*

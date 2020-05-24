@@ -5046,6 +5046,7 @@ object ChameleonForm: TChameleonForm
   OnCreate = FormCreate
   OnWindowStateChange = FormWindowStateChange
   Position = poScreenCenter
+  Visible = True
   object ChangeByGroup: TRadioGroup
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = TopPanel

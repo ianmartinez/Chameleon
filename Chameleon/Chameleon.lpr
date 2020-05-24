@@ -21,6 +21,7 @@ begin
 
   (* Load the settings *)
   ProgramSettings := LoadSettings();
+  ProgramSettings.AutoStartNeeded := false;
 
   (* Check for command line arguments *)
   if ParamCount > 0 then begin

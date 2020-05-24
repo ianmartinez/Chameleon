@@ -2,6 +2,7 @@ Version 2.0 (May 25, 2020)
   - Support high-DPI displays
   - Dedicated installer that has the program automatically runs at startup
   - Settings and wallpapers are now stored in ~/ChameleonApp directory
+  * Show weather when hovering on tray icon
   - Code cleanup
   - Updated wallpaper pack
   - Added a new icon
