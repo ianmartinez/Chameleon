@@ -10,7 +10,6 @@ object ImageButtonFrame: TImageButtonFrame
   Constraints.MaxWidth = 525
   Constraints.MinWidth = 420
   DesignTimePPI = 144
-  OnClick = FrameClick
   ParentColor = False
   ParentFont = False
   TabOrder = 0

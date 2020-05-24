@@ -1,11 +1,11 @@
 object SettingsDialog: TSettingsDialog
   Left = 0
-  Height = 800
+  Height = 725
   Top = 0
   Width = 800
   ActiveControl = MainTabControl
   Caption = 'Settings'
-  ClientHeight = 800
+  ClientHeight = 725
   ClientWidth = 800
   DesignTimePPI = 144
   Icon.Data = {
@@ -4813,7 +4813,7 @@ object SettingsDialog: TSettingsDialog
   object ButtonsPanel: TButtonPanel
     Left = 9
     Height = 43
-    Top = 748
+    Top = 673
     Width = 782
     BorderSpacing.Around = 9
     OKButton.Name = 'OKButton'
@@ -4902,7 +4902,7 @@ object SettingsDialog: TSettingsDialog
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = ButtonsPanel
     Left = 9
-    Height = 606
+    Height = 531
     Top = 133
     Width = 782
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -4911,7 +4911,7 @@ object SettingsDialog: TSettingsDialog
     BorderSpacing.Right = 9
     BorderSpacing.Bottom = 9
     Caption = 'Weather'
-    ClientHeight = 576
+    ClientHeight = 501
     ClientWidth = 778
     TabOrder = 2
     object MainTabControl: TPageControl
@@ -4922,7 +4922,7 @@ object SettingsDialog: TSettingsDialog
       AnchorSideBottom.Control = WeatherGroupBox
       AnchorSideBottom.Side = asrBottom
       Left = 9
-      Height = 558
+      Height = 483
       Top = 9
       Width = 760
       ActivePage = LocationTab
@@ -4936,7 +4936,7 @@ object SettingsDialog: TSettingsDialog
       TabOrder = 0
       object LocationTab: TTabSheet
         Caption = 'Location'
-        ClientHeight = 520
+        ClientHeight = 445
         ClientWidth = 752
         ParentFont = False
         object StateGroupBox: TGroupBox
@@ -5054,7 +5054,7 @@ object SettingsDialog: TSettingsDialog
           AnchorSideBottom.Control = LocationTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 298
+          Height = 223
           Top = 210
           Width = 728
           Anchors = [akTop, akLeft, akRight, akBottom]
@@ -5064,7 +5064,7 @@ object SettingsDialog: TSettingsDialog
           BorderSpacing.Right = 12
           BorderSpacing.Bottom = 12
           Caption = 'Current Weather:'
-          ClientHeight = 268
+          ClientHeight = 193
           ClientWidth = 724
           ParentFont = False
           TabOrder = 2
@@ -5076,7 +5076,7 @@ object SettingsDialog: TSettingsDialog
             AnchorSideBottom.Control = CurrentWeatherGroupBox
             AnchorSideBottom.Side = asrBottom
             Left = 12
-            Height = 244
+            Height = 169
             Top = 12
             Width = 700
             Anchors = [akTop, akLeft, akRight, akBottom]

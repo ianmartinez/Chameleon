@@ -6139,7 +6139,7 @@ object SettingsDialog: TSettingsDialog
     DocTypeAttri.Foreground = clOlive
     SymbolAttri.Foreground = clNavy
     WantBracesParsed = False
-    left = 36
-    top = 480
+    left = 80
+    top = 632
   end
 end

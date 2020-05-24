@@ -16,6 +16,7 @@ type
 
   TChameleonForm = class(TForm)
     AboutButton: TButton;
+    RefreshEveryLabel: TLabel;
     SettingsButton: TButton;
     Image2: TImage;
     LogoImage: TImage;
@@ -37,7 +38,6 @@ type
     TimeBox: TScrollBox;
     IntervalGroupBox: TGroupBox;
     WallpapersGroupBox: TGroupBox;
-    RefreshEveryLabel: TLabel;
     RefreshSecondsLabel: TLabel;
     WallpapersTabControl: TPageControl;
     ChangeByGroup: TRadioGroup;

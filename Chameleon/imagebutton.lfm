@@ -102,7 +102,7 @@ object ImageButtonFrame: TImageButtonFrame
   end
   object OpenPictureDialog: TOpenPictureDialog
     Filter = 'Image files (*.png;*.bmp;*.jpeg;*.jpg;*.gif)|*.png;*.bmp;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*'
-    left = 96
-    top = 132
+    left = 400
+    top = 232
   end
 end

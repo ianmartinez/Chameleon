@@ -1,12 +1,12 @@
 object ChameleonForm: TChameleonForm
   Left = 0
-  Height = 1030
+  Height = 1000
   Top = 0
-  Width = 868
+  Width = 860
   ActiveControl = NoneRadioButton
   Caption = 'Chameleon'
-  ClientHeight = 1030
-  ClientWidth = 868
+  ClientHeight = 1000
+  ClientWidth = 860
   Constraints.MinHeight = 150
   Constraints.MinWidth = 825
   DesignTimePPI = 144
@@ -5048,23 +5048,24 @@ object ChameleonForm: TChameleonForm
   Position = poScreenCenter
   object ChangeByGroup: TRadioGroup
     AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = TopPanel
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 12
     Height = 158
-    Top = 192
-    Width = 844
+    Top = 190
+    Width = 836
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
     BorderSpacing.Left = 12
     BorderSpacing.Top = 12
     BorderSpacing.Right = 12
     Caption = 'Change By:'
-    ChildSizing.LeftRightSpacing = 6
-    ChildSizing.TopBottomSpacing = 10
-    ChildSizing.HorizontalSpacing = 8
-    ChildSizing.VerticalSpacing = 8
+    ChildSizing.LeftRightSpacing = 12
+    ChildSizing.TopBottomSpacing = 12
+    ChildSizing.HorizontalSpacing = 12
+    ChildSizing.VerticalSpacing = 12
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.EnlargeVertical = crsHomogenousChildResize
     ChildSizing.ShrinkHorizontal = crsScaleChilds
@@ -5072,15 +5073,15 @@ object ChameleonForm: TChameleonForm
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 4
     ClientHeight = 128
-    ClientWidth = 840
+    ClientWidth = 832
     ParentFont = False
     TabOrder = 0
     TabStop = True
     object NoneRadioButton: TRadioButton
-      Left = 6
-      Height = 50
-      Top = 10
-      Width = 192
+      Left = 12
+      Height = 46
+      Top = 12
+      Width = 184
       Caption = 'None'
       Checked = True
       OnChange = ModeChange
@@ -5089,70 +5090,70 @@ object ChameleonForm: TChameleonForm
       TabStop = True
     end
     object BatteryRadioButton: TRadioButton
-      Left = 206
-      Height = 50
-      Top = 10
-      Width = 195
+      Left = 208
+      Height = 46
+      Top = 12
+      Width = 187
       Caption = 'Battery'
       OnChange = ModeChange
       ParentFont = False
       TabOrder = 1
     end
     object TimeRadioButton: TRadioButton
-      Left = 409
-      Height = 50
-      Top = 10
-      Width = 168
+      Left = 407
+      Height = 46
+      Top = 12
+      Width = 160
       Caption = 'Time'
       OnChange = ModeChange
       ParentFont = False
       TabOrder = 2
     end
     object ConditionsRadioButton: TRadioButton
-      Left = 585
-      Height = 50
-      Top = 10
-      Width = 249
+      Left = 579
+      Height = 46
+      Top = 12
+      Width = 241
       Caption = 'Weather Conditions'
       OnChange = ModeChange
       ParentFont = False
       TabOrder = 3
     end
     object WindSpeedRadioButton: TRadioButton
-      Left = 6
-      Height = 50
-      Top = 68
-      Width = 192
+      Left = 12
+      Height = 46
+      Top = 70
+      Width = 184
       Caption = 'Wind Speed'
       OnChange = ModeChange
       ParentFont = False
       TabOrder = 4
     end
     object TemperatureRadioButton: TRadioButton
-      Left = 206
-      Height = 50
-      Top = 68
-      Width = 195
+      Left = 208
+      Height = 46
+      Top = 70
+      Width = 187
       Caption = 'Temperature'
       OnChange = ModeChange
       ParentFont = False
       TabOrder = 5
     end
     object HumidityRadioButton: TRadioButton
-      Left = 409
-      Height = 50
-      Top = 68
-      Width = 168
+      Left = 407
+      Height = 46
+      Top = 70
+      Width = 160
       Caption = 'Humidity'
       OnChange = ModeChange
       ParentFont = False
       TabOrder = 6
     end
     object HeatIndexRadioButton: TRadioButton
-      Left = 585
-      Height = 50
-      Top = 68
-      Width = 249
+      Left = 579
+      Height = 46
+      Top = 70
+      Width = 241
       Caption = 'Heat Index'
       OnChange = ModeChange
       ParentFont = False
@@ -5166,43 +5167,35 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 12
-    Height = 82
-    Top = 362
-    Width = 844
+    Height = 91
+    Top = 360
+    Width = 836
     Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
     BorderSpacing.Left = 12
     BorderSpacing.Top = 12
     BorderSpacing.Right = 12
     Caption = 'Interval:'
-    ClientHeight = 52
-    ClientWidth = 840
+    ClientHeight = 61
+    ClientWidth = 832
     ParentFont = False
     TabOrder = 1
     TabStop = True
-    object RefreshEveryLabel: TLabel
-      AnchorSideLeft.Control = IntervalGroupBox
-      AnchorSideTop.Control = IntervalGroupBox
-      Left = 12
-      Height = 25
-      Top = 12
-      Width = 110
-      BorderSpacing.Left = 12
-      BorderSpacing.Top = 12
-      Caption = 'Refresh Every '
-      ParentColor = False
-      ParentFont = False
-    end
     object InveralSpinEdit: TSpinEdit
       AnchorSideLeft.Control = RefreshEveryLabel
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = IntervalGroupBox
-      Left = 128
+      AnchorSideBottom.Control = IntervalGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 129
       Height = 33
-      Top = 6
+      Top = 12
       Width = 136
       Alignment = taCenter
-      BorderSpacing.Left = 6
-      BorderSpacing.Top = 6
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 12
+      BorderSpacing.Bottom = 16
       MaxValue = 100000
       MinValue = 10
       OnChange = InveralSpinEditChange
@@ -5214,15 +5207,37 @@ object ChameleonForm: TChameleonForm
       AnchorSideLeft.Control = InveralSpinEdit
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = IntervalGroupBox
-      Left = 270
-      Height = 25
+      AnchorSideBottom.Control = IntervalGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 277
+      Height = 33
       Top = 12
       Width = 72
-      BorderSpacing.Left = 6
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 12
       BorderSpacing.Top = 12
+      BorderSpacing.Bottom = 16
       Caption = ' Seconds'
+      Layout = tlCenter
       ParentColor = False
       ParentFont = False
+    end
+    object RefreshEveryLabel: TLabel
+      AnchorSideLeft.Control = IntervalGroupBox
+      AnchorSideTop.Control = IntervalGroupBox
+      AnchorSideBottom.Control = IntervalGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 12
+      Height = 33
+      Top = 12
+      Width = 105
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 12
+      BorderSpacing.Bottom = 16
+      Caption = 'Refresh Every'
+      Layout = tlCenter
+      ParentColor = False
     end
   end
   object WallpapersGroupBox: TGroupBox
@@ -5233,17 +5248,17 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = ButtonsPanel
     Left = 12
-    Height = 501
-    Top = 456
-    Width = 844
+    Height = 470
+    Top = 463
+    Width = 836
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 12
     BorderSpacing.Top = 12
     BorderSpacing.Right = 12
     BorderSpacing.Bottom = 12
     Caption = 'Wallpapers:'
-    ClientHeight = 471
-    ClientWidth = 840
+    ClientHeight = 440
+    ClientWidth = 832
     ParentFont = False
     TabOrder = 3
     TabStop = True
@@ -5255,22 +5270,22 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = WallpapersGroupBox
       AnchorSideBottom.Side = asrBottom
       Left = 12
-      Height = 447
+      Height = 416
       Top = 12
-      Width = 816
-      ActivePage = HeatIndexTab
+      Width = 808
+      ActivePage = ConditionsTab
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 12
       BorderSpacing.Top = 12
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 12
       ParentFont = False
-      TabIndex = 6
+      TabIndex = 2
       TabOrder = 0
       object BatteryTab: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 358
+        ClientWidth = 800
         ParentFont = False
         object BatteryBox: TScrollBox
           AnchorSideLeft.Control = BatteryTab
@@ -5280,9 +5295,9 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 385
+          Height = 334
           Top = 12
-          Width = 784
+          Width = 776
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5331,8 +5346,8 @@ object ChameleonForm: TChameleonForm
       end
       object ConditionsTab: TTabSheet
         Caption = 'Weather Conditions'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object ConditionsBox: TScrollBox
           AnchorSideLeft.Control = BatteryTab
@@ -5342,9 +5357,9 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 393
+          Height = 362
           Top = 12
-          Width = 792
+          Width = 784
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5494,9 +5509,9 @@ object ChameleonForm: TChameleonForm
     AnchorSideBottom.Side = asrBottom
     Left = 9
     Height = 43
-    Top = 978
-    Width = 850
-    BorderSpacing.Top = 12
+    Top = 948
+    Width = 842
+    BorderSpacing.Top = 6
     BorderSpacing.Around = 9
     OKButton.Name = 'OKButton'
     OKButton.Caption = '&Run'
@@ -5519,7 +5534,7 @@ object ChameleonForm: TChameleonForm
     Left = 12
     Height = 154
     Top = 12
-    Width = 844
+    Width = 836
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
     BorderSpacing.Left = 12
@@ -5530,7 +5545,7 @@ object ChameleonForm: TChameleonForm
     BevelInner = bvSpace
     BevelOuter = bvSpace
     ClientHeight = 154
-    ClientWidth = 844
+    ClientWidth = 836
     Color = 14474460
     ParentColor = False
     ParentFont = False
@@ -5793,7 +5808,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideRight.Control = TopPanel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = PatreonImage
-      Left = 742
+      Left = 734
       Height = 48
       Top = 26
       Width = 88
@@ -5814,7 +5829,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideTop.Control = TopPanel
       AnchorSideRight.Control = AboutButton
       AnchorSideBottom.Control = PatreonImage
-      Left = 628
+      Left = 620
       Height = 48
       Top = 26
       Width = 102
@@ -5883,7 +5898,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideTop.Control = PatreonLinkLabel
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = PatreonLinkLabel
-      Left = 633
+      Left = 625
       Height = 24
       Top = 106
       Width = 24
@@ -5926,7 +5941,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = TopPanel
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 669
+      Left = 661
       Height = 25
       Top = 106
       Width = 161

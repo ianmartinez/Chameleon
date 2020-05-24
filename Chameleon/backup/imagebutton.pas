@@ -17,7 +17,6 @@ type
     OpenPictureDialog: TOpenPictureDialog;
     ImageTitleLabel: TLabel;
     MainPanel: TPanel;
-    procedure FrameClick(Sender: TObject);
     procedure PickImageButtonClick(Sender: TObject);
   private
 
