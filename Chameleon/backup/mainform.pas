@@ -176,6 +176,7 @@ begin
   if SettingsDialog.ShowModal = mrOK then begin
     ProgramSettings.State := SettingsDialog.StatesComboBox.Text;
     ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
+    ProgramSettings.RunAtStartup := SettingsDialog.RunAtStartupCheckbox.Checked;
     SaveSettings(ProgramSettings);
   end;
 end;

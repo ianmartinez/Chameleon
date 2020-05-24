@@ -176,6 +176,9 @@ begin
   if SettingsDialog.ShowModal = mrOK then begin
     ProgramSettings.State := SettingsDialog.StatesComboBox.Text;
     ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
+    ProgramSettings.RunAtStartup := SettingsDialog.RunAtStartupCheckbox.Checked;  
+    ProgramSettings.ShowChameleonIsRunning := SettingsDialog.ShowChameleonRunningCheckbox.Checked;
+    ProgramSettings.AlwaysShowWeather := SettingsDialog.AlwaysShowWeather.Checked;
     SaveSettings(ProgramSettings);
   end;
 end;

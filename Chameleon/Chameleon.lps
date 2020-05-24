@@ -56,7 +56,7 @@
         </CompilerOptions>
       </Item2>
     </BuildModes>
-    <Units Count="33">
+    <Units Count="34">
       <Unit0>
         <Filename Value="Chameleon.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -72,8 +72,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="44"/>
-        <CursorPos X="35" Y="91"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="158"/>
+        <CursorPos X="70" Y="182"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -95,10 +96,8 @@
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="133"/>
-        <CursorPos X="78" Y="153"/>
+        <CursorPos X="124" Y="332"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -144,7 +143,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="72"/>
+        <TopLine Value="37"/>
         <CursorPos X="49" Y="72"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -347,95 +346,103 @@
         <CursorPos X="14" Y="97"/>
         <UsageCount Value="10"/>
       </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1319"/>
+        <CursorPos X="14" Y="1340"/>
+        <UsageCount Value="10"/>
+      </Unit33>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="157" Column="31" TopLine="137"/>
+        <Filename Value="settings.pas"/>
+        <Caret Line="89" Column="26" TopLine="81"/>
       </Position1>
       <Position2>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="152" Column="26" TopLine="137"/>
+        <Filename Value="settings.pas"/>
+        <Caret Line="104" Column="31" TopLine="81"/>
       </Position2>
       <Position3>
         <Filename Value="settings.pas"/>
-        <Caret Line="89" Column="26" TopLine="81"/>
+        <Caret Line="84" Column="24" TopLine="81"/>
       </Position3>
       <Position4>
         <Filename Value="settings.pas"/>
-        <Caret Line="104" Column="31" TopLine="81"/>
+        <Caret Line="95" Column="57" TopLine="76"/>
       </Position4>
       <Position5>
         <Filename Value="settings.pas"/>
-        <Caret Line="84" Column="24" TopLine="81"/>
+        <Caret Line="97" Column="67" TopLine="95"/>
       </Position5>
       <Position6>
         <Filename Value="settings.pas"/>
-        <Caret Line="95" Column="57" TopLine="76"/>
+        <Caret Line="39" Column="26" TopLine="19"/>
       </Position6>
       <Position7>
         <Filename Value="settings.pas"/>
-        <Caret Line="97" Column="67" TopLine="95"/>
+        <Caret Line="38" Column="26" TopLine="13"/>
       </Position7>
       <Position8>
         <Filename Value="settings.pas"/>
-        <Caret Line="39" Column="26" TopLine="19"/>
+        <Caret Line="16" TopLine="13"/>
       </Position8>
       <Position9>
         <Filename Value="settings.pas"/>
-        <Caret Line="38" Column="26" TopLine="13"/>
+        <Caret Line="172" Column="6" TopLine="137"/>
       </Position9>
       <Position10>
-        <Filename Value="settings.pas"/>
-        <Caret Line="16" TopLine="13"/>
-      </Position10>
-      <Position11>
-        <Filename Value="settings.pas"/>
-        <Caret Line="172" Column="6" TopLine="137"/>
-      </Position11>
-      <Position12>
         <Filename Value="weather.pas"/>
         <Caret Line="158" Column="79" TopLine="137"/>
+      </Position10>
+      <Position11>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="75" TopLine="55"/>
+      </Position11>
+      <Position12>
+        <Filename Value="settingsform.pas"/>
+        <Caret Line="76" TopLine="55"/>
       </Position12>
       <Position13>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="75" TopLine="55"/>
+        <Caret Line="79" TopLine="55"/>
       </Position13>
       <Position14>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="76" TopLine="55"/>
+        <Caret Line="80" TopLine="55"/>
       </Position14>
       <Position15>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="79" TopLine="55"/>
+        <Caret Line="67" Column="49" TopLine="67"/>
       </Position15>
       <Position16>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="80" TopLine="55"/>
+        <Caret Line="68" Column="49" TopLine="68"/>
       </Position16>
       <Position17>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="67" Column="49" TopLine="67"/>
+        <Caret Line="69" Column="49" TopLine="69"/>
       </Position17>
       <Position18>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="68" Column="49" TopLine="68"/>
+        <Caret Line="70" Column="49" TopLine="70"/>
       </Position18>
       <Position19>
         <Filename Value="settingsform.pas"/>
-        <Caret Line="69" Column="49" TopLine="69"/>
+        <Caret Line="71" Column="49" TopLine="71"/>
       </Position19>
       <Position20>
-        <Filename Value="settingsform.pas"/>
-        <Caret Line="70" Column="49" TopLine="70"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="138" TopLine="182"/>
       </Position20>
       <Position21>
-        <Filename Value="settingsform.pas"/>
-        <Caret Line="71" Column="49" TopLine="71"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="139" TopLine="139"/>
       </Position21>
       <Position22>
         <Filename Value="mainform.pas"/>
-        <Caret Line="138" TopLine="182"/>
+        <Caret Line="138" TopLine="138"/>
       </Position22>
       <Position23>
         <Filename Value="mainform.pas"/>
@@ -446,28 +453,28 @@
         <Caret Line="138" TopLine="138"/>
       </Position24>
       <Position25>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="139" TopLine="139"/>
-      </Position25>
-      <Position26>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="138" TopLine="138"/>
-      </Position26>
-      <Position27>
         <Filename Value="settings.pas"/>
         <Caret Line="138" Column="24" TopLine="124"/>
+      </Position25>
+      <Position26>
+        <Filename Value="settings.pas"/>
+        <Caret Line="46" Column="12" TopLine="25"/>
+      </Position26>
+      <Position27>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="95" Column="22" TopLine="74"/>
       </Position27>
       <Position28>
         <Filename Value="settings.pas"/>
-        <Caret Line="46" Column="12" TopLine="25"/>
+        <Caret Line="19" Column="34"/>
       </Position28>
       <Position29>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="95" Column="22" TopLine="74"/>
+        <Filename Value="settings.pas"/>
+        <Caret Line="341" Column="34" TopLine="320"/>
       </Position29>
       <Position30>
-        <Filename Value="settings.pas"/>
-        <Caret Line="19" Column="34"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="179" Column="80" TopLine="158"/>
       </Position30>
     </JumpHistory>
     <RunParams>

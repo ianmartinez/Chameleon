@@ -60,7 +60,6 @@
       <Unit0>
         <Filename Value="Chameleon.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="12"/>
         <CursorPos Y="23"/>
         <UsageCount Value="200"/>
@@ -73,8 +72,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="74"/>
-        <CursorPos X="32" Y="103"/>
+        <TopLine Value="44"/>
+        <CursorPos X="35" Y="91"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -96,8 +95,10 @@
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="34" Y="19"/>
+        <TopLine Value="133"/>
+        <CursorPos X="78" Y="153"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -155,7 +156,7 @@
         <UnitName Value="Win32"/>
         <EditorIndex Value="8"/>
         <CursorPos X="13" Y="5"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="64"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
