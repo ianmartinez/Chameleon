@@ -72,9 +72,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="284"/>
-        <CursorPos X="3" Y="302"/>
+        <CursorPos X="101" Y="322"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -144,6 +143,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <TopLine Value="94"/>
         <CursorPos X="12" Y="78"/>
@@ -157,7 +157,7 @@
         <UnitName Value="Win32"/>
         <EditorIndex Value="8"/>
         <CursorPos X="13" Y="5"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>

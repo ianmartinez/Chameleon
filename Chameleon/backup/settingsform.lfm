@@ -4869,10 +4869,10 @@ object SettingsDialog: TSettingsDialog
       Left = 9
       Height = 29
       Top = 47
-      Width = 367
+      Width = 362
       BorderSpacing.Top = 9
       BorderSpacing.Bottom = 9
-      Caption = 'Show "Chameleon is Running" Notification'
+      Caption = 'Show "Chameleon is running" Notification'
       Checked = True
       State = cbChecked
       TabOrder = 1
@@ -4883,7 +4883,7 @@ object SettingsDialog: TSettingsDialog
       AnchorSideTop.Control = RunGroupBox
       AnchorSideBottom.Control = RunGroupBox
       AnchorSideBottom.Side = asrBottom
-      Left = 385
+      Left = 380
       Height = 29
       Top = 9
       Width = 262
@@ -5075,16 +5075,18 @@ object SettingsDialog: TSettingsDialog
             AnchorSideRight.Side = asrBottom
             AnchorSideBottom.Control = CurrentWeatherGroupBox
             AnchorSideBottom.Side = asrBottom
-            Left = 12
-            Height = 169
-            Top = 12
-            Width = 700
+            Left = 6
+            Height = 181
+            Top = 6
+            Width = 712
             Anchors = [akTop, akLeft, akRight, akBottom]
-            BorderSpacing.Left = 12
-            BorderSpacing.Top = 12
-            BorderSpacing.Right = 12
-            BorderSpacing.Bottom = 12
+            BorderSpacing.Left = 6
+            BorderSpacing.Top = 6
+            BorderSpacing.Right = 6
+            BorderSpacing.Bottom = 6
+            BorderStyle = bsNone
             ParentFont = False
+            ReadOnly = True
             TabOrder = 0
           end
         end
