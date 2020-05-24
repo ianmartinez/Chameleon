@@ -13,8 +13,13 @@ type
   { TSettingsDialog }
 
   TSettingsDialog = class(TForm)
+    WeatherGroupBox: TGroupBox;
+    RunGroupBox: TGroupBox;
+    RunAtStartupCheckbox: TCheckBox;
     GoButton: TButton;
     ButtonsPanel: TButtonPanel;
+    ShowChameleonRunningCheckbox: TCheckBox;
+    AlwaysShowWeather: TCheckBox;
     StatesComboBox: TComboBox;
     StationsComboBox: TComboBox;
     StateGroupBox: TGroupBox;
@@ -26,7 +31,7 @@ type
     WeatherStationXMLEdit: TSynEdit;
     XmlSyntaxHighlighter: TSynXMLSyn;
     WeatherStationXmlTab: TTabSheet;
-    WeatherTab: TTabSheet;
+    LocationTab: TTabSheet;
     MainTabControl: TPageControl;
     procedure GoButtonClick(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
