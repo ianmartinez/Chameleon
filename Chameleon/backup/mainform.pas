@@ -62,7 +62,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    function CreateImageButtonFrame(ImageCategory: string; SettingKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
+    function CreateImageButtonFrame(ImageCategory: string; ImageKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
     procedure FormWindowStateChange(Sender: TObject);
     procedure PatreonLinkLabelClick(Sender: TObject);
     procedure ModeChange(Sender: TObject);
@@ -70,6 +70,7 @@ type
     procedure InveralSpinEditChange(Sender: TObject);
     procedure WallpaperTimerTimer(Sender: TObject);
     procedure ChameleonTrayIconDblClick(Sender: TObject);
+    procedure RunAutomatically();
   private
     FirstShow: boolean;
     AutoStart: boolean;
@@ -178,6 +179,7 @@ begin
     ProgramSettings.RunAtStartup := SettingsDialog.RunAtStartupCheckbox.Checked;  
     ProgramSettings.ShowChameleonIsRunning := SettingsDialog.ShowChameleonRunningCheckbox.Checked;
     ProgramSettings.AlwaysShowWeather := SettingsDialog.AlwaysShowWeather.Checked;
+
     SaveSettings(ProgramSettings);
   end;
 end;
@@ -193,9 +195,14 @@ begin
      (* The argument -a means to start running in the background
         automatically *)
       if ParamStr(1).Equals('-a') then begin
-         OKButtonClick(nil);
-         WindowState := wsMinimized;
-         AutoStart := True;
+       RunAutomatically();
+
+       (* The argument -s means to start running in the background
+        automatically, only if 'Run at Startup'  is checked *)
+      end else if ParamStr(1).Equals('-s') then begin
+        if ProgramSettings.RunAtStartup then begin
+          RunAutomatically();
+        end;
       end;
     end;
   end;
@@ -209,7 +216,7 @@ begin
 end;
 
 function TChameleonForm.CreateImageButtonFrame(ImageCategory: string;
-  SettingKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
+  ImageKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
 var
   ImageButtonFrame : TImageButtonFrame;
   ImagePath: string;
@@ -218,7 +225,7 @@ var
 begin
   ImageButtonFrame := TImageButtonFrame.Create(ControlOwner);
   SafeCategory := WriteSafeString(ImageCategory);
-  SafeKey := WriteSafeString(SettingKey);
+  SafeKey := WriteSafeString(ImageKey);
   ImagePath := GetImagePath(SafeKey, SafeCategory);
 
   with ImageButtonFrame do begin
@@ -385,6 +392,13 @@ begin
   // Show taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Show);        
   ChameleonTrayIcon.Hint := 'Chameleon';
+end;
+
+procedure TChameleonForm.RunAutomatically();
+begin
+  OKButtonClick(nil);
+  WindowState := wsMinimized;
+  AutoStart := True;
 end;
 
 end.
