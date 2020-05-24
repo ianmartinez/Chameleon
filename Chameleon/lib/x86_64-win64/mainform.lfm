@@ -5294,10 +5294,10 @@ object ChameleonForm: TChameleonForm
           AnchorSideRight.Side = asrBottom
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 354
-          Top = 12
-          Width = 776
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5305,30 +5305,30 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object TimeTab: TTabSheet
         Caption = 'Time'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object TimeBox: TScrollBox
-          AnchorSideLeft.Control = BatteryTab
-          AnchorSideTop.Control = BatteryTab
-          AnchorSideRight.Control = BatteryTab
+          AnchorSideLeft.Control = TimeTab
+          AnchorSideTop.Control = TimeTab
+          AnchorSideRight.Control = TimeTab
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = BatteryTab
+          AnchorSideBottom.Control = TimeTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 393
-          Top = 12
-          Width = 792
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5336,30 +5336,30 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object ConditionsTab: TTabSheet
         Caption = 'Weather Conditions'
-        ClientHeight = 478
+        ClientHeight = 378
         ClientWidth = 800
         ParentFont = False
         object ConditionsBox: TScrollBox
-          AnchorSideLeft.Control = BatteryTab
-          AnchorSideTop.Control = BatteryTab
-          AnchorSideRight.Control = BatteryTab
+          AnchorSideLeft.Control = ConditionsTab
+          AnchorSideTop.Control = ConditionsTab
+          AnchorSideRight.Control = ConditionsTab
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = BatteryTab
+          AnchorSideBottom.Control = ConditionsTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 462
-          Top = 12
-          Width = 784
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5367,30 +5367,30 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object WindSpeedTab: TTabSheet
         Caption = 'Wind Speed'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object WindSpeedBox: TScrollBox
-          AnchorSideLeft.Control = BatteryTab
-          AnchorSideTop.Control = BatteryTab
-          AnchorSideRight.Control = BatteryTab
+          AnchorSideLeft.Control = WindSpeedTab
+          AnchorSideTop.Control = WindSpeedTab
+          AnchorSideRight.Control = WindSpeedTab
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = BatteryTab
+          AnchorSideBottom.Control = WindSpeedTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 393
-          Top = 12
-          Width = 792
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5398,30 +5398,30 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object TemperatureTab: TTabSheet
         Caption = 'Temperature'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object TemperatureBox: TScrollBox
-          AnchorSideLeft.Control = BatteryTab
-          AnchorSideTop.Control = BatteryTab
-          AnchorSideRight.Control = BatteryTab
+          AnchorSideLeft.Control = TemperatureTab
+          AnchorSideTop.Control = TemperatureTab
+          AnchorSideRight.Control = TemperatureTab
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = BatteryTab
+          AnchorSideBottom.Control = TemperatureTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 393
-          Top = 12
-          Width = 792
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5429,30 +5429,30 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object HumidityTab: TTabSheet
         Caption = 'Humidity'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object HumidityBox: TScrollBox
-          AnchorSideLeft.Control = BatteryTab
-          AnchorSideTop.Control = BatteryTab
-          AnchorSideRight.Control = BatteryTab
+          AnchorSideLeft.Control = HumidityTab
+          AnchorSideTop.Control = HumidityTab
+          AnchorSideRight.Control = HumidityTab
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = BatteryTab
+          AnchorSideBottom.Control = HumidityTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 393
-          Top = 12
-          Width = 792
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5460,30 +5460,30 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object HeatIndexTab: TTabSheet
         Caption = 'Heat Index'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object HeatIndexBox: TScrollBox
-          AnchorSideLeft.Control = BatteryTab
-          AnchorSideTop.Control = BatteryTab
-          AnchorSideRight.Control = BatteryTab
+          AnchorSideLeft.Control = HeatIndexTab
+          AnchorSideTop.Control = HeatIndexTab
+          AnchorSideRight.Control = HeatIndexTab
           AnchorSideRight.Side = asrBottom
-          AnchorSideBottom.Control = BatteryTab
+          AnchorSideBottom.Control = HeatIndexTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 393
-          Top = 12
-          Width = 792
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5491,10 +5491,10 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end

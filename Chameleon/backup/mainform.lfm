@@ -5273,14 +5273,14 @@ object ChameleonForm: TChameleonForm
       Height = 416
       Top = 12
       Width = 808
-      ActivePage = BatteryTab
+      ActivePage = WindSpeedTab
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 12
       BorderSpacing.Top = 12
       BorderSpacing.Right = 12
       BorderSpacing.Bottom = 12
       ParentFont = False
-      TabIndex = 0
+      TabIndex = 3
       TabOrder = 0
       object BatteryTab: TTabSheet
         Caption = 'Battery'
@@ -5294,10 +5294,10 @@ object ChameleonForm: TChameleonForm
           AnchorSideRight.Side = asrBottom
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
-          Left = 12
-          Height = 354
-          Top = 12
-          Width = 776
+          Left = 2
+          Height = 376
+          Top = 0
+          Width = 796
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5305,18 +5305,18 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object TimeTab: TTabSheet
         Caption = 'Time'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object TimeBox: TScrollBox
           AnchorSideLeft.Control = BatteryTab
@@ -5326,9 +5326,9 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 393
+          Height = 362
           Top = 12
-          Width = 792
+          Width = 784
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5336,17 +5336,17 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object ConditionsTab: TTabSheet
         Caption = 'Weather Conditions'
-        ClientHeight = 478
+        ClientHeight = 378
         ClientWidth = 800
         ParentFont = False
         object ConditionsBox: TScrollBox
@@ -5357,7 +5357,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 462
+          Height = 362
           Top = 12
           Width = 784
           HorzScrollBar.Increment = 1
@@ -5367,18 +5367,18 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
       end
       object WindSpeedTab: TTabSheet
         Caption = 'Wind Speed'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 378
+        ClientWidth = 800
         ParentFont = False
         object WindSpeedBox: TScrollBox
           AnchorSideLeft.Control = BatteryTab
@@ -5388,9 +5388,9 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 393
+          Height = 362
           Top = 12
-          Width = 792
+          Width = 784
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True
@@ -5398,10 +5398,10 @@ object ChameleonForm: TChameleonForm
           VertScrollBar.Page = 1
           VertScrollBar.Visible = False
           Anchors = [akTop, akLeft, akRight, akBottom]
-          BorderSpacing.Left = 12
-          BorderSpacing.Top = 12
-          BorderSpacing.Right = 12
-          BorderSpacing.Bottom = 12
+          BorderSpacing.Left = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.Bottom = 2
+          BorderStyle = bsNone
           ParentFont = False
           TabOrder = 0
         end
@@ -5470,8 +5470,8 @@ object ChameleonForm: TChameleonForm
       end
       object HeatIndexTab: TTabSheet
         Caption = 'Heat Index'
-        ClientHeight = 409
-        ClientWidth = 808
+        ClientHeight = 390
+        ClientWidth = 800
         ParentFont = False
         object HeatIndexBox: TScrollBox
           AnchorSideLeft.Control = BatteryTab
@@ -5481,9 +5481,9 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 12
-          Height = 393
+          Height = 374
           Top = 12
-          Width = 792
+          Width = 784
           HorzScrollBar.Increment = 1
           HorzScrollBar.Page = 1
           HorzScrollBar.Smooth = True

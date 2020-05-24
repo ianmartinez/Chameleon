@@ -12,12 +12,12 @@ type
   { TImageButtonFrame }
 
   TImageButtonFrame = class(TFrame)
-    PickImageButton: TButton;
+    ChangeImageButton: TButton;
     PreviewImage: TImage;
     OpenPictureDialog: TOpenPictureDialog;
     ImageTitleLabel: TLabel;
     MainPanel: TPanel;
-    procedure PickImageButtonClick(Sender: TObject);
+    procedure ChangeImageButtonClick(Sender: TObject);
   private
 
   public   
@@ -37,7 +37,7 @@ implementation
 
 { TImageButtonFrame }
 
-procedure TImageButtonFrame.PickImageButtonClick(Sender: TObject);
+procedure TImageButtonFrame.ChangeImageButtonClick(Sender: TObject);
 begin
   if OpenPictureDialog.Execute then
     if FileExists(OpenPictureDialog.FileName) then begin

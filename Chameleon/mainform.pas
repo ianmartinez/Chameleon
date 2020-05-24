@@ -18,7 +18,6 @@ type
     AboutButton: TButton;
     RefreshEveryLabel: TLabel;
     SettingsButton: TButton;
-    Image2: TImage;
     LogoImage: TImage;
     PatreonImage: TImage;
     PatreonLinkLabel: TLabel;
