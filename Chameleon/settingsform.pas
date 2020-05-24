@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, SynHighlighterXML, SynEdit, Forms, Controls,
-  Graphics, Dialogs, StdCtrls, ComCtrls, ButtonPanel, Weather;
+  Graphics, Dialogs, StdCtrls, ComCtrls, ButtonPanel, Weather, Settings;
 
 type
 
@@ -19,7 +19,7 @@ type
     GoButton: TButton;
     ButtonsPanel: TButtonPanel;
     ShowChameleonRunningCheckbox: TCheckBox;
-    AlwaysShowWeather: TCheckBox;
+    AlwaysShowWeatherCheckbox: TCheckBox;
     StatesComboBox: TComboBox;
     StationsComboBox: TComboBox;
     StateGroupBox: TGroupBox;
@@ -42,8 +42,7 @@ type
   private
 
   public
-    State: string;
-    WeatherStationName: string;
+    Settings: TProgramSettings;
   end;
 
 var
@@ -77,14 +76,18 @@ end;
 
 procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
-  if State <> '' then begin
-    StatesComboBox.Text := State;
+  RunAtStartupCheckbox.Checked := Settings.RunAtStartup;
+  ShowChameleonRunningCheckbox.Checked := Settings.ShowChameleonIsRunning;
+  AlwaysShowWeatherCheckbox.Checked := Settings.AlwaysShowWeather;
+
+  if Settings.State <> '' then begin
+    StatesComboBox.Text := Settings.State;
   end;
 
   StatesComboBoxChange(Sender);
 
-  if WeatherStationName <> ''  then begin
-    StationsComboBox.Text := WeatherStationName;
+  if Settings.WeatherStationName <> ''  then begin
+    StationsComboBox.Text := Settings.WeatherStationName;
   end;
 end;
 

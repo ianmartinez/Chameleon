@@ -170,15 +170,14 @@ end;
 
 procedure TChameleonForm.SettingsButtonClick(Sender: TObject);
 begin
-  SettingsDialog.State := ProgramSettings.State;
-  SettingsDialog.WeatherStationName := ProgramSettings.WeatherStationName;
+  SettingsDialog.Settings := ProgramSettings;
 
   if SettingsDialog.ShowModal = mrOK then begin
     ProgramSettings.State := SettingsDialog.StatesComboBox.Text;
     ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
     ProgramSettings.RunAtStartup := SettingsDialog.RunAtStartupCheckbox.Checked;  
     ProgramSettings.ShowChameleonIsRunning := SettingsDialog.ShowChameleonRunningCheckbox.Checked;
-    ProgramSettings.AlwaysShowWeather := SettingsDialog.AlwaysShowWeather.Checked;
+    ProgramSettings.AlwaysShowWeather := SettingsDialog.AlwaysShowWeatherCheckbox.Checked;
 
     SaveSettings(ProgramSettings);
   end;

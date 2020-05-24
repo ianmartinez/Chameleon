@@ -4877,7 +4877,7 @@ object SettingsDialog: TSettingsDialog
       State = cbChecked
       TabOrder = 1
     end
-    object AlwaysShowWeather: TCheckBox
+    object AlwaysShowWeatherCheckbox: TCheckBox
       AnchorSideLeft.Control = ShowChameleonRunningCheckbox
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = RunGroupBox
