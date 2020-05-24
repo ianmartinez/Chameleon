@@ -5965,7 +5965,7 @@ object ChameleonForm: TChameleonForm
   object ChameleonTrayIcon: TTrayIcon
     BalloonFlags = bfInfo
     BalloonHint = 'Double click tray icon to restore.'
-    BalloonTitle = 'Chameleon Is Running'
+    BalloonTitle = 'Chameleon is running'
     Icon.Data = {
       BB7F02000000010008000000000001002000FD5B000086000000808000000100
       200028080100835C00006060000001002000A8940000AB640100404000000100

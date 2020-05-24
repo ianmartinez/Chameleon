@@ -65,10 +65,6 @@ begin
   WeatherStations := GetAllWeatherStations(StationsXML);
   WeatherStationXMLEdit.Caption := StationsXML;
 
-  RunAtStartupCheckbox.Checked := Settings.RunAtStartup; 
-  ShowChameleonRunningCheckbox.Checked := Settings.ShowChameleonIsRunning;
-  AlwaysShowWeatherCheckbox.Checked := Settings.AlwaysShowWeather;
-
   for StateAbbreviation in StateAbreviations do begin
     StatesComboBox.Items.Add(StateAbbreviation);
   end;
@@ -80,6 +76,10 @@ end;
 
 procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
+  RunAtStartupCheckbox.Checked := Settings.RunAtStartup;
+  ShowChameleonRunningCheckbox.Checked := Settings.ShowChameleonIsRunning;
+  AlwaysShowWeatherCheckbox.Checked := Settings.AlwaysShowWeather;
+
   if Settings.State <> '' then begin
     StatesComboBox.Text := Settings.State;
   end;

@@ -177,7 +177,7 @@ begin
     ProgramSettings.WeatherStationName := SettingsDialog.StationsComboBox.Text;
     ProgramSettings.RunAtStartup := SettingsDialog.RunAtStartupCheckbox.Checked;  
     ProgramSettings.ShowChameleonIsRunning := SettingsDialog.ShowChameleonRunningCheckbox.Checked;
-    ProgramSettings.AlwaysShowWeatherCheckbox.Checked := SettingsDialog.AlwaysShowWeather;
+    ProgramSettings.AlwaysShowWeather := SettingsDialog.AlwaysShowWeatherCheckbox.Checked;
 
     SaveSettings(ProgramSettings);
   end;
@@ -295,7 +295,10 @@ begin
   WallpaperTimer.Interval := LongWord(InveralSpinEdit.Value * 1000);
   WallpaperTimer.Enabled := true;
   WallpaperTimerTimer(Sender);
-  ChameleonTrayIcon.ShowBalloonHint;
+
+  if ProgramSettings.ShowChameleonIsRunning then begin
+    ChameleonTrayIcon.ShowBalloonHint;
+  end;
 
   // Hide taskbar icon
   ShowWindow(WidgetSet.AppHandle, SW_Hide);
