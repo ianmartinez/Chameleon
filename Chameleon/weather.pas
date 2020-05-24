@@ -63,7 +63,8 @@ interface
   function GetStationByName(AllStations: TWeatherStationArray; StationName: string) : TWeatherStation;
   function GetWeatherByStationName(WeatherStationName: string) : TWeatherData;
   function GetWeatherData(Station: TWeatherStation) : TWeatherData;
-  function PrintWeatherReport(Weather: TWeatherData) : string;
+  function PrintWeatherReport(Weather: TWeatherData) : string;   
+  function PrintMiniWeatherReport(Weather: TWeatherData) : string;
   function NormalizeWeatherCondition(WeatherCondition: string) : string;
   function CalcHeatIndex(Temperature: integer; Humidity: integer) : integer;
 
@@ -368,6 +369,27 @@ implementation
       Report.Add('Heat Index: ' + Weather.HeatIndex.ToString() + DegF);
       Report.Add('Wind Speed: ' + Weather.WindSpeed.ToString() + ' MPH');
       Report.Add('Wind Direction: ' + Weather.WindDirection);
+
+      Result := Report.Text;
+    finally
+      Report.Free;
+    end;
+  end;
+
+  (*
+    Print all of the weather data as a string.
+  *)
+  function PrintMiniWeatherReport(Weather: TWeatherData) : string;
+  var
+    Report: TStringList;
+  begin
+    Report := TStringList.Create;
+
+    try
+      Report.Add(Weather.Conditions);
+      Report.Add(Weather.Temperature.ToString() + DegF + ' (Feels Like ' + Weather.HeatIndex.ToString() + DegF + ')');
+      Report.Add(Weather.Humidity.ToString() + '% Humidity');
+      Report.Add(Weather.WindSpeed.ToString() + ' MPH Wind (' + Weather.WindDirection + ')');
 
       Result := Report.Text;
     finally

@@ -349,10 +349,11 @@ begin
     (* Set the tray icon hint to the report *)
     TrayReport := TStringList.Create;
     try
-      TrayReport.Add('Wallpaper: ' + GetCategoryTitle(ProgramSettings.Mode));
+      TrayReport.Add('Mode: ' + GetCategoryTitle(ProgramSettings.Mode));
 
       if not InvalidStation then begin
-        TrayReport.Add(PrintWeatherReport(Weather));
+        TrayReport.Add('');
+        TrayReport.Add(PrintMiniWeatherReport(Weather));
       end;
 
       ChameleonTrayIcon.Hint := TrayReport.Text;
