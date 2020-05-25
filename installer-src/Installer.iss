@@ -1,4 +1,4 @@
-; Installer for LangPad
+; Installer for Chameleon
 
 #define AppName "Chameleon"
  
