@@ -4910,14 +4910,14 @@ object SettingsDialog: TSettingsDialog
       Height = 521
       Top = 9
       Width = 760
-      ActivePage = LocationTab
+      ActivePage = WeatherStationXmlTab
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 9
       BorderSpacing.Top = 9
       BorderSpacing.Right = 9
       BorderSpacing.Bottom = 9
       ParentFont = False
-      TabIndex = 0
+      TabIndex = 1
       TabOrder = 0
       object LocationTab: TTabSheet
         Caption = 'Location'
@@ -5078,7 +5078,7 @@ object SettingsDialog: TSettingsDialog
       end
       object WeatherStationXmlTab: TTabSheet
         Caption = 'Weather Station XML'
-        ClientHeight = 445
+        ClientHeight = 483
         ClientWidth = 752
         ParentFont = False
         inline WeatherStationXMLEdit: TSynEdit
@@ -5089,7 +5089,7 @@ object SettingsDialog: TSettingsDialog
           AnchorSideBottom.Control = WeatherStationXmlTab
           AnchorSideBottom.Side = asrBottom
           Left = 0
-          Height = 445
+          Height = 483
           Top = 0
           Width = 752
           BlockIndent = 1
@@ -5104,7 +5104,7 @@ object SettingsDialog: TSettingsDialog
           TabOrder = 0
           BorderStyle = bsNone
           Gutter.Color = clMenu
-          Gutter.Width = 90
+          Gutter.Width = 48
           Gutter.MouseActions = <>
           RightGutter.Width = 0
           RightGutter.MouseActions = <>
@@ -5558,6 +5558,7 @@ object SettingsDialog: TSettingsDialog
           inline SynLeftGutterPartList1: TSynGutterPartList
             object SynGutterMarks1: TSynGutterMarks
               Width = 36
+              Visible = False
               MouseActions = <>
             end
             object SynGutterLineNumber1: TSynGutterLineNumber
@@ -5572,6 +5573,7 @@ object SettingsDialog: TSettingsDialog
             end
             object SynGutterChanges1: TSynGutterChanges
               Width = 6
+              Visible = False
               MouseActions = <>
               ModifiedColor = 59900
               SavedColor = clGreen
@@ -5596,7 +5598,7 @@ object SettingsDialog: TSettingsDialog
       end
       object WeatherDataXmlTab: TTabSheet
         Caption = 'Weather Data XML'
-        ClientHeight = 445
+        ClientHeight = 483
         ClientWidth = 752
         ParentFont = False
         inline WeatherDataXmlEdit: TSynEdit
@@ -5607,7 +5609,7 @@ object SettingsDialog: TSettingsDialog
           AnchorSideBottom.Control = WeatherStationXmlTab
           AnchorSideBottom.Side = asrBottom
           Left = 0
-          Height = 445
+          Height = 483
           Top = 0
           Width = 752
           BlockIndent = 1
@@ -5622,7 +5624,7 @@ object SettingsDialog: TSettingsDialog
           TabOrder = 0
           BorderStyle = bsNone
           Gutter.Color = clMenu
-          Gutter.Width = 90
+          Gutter.Width = 48
           Gutter.MouseActions = <>
           RightGutter.Width = 0
           RightGutter.MouseActions = <>
@@ -6076,6 +6078,7 @@ object SettingsDialog: TSettingsDialog
           inline SynLeftGutterPartList1: TSynGutterPartList
             object SynGutterMarks1: TSynGutterMarks
               Width = 36
+              Visible = False
               MouseActions = <>
             end
             object SynGutterLineNumber1: TSynGutterLineNumber
@@ -6090,6 +6093,7 @@ object SettingsDialog: TSettingsDialog
             end
             object SynGutterChanges1: TSynGutterChanges
               Width = 6
+              Visible = False
               MouseActions = <>
               ModifiedColor = 59900
               SavedColor = clGreen

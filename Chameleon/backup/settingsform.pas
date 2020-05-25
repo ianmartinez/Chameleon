@@ -77,7 +77,6 @@ procedure TSettingsDialog.FormShow(Sender: TObject);
 begin
   RunAtStartupCheckbox.Checked := ProgramSettings.RunAtStartup;
   ShowChameleonRunningCheckbox.Checked := ProgramSettings.ShowChameleonIsRunning;
-  AlwaysShowWeatherCheckbox.Checked := ProgramSettings.AlwaysShowWeather;
 
   if ProgramSettings.State <> '' then begin
     StatesComboBox.Text := ProgramSettings.State;
