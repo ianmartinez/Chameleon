@@ -376,31 +376,42 @@ begin
 end;
 
 procedure TChameleonForm.ChameleonTrayIconDblClick(Sender: TObject);
+var
+  NeedsCentering: boolean = False;
 begin
   Application.Restore;
 
-  // If the application is restoring from the
-  // first time after auto-starting, the size is
-  // all messed up, so this will force windows to
-  // resize it to a normal state
+  (* If the application is restoring from the
+     first time after auto-starting, the size is
+     all messed up, so this will force windows to
+     resize it to a normal state *)
   if ProgramSettings.AutoStartNeeded then begin
     WindowState := wsMaximized;
     WindowState := wsNormal;
     ProgramSettings.AutoStartNeeded := False;
+    NeedsCentering := True;
   end;
 
-  // Show taskbar icon
+  (* Show taskbar icon and restore the window *)
   ShowWindow(WidgetSet.AppHandle, SW_Show);
   Visible := True;
   WindowState := wsNormal;
   BringToFront();
   ChameleonTrayIcon.Hint := 'Chameleon';
+
+  (* The window location is all messed up if restoring after
+     auto starting, so manually center it *)
+  if NeedsCentering then begin
+    Left := (Screen.Width - Width) div 2;
+    Top := (Screen.Height - Height) div 2;
+  end;
 end;
 
 procedure TChameleonForm.RunAutomatically();
 begin          
   WindowState := wsMinimized;
   OKButtonClick(nil);
+  Hide();
   ProgramSettings.AutoStartNeeded := True;
 end;
 

@@ -21,7 +21,7 @@ begin
 
   (* Load the settings *)
   ProgramSettings := LoadSettings();
-  ProgramSettings.AutoStartNeeded := false;
+  ProgramSettings.AutoStartNeeded := False;
 
   (* Check for command line arguments *)
   if ParamCount > 0 then begin
@@ -35,6 +35,7 @@ begin
    else if ParamStr(1).Equals('-s') then begin
      if ProgramSettings.RunAtStartup then begin
         ProgramSettings.AutoStartNeeded := True;
+        Application.ShowMainForm := False;
      end else begin (* If not, just close *)
        ShouldLoad := False;
        Application.Terminate();

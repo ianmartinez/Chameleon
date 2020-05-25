@@ -5045,8 +5045,7 @@ object ChameleonForm: TChameleonForm
   OnClose = FormClose
   OnCreate = FormCreate
   OnWindowStateChange = FormWindowStateChange
-  Position = poScreenCenter
-  LCLVersion = '2.0.8.0'
+  Position = poDesktopCenter
   Visible = True
   object ChangeByGroup: TRadioGroup
     AnchorSideLeft.Control = Owner
