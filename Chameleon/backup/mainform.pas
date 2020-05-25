@@ -340,7 +340,7 @@ begin
         end;
       pmHeatIndex:
         begin
-          Data := ConvertPercentage(Weather.HeatIndex);
+          Data := ConvertTemperature(Weather.HeatIndex);
         end;
       else (* No or invalid mode *)
         Data := '';
@@ -398,9 +398,9 @@ begin
 end;
 
 procedure TChameleonForm.RunAutomatically();
-begin
-  OKButtonClick(nil);
+begin          
   WindowState := wsMinimized;
+  OKButtonClick(nil);
   ProgramSettings.AutoStartNeeded := True;
 end;
 

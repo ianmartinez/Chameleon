@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="11"/>
-    <BuildModes Count="2" Active="Release">
+    <BuildModes Count="2" Active="Default">
       <Item1 Name="Debug">
         <CompilerOptions>
           <Version Value="11"/>
@@ -73,8 +73,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="307"/>
-        <CursorPos X="37" Y="343"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="366"/>
+        <CursorPos X="43" Y="404"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -144,7 +145,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="10"/>
         <TopLine Value="59"/>
         <CursorPos Y="88"/>
@@ -399,7 +399,7 @@
         <Loaded Value="True"/>
       </Unit38>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="mainform.pas"/>
         <Caret Line="323" Column="19" TopLine="308"/>
@@ -504,6 +504,10 @@
         <Filename Value="weather.pas"/>
         <Caret Line="391" Column="60" TopLine="358"/>
       </Position26>
+      <Position27>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="404" Column="34" TopLine="365"/>
+      </Position27>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="11"/>
-    <BuildModes Count="2" Active="Debug">
+    <BuildModes Count="2" Active="Release">
       <Item1 Name="Debug">
         <CompilerOptions>
           <Version Value="11"/>
@@ -73,8 +73,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="307"/>
-        <CursorPos X="37" Y="343"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="366"/>
+        <CursorPos X="43" Y="404"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -144,7 +145,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="10"/>
         <TopLine Value="59"/>
         <CursorPos Y="88"/>
@@ -221,7 +221,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="5392"/>
         <CursorPos Y="5412"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit16>
       <Unit17>
@@ -276,7 +276,7 @@
         <EditorIndex Value="15"/>
         <TopLine Value="288"/>
         <CursorPos X="26" Y="295"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit23>
       <Unit24>
@@ -291,7 +291,7 @@
         <EditorIndex Value="14"/>
         <TopLine Value="18"/>
         <CursorPos X="78" Y="36"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit25>
       <Unit26>
@@ -325,7 +325,7 @@
         <EditorIndex Value="9"/>
         <TopLine Value="1406"/>
         <CursorPos X="11" Y="1431"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit29>
       <Unit30>
@@ -333,7 +333,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="99"/>
         <CursorPos X="15" Y="120"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit30>
       <Unit31>
@@ -363,7 +363,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="2407"/>
         <CursorPos Y="2428"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit34>
       <Unit35>
@@ -371,7 +371,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="1561"/>
         <CursorPos Y="1583"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit35>
       <Unit36>
@@ -379,7 +379,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="880"/>
         <CursorPos Y="903"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit36>
       <Unit37>
@@ -395,11 +395,11 @@
         <EditorIndex Value="1"/>
         <TopLine Value="1376"/>
         <CursorPos X="27" Y="1382"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="13"/>
         <Loaded Value="True"/>
       </Unit38>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="mainform.pas"/>
         <Caret Line="323" Column="19" TopLine="308"/>
@@ -504,6 +504,10 @@
         <Filename Value="weather.pas"/>
         <Caret Line="391" Column="60" TopLine="358"/>
       </Position26>
+      <Position27>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="404" Column="34" TopLine="365"/>
+      </Position27>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

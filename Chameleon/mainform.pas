@@ -398,10 +398,10 @@ begin
 end;
 
 procedure TChameleonForm.RunAutomatically();
-begin
-  OKButtonClick(nil);
+begin          
   WindowState := wsMinimized;
-  ProgramSettings.AutoStartNeeded := True;
+  OKButtonClick(nil);
+  ProgramSettings.AutoStartNeeded := False;
 end;
 
 end.

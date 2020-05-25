@@ -28,11 +28,15 @@ WelcomeLabel2=Change your wallpaper with the weather, battery level, or time of 
 
 ; Files to copy into program files
 [Files]                              
-Source: "{#AppLocation}"; DestDir: "{app}";      
+Source: "{#AppLocation}"; DestDir: "{app}"; DestName: "{#AppName}.exe";      
 
 ; Add to start menu
 [Icons]
 Name: "{autoprograms}\{#AppName}"; Filename: "{app}\{#AppName}.exe"   
+
+; Run at startup
+[Registry]
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "Chameleon"; ValueData: "{app}\{#AppName}.exe -s";
 
 ; Allow the user to run the program after setup is complete
 [Run]
