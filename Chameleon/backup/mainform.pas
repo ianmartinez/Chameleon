@@ -352,6 +352,7 @@ begin
       TrayReport.Add('Mode: ' + GetCategoryTitle(ProgramSettings.Mode));
 
       if not InvalidStation then begin
+        TrayReport.Add('');
         TrayReport.Add(PrintMiniWeatherReport(Weather));
       end;
 

@@ -340,7 +340,7 @@ begin
         end;
       pmHeatIndex:
         begin
-          Data := ConvertPercentage(Weather.HeatIndex);
+          Data := ConvertTemperature(Weather.HeatIndex);
         end;
       else (* No or invalid mode *)
         Data := '';
