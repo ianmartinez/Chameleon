@@ -186,10 +186,10 @@ begin
      (* Auto start if enabled *)
      if ProgramSettings.AutoStartNeeded then begin
        RunAutomatically();
+     end else begin
+       WindowState := wsNormal;
+       BringToFront();
      end;
-
-     WindowState := wsNormal;
-     BringToFront();
    end;
 
    FirstShow := False;
@@ -401,7 +401,7 @@ procedure TChameleonForm.RunAutomatically();
 begin          
   WindowState := wsMinimized;
   OKButtonClick(nil);
-  ProgramSettings.AutoStartNeeded := False;
+  ProgramSettings.AutoStartNeeded := True;
 end;
 
 end.

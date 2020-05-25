@@ -30,9 +30,16 @@
       <DestinationDirectory Value="C:\Users\ianma\Desktop\test"/>
     </PublishOptions>
     <RunParams>
+      <local>
+        <CommandLineParams Value="-s"/>
+      </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
-        <Mode0 Name="default"/>
+        <Mode0 Name="default">
+          <local>
+            <CommandLineParams Value="-s"/>
+          </local>
+        </Mode0>
       </Modes>
     </RunParams>
     <RequiredPackages Count="4">

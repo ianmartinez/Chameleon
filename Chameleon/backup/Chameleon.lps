@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="11"/>
-    <BuildModes Count="2" Active="Release">
+    <BuildModes Count="2" Active="Default">
       <Item1 Name="Debug">
         <CompilerOptions>
           <Version Value="11"/>
@@ -75,7 +75,7 @@
         <UnitName Value="MainForm"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="366"/>
-        <CursorPos X="43" Y="404"/>
+        <CursorPos Y="402"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -515,6 +515,22 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform.pas"/>
+        <Line Value="380"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform.pas"/>
+        <Line Value="402"/>
+      </Item2>
+    </BreakPoints>
     <Watches Count="7">
       <Item1>
         <Expression Value="Station.XMLUrl"/>
