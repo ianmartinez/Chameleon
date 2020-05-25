@@ -2,7 +2,7 @@
 # Chameleon
 Dynamically change your desktop wallpaper based on the current battery, time of day, weather conditions, wind speed, temperature, humidity, or heat index. 
 
-![Windows 10 Screenshot](https://github.com/ianmartinez/Chameleon/raw/master/Screenshots/Windows%2010.jpg)       
+![Windows 10 Screenshot](https://github.com/ianmartinez/Chameleon/raw/master/Screenshots/Screenshot.jpg)       
    
 ## Download
 ##### [Chameleon latest release](https://github.com/ianmartinez/Chameleon/raw/master/Release/Chameleon.exe)
@@ -23,5 +23,3 @@ Chameleon is fairly light on resources while it's running. The minimum requireme
 ![Tray Icon](https://github.com/ianmartinez/Chameleon/raw/master/Screenshots/Tray.jpg)
 
 - The release comes with a 4K default wallpaper for each setting. Because there are so many images, it might take about 1 minute on the first startup for the program to generate all of the thumbnails for the 100+ images in the Wallpapers folder. This will not be an issue on subsequent start ups.
-
-

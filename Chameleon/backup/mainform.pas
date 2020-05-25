@@ -392,7 +392,7 @@ begin
     NeedsCentering := True;
   end;
 
-  (* Show taskbar icon and the window *)
+  (* Show taskbar icon and restore the window *)
   ShowWindow(WidgetSet.AppHandle, SW_Show);
   Visible := True;
   WindowState := wsNormal;
