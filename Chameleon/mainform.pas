@@ -115,37 +115,37 @@ begin
   InveralSpinEdit.Value := ProgramSettings.Interval;
 
   // Battery percentage
-  for i:= high(PercentageModes) downto low(PercentageModes) do begin
+  for i := high(PercentageModes) downto low(PercentageModes) do begin
     CreateImageButtonFrame('Battery', PercentageModes[i], PercentageModes[i], BatteryBox);
   end;
 
   // Time of day
-  for i:= high(TimeModes) downto low(TimeModes) do begin
+  for i := high(TimeModes) downto low(TimeModes) do begin
     CreateImageButtonFrame('Time', TimeModes[i], TimeModes[i], TimeBox);
   end;
 
   // Weather Conditions
-  for i:= high(WeatherConditions) downto low(WeatherConditions) do begin
+  for i := high(WeatherConditions) downto low(WeatherConditions) do begin
     CreateImageButtonFrame('Weather Conditions', WeatherConditions[i], WeatherConditions[i], ConditionsBox);
   end;
 
   // Wind speed
-  for i:= high(WindSpeedModes) downto low(WindSpeedModes) do begin
+  for i := high(WindSpeedModes) downto low(WindSpeedModes) do begin
     CreateImageButtonFrame('WindSpeed', WindSpeedModes[i], WindSpeedModes[i], WindSpeedBox);
   end;
 
   // Temperature
-  for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
+  for i := high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame('Temperature', TemperatureModes[i], TemperatureModes[i], TemperatureBox);
   end;
 
   // Humidity
-  for i:= high(PercentageModes) downto low(PercentageModes) do begin
+  for i := high(PercentageModes) downto low(PercentageModes) do begin
     CreateImageButtonFrame('Humidity', PercentageModes[i], PercentageModes[i], HumidityBox);
   end;
 
   // Heat Index
-  for i:= high(TemperatureModes) downto low(TemperatureModes) do begin
+  for i := high(TemperatureModes) downto low(TemperatureModes) do begin
     CreateImageButtonFrame('Heat Index', TemperatureModes[i], TemperatureModes[i], HeatIndexBox);
   end;
 
@@ -203,7 +203,7 @@ end;
 function TChameleonForm.CreateImageButtonFrame(ImageCategory: string;
   ImageKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
 var
-  ImageButtonFrame : TImageButtonFrame;
+  ImageButtonFrame: TImageButtonFrame;
   ImagePath: string;
   SafeCategory: string;
   SafeKey: string;
@@ -217,7 +217,7 @@ begin
     Name := SafeCategory + SafeKey + 'Button';
     Align := alLeft;
     AutoSize := True;
-    FullName := ImageKey + ' (' +  ImageCategory + ')';
+    FullName := ImageKey + ' (' + ImageCategory + ')';
     SettingKey := SafeKey;
     SettingCategory := SafeCategory;
     Title := ImageTitle;
@@ -309,6 +309,7 @@ begin
   CategoryName := GetCategoryName(ProgramSettings.Mode);
   (* Get weather *)
   InvalidStation := ProgramSettings.WeatherStationName.Equals('');
+
   if not InvalidStation then begin
     Weather := GetWeatherByStationName(ProgramSettings.WeatherStationName);
   end;

@@ -53,7 +53,8 @@ interface
   function LoadSettings() : TProgramSettings;
   procedure SaveSettings(ProgramSettings: TProgramSettings);
 
-  function GetCategoryName(const m: TProgramMode) : string;
+  function GetCategoryName(const m: TProgramMode) : string; 
+  function GetCategoryTitle(const m: TProgramMode) : string;
 
   function ConvertPercentage(const n: integer) : string;
   function ConvertSpeed(d: double) : string;

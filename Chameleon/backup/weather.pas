@@ -387,9 +387,9 @@ implementation
 
     try
       Report.Add(Weather.Conditions);
-      Report.Add(Weather.Temperature.ToString() + DegF + ' (feels like ' + Weather.HeatIndex.ToString() + DegF + ')');
-      Report.Add(Weather.Humidity.ToString() + '% humidity');
-      Report.Add(Weather.WindSpeed.ToString() + ' MPH wind (' + Weather.WindDirection + ')');
+      Report.Add(Weather.Temperature.ToString() + DegF + ' (Feels Like ' + Weather.HeatIndex.ToString() + DegF + ')');
+      Report.Add(Weather.Humidity.ToString() + '% Humidity');
+      Report.Add(Weather.WindSpeed.ToString() + ' MPH Wind (' + Weather.WindDirection + ')');
 
       Result := Report.Text;
     finally

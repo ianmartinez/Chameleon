@@ -5046,6 +5046,7 @@ object ChameleonForm: TChameleonForm
   OnCreate = FormCreate
   OnWindowStateChange = FormWindowStateChange
   Position = poDesktopCenter
+  LCLVersion = '2.0.8.0'
   Visible = True
   object ChangeByGroup: TRadioGroup
     AnchorSideLeft.Control = Owner
@@ -5055,7 +5056,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     Left = 12
     Height = 158
-    Top = 184
+    Top = 168
     Width = 836
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
@@ -5169,7 +5170,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     Left = 12
     Height = 91
-    Top = 354
+    Top = 338
     Width = 836
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
@@ -5249,8 +5250,8 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = ButtonsPanel
     Left = 12
-    Height = 476
-    Top = 457
+    Height = 492
+    Top = 441
     Width = 836
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 12
@@ -5258,7 +5259,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 12
     BorderSpacing.Bottom = 12
     Caption = 'Wallpapers:'
-    ClientHeight = 446
+    ClientHeight = 462
     ClientWidth = 832
     ParentFont = False
     TabOrder = 3
@@ -5271,7 +5272,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = WallpapersGroupBox
       AnchorSideBottom.Side = asrBottom
       Left = 12
-      Height = 422
+      Height = 438
       Top = 12
       Width = 808
       ActivePage = BatteryTab
@@ -5285,7 +5286,7 @@ object ChameleonForm: TChameleonForm
       TabOrder = 0
       object BatteryTab: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 384
+        ClientHeight = 400
         ClientWidth = 800
         ParentFont = False
         object BatteryBox: TScrollBox
@@ -5296,7 +5297,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 2
-          Height = 382
+          Height = 398
           Top = 0
           Width = 796
           HorzScrollBar.Increment = 1
@@ -5533,7 +5534,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 12
-    Height = 148
+    Height = 132
     Top = 12
     Width = 836
     Anchors = [akTop, akLeft, akRight]
@@ -5545,7 +5546,7 @@ object ChameleonForm: TChameleonForm
     BevelColor = 13158600
     BevelInner = bvSpace
     BevelOuter = bvSpace
-    ClientHeight = 148
+    ClientHeight = 132
     ClientWidth = 836
     Color = 14474460
     ParentColor = False
@@ -5558,13 +5559,13 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Side = asrBottom
       Left = 14
       Height = 96
-      Top = 26
+      Top = 18
       Width = 96
       Anchors = [akTop, akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 12
-      BorderSpacing.Top = 24
-      BorderSpacing.Bottom = 24
+      BorderSpacing.Top = 16
+      BorderSpacing.Bottom = 16
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963291D000089504E47
         0D0A1A0A0000000D4948445200000060000000600806000000E2987738000000
@@ -5811,14 +5812,14 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = PatreonImage
       Left = 734
       Height = 38
-      Top = 26
+      Top = 18
       Width = 88
       Anchors = [akTop, akRight]
       AutoSize = True
       BorderSpacing.Left = 12
-      BorderSpacing.Top = 24
+      BorderSpacing.Top = 16
       BorderSpacing.Right = 12
-      BorderSpacing.Bottom = 24
+      BorderSpacing.Bottom = 16
       Caption = 'About...'
       Constraints.MinHeight = 38
       OnClick = AboutButtonClick
@@ -5832,14 +5833,14 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = PatreonImage
       Left = 620
       Height = 38
-      Top = 26
+      Top = 18
       Width = 102
       Anchors = [akTop, akRight]
       AutoSize = True
       BorderSpacing.Left = 12
-      BorderSpacing.Top = 24
+      BorderSpacing.Top = 16
       BorderSpacing.Right = 12
-      BorderSpacing.Bottom = 24
+      BorderSpacing.Bottom = 16
       Caption = 'Settings...'
       Constraints.MinHeight = 38
       OnClick = SettingsButtonClick
@@ -5854,7 +5855,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Side = asrCenter
       Left = 122
       Height = 85
-      Top = 32
+      Top = 24
       Width = 200
       AutoSize = True
       BorderSpacing.Left = 12
@@ -5901,7 +5902,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideRight.Control = PatreonLinkLabel
       Left = 618
       Height = 24
-      Top = 97
+      Top = 89
       Width = 24
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -5944,7 +5945,7 @@ object ChameleonForm: TChameleonForm
       Cursor = crHandPoint
       Left = 654
       Height = 25
-      Top = 97
+      Top = 89
       Width = 168
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 12

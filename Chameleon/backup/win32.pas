@@ -10,6 +10,6 @@ implementation
 
   procedure SetWallpaper(WallpaperPath: string);
   begin
-    SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, PWideString(WallpaperPath), SPIF_SENDCHANGE);
+    SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, StringToOleStr(WallpaperPath), SPIF_SENDCHANGE);
   end;
 end.

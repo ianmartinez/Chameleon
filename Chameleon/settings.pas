@@ -39,8 +39,7 @@ interface
       ('<= -50°F', '-49 to -40°F', '-39 to -30°F', '-29 to -20°F', '-19 to -10°F', '-9 to -1°F', '0°F','1 to 9°F','10 to 19°F','20 to 29°F','30 to 39°F',
       '40 to 49°F', '50 to 59°F', '60 to 69°F', '70 to 79°F', '80 to 89°F', '90 to 99°F', '100 to 109°F', '110 to 119°F', '120 to 129°F', '>= 130°F');
 
-
-  var ProgramSettings : TProgramSettings;
+  var ProgramSettings: TProgramSettings;
 
   function WriteSafeString(UnsafeString: string) : string;
   function GetAppLocation() : string;               
@@ -377,4 +376,5 @@ implementation
     DefaultFormatSettings.TimePMString := 'PM';
     Result := formatdatetime('h ampm', Now);
   end;
+
 end.

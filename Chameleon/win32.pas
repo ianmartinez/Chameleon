@@ -12,4 +12,5 @@ implementation
   begin
     SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, StringToOleStr(WallpaperPath), SPIF_SENDCHANGE);
   end;
+
 end.

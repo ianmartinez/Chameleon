@@ -21,8 +21,8 @@ type
   private
 
   public   
-    SettingCategory : string;
-    SettingKey : string;
+    SettingCategory: string;
+    SettingKey: string;
     FullName: string;
     Thumb: TPicture;
     OverwriteImage: Boolean;
@@ -30,7 +30,7 @@ type
     procedure SetTitle(Value: string);
     procedure LoadThumb();
     procedure SaveThumb(SourceImage: string);
-    property Title : string read GetTitle write SetTitle;
+    property Title: string read GetTitle write SetTitle;
   end;
 
 implementation
@@ -40,7 +40,7 @@ implementation
 
 procedure TImageButtonFrame.ChangeImageButtonClick(Sender: TObject);
 begin
-  OpenPictureDialog.Title := 'Change Wallpaper for ' + ImageTitleLabel.Caption;
+  OpenPictureDialog.Title := 'Change Wallpaper for "' + FullName + '"';
   if OpenPictureDialog.Execute then
     if FileExists(OpenPictureDialog.FileName) then begin
       OverwriteImage := true;
@@ -62,31 +62,31 @@ end;
 
 procedure ResizeBitmap(Bitmap: TBitmap; NewHeight: integer);
 var
-  buffer: TBitmap;
+  Buffer: TBitmap;
   NewWidth: integer;
 begin
-  buffer := TBitmap.Create;
+  Buffer := TBitmap.Create;
   try
     NewWidth := Round((NewHeight * Bitmap.Width) / Bitmap.Height);
-    buffer.SetSize(NewWidth, NewHeight);
-    buffer.Canvas.StretchDraw(Rect(0, 0, NewWidth, NewHeight), Bitmap);
+    Buffer.SetSize(NewWidth, NewHeight);
+    Buffer.Canvas.StretchDraw(Rect(0, 0, NewWidth, NewHeight), Bitmap);
     Bitmap.SetSize(NewWidth, NewHeight);
-    Bitmap.Canvas.Draw(0, 0, buffer);
+    Bitmap.Canvas.Draw(0, 0, Buffer);
   finally
-    buffer.Free;
+    Buffer.Free;
   end;
 end;
 
 procedure TImageButtonFrame.SaveThumb(SourceImage: string);
 var
   Picture: TPicture;
-  ThumbPath: string;  
+  ThumbPath: string;
   ImagePath: string;
   ThumbDir: string;
   ImageDir: string;
 begin   
-  ThumbPath :=  GetThumbPath(SettingKey, SettingCategory);  
-  ImagePath :=  GetImagePath(SettingKey, SettingCategory);
+  ThumbPath := GetThumbPath(SettingKey, SettingCategory);
+  ImagePath := GetImagePath(SettingKey, SettingCategory);
 
   if fileexists(SourceImage) then begin
     try
@@ -129,8 +129,8 @@ var
   ThumbPath: string;
   ImagePath: string;
 begin
-  ThumbPath :=  GetThumbPath(SettingKey, SettingCategory);
-  ImagePath :=  GetImagePath(SettingKey, SettingCategory);
+  ThumbPath := GetThumbPath(SettingKey, SettingCategory);
+  ImagePath := GetImagePath(SettingKey, SettingCategory);
 
   if not fileexists(ThumbPath) then begin
     SaveThumb(ImagePath);
@@ -139,5 +139,6 @@ begin
     PreviewImage.Picture.LoadFromFile(ThumbPath);
   end;
 end;
+
 end.
 

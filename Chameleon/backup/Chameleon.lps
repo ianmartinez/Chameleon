@@ -60,7 +60,7 @@
       <Unit0>
         <Filename Value="Chameleon.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="12"/>
         <TopLine Value="12"/>
         <CursorPos X="39" Y="24"/>
         <UsageCount Value="200"/>
@@ -73,9 +73,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="367"/>
-        <CursorPos X="34" Y="390"/>
+        <TopLine Value="378"/>
+        <CursorPos X="3" Y="312"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -87,18 +86,20 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
-        <EditorIndex Value="13"/>
-        <TopLine Value="28"/>
-        <CursorPos X="71" Y="43"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="102"/>
+        <CursorPos X="5" Y="143"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
         <EditorIndex Value="7"/>
-        <CursorPos X="7" Y="21"/>
+        <TopLine Value="338"/>
+        <CursorPos X="3" Y="379"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -109,8 +110,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
-        <EditorIndex Value="12"/>
-        <TopLine Value="28"/>
+        <EditorIndex Value="13"/>
         <CursorPos X="58" Y="56"/>
         <UsageCount Value="207"/>
         <Loaded Value="True"/>
@@ -120,18 +120,18 @@
         <Filename Value="versionsupport.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="VersionSupport"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="203"/>
+        <EditorIndex Value="14"/>
         <CursorPos X="10" Y="50"/>
         <UsageCount Value="204"/>
+        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="weather.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Weather"/>
         <EditorIndex Value="8"/>
-        <TopLine Value="366"/>
-        <CursorPos X="62" Y="367"/>
+        <TopLine Value="402"/>
+        <CursorPos X="49" Y="486"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -143,7 +143,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
         <EditorIndex Value="10"/>
-        <TopLine Value="59"/>
+        <TopLine Value="5"/>
         <CursorPos Y="88"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -153,9 +153,11 @@
         <Filename Value="win32.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Win32"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="13" Y="5"/>
-        <UsageCount Value="75"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="11"/>
+        <CursorPos X="3" Y="15"/>
+        <UsageCount Value="76"/>
+        <Loaded Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="progressform.pas"/>
@@ -422,7 +424,7 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="27" HistoryIndex="26">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
         <Caret Line="2470" TopLine="2451"/>
@@ -531,6 +533,10 @@
         <Filename Value="mainform.pas"/>
         <Caret Line="390" Column="34" TopLine="367"/>
       </Position27>
+      <Position28>
+        <Filename Value="imagebutton.pas"/>
+        <Caret Line="65" Column="9" TopLine="44"/>
+      </Position28>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

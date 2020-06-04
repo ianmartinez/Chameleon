@@ -75,9 +75,9 @@ implementation
   procedure SplitString(Delimiter: Char; Str: string; ListOfStrings: TStrings);
   begin
     ListOfStrings.Clear;
-    ListOfStrings.Delimiter       := Delimiter;
+    ListOfStrings.Delimiter := Delimiter;
     ListOfStrings.StrictDelimiter := True;
-    ListOfStrings.DelimitedText   := Str;
+    ListOfStrings.DelimitedText := Str;
   end;
 
   (*
@@ -497,7 +497,7 @@ implementation
     end
     else begin
       // This is the less accurate, but works with values outside of the above range
-      Result := Round((t + (0.5 * (t + 61.0 + ((t-68.0)*1.2) + (r*0.094))))/2);
+      Result := Round((t + (0.5 * (t + 61.0 + ((t-68.0) * 1.2) + (r * 0.094)))) / 2);
     end;
   end;
 end.
