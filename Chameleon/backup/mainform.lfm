@@ -1,11 +1,11 @@
 object ChameleonForm: TChameleonForm
   Left = 1203
-  Height = 925
-  Top = 343
+  Height = 1003
+  Top = 265
   Width = 860
   ActiveControl = NoneRadioButton
   Caption = 'Chameleon'
-  ClientHeight = 925
+  ClientHeight = 1003
   ClientWidth = 860
   Constraints.MinHeight = 150
   Constraints.MinWidth = 825
@@ -5250,7 +5250,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = ButtonsPanel
     Left = 12
-    Height = 417
+    Height = 495
     Top = 441
     Width = 836
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -5259,7 +5259,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 12
     BorderSpacing.Bottom = 12
     Caption = 'Wallpapers:'
-    ClientHeight = 387
+    ClientHeight = 465
     ClientWidth = 832
     ParentFont = False
     TabOrder = 3
@@ -5272,7 +5272,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = WallpapersGroupBox
       AnchorSideBottom.Side = asrBottom
       Left = 12
-      Height = 363
+      Height = 441
       Top = 12
       Width = 808
       ActivePage = BatteryTab
@@ -5286,7 +5286,7 @@ object ChameleonForm: TChameleonForm
       TabOrder = 0
       object BatteryTab: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 325
+        ClientHeight = 403
         ClientWidth = 800
         ParentFont = False
         object BatteryBox: TScrollBox
@@ -5297,7 +5297,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 2
-          Height = 323
+          Height = 401
           Top = 0
           Width = 796
           HorzScrollBar.Increment = 1
@@ -5511,7 +5511,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideBottom.Side = asrBottom
     Left = 9
     Height = 43
-    Top = 873
+    Top = 951
     Width = 842
     BorderSpacing.Top = 6
     BorderSpacing.Around = 9

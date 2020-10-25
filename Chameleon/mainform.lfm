@@ -1,7 +1,7 @@
 object ChameleonForm: TChameleonForm
-  Left = 1203
+  Left = 1391
   Height = 1003
-  Top = 265
+  Top = 247
   Width = 860
   ActiveControl = NoneRadioButton
   Caption = 'Chameleon'

@@ -20,6 +20,7 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <MajorVersionNr Value="2"/>
+      <MinorVersionNr Value="1"/>
       <StringTable CompanyName="Ian Martinez" ProductName="Chameleon"/>
     </VersionInfo>
     <BuildModes Count="1">

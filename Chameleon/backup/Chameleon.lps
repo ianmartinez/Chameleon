@@ -85,8 +85,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="ImageButton"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="97"/>
         <CursorPos X="23" Y="129"/>
         <UsageCount Value="200"/>
@@ -97,10 +96,11 @@
         <Filename Value="settings.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Settings"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="338"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="308"/>
         <CursorPos X="3" Y="379"/>
         <UsageCount Value="209"/>
+        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="aboutform.pas"/>
@@ -109,15 +109,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutForm"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="58" Y="56"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="26" Y="4"/>
         <UsageCount Value="207"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="versionsupport.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="VersionSupport"/>
         <EditorIndex Value="-1"/>
+        <TopLine Value="199"/>
         <CursorPos X="10" Y="50"/>
         <UsageCount Value="204"/>
       </Unit5>
@@ -137,10 +141,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SettingsForm"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="5"/>
-        <CursorPos Y="88"/>
+        <CursorPos X="14" Y="31"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="win32.pas"/>
@@ -148,7 +153,7 @@
         <UnitName Value="Win32"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="66" Y="13"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="77"/>
       </Unit8>
       <Unit9>
         <Filename Value="progressform.pas"/>
