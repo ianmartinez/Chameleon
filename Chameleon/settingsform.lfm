@@ -1,9 +1,10 @@
 object SettingsDialog: TSettingsDialog
-  Left = 0
+  Left = 1116
   Height = 725
-  Top = 0
+  Top = 353
   Width = 800
   ActiveControl = MainTabControl
+  BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Settings'
   ClientHeight = 725
   ClientWidth = 800
@@ -4810,6 +4811,7 @@ object SettingsDialog: TSettingsDialog
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poOwnerFormCenter
+  LCLVersion = '2.0.10.0'
   object ButtonsPanel: TButtonPanel
     Left = 9
     Height = 43
@@ -6130,7 +6132,7 @@ object SettingsDialog: TSettingsDialog
     DocTypeAttri.Foreground = clOlive
     SymbolAttri.Foreground = clNavy
     WantBracesParsed = False
-    left = 80
-    top = 632
+    Left = 80
+    Top = 632
   end
 end

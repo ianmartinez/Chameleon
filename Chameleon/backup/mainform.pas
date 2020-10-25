@@ -203,7 +203,7 @@ end;
 function TChameleonForm.CreateImageButtonFrame(ImageCategory: string;
   ImageKey: string; ImageTitle: string; ControlOwner: TWinControl) : TImageButtonFrame;
 var
-  ImageButtonFrame : TImageButtonFrame;
+  ImageButtonFrame: TImageButtonFrame;
   ImagePath: string;
   SafeCategory: string;
   SafeKey: string;
@@ -309,6 +309,7 @@ begin
   CategoryName := GetCategoryName(ProgramSettings.Mode);
   (* Get weather *)
   InvalidStation := ProgramSettings.WeatherStationName.Equals('');
+
   if not InvalidStation then begin
     Weather := GetWeatherByStationName(ProgramSettings.WeatherStationName);
   end;

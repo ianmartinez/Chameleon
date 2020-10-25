@@ -1,11 +1,11 @@
 object ChameleonForm: TChameleonForm
-  Left = 0
-  Height = 1000
-  Top = 0
+  Left = 1203
+  Height = 925
+  Top = 343
   Width = 860
   ActiveControl = NoneRadioButton
   Caption = 'Chameleon'
-  ClientHeight = 1000
+  ClientHeight = 925
   ClientWidth = 860
   Constraints.MinHeight = 150
   Constraints.MinWidth = 825
@@ -5046,7 +5046,7 @@ object ChameleonForm: TChameleonForm
   OnCreate = FormCreate
   OnWindowStateChange = FormWindowStateChange
   Position = poDesktopCenter
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.0.10.0'
   Visible = True
   object ChangeByGroup: TRadioGroup
     AnchorSideLeft.Control = Owner
@@ -5250,7 +5250,7 @@ object ChameleonForm: TChameleonForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = ButtonsPanel
     Left = 12
-    Height = 492
+    Height = 417
     Top = 441
     Width = 836
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -5259,7 +5259,7 @@ object ChameleonForm: TChameleonForm
     BorderSpacing.Right = 12
     BorderSpacing.Bottom = 12
     Caption = 'Wallpapers:'
-    ClientHeight = 462
+    ClientHeight = 387
     ClientWidth = 832
     ParentFont = False
     TabOrder = 3
@@ -5272,7 +5272,7 @@ object ChameleonForm: TChameleonForm
       AnchorSideBottom.Control = WallpapersGroupBox
       AnchorSideBottom.Side = asrBottom
       Left = 12
-      Height = 438
+      Height = 363
       Top = 12
       Width = 808
       ActivePage = BatteryTab
@@ -5286,7 +5286,7 @@ object ChameleonForm: TChameleonForm
       TabOrder = 0
       object BatteryTab: TTabSheet
         Caption = 'Battery'
-        ClientHeight = 400
+        ClientHeight = 325
         ClientWidth = 800
         ParentFont = False
         object BatteryBox: TScrollBox
@@ -5297,7 +5297,7 @@ object ChameleonForm: TChameleonForm
           AnchorSideBottom.Control = BatteryTab
           AnchorSideBottom.Side = asrBottom
           Left = 2
-          Height = 398
+          Height = 323
           Top = 0
           Width = 796
           HorzScrollBar.Increment = 1
@@ -5511,13 +5511,12 @@ object ChameleonForm: TChameleonForm
     AnchorSideBottom.Side = asrBottom
     Left = 9
     Height = 43
-    Top = 948
+    Top = 873
     Width = 842
     BorderSpacing.Top = 6
     BorderSpacing.Around = 9
     OKButton.Name = 'OKButton'
     OKButton.Caption = '&Run'
-    OKButton.DefaultCaption = False
     OKButton.OnClick = OKButtonClick
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
@@ -5960,8 +5959,8 @@ object ChameleonForm: TChameleonForm
   object WallpaperTimer: TTimer
     Enabled = False
     OnTimer = WallpaperTimerTimer
-    left = 540
-    top = 72
+    Left = 540
+    Top = 72
   end
   object ChameleonTrayIcon: TTrayIcon
     BalloonFlags = bfInfo
@@ -11090,8 +11089,8 @@ object ChameleonForm: TChameleonForm
     Hint = 'Chameleon'
     Visible = True
     OnDblClick = ChameleonTrayIconDblClick
-    left = 456
-    top = 72
+    Left = 456
+    Top = 72
   end
   object ChameleonLogger: TEventLog
     AppendContent = True
@@ -11102,7 +11101,7 @@ object ChameleonForm: TChameleonForm
     CustomLogType = 0
     EventIDOffset = 0
     Paused = False
-    left = 372
-    top = 72
+    Left = 372
+    Top = 72
   end
 end

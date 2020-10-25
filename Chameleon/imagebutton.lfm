@@ -13,8 +13,8 @@ object ImageButtonFrame: TImageButtonFrame
   ParentColor = False
   ParentFont = False
   TabOrder = 0
-  DesignLeft = -2
-  DesignTop = -2
+  DesignLeft = 1082
+  DesignTop = 622
   object MainPanel: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -31,7 +31,7 @@ object ImageButtonFrame: TImageButtonFrame
     BorderSpacing.Top = 4
     BorderSpacing.Right = 4
     BorderSpacing.Bottom = 4
-    BevelInner = bvLowered
+    BevelOuter = bvNone
     ClientHeight = 367
     ClientWidth = 517
     Color = clNone
@@ -44,10 +44,10 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = MainPanel
       AnchorSideBottom.Side = asrBottom
-      Left = 8
+      Left = 6
       Height = 35
-      Top = 324
-      Width = 501
+      Top = 326
+      Width = 505
       Anchors = [akLeft, akRight, akBottom]
       AutoSize = True
       BorderSpacing.Left = 6
@@ -63,10 +63,10 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideTop.Control = MainPanel
       AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
-      Left = 8
+      Left = 6
       Height = 25
-      Top = 14
-      Width = 501
+      Top = 12
+      Width = 505
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
@@ -85,10 +85,10 @@ object ImageButtonFrame: TImageButtonFrame
       AnchorSideRight.Control = MainPanel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = ChangeImageButton
-      Left = 8
-      Height = 267
-      Top = 51
-      Width = 501
+      Left = 6
+      Height = 271
+      Top = 49
+      Width = 505
       Anchors = [akTop, akLeft, akRight, akBottom]
       AutoSize = True
       BorderSpacing.Left = 6
@@ -104,7 +104,7 @@ object ImageButtonFrame: TImageButtonFrame
   end
   object OpenPictureDialog: TOpenPictureDialog
     Filter = 'Image files (*.png;*.bmp;*.jpeg;*.jpg;*.gif)|*.png;*.bmp;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*'
-    left = 400
-    top = 232
+    Left = 400
+    Top = 232
   end
 end
